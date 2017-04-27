@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -24,7 +25,6 @@ items:
       path: cntk/device.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.device
 - _type: function
@@ -151,7 +151,8 @@ items:
     parameters:
     - description: new device descriptor
       id: new_default_device
-      type: DeviceDescriptor
+      type:
+      - DeviceDescriptor
     return:
       description: id
       type: DeviceDescriptor

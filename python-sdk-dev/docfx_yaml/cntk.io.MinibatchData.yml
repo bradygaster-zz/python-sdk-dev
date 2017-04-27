@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -12,12 +13,10 @@ items:
   class: cntk.io.MinibatchData
   fullName: cntk.io.MinibatchData
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.MinibatchData
-  - inheritance:
-      type: builtins.object
-    type: cntk.tensor.ArrayMixin
+  - - type: cntk.cntk_py.MinibatchData
+    - type: builtins.object
+  - - type: cntk.tensor.ArrayMixin
+    - type: builtins.object
   langs:
   - python
   module: cntk.io

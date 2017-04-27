@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -18,7 +19,6 @@ items:
       path: cntk/tests/tensor_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.tests.tensor_test
 - _type: function
@@ -35,7 +35,6 @@ items:
       path: cntk/tests/tensor_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 19
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.tests.tensor_test.test_eval_scalar
@@ -53,7 +52,6 @@ items:
       path: cntk/tests/tensor_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 24
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.tests.tensor_test.test_numpy_conversion
@@ -71,7 +69,6 @@ items:
       path: cntk/tests/tensor_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 13
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.tests.tensor_test.test_overload_exception

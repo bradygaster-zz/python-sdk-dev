@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -18,7 +19,6 @@ items:
       path: cntk/conftest.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.conftest
 - _type: function
@@ -35,7 +35,6 @@ items:
       path: cntk/conftest.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 69
-  summary: ''
   syntax:
     parameters:
     - id: doctest_namespace
@@ -55,7 +54,6 @@ items:
       path: cntk/conftest.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 13
-  summary: ''
   syntax:
     parameters:
     - id: parser
@@ -75,7 +73,6 @@ items:
       path: cntk/conftest.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 26
-  summary: ''
   syntax:
     parameters:
     - id: metafunc

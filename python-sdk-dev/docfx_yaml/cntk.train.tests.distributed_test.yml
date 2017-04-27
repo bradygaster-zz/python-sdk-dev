@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -21,7 +22,6 @@ items:
       path: cntk/train/tests/distributed_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.train.tests.distributed_test
 - _type: function
@@ -38,7 +38,6 @@ items:
       path: cntk/train/tests/distributed_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 25
-  summary: ''
   syntax:
     parameters:
     - id: learner
@@ -59,7 +58,6 @@ items:
       path: cntk/train/tests/distributed_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 31
-  summary: ''
   syntax:
     parameters:
     - id: learner
@@ -80,7 +78,6 @@ items:
       path: cntk/train/tests/distributed_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 18
-  summary: ''
   syntax:
     parameters:
     - id: learner
@@ -102,7 +99,6 @@ items:
       path: cntk/train/tests/distributed_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 38
-  summary: ''
   syntax:
     parameters:
     - id: tmpdir
@@ -123,7 +119,6 @@ items:
       path: cntk/train/tests/distributed_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 201
-  summary: ''
   syntax:
     parameters:
     - id: tmpdir
@@ -144,7 +139,6 @@ items:
       path: cntk/train/tests/distributed_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 81
-  summary: ''
   syntax:
     parameters:
     - id: tmpdir

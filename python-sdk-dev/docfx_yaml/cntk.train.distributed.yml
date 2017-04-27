@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -55,22 +56,28 @@ items:
       id: learner
     - description: size of the partition in samples
       id: block_size
-      type: int
+      type:
+      - int
     - description: block momentum as time constant
       id: block_momentum_as_time_constant
-      type: float
+      type:
+      - float
     - description: use nestrov momentum
       id: use_nestrov_momentum
-      type: bool
+      type:
+      - bool
     - description: reset SGD momentum after aggregation
       id: reset_sgd_momentum_after_aggregation
-      type: bool
+      type:
+      - bool
     - description: block learning rate
       id: block_learning_rate
-      type: float
+      type:
+      - float
     - description: number of samples after which distributed training starts
       id: distributed_after
-      type: int
+      type:
+      - int
     return:
       description: a distributed learner instance
   type: Method
@@ -96,13 +103,16 @@ items:
       id: learner
     - description: number of samples after which distributed training starts
       id: distributed_after
-      type: int
+      type:
+      - int
     - description: number of bits for quantization (1 to 32)
       id: num_quantization_bits
-      type: int
+      type:
+      - int
     - description: use async buffered parameter update
       id: use_async_buffered_parameter_update
-      type: bool
+      type:
+      - bool
     return:
       description: a distributed learner instance
   type: Method

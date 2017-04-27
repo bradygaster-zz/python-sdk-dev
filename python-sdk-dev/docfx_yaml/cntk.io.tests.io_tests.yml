@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -22,7 +23,6 @@ items:
       path: cntk/io/tests/io_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.io.tests.io_tests
 - _type: function
@@ -39,7 +39,6 @@ items:
       path: cntk/io/tests/io_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 170
-  summary: ''
   syntax:
     parameters:
     - id: tmpdir
@@ -59,7 +58,6 @@ items:
       path: cntk/io/tests/io_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 85
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.io.tests.io_tests.test_image
@@ -77,7 +75,6 @@ items:
       path: cntk/io/tests/io_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 301
-  summary: ''
   syntax:
     parameters:
     - id: data
@@ -98,7 +95,6 @@ items:
       path: cntk/io/tests/io_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 228
-  summary: ''
   syntax:
     parameters:
     - id: tmpdir
@@ -118,7 +114,6 @@ items:
       path: cntk/io/tests/io_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 277
-  summary: ''
   syntax:
     parameters:
     - id: idx
@@ -140,7 +135,6 @@ items:
       path: cntk/io/tests/io_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 269
-  summary: ''
   syntax:
     parameters:
     - id: idx
@@ -162,7 +156,6 @@ items:
       path: cntk/io/tests/io_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 20
-  summary: ''
   syntax:
     parameters:
     - id: tmpdir

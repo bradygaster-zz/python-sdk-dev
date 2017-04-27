@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -19,7 +20,6 @@ items:
       path: cntk/metrics/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.metrics
 - _type: function
@@ -66,10 +66,12 @@ items:
       id: target_vector
     - description: axis along which the classification error will be computed.
       id: axis
-      type: int or Axis
+      type:
+      - int or Axis
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -125,7 +127,8 @@ items:
       id: input_b
     - description: substitution, deletion and insertion penalties
       id: delPen, insPen
-      type: subPen,
+      type:
+      - subPen,
     - description: whether to merge sequences of identical samples (in both input
         sequences). If true and tokensToIgnore contains label '-' then given first
         input sequence as s1="a-ab-" and second as s2="-aa--abb" the edit distance
@@ -136,7 +139,8 @@ items:
       id: tokensToIgnore
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -181,7 +185,8 @@ items:
       id: group
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -241,7 +246,8 @@ items:
       id: group
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method

@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -91,7 +92,6 @@ items:
       path: cntk/ops/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.ops
 - _type: function
@@ -122,7 +122,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -154,7 +155,8 @@ items:
       id: operand
     - description: the name of the Alias Function in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -183,13 +185,16 @@ items:
     parameters:
     - description: any `Function` that outputs a tensor.
       id: x
-      type: numpy.array or Function
+      type:
+      - numpy.array or Function
     - description: axis along which the reduction will be performed
       id: axis
-      type: int or Axis
+      type:
+      - int or Axis
     - description: the name of the Function instance in the network
       id: name
-      type: str, default to ''
+      type:
+      - str, default to ''
     return:
       description: An instance of `Function`
       type: cntk.ops.functions.Function
@@ -219,13 +224,16 @@ items:
     parameters:
     - description: any `Function` that outputs a tensor.
       id: x
-      type: numpy.array or Function
+      type:
+      - numpy.array or Function
     - description: axis along which the reduction will be performed
       id: axis
-      type: int or Axis
+      type:
+      - int or Axis
     - description: the name of the Function instance in the network
       id: name
-      type: str, default to ''
+      type:
+      - str, default to ''
     return:
       description: An instance of `Function`
       type: cntk.ops.functions.Function
@@ -263,12 +271,14 @@ items:
       id: block_arguments_map
     - description: ''
       id: variables they are connected to
-      type: actual
+      type:
+      - actual
     - description: Name of the op that the block represents
       id: block_op_name
     - description: the name of the block Function in the network
       id: block_instance_name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -297,7 +307,8 @@ items:
       id: root_function
     - description: the name of the Alias Function in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -393,23 +404,28 @@ items:
         in a minibatch independently or, in case of convolutional layers, per future
         map
       id: spatial
-      type: bool
+      type:
+      - bool
     - description: time constant for computing running average of mean and variance
         as a low-pass filtered version of the batch statistics.
       id: normalization_time_constant
-      type: float, default 5000
+      type:
+      - float, default 5000
     - description: constant for smoothing batch estimates with the running statistics
       id: blend_time_constant
-      type: float, default 0
+      type:
+      - float, default 0
     - description: conditioner constant added to the variance when computing the inverse
         standard deviation
       id: epsilon
     - description: ''
       id: use_cudnn_engine
-      type: bool, default True
+      type:
+      - bool, default True
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -439,7 +455,8 @@ items:
       id: arg
     - description: the name of the Function instance in the network (optional)
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -480,14 +497,17 @@ items:
     - description: a scalar or a tensor which represents the minimum value to clip
         element values to
       id: min_value
-      type: float
+      type:
+      - float
     - description: a scalar or a tensor which represents the maximum value to clip
         element values to
       id: max_value
-      type: float
+      type:
+      - float
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -523,10 +543,12 @@ items:
     parameters:
     - description: list of functions or their variables to combine
       id: operands
-      type: list
+      type:
+      - list
     - description: the name of the Combine Function in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -554,21 +576,26 @@ items:
         in the tensor or NumPy array. If `None`, the tensor will be initialized uniformly
         random.
       id: value
-      type: scalar or NumPy array, optional
+      type:
+      - scalar or NumPy array, optional
     - description: the shape of the input tensor. If not provided, it will be inferred
         from `value`.
       id: shape
-      type: tuple or int, optional
+      type:
+      - tuple or int, optional
     - description: data type of the constant. If a NumPy array and `dtype`, are given,
         then data will be converted if needed. If none given, it will default to `np.float32`.
       id: dtype
-      type: optional
+      type:
+      - optional
     - description: instance of DeviceDescriptor
       id: device
-      type: DeviceDescriptor
+      type:
+      - DeviceDescriptor
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Constant`'
   type: Method
@@ -619,10 +646,12 @@ items:
         will lead to a halving of that dimension. The first stride dimension that
         lines up with the number of input channels can be set to any non-zero value.
       id: strides
-      type: tuple, optional
+      type:
+      - tuple, optional
     - description: sharing flags for each input dimension
       id: sharing
-      type: bool
+      type:
+      - bool
     - description: flags for each input dimension whether it should be padded automatically
         (that is, symmetrically) or not padded at all. Padding means that the convolution
         kernel is applied to all pixel positions, where all pixels outside the area
@@ -631,7 +660,8 @@ items:
         the area. In this case, the output dimension will be less than the input dimension.
         The last value that lines up with the number of input channels must be false.
       id: auto_padding
-      type: bool
+      type:
+      - bool
     - description: precise lower padding for each input dimension.
       id: lower_pad
     - description: precise upper padding for each input dimension.
@@ -642,10 +672,12 @@ items:
         performance. However, sometimes this may lead to higher memory utilization.
         Default is 0 which means the same as the input samples.
       id: max_temp_mem_size_in_samples
-      type: int
+      type:
+      - int
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -698,10 +730,12 @@ items:
         will lead to a halving of that dimension. The first stride dimension that
         lines up with the number of input channels can be set to any non-zero value.
       id: strides
-      type: tuple, optional
+      type:
+      - tuple, optional
     - description: sharing flags for each input dimension
       id: sharing
-      type: bool
+      type:
+      - bool
     - description: flags for each input dimension whether it should be padded automatically
         (that is, symmetrically) or not padded at all. Padding means that the convolution
         kernel is applied to all pixel positions, where all pixels outside the area
@@ -710,7 +744,8 @@ items:
         the area. In this case, the output dimension will be less than the input dimension.
         The last value that lines up with the number of input channels must be false.
       id: auto_padding
-      type: bool
+      type:
+      - bool
     - description: precise lower padding for each input dimension.
       id: lower_pad
     - description: precise upper padding for each input dimension.
@@ -723,10 +758,12 @@ items:
         performance. However, sometimes this may lead to higher memory utilization.
         Default is 0 which means the same as the input samples.
       id: max_temp_mem_size_in_samples
-      type: int
+      type:
+      - int
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -754,7 +791,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -790,10 +828,12 @@ items:
       id: x
     - description: probability that an element of `x` will be set to zero
       id: dropout_rate
-      type: float, [0,1)
+      type:
+      - float, [0,1)
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -832,7 +872,8 @@ items:
       id: right
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -923,7 +964,8 @@ items:
       id: value_if_false
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -996,10 +1038,12 @@ items:
     parameters:
     - description: any `Function` that outputs a tensor.
       id: x
-      type: numpy.array or Function
+      type:
+      - numpy.array or Function
     - description: the name of the Function instance in the network
       id: name
-      type: str, default to ''
+      type:
+      - str, default to ''
     return:
       description: An instance of `Function`
       type: cntk.ops.functions.Function
@@ -1039,7 +1083,8 @@ items:
       id: right
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1072,7 +1117,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1104,7 +1150,8 @@ items:
       id: arg
     - description: the name of the Function instance in the network (optional)
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1185,10 +1232,12 @@ items:
       id: initial_state
     - description: the number of time steps to look into the future (default 1)
       id: time_step
-      type: int
+      type:
+      - int
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1227,7 +1276,8 @@ items:
       id: right
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1266,7 +1316,8 @@ items:
       id: right
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1304,7 +1355,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str
+      type:
+      - str
     return:
       description: '`Function`'
   type: Method
@@ -1329,22 +1381,28 @@ items:
     parameters:
     - description: the shape of the input tensor
       id: shape
-      type: tuple or int
+      type:
+      - tuple or int
     - description: np.float32 (default) or np.float64
       id: dtype
-      type: type, optional
+      type:
+      - type, optional
     - description: whether to back-propagates to it or not. False by default.
       id: needs_gradients
-      type: bool, optional
+      type:
+      - bool, optional
     - description: whether the variable is sparse (*False* by default)
       id: is_sparse
-      type: bool, optional
+      type:
+      - bool, optional
     - description: a list of dynamic axis (e.g., batch axis, time axis)
       id: dynamic_axes
-      type: list or tuple, default
+      type:
+      - list or tuple, default
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Variable`'
   type: Method
@@ -1404,10 +1462,12 @@ items:
     parameters:
     - description: any `Function` that outputs a tensor.
       id: x
-      type: numpy.array or Function
+      type:
+      - numpy.array or Function
     - description: the name of the Function instance in the network
       id: name
-      type: str, default to ''
+      type:
+      - str, default to ''
     return:
       description: An instance of `Function`
       type: cntk.ops.functions.Function
@@ -1447,7 +1507,8 @@ items:
       id: right
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1486,7 +1547,8 @@ items:
       id: right
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1523,7 +1585,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1592,7 +1655,8 @@ items:
       id: right
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1625,7 +1689,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1664,7 +1729,8 @@ items:
       id: right
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1719,16 +1785,20 @@ items:
     parameters:
     - description: the shape of the input tensor
       id: shape
-      type: tuple or int
+      type:
+      - tuple or int
     - description: data type
       id: dtype
-      type: np.float32 or np.float64
+      type:
+      - np.float32 or np.float64
     - description: a list of dynamic axis (e.g., batch axis, time axis)
       id: dynamic_axes
-      type: list or tuple
+      type:
+      - list or tuple
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Variable` that is of output type'
   type: Method
@@ -1763,13 +1833,16 @@ items:
     parameters:
     - description: same shape as x
       id: alpha
-      type: Parameter
+      type:
+      - Parameter
     - description: any `Function` that outputs a tensor.
       id: x
-      type: numpy.array or Function
+      type:
+      - numpy.array or Function
     - description: the name of the Function instance in the network
       id: name
-      type: str, default to ''
+      type:
+      - str, default to ''
     return:
       description: An instance of `Function`
       type: cntk.ops.functions.Function
@@ -1797,23 +1870,28 @@ items:
     - description: the shape of the input tensor. If not provided, it will be inferred
         from `value`.
       id: shape
-      type: tuple or int, optional
+      type:
+      - tuple or int, optional
     - description: if init is a scalar it will be replicated for every element in
         the tensor or NumPy array. If it is the output of an initializer form `cntk.initializer`
         it will be used to initialize the tensor at the first forward pass. If *None*,
         the tensor will be initialized with 0.
       id: init
-      type: scalar or NumPy array or initializer
+      type:
+      - scalar or NumPy array or initializer
     - description: data type of the constant. If a NumPy array and `dtype`, are given,
         then data will be converted if needed. If none given, it will default to `np.float32`.
       id: dtype
-      type: optional
+      type:
+      - optional
     - description: instance of DeviceDescriptor
       id: device
-      type: DeviceDescriptor
+      type:
+      - DeviceDescriptor
     - description: the name of the Parameter instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Parameter`'
   type: Method
@@ -1873,10 +1951,12 @@ items:
       id: initial_state
     - description: the number of time steps to look into the past (default 1)
       id: time_step
-      type: int
+      type:
+      - int
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1903,13 +1983,16 @@ items:
       id: operand
     - description: per dimension mean to use for the normalization
       id: mean
-      type: NumPy array
+      type:
+      - NumPy array
     - description: per dimension standard deviation to use for the normalization
       id: inv_stddev
-      type: NumPy array
+      type:
+      - NumPy array
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -1936,10 +2019,12 @@ items:
     parameters:
     - description: the shape of the variable tensor
       id: shape
-      type: tuple or int
+      type:
+      - tuple or int
     - description: the list of dynamic axes that the actual variable uses
       id: dynamic_axes
-      type: list
+      type:
+      - list
     return:
       description: '`Variable`'
   type: Method
@@ -2021,22 +2106,28 @@ items:
       id: pooling_window_shape
     - description: strides.
       id: strides
-      type: default 1
+      type:
+      - default 1
     - description: automatic padding flags for each input dimension.
       id: auto_padding
-      type: default [False,]
+      type:
+      - default [False,]
     - description: precise lower padding for each input dimension
       id: lower_pad
-      type: default (0,)
+      type:
+      - default (0,)
     - description: precise upper padding for each input dimension
       id: upper_pad
-      type: default (0,)
+      type:
+      - default (0,)
     - description: ceiling while computing output size
       id: ceil_out_dim
-      type: default false
+      type:
+      - default false
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2069,10 +2160,12 @@ items:
       id: weights
     - description: number of expected samples
       id: num_samples
-      type: int
+      type:
+      - int
     - description: If sampling is done with replacement (*True*) or without (*False*).
       id: allow_duplicates
-      type: bool
+      type:
+      - bool
     return:
       description: '`Function`'
   type: Method
@@ -2169,7 +2262,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2352,10 +2446,12 @@ items:
       id: x
     - description: axis along which the reduction will be performed
       id: axis
-      type: int or Axis
+      type:
+      - int or Axis
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2390,7 +2486,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2421,10 +2518,12 @@ items:
       id: x
     - description: a tuple defining the resulting shape
       id: shape
-      type: tuple
+      type:
+      - tuple
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2462,7 +2561,8 @@ items:
       id: roi_output_shape
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2497,7 +2597,8 @@ items:
       id: arg
     - description: the name of the Function instance in the network (optional)
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2532,7 +2633,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2560,7 +2662,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2633,10 +2736,12 @@ items:
       id: x
     - description: axis along which the softmax operation will be performed
       id: axis
-      type: int or Axis
+      type:
+      - int or Axis
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2678,13 +2783,16 @@ items:
     parameters:
     - description: any `Function` that outputs a tensor.
       id: x
-      type: numpy.array or Function
+      type:
+      - numpy.array or Function
     - description: optional steepness factor
       id: steepness
-      type: float, optional
+      type:
+      - float, optional
     - description: the name of the Function instance in the network
       id: name
-      type: str, default to ''
+      type:
+      - str, default to ''
     return:
       description: An instance of `Function`
       type: cntk.ops.functions.Function
@@ -2719,10 +2827,12 @@ items:
       id: inputs
     - description: axis along which the concatenation will be performed
       id: axis
-      type: int or Axis, optional, keyword only
+      type:
+      - int or Axis, optional, keyword only
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional, keyword only
+      type:
+      - str, optional, keyword only
     return:
       description: '`Function`'
   type: Method
@@ -2758,7 +2868,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2790,7 +2901,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2817,7 +2929,8 @@ items:
       id: input
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2845,7 +2958,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2869,12 +2983,11 @@ items:
     \ a matrix. The operator '@' has been overloaded such that in Python 3.5 and later\
     \ X @ W equals times(X, W).\nFor better performance on times operation on sequence\
     \ which is followed by sequence.reduce_sum, use infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK,\
-    \ i.e. replace following:\n<!-- literal_block {\"backrefs\": [], \"names\": [],\
-    \ \"dupnames\": [], \"xml:space\": \"preserve\", \"classes\": [], \"ids\": []}\
+    \ i.e. replace following:\n<!-- literal_block {\"ids\": [], \"xml:space\": \"\
+    preserve\", \"names\": [], \"dupnames\": [], \"classes\": [], \"backrefs\": []}\
     \ -->\n\n````\n\n   sequence.reduce_sum(times(seq1, seq2))\n   ````\nwith:\n<!--\
-    \ literal_block {\"backrefs\": [], \"names\": [], \"dupnames\": [], \"xml:space\"\
-    : \"preserve\", \"classes\": [], \"ids\": []} -->\n\n````\n\n   times(seq1, seq2,\
-    \ infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK)\n\
+    \ literal_block {\"ids\": [], \"xml:space\": \"preserve\", \"names\": [], \"dupnames\"\
+    : [], \"classes\": [], \"backrefs\": []} -->\n\n````\n\n   times(seq1, seq2, infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK)\n\
     \   ````\n-[ Example ]-\n>>> C.times([[1,2],[3,4]], [[5],[6]]).eval()\narray([[\
     \ 17.],\n       [ 39.]], dtype=float32)\n>>> C.times(1.*np.reshape(np.arange(8),\
     \ (2,2,2)),1.*np.reshape(np.arange(8), (2,2,2)), output_rank=1).eval()\narray([[\
@@ -2894,13 +3007,16 @@ items:
         number of axes to be collapsed in order to transform the tensors into matrices,
         perform the operation and then reshape back (explode the axes)
       id: output_rank
-      type: int
+      type:
+      - int
     - description: meant for internal use only. Always use default value
       id: infer_input_rank_to_map
-      type: '''int'''
+      type:
+      - '''int'''
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2949,7 +3065,8 @@ items:
       id: right
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -2977,13 +3094,16 @@ items:
       id: x
     - description: the axis to swap with `axis2`
       id: axis1
-      type: int or Axis
+      type:
+      - int or Axis
     - description: the axis to swap with `axis1`
       id: axis2
-      type: int or Axis
+      type:
+      - int or Axis
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -3024,7 +3144,8 @@ items:
       id: unpooling_window_shape
     - description: strides.
       id: strides
-      type: default 1
+      type:
+      - default 1
     - description: automatic padding flags for each input dimension.
       id: auto_padding
     - description: precise lower padding for each input dimension
@@ -3033,7 +3154,8 @@ items:
       id: upper_pad
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method

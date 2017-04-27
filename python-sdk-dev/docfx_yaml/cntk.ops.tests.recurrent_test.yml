@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -36,7 +37,6 @@ items:
       path: cntk/ops/tests/recurrent_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 116
-  summary: ''
   syntax:
     parameters:
     - id: input_size
@@ -60,7 +60,6 @@ items:
       path: cntk/ops/tests/recurrent_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 28
-  summary: ''
   syntax:
     parameters:
     - id: input_size
@@ -84,7 +83,6 @@ items:
       path: cntk/ops/tests/recurrent_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 68
-  summary: ''
   syntax:
     parameters:
     - id: input_size

@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -6,9 +7,9 @@ items:
   class: cntk.debugging.tests.userlearner_test.MySgdFast
   fullName: cntk.debugging.tests.userlearner_test.MySgdFast
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.learners.UserLearner
+  - - type: cntk.learners.UserLearner
+    - type: cntk.cntk_py.Learner
+    - type: builtins.object
   langs:
   - python
   module: cntk.debugging.tests.userlearner_test
@@ -42,7 +43,6 @@ items:
       path: cntk/debugging/tests/userlearner_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 64
-  summary: ''
   syntax:
     parameters:
     - id: self

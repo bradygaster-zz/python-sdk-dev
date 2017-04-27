@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -7,9 +8,8 @@ items:
   class: cntk.device.DeviceDescriptor
   fullName: cntk.device.DeviceDescriptor
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.DeviceDescriptor
+  - - type: cntk.cntk_py.DeviceDescriptor
+    - type: builtins.object
   langs:
   - python
   module: cntk.device

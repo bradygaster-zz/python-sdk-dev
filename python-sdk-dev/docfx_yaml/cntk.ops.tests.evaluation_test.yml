@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -42,7 +43,6 @@ items:
       path: cntk/ops/tests/evaluation_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 284
-  summary: ''
   syntax:
     parameters:
     - id: left_input
@@ -71,7 +71,6 @@ items:
       path: cntk/ops/tests/evaluation_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 225
-  summary: ''
   syntax:
     parameters:
     - id: grad
@@ -96,7 +95,6 @@ items:
       path: cntk/ops/tests/evaluation_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 254
-  summary: ''
   syntax:
     parameters:
     - id: value
@@ -120,7 +118,6 @@ items:
       path: cntk/ops/tests/evaluation_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 136
-  summary: ''
   syntax:
     parameters:
     - id: output_vector
@@ -143,7 +140,6 @@ items:
       path: cntk/ops/tests/evaluation_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 183
-  summary: ''
   syntax:
     parameters:
     - id: output_vector
@@ -167,7 +163,6 @@ items:
       path: cntk/ops/tests/evaluation_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 27
-  summary: ''
   syntax:
     parameters:
     - id: output_vector
@@ -190,7 +185,6 @@ items:
       path: cntk/ops/tests/evaluation_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 73
-  summary: ''
   syntax:
     parameters:
     - id: output_vector
@@ -214,7 +208,6 @@ items:
       path: cntk/ops/tests/evaluation_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 110
-  summary: ''
   syntax:
     parameters:
     - id: output_vector
@@ -237,7 +230,6 @@ items:
       path: cntk/ops/tests/evaluation_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 292
-  summary: ''
   syntax:
     parameters:
     - id: device_id

@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -88,21 +89,25 @@ items:
     parameters:
     - description: root node until which the nodes are to be debugged
       id: model
-      type: root node
-    - default: <built-in function exit>
+      type:
+      - root node
+    - defaultValue: <built-in function exit>
       description: '*readline()* will be called on it to obtain user input'
       id: in_stream
-      type: object behaving like sys.stdin, default stdin
-    - default: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='ANSI_X3.4-1968'>
+      type:
+      - object behaving like sys.stdin, default stdin
+    - defaultValue: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='ANSI_X3.4-1968'>
       description: '*write()* and *flush()* will be called on it to output debug info
         to the user'
       id: out_stream
-      type: object behaving like sys.stdout, default stdout
-    - default: <_io.TextIOWrapper name='<stdin>' mode='r' encoding='ANSI_X3.4-1968'>
+      type:
+      - object behaving like sys.stdout, default stdout
+    - defaultValue: <_io.TextIOWrapper name='<stdin>' mode='r' encoding='ANSI_X3.4-1968'>
       description: callable that takes an exit code and is called, when the user exits
         the debugging process
       id: exit_func
-      type: callable, default sys.exit
+      type:
+      - callable, default sys.exit
     return:
       description: a clone of the model that has debugging enabled
   type: Method
@@ -127,10 +132,12 @@ items:
     parameters:
     - description: op of the graph to save
       id: root_op
-      type: Function
+      type:
+      - Function
     - description: filename to store the model in.
       id: filename
-      type: str
+      type:
+      - str
   type: Method
   uid: cntk.debugging.debug.save_as_legacy_model
 - _type: function
@@ -156,7 +163,8 @@ items:
     parameters:
     - description: trace level
       id: level
-      type: int
+      type:
+      - int
   type: Method
   uid: cntk.debugging.debug.set_computation_network_trace_level
 - _type: function
@@ -179,7 +187,8 @@ items:
     parameters:
     - description: whether to enable gap nans tracking (with performance impact)
       id: enable
-      type: Boolean
+      type:
+      - Boolean
   type: Method
   uid: cntk.debugging.debug.set_computation_network_track_gap_nans
 references:

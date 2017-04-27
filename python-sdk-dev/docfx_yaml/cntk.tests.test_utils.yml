@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -33,7 +34,6 @@ items:
       path: cntk/tests/test_utils.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 23
-  summary: ''
   syntax:
     parameters:
     - id: request

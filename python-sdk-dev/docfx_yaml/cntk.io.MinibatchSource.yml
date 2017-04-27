@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -12,9 +13,8 @@ items:
   class: cntk.io.MinibatchSource
   fullName: cntk.io.MinibatchSource
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.MinibatchSource
+  - - type: cntk.cntk_py.MinibatchSource
+    - type: builtins.object
   langs:
   - python
   module: cntk.io
@@ -45,20 +45,24 @@ items:
     parameters:
     - description: list of deserializers
       id: deserializers
-      type: list, defaults to empty
+      type:
+      - list, defaults to empty
     - description: randomize before every epoch
       id: randomize
-      type: bool, defaults to True
+      type:
+      - bool, defaults to True
     - description: size of window that reader will shuffle, ignored if *randomize*
         is *False*
       id: randomization_window
-      type: int
+      type:
+      - int
     - description: specifies how to interpret *randomization_window*. If *True*, the
         size of the randomization window is interpreted as a certain number of samples,
         otherwise -- as a number of chunks. Similarly to *randomization_window*, this
         parameter is ignored, when *randomize* is *False*
       id: sample_based_randomization_window
-      type: bool, defaults to False
+      type:
+      - bool, defaults to False
     - description: number of samples as a scheduling unit. Parameters in the schedule
         change their values every *epoch_size* samples. If no *epoch_size* is provided,
         this parameter is substituted by the size of the full data sweep with infinte
@@ -67,21 +71,26 @@ items:
         basis specified by the schedule. **Important:** Click [here](https://github.com/Microsoft/CNTK/wiki/BrainScript-epochSize-and-Python-epoch_size-in-CNTK)
         for a full description of this parameter.
       id: epoch_size
-      type: int, defaults to INFINITELY_REPEAT
+      type:
+      - int, defaults to INFINITELY_REPEAT
     - description: sample count after which minibatch source becomes distributed
       id: distributed_after
-      type: int, defaults to cntk.io.INFINITE_SAMPLES
+      type:
+      - int, defaults to cntk.io.INFINITE_SAMPLES
     - description: using multi threaded deserializer
       id: multithreaded_deserializer
-      type: bool, defaults to None
+      type:
+      - bool, defaults to None
     - description: Specifies if data should be randomized and returned at the frame
         or sequence level. When  true , input sequence are split into frames.
       id: frame_mode
-      type: bool, defaults to False
+      type:
+      - bool, defaults to False
     - description: Specifies the truncation length in samples for BPTT (positive integer).
         If greater than zero *frame_mode* cannot be used at the same time.
       id: truncation_length
-      type: int
+      type:
+      - int
   type: Class
   uid: cntk.io.MinibatchSource
 - _type: attribute
@@ -179,21 +188,25 @@ items:
         Click [here](https://github.com/Microsoft/CNTK/wiki/BrainScript-epochSize-and-Python-epoch_size-in-CNTK)
         for a full description of this parameter.'
       id: minibatch_size_in_samples
-      type: int
+      type:
+      - int
     - description: mapping of `Variable` to `StreamInformation` which will be used
         to convert the returned data.
       id: input_map
-      type: dict
+      type:
+      - dict
     - description: CNTK DeviceDescriptor
       id: device
-      type: DeviceDescriptor, defaults to None
+      type:
+      - DeviceDescriptor, defaults to None
     - description: Used for distributed training, indicates into how many partitions
         the source should split the data.
       id: num_data_partitions
     - description: Used for distributed training, indicates data from which partition
         to take.
       id: partition_index
-      type: int, defaults to None
+      type:
+      - int, defaults to None
     return:
       description: A mapping of `StreamInformation` to `MinibatchData` if *input_map*
         was not specified. Otherwise, the returned value will be a mapping of `Variable`
@@ -222,7 +235,8 @@ items:
     - id: self
     - description: checkpoint to restore from
       id: checkpoint
-      type: Dictionary
+      type:
+      - Dictionary
   type: Method
   uid: cntk.io.MinibatchSource.restore_from_checkpoint
 - _type: method

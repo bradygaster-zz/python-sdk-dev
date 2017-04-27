@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -12,9 +13,8 @@ items:
   class: cntk.logging.progress_print.TensorBoardProgressWriter
   fullName: cntk.logging.progress_print.TensorBoardProgressWriter
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.ProgressWriter
+  - - type: cntk.cntk_py.ProgressWriter
+    - type: builtins.object
   langs:
   - python
   module: cntk.logging.progress_print
@@ -47,18 +47,22 @@ items:
         is invoked. None indicates that progress is logged only when *:func:cntk.util.TensorBoardFileWriter.summarize_progress*
         is invoked. Must be a positive integer otherwise.
       id: freq
-      type: int or None, default None
+      type:
+      - int or None, default None
     - description: directory where to create a TensorBoard event file.
       id: log_dir
-      type: string, default '.'
+      type:
+      - string, default '.'
     - description: rank of a worker when using distributed training, or *None* if
         training locally. If not *None*, event files will be created only by rank
         0.
       id: rank
-      type: int or None, default None
+      type:
+      - int or None, default None
     - description: model graph to plot.
       id: model
-      type: cntk.ops.functions.Function or None, default None
+      type:
+      - cntk.ops.functions.Function or None, default None
   type: Class
   uid: cntk.logging.progress_print.TensorBoardProgressWriter
 - _type: method
@@ -119,7 +123,6 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 493
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -145,7 +148,6 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 480
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -169,7 +171,6 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 487
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -196,7 +197,6 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 475
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -227,13 +227,16 @@ items:
     - id: self
     - description: name of a variable.
       id: name
-      type: string
+      type:
+      - string
     - description: value of the variable.
       id: value
-      type: float
+      type:
+      - float
     - description: time step at which the value is recorded.
       id: step
-      type: int
+      type:
+      - int
   type: Method
   uid: cntk.logging.progress_print.TensorBoardProgressWriter.write_value
 references:

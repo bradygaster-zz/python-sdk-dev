@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -9,9 +10,11 @@ items:
   class: cntk.ops.tests.userfunction_test.MyPlus
   fullName: cntk.ops.tests.userfunction_test.MyPlus
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.ops.functions.UserFunction
+  - - type: cntk.ops.functions.UserFunction
+    - type: cntk.ops.functions.Function
+    - type: cntk.cntk_py.Function
+    - type: cntk.cntk_py.IDictionarySerializable
+    - type: builtins.object
   langs:
   - python
   module: cntk.ops.tests.userfunction_test
@@ -48,7 +51,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 43
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -71,7 +73,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 31
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -93,14 +94,13 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 34
-  summary: ''
   syntax:
     parameters:
-    - default: None
+    - defaultValue: None
       id: self
     - id: arguments
     - id: device
-    - default: None
+    - defaultValue: None
       id: outputs_to_retain
   type: Method
   uid: cntk.ops.tests.userfunction_test.MyPlus.forward
@@ -119,7 +119,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 27
-  summary: ''
   syntax:
     parameters:
     - id: self

@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -19,7 +20,6 @@ items:
       path: cntk/logging/tests/graph_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.logging.tests.graph_test
 - _type: function
@@ -36,7 +36,6 @@ items:
       path: cntk/logging/tests/graph_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 114
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.logging.tests.graph_test.test_depth_first_search
@@ -54,7 +53,6 @@ items:
       path: cntk/logging/tests/graph_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 62
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.logging.tests.graph_test.test_find_nodes
@@ -72,7 +70,6 @@ items:
       path: cntk/logging/tests/graph_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 90
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.logging.tests.graph_test.test_find_nodes_returning_proper_types
@@ -90,7 +87,6 @@ items:
       path: cntk/logging/tests/graph_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 102
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.logging.tests.graph_test.test_plot

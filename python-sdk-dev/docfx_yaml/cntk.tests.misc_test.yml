@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -18,7 +19,6 @@ items:
       path: cntk/tests/misc_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.tests.misc_test
 - _type: function
@@ -35,7 +35,6 @@ items:
       path: cntk/tests/misc_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 21
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.tests.misc_test.test_Value_raises
@@ -53,7 +52,6 @@ items:
       path: cntk/tests/misc_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 11
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.tests.misc_test.test_callstack1
@@ -71,7 +69,6 @@ items:
       path: cntk/tests/misc_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 16
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.tests.misc_test.test_callstack2

@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -6,9 +7,9 @@ items:
   class: cntk.train.distributed.DistributedLearner
   fullName: cntk.train.distributed.DistributedLearner
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.DistributedLearner
+  - - type: cntk.cntk_py.DistributedLearner
+    - type: cntk.cntk_py.Learner
+    - type: builtins.object
   langs:
   - python
   module: cntk.train.distributed

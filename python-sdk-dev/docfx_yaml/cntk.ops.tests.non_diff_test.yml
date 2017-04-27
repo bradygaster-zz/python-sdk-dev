@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -36,7 +37,6 @@ items:
       path: cntk/ops/tests/non_diff_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 97
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.non_diff_test.test_input_variable
@@ -54,7 +54,6 @@ items:
       path: cntk/ops/tests/non_diff_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 43
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -76,7 +75,6 @@ items:
       path: cntk/ops/tests/non_diff_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 28
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -98,7 +96,6 @@ items:
       path: cntk/ops/tests/non_diff_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 84
-  summary: ''
   syntax:
     parameters:
     - id: operand

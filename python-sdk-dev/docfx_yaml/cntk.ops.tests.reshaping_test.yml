@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -47,7 +48,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 494
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -68,7 +68,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 521
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -88,7 +87,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 430
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -109,7 +107,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 403
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -130,7 +127,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 457
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -150,7 +146,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 34
-  summary: ''
   syntax:
     parameters:
     - id: input_shape
@@ -174,7 +169,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 123
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -195,7 +189,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 159
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.reshaping_test.test_op_reshape_parameter
@@ -213,7 +206,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 82
-  summary: ''
   syntax:
     parameters:
     - id: input_shape
@@ -239,7 +231,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 477
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -259,7 +250,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 546
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -280,7 +270,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 183
-  summary: ''
   syntax:
     parameters:
     - id: input_data
@@ -304,7 +293,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 245
-  summary: ''
   syntax:
     parameters:
     - id: input_data
@@ -328,7 +316,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 301
-  summary: ''
   syntax:
     parameters:
     - id: input_data
@@ -352,7 +339,6 @@ items:
       path: cntk/ops/tests/reshaping_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 357
-  summary: ''
   syntax:
     parameters:
     - id: input_data1

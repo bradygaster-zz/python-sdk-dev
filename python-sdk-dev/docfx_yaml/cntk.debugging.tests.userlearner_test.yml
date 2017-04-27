@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -20,7 +21,6 @@ items:
       path: cntk/debugging/tests/userlearner_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.debugging.tests.userlearner_test
 - _type: function
@@ -37,7 +37,6 @@ items:
       path: cntk/debugging/tests/userlearner_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 83
-  summary: ''
   syntax:
     parameters:
     - id: optimizer
@@ -58,7 +57,6 @@ items:
       path: cntk/debugging/tests/userlearner_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 15
-  summary: ''
   syntax:
     parameters:
     - id: sample_size
@@ -80,7 +78,6 @@ items:
       path: cntk/debugging/tests/userlearner_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 126
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.debugging.tests.userlearner_test.test_user_learner

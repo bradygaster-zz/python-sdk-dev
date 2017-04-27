@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -21,7 +22,6 @@ items:
       path: cntk/logging/graph.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.logging.graph
 - _type: function
@@ -44,11 +44,13 @@ items:
     parameters:
     - description: the root to start the journey from
       id: root
-      type: Function or Variable
+      type:
+      - Function or Variable
     - description: function that takes a node as argument and returns `True` if that
         node should be returned.
       id: visitor
-      type: Python function or lambda
+      type:
+      - Python function or lambda
     return:
       description: List of functions, for which `visitor` was `True`
   type: Method
@@ -75,10 +77,12 @@ items:
     parameters:
     - description: the node to start the journey from
       id: node
-      type: Function or Variable
+      type:
+      - Function or Variable
     - description: name for which we are search nodes
       id: node_name
-      type: str
+      type:
+      - str
     return:
       description: List of primitive (or block) functions having the specified name
   type: Method
@@ -105,10 +109,12 @@ items:
     parameters:
     - description: the node to start the journey from
       id: node
-      type: Function or Variable
+      type:
+      - Function or Variable
     - description: name for which we are search nodes
       id: node_name
-      type: str
+      type:
+      - str
     return:
       description: Primitive (or block) function having the specified name
   type: Method
@@ -133,7 +139,8 @@ items:
     parameters:
     - description: the node to start the journey from
       id: node
-      type: graph node
+      type:
+      - graph node
     return:
       description: A list of all node outputs
   type: Method
@@ -152,13 +159,12 @@ items:
       path: cntk/logging/graph.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 334
-  summary: ''
   syntax:
     parameters:
     - id: node
-    - default: None
+    - defaultValue: None
       id: dot_file_path
-    - default: None
+    - defaultValue: None
       id: png_file_path
   type: Method
   uid: cntk.logging.graph.output_function_graph
@@ -188,13 +194,15 @@ items:
     parameters:
     - description: the node to start the journey from
       id: node
-      type: graph node
-    - default: None
+      type:
+      - graph node
+    - defaultValue: None
       description: file with extension '.dot', 'png', 'pdf', or 'svg' to denote what
         format should be written. If *None* then nothing will be plotted, and the
         returned string can be used to debug the graph.
       id: filename
-      type: str, default None
+      type:
+      - str, default None
     return:
       description: '*str* describing the graph'
   type: Method

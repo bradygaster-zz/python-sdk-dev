@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -5,9 +6,8 @@ items:
   class: cntk.device.DeviceKind
   fullName: cntk.device.DeviceKind
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: enum.Enum
+  - - type: enum.Enum
+    - type: builtins.object
   langs:
   - python
   module: cntk.device

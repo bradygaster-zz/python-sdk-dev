@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -16,7 +17,6 @@ items:
       path: cntk/internal/tests/swig_helper_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.internal.tests.swig_helper_tests
 - _type: function
@@ -33,7 +33,6 @@ items:
       path: cntk/internal/tests/swig_helper_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 16
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.internal.tests.swig_helper_tests.test_typemap

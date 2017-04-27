@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -20,7 +21,6 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.ops.functions
 - _type: function
@@ -55,7 +55,6 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 1068
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.functions.save_model

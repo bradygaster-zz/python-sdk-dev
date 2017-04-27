@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -45,7 +46,6 @@ items:
       path: cntk/ops/tests/linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 197
-  summary: ''
   syntax:
     parameters:
     - id: left_operand
@@ -68,7 +68,6 @@ items:
       path: cntk/ops/tests/linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 177
-  summary: ''
   syntax:
     parameters:
     - id: left_operand
@@ -91,7 +90,6 @@ items:
       path: cntk/ops/tests/linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 156
-  summary: ''
   syntax:
     parameters:
     - id: left_operand
@@ -114,7 +112,6 @@ items:
       path: cntk/ops/tests/linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 224
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -136,7 +133,6 @@ items:
       path: cntk/ops/tests/linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 35
-  summary: ''
   syntax:
     parameters:
     - id: left_operand
@@ -159,7 +155,6 @@ items:
       path: cntk/ops/tests/linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 79
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -180,7 +175,6 @@ items:
       path: cntk/ops/tests/linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 59
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -201,7 +195,6 @@ items:
       path: cntk/ops/tests/linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 111
-  summary: ''
   syntax:
     parameters:
     - id: left_batch
@@ -224,7 +217,6 @@ items:
       path: cntk/ops/tests/linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 258
-  summary: ''
   syntax:
     parameters:
     - id: left_operand
@@ -247,7 +239,6 @@ items:
       path: cntk/ops/tests/linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 331
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -268,7 +259,6 @@ items:
       path: cntk/ops/tests/linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 315
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -289,7 +279,6 @@ items:
       path: cntk/ops/tests/linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 287
-  summary: ''
   syntax:
     parameters:
     - id: left_operand

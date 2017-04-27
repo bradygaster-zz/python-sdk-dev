@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -12,9 +13,8 @@ items:
   class: cntk.train.distributed.Communicator
   fullName: cntk.train.distributed.Communicator
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.DistributedCommunicator
+  - - type: cntk.cntk_py.DistributedCommunicator
+    - type: builtins.object
   langs:
   - python
   module: cntk.train.distributed

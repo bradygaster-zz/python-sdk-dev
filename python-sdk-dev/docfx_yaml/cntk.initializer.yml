@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -24,7 +25,6 @@ items:
       path: cntk/initializer.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.initializer
 - _type: function
@@ -46,10 +46,12 @@ items:
     parameters:
     - description: kernel width
       id: kernel_width
-      type: int
+      type:
+      - int
     - description: kernel height
       id: kernel_height
-      type: int
+      type:
+      - int
     return:
       description: initializer for `Parameter` useful for deconvolution layer
   type: Method
@@ -71,21 +73,25 @@ items:
   summary: initializer
   syntax:
     parameters:
-    - default: '2147483647'
+    - defaultValue: '2147483647'
       description: scale
       id: scale
-      type: float
-    - default: '2147483647'
+      type:
+      - float
+    - defaultValue: '2147483647'
       description: output rank
       id: output_rank
-      type: int
-    - default: '1'
+      type:
+      - int
+    - defaultValue: '1'
       description: filter rank
       id: filter_rank
-      type: int
+      type:
+      - int
     - description: random seed
       id: seed
-      type: int
+      type:
+      - int
     return:
       description: initializer for `Parameter` initialized to Gaussian distribution
         with mean *0* and standard deviation $$scale*sqrt(2.0/(fanIn+fanOut))$$
@@ -108,21 +114,25 @@ items:
   summary: Glorot initializer
   syntax:
     parameters:
-    - default: '2147483647'
+    - defaultValue: '2147483647'
       description: scale
       id: scale
-      type: float
-    - default: '2147483647'
+      type:
+      - float
+    - defaultValue: '2147483647'
       description: output rank
       id: output_rank
-      type: int
-    - default: '1'
+      type:
+      - int
+    - defaultValue: '1'
       description: filter rank
       id: filter_rank
-      type: int
+      type:
+      - int
     - description: random seed
       id: seed
-      type: int
+      type:
+      - int
     return:
       description: initializer for `Parameter` initialized to uniform distribution
         between $$scale*sqrt(6.0/(fanIn+fanOut))*[-1,1]$$
@@ -145,21 +155,25 @@ items:
   summary: initializer
   syntax:
     parameters:
-    - default: '2147483647'
+    - defaultValue: '2147483647'
       description: scale
       id: scale
-      type: float
-    - default: '2147483647'
+      type:
+      - float
+    - defaultValue: '2147483647'
       description: output rank
       id: output_rank
-      type: int
-    - default: '1'
+      type:
+      - int
+    - defaultValue: '1'
       description: filter rank
       id: filter_rank
-      type: int
+      type:
+      - int
     - description: random seed
       id: seed
-      type: int
+      type:
+      - int
     return:
       description: initializer for `Parameter` initialized to Gaussian distribution
         with mean *0* and standard deviation $$scale*sqrt(2.0/fanIn)$$
@@ -182,21 +196,25 @@ items:
   summary: initializer
   syntax:
     parameters:
-    - default: '2147483647'
+    - defaultValue: '2147483647'
       description: scale
       id: scale
-      type: float
-    - default: '2147483647'
+      type:
+      - float
+    - defaultValue: '2147483647'
       description: output rank
       id: output_rank
-      type: int
-    - default: '1'
+      type:
+      - int
+    - defaultValue: '1'
       description: filter rank
       id: filter_rank
-      type: int
+      type:
+      - int
     - description: random seed
       id: seed
-      type: int
+      type:
+      - int
     return:
       description: initializer for `Parameter` initialized to uniform distribution
         between $$scale*sqrt(6.0/fanIn)*[-1,1]$$
@@ -223,14 +241,16 @@ items:
     - description: initializer whose output_rank and filter_rank parameters are to
         be overriden
       id: initializer
-    - default: None
+    - defaultValue: None
       description: new output rank value
       id: output_rank
-      type: int
-    - default: None
+      type:
+      - int
+    - defaultValue: None
       description: new filter rank value
       id: filter_rank
-      type: int
+      type:
+      - int
     return:
       description: new initializer for `Parameter` with specified output_rank and
         filter_rank
@@ -255,19 +275,23 @@ items:
     parameters:
     - description: scale
       id: scale
-      type: float
-    - default: None
+      type:
+      - float
+    - defaultValue: None
       description: output rank
       id: output_rank
-      type: int
-    - default: '2147483647'
+      type:
+      - int
+    - defaultValue: '2147483647'
       description: filter rank
       id: filter_rank
-      type: int
-    - default: '2147483647'
+      type:
+      - int
+    - defaultValue: '2147483647'
       description: random seed
       id: seed
-      type: int
+      type:
+      - int
     return:
       description: initializer for `cntk.ops.variables.Parameter` initialized to normal
         distribution with mean *0* and standard deviation *scale*.
@@ -292,11 +316,13 @@ items:
     parameters:
     - description: scale
       id: scale
-      type: float
-    - default: None
+      type:
+      - float
+    - defaultValue: None
       description: random seed
       id: seed
-      type: int
+      type:
+      - int
     return:
       description: initializer for `cntk.ops.variables.Parameter` initialized to uniform
         distribution between *scale*[-1.0, 1.0]* note this maps to the "uniform1"
@@ -320,21 +346,25 @@ items:
   summary: Xavier initializer
   syntax:
     parameters:
-    - default: '2147483647'
+    - defaultValue: '2147483647'
       description: scale
       id: scale
-      type: float
-    - default: '2147483647'
+      type:
+      - float
+    - defaultValue: '2147483647'
       description: output rank
       id: output_rank
-      type: int
-    - default: '1'
+      type:
+      - int
+    - defaultValue: '1'
       description: filter rank
       id: filter_rank
-      type: int
+      type:
+      - int
     - description: random seed
       id: seed
-      type: int
+      type:
+      - int
     return:
       description: initializer for `Parameter` initialized to Gaussian distribution
         with mean *0* and standard deviation $$scale*sqrt(3.0/fanIn)$$

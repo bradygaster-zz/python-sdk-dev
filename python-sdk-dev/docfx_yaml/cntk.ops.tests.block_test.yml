@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -36,7 +37,6 @@ items:
       path: cntk/ops/tests/block_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 115
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.block_test.test_as_block_with_function_in_arguments_map
@@ -54,7 +54,6 @@ items:
       path: cntk/ops/tests/block_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 104
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.block_test.test_block_with_duplicate_inputs
@@ -72,7 +71,6 @@ items:
       path: cntk/ops/tests/block_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 81
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.block_test.test_combine_op_as_block
@@ -90,7 +88,6 @@ items:
       path: cntk/ops/tests/block_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 30
-  summary: ''
   syntax:
     parameters:
     - id: input_shape

@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -19,7 +20,6 @@ items:
       path: cntk/io/transforms.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.io.transforms
 - _type: function
@@ -39,25 +39,28 @@ items:
   summary: Color transform that can be used to pass to *map_features* for data augmentation.
   syntax:
     parameters:
-    - default: '0.0'
+    - defaultValue: '0.0'
       description: Radius for brightness change. Must be set within [0.0, 1.0]. For
         example, assume brightness_radius = 0.2, a random number *x* is uniformly
         drawn from [-0.2, 0.2], and every pixel's value is added by *x*meanVal*, where
         meanVal is the mean of the image pixel intensity combining all color channels.
       id: brightness_radius
-      type: float, default 0.0
-    - default: '0.0'
+      type:
+      - float, default 0.0
+    - defaultValue: '0.0'
       description: Radius for contrast change. Must be set within [0.0, 1.0]. For
         example, assume contrast_radius = 0.2, a random number *x* is uniformly drawn
         from [-0.2, 0.2], and every pixel's value is multiplied by *1+x*.
       id: contrast_radius
-      type: float, default 0.0
+      type:
+      - float, default 0.0
     - description: Radius for saturation change. Only for color images and must be
         set within [0.0, 1.0]. For example, assume saturation_radius = 0.2, a random
         number *x* is uniformly drawn from [-0.2, 0.2], and every pixel's saturation
         is multiplied by *1+x*.
       id: saturation_radius
-      type: float, default 0.0
+      type:
+      - float, default 0.0
     return:
       description: A dictionary-like object describing the mean transform
   type: Method
@@ -79,22 +82,24 @@ items:
   summary: Crop transform that can be used to pass to *map_features*
   syntax:
     parameters:
-    - default: '1.0'
+    - defaultValue: '1.0'
       description: '''center'', ''randomside'', ''randomarea'', or ''multiview10''.  ''randomside''
         and ''randomarea'' are usually used during training, while ''center'' and
         ''multiview10'' are usually used during testing. Random cropping is a popular
         data augmentation technique used to improve generalization of the DNN.'
       id: crop_type
-      type: str, default 'center'
-    - default: '0.0'
+      type:
+      - str, default 'center'
+    - defaultValue: '0.0'
       description: crop size in pixels. Ignored if set to 0. When crop_size is non-zero,
         for example, crop_size=256, it means a cropping window of size 256x256 pixels
         will be taken. If one want to crop with non-square shapes, specify crop_size=256:224
         will crop 256x224 (width x height) pixels. *When crop_size is specified, side_ratio,
         area_ratio and aspect_ratio will be ignored.*
       id: crop_size
-      type: int, default 0
-    - default: '0.0'
+      type:
+      - int, default 0
+    - defaultValue: '0.0'
       description: It specifies the ratio of final image side (width or height) with
         respect to the original image. Ignored if set to 0.0. Otherwise, must be set
         within *(0,1]*. For example, with an input image size of 640x480, side_ratio
@@ -104,8 +109,9 @@ items:
         values like side_ratio=0.5:0.75, which means the crop will have size between
         240 (0.5*min(640, 480)) and 360 (0.75*min(640, 480)).
       id: side_ratio
-      type: float, default 0.0
-    - default: '0'
+      type:
+      - float, default 0.0
+    - defaultValue: '0'
       description: It specifies the area ratio of final image with respect to the
         original image. Ignored if set to 0.0. Otherwise, must be set within *(0,1]*.
         For example, for an input image size of 200x150 pixels, the area is 30,000.
@@ -114,8 +120,9 @@ items:
         use colon-delimited values such as area_ratio=0.3333:0.8, which means the
         crop will have size between 100 (sqrt(30,000*0.3333)) and 155 (sqrt(30,000*0.8)).
       id: area_ratio
-      type: float, default 0.0
-    - default: center
+      type:
+      - float, default 0.0
+    - defaultValue: center
       description: 'It specifies the aspect ratio (width/height or height/width) of
         the crop window. Must be set within *(0,1]*. For example, if due to size_ratio
         the crop size is 240x240, an aspect_ratio of 0.64 will change the window size
@@ -124,12 +131,14 @@ items:
         values such as aspect_ratio=0.64:1.0, which means the crop will have size
         between 192x300 (or euqally likely 300x192) and 240x240.'
       id: aspect_ratio
-      type: float, default 1.0
+      type:
+      - float, default 1.0
     - description: crop scale jitter type, possible values are 'none' and 'uniratio'.
         'uniratio' means uniform distributed jitter scale between the minimum and
         maximum ratio values.
       id: jitter_type
-      type: str, default 'none'
+      type:
+      - str, default 'none'
     return:
       description: A dictionary-like object describing the crop transform
   type: Method
@@ -154,7 +163,8 @@ items:
     - description: file that stores the mean values for each pixel in OpenCV matrix
         XML format
       id: filename
-      type: str
+      type:
+      - str
     return:
       description: A dictionary-like object describing the mean transform
       type: dict
@@ -177,31 +187,37 @@ items:
   summary: Scale transform that can be used to pass to *map_features* for data augmentation.
   syntax:
     parameters:
-    - default: fill
+    - defaultValue: fill
       description: width of the image in pixels
       id: width
-      type: int
-    - default: linear
+      type:
+      - int
+    - defaultValue: linear
       description: height of the image in pixels
       id: height
-      type: int
+      type:
+      - int
     - description: channels of the image
       id: channels
-      type: int
+      type:
+      - int
     - description: possible values are 'nearest', 'linear', 'cubic', and 'lanczos'
       id: interpolations
-      type: str, default 'linear'
+      type:
+      - str, default 'linear'
     - description: '''fill'', ''crop'' or ''pad''. ''fill'' - warp the image to the
         given target size. ''crop'' - resize the image''s shorter side to the given
         target size and crop the overlap. ''pad''  - resize the image''s larger side
         to the given target size, center it and pad the rest'
       id: scale_mode
-      type: str, default 'fill'
-    - default: '-1'
+      type:
+      - str, default 'fill'
+    - defaultValue: '-1'
       description: -1 or int value. The pad value used for the 'pad' mode. If set
         to -1 then the border will be replicated.
       id: pad_value
-      type: int, default -1
+      type:
+      - int, default -1
     return:
       description: A dictionary-like object describing the scale transform
   type: Method

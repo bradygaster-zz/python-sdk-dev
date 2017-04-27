@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -6,9 +7,8 @@ items:
   class: cntk.learners.UserLearner
   fullName: cntk.learners.UserLearner
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.Learner
+  - - type: cntk.cntk_py.Learner
+    - type: builtins.object
   langs:
   - python
   module: cntk.learners
@@ -55,14 +55,17 @@ items:
     - description: maps `Parameter` to a NumPy array containing the first order gradient
         values for the Parameter w.r.t. the training objective.
       id: gradient_values
-      type: dict
+      type:
+      - dict
     - description: number of samples in the minibatch
       id: training_sample_count
-      type: int
+      type:
+      - int
     - description: if the data is fed by a conforming reader, this indicates whether
         a full pass over the dataset has just occured.
       id: sweep_end
-      type: bool
+      type:
+      - bool
     return:
       description: '*False* to indicate that learning has stopped for all of the parameters
         associated with this learner'

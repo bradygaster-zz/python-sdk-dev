@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -28,7 +29,6 @@ items:
       path: cntk/internal/sanitize.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.internal.sanitize
 - _type: function
@@ -81,7 +81,8 @@ items:
 
         * None: denote all available axes'
       id: axis
-      type: Axis or int or None
+      type:
+      - Axis or int or None
   type: Method
   uid: cntk.internal.sanitize.sanitize_axis
 - _type: function
@@ -103,7 +104,8 @@ items:
     parameters:
     - description: input variable into which `batch` is passed
       id: var
-      type: Variable
+      type:
+      - Variable
     - description: 'batch input for *var*. It can be
 
 
@@ -121,10 +123,12 @@ items:
         that tell whether a sequence is a new sequence (*True*) or a continuation
         of the sequence in the same slot of the previous minibatch (*False*)
       id: seq_starts
-      type: list of bools or None
+      type:
+      - list of bools or None
     - description: device this value should be put on
       id: device
-      type: DeviceDescriptor, default None
+      type:
+      - DeviceDescriptor, default None
     return:
       description: batch converted to a `Value` instance that can be passed to the
         core API
@@ -144,7 +148,6 @@ items:
       path: cntk/internal/sanitize.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 374
-  summary: ''
   syntax:
     parameters:
     - id: dtype
@@ -164,7 +167,6 @@ items:
       path: cntk/internal/sanitize.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 359
-  summary: ''
   syntax:
     parameters:
     - id: dtype
@@ -184,7 +186,6 @@ items:
       path: cntk/internal/sanitize.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 414
-  summary: ''
   syntax:
     parameters:
     - id: axes
@@ -232,14 +233,16 @@ items:
   syntax:
     parameters:
     - id: arg
-    - default: None
+    - defaultValue: None
       description: input
       id: arg
-      type: number, NumPy array, Variable, or Function
-    - default: <class 'numpy.float32'>
+      type:
+      - number, NumPy array, Variable, or Function
+    - defaultValue: <class 'numpy.float32'>
       description: fallback dtype in case `arg` is a list
       id: fallback_dtype
-      type: NumPy dtype
+      type:
+      - NumPy dtype
     return:
       description: Leaves Constant, Parameter, and Variable as is. Returns Constant,
         if `arg` is a number or NumPy array. Variable otherwise.
@@ -265,7 +268,8 @@ items:
     - description: precision, if string it can be one of 'float' 'float32, 'double',
         or 'float64'
       id: precision
-      type: str or np.float32 or np.float64
+      type:
+      - str or np.float32 or np.float64
     return:
       description: NumPy precision
   type: Method
@@ -310,15 +314,18 @@ items:
     parameters:
     - description: shape of the value
       id: shape
-      type: tuple
+      type:
+      - tuple
     - description: the value to be converted
       id: value
-      type: None or value that can be cast to NumPy array
+      type:
+      - None or value that can be cast to NumPy array
     - description: data type (np.float32 or np.float64)
       id: dtype
     - description: device this value should be put on
       id: device
-      type: DeviceDescriptor
+      type:
+      - DeviceDescriptor
     return:
       description: '`NDArrayView` object representing `value`'
   type: Method
@@ -342,11 +349,12 @@ items:
     and `test_minibatch()`).
   syntax:
     parameters:
-    - default: None
+    - defaultValue: None
       description: arguments of the root function. In `forward()` pass it is typically
         *op.arguments*, in `backward()` pass it is *op.outputs*
       id: op_arguments
-      type: Function
+      type:
+      - Function
     - description: "maps variables to their input data. The interpretation depends\
         \ on the input type:\n\n   * dict: keys are input variable or names, and values\
         \ are the input data.\n\n   * any other type: if node has a unique input,\
@@ -369,18 +377,21 @@ items:
     - description: if string it can be one of 'float' 'float32, 'double', 'float64',
         or None
       id: precision
-      type: str or np.float32 or np.float64
-    - default: 'True'
+      type:
+      - str or np.float32 or np.float64
+    - defaultValue: 'True'
       description: device this value should be put on
       id: device
-      type: DeviceDescriptor, default None
-    - default: None
+      type:
+      - DeviceDescriptor, default None
+    - defaultValue: None
       description: specifies if `MinibatchData` instances in the arguments map are
         converted to the underlying value (`Value`) instances (default), or if they
         should remain intact, as they contain additional meta information required
         by the Trainer (specifically, by the `train_minibatch()` method).
       id: extract_values_from_minibatch_data
-      type: bool, defaults to True
+      type:
+      - bool, defaults to True
     return:
       description: '*dict* that maps variables to sanitized batches'
   type: Method
@@ -399,7 +410,6 @@ items:
       path: cntk/internal/sanitize.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 424
-  summary: ''
   syntax:
     parameters:
     - id: var_value_dict

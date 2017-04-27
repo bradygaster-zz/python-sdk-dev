@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -6,7 +7,7 @@ items:
   class: cntk.debugging.tests.debug_test.InStream
   fullName: cntk.debugging.tests.debug_test.InStream
   inheritance:
-  - type: builtins.object
+  - - type: builtins.object
   langs:
   - python
   module: cntk.debugging.tests.debug_test
@@ -40,7 +41,6 @@ items:
       path: cntk/debugging/tests/debug_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 52
-  summary: ''
   syntax:
     parameters:
     - id: self

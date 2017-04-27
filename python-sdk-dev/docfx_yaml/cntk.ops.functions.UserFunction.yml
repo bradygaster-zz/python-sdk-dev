@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -8,9 +9,10 @@ items:
   class: cntk.ops.functions.UserFunction
   fullName: cntk.ops.functions.UserFunction
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.ops.functions.Function
+  - - type: cntk.ops.functions.Function
+    - type: cntk.cntk_py.Function
+    - type: cntk.cntk_py.IDictionarySerializable
+    - type: builtins.object
   langs:
   - python
   module: cntk.ops.functions
@@ -37,15 +39,18 @@ items:
     parameters:
     - description: inputs to this function
       id: inputs
-      type: list
+      type:
+      - list
     - description: whether the data should be automatically converted from and to
         NumPy. Defaults to True. Specifying this as *False* passes the data as CNTK
         Value objects.
       id: as_numpy
-      type: bool, optional
+      type:
+      - bool, optional
     - description: name of this function
       id: name
-      type: str
+      type:
+      - str
   type: Class
   uid: cntk.ops.functions.UserFunction
 - _type: method

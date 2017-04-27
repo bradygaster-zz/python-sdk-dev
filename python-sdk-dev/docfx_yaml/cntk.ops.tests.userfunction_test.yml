@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -50,7 +51,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 179
-  summary: ''
   syntax:
     parameters:
     - id: payload
@@ -70,7 +70,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 48
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_1
@@ -88,7 +87,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 59
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_2_only_param
@@ -106,7 +104,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 72
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_3_no_input
@@ -124,7 +121,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 82
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_4_a_inside_graph
@@ -142,7 +138,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 93
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_4_b_inside_graph
@@ -160,7 +155,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 103
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_5_times
@@ -178,7 +172,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 114
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_6_clone
@@ -196,7 +189,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 129
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_7_placeholder
@@ -214,7 +206,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 240
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_lambdafunc
@@ -232,7 +223,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 142
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_train
@@ -250,7 +240,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 332
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_multioutput_udf
@@ -268,7 +257,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 165
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_udf_clone
@@ -286,7 +274,6 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 293
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_udf_plus_and_last

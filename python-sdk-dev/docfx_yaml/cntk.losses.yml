@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -21,7 +22,6 @@ items:
       path: cntk/losses/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.losses
 - _type: function
@@ -53,7 +53,8 @@ items:
       id: target
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -84,7 +85,8 @@ items:
       id: x
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -125,7 +127,8 @@ items:
     parameters:
     - description: numpy array or any `Function` that outputs a tensor
       id: y
-      type: x,
+      type:
+      - x,
     - description: non-zero positive integer representing number of shift to generate
         a negative sample
       id: shift
@@ -133,7 +136,8 @@ items:
       id: num_negative_samples
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -180,10 +184,12 @@ items:
       id: target_vector
     - description: if given, cross entropy will be computed along this axis
       id: axis
-      type: int or Axis, optional
+      type:
+      - int or Axis, optional
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -230,7 +236,8 @@ items:
       id: target
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -265,7 +272,8 @@ items:
       id: weight
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method

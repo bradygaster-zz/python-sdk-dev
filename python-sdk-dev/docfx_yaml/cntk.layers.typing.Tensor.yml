@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -5,7 +6,7 @@ items:
   class: cntk.layers.typing.Tensor
   fullName: cntk.layers.typing.Tensor
   inheritance:
-  - type: builtins.object
+  - - type: builtins.object
   langs:
   - python
   module: cntk.layers.typing

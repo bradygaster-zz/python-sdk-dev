@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -41,7 +42,6 @@ items:
       path: cntk/ops/tests/userfunction_complex_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 47
-  summary: ''
   syntax:
     parameters:
     - id: input
@@ -63,7 +63,6 @@ items:
       path: cntk/ops/tests/userfunction_complex_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 54
-  summary: ''
   syntax:
     parameters:
     - id: input
@@ -87,7 +86,6 @@ items:
       path: cntk/ops/tests/userfunction_complex_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 27
-  summary: ''
   syntax:
     parameters:
     - id: sample_size
@@ -109,7 +107,6 @@ items:
       path: cntk/ops/tests/userfunction_complex_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 39
-  summary: ''
   syntax:
     parameters:
     - id: input_var
@@ -130,7 +127,6 @@ items:
       path: cntk/ops/tests/userfunction_complex_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 149
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -150,7 +146,6 @@ items:
       path: cntk/ops/tests/userfunction_complex_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 62
-  summary: ''
   syntax:
     parameters:
     - id: trainer
@@ -172,7 +167,6 @@ items:
       path: cntk/ops/tests/userfunction_complex_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 141
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -192,7 +186,6 @@ items:
       path: cntk/ops/tests/userfunction_complex_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 72
-  summary: ''
   syntax:
     parameters:
     - id: nonlinearity

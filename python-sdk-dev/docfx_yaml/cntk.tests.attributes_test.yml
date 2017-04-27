@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -19,7 +20,6 @@ items:
       path: cntk/tests/attributes_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.tests.attributes_test
 - _type: function
@@ -36,7 +36,6 @@ items:
       path: cntk/tests/attributes_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 16
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.tests.attributes_test.test_convolution_attributes
@@ -54,7 +53,6 @@ items:
       path: cntk/tests/attributes_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 33
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.tests.attributes_test.test_convolution_transpose_attributes
@@ -72,7 +70,6 @@ items:
       path: cntk/tests/attributes_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 50
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.tests.attributes_test.test_dropout_attributes
@@ -90,7 +87,6 @@ items:
       path: cntk/tests/attributes_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 57
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.tests.attributes_test.test_slice_attributes

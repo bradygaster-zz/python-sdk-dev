@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -35,7 +36,6 @@ items:
       path: cntk/ops/tests/random_sample_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 49
-  summary: ''
   syntax:
     parameters:
     - id: weights
@@ -62,7 +62,6 @@ items:
       path: cntk/ops/tests/random_sample_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 70
-  summary: ''
   syntax:
     parameters:
     - id: weights
@@ -87,7 +86,6 @@ items:
       path: cntk/ops/tests/random_sample_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 101
-  summary: ''
   syntax:
     parameters:
     - id: weights

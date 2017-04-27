@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -9,9 +10,8 @@ items:
   class: cntk.learners.Learner
   fullName: cntk.learners.Learner
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.Learner
+  - - type: cntk.cntk_py.Learner
+    - type: builtins.object
   langs:
   - python
   module: cntk.learners
@@ -103,7 +103,8 @@ items:
     - id: self
     - description: learning rate to reset to
       id: learning_rate
-      type: output of learning_rate_schedule()
+      type:
+      - output of learning_rate_schedule()
   type: Method
   uid: cntk.learners.Learner.reset_learning_rate
 - _type: method
@@ -128,10 +129,12 @@ items:
     - description: maps `Parameter` to a NumPy array containing the first order gradient
         values for the Parameter w.r.t. the training objective.
       id: gradient_values
-      type: dict
+      type:
+      - dict
     - description: number of samples in the minibatch
       id: training_sample_count
-      type: int
+      type:
+      - int
     return:
       description: '*False* to indicate that learning has stopped for all of the parameters
         associated with this learner'

@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -18,9 +19,8 @@ items:
   class: cntk.axis.Axis
   fullName: cntk.axis.Axis
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.Axis
+  - - type: cntk.cntk_py.Axis
+    - type: builtins.object
   langs:
   - python
   module: cntk.axis
@@ -306,7 +306,8 @@ items:
     parameters:
     - description: name of the dynmic axis
       id: name
-      type: str
+      type:
+      - str
     return:
       description: new unique dynamic axis
       type: Axis
@@ -332,11 +333,12 @@ items:
   syntax:
     parameters:
     - id: self
-    - default: 'True'
+    - defaultValue: 'True'
       description: if True then this function will throw an exception if the axis
         is not static.
       id: checked
-      type: bool
+      type:
+      - bool
     return:
       description: the number with which the static axis is defined.
       type: int

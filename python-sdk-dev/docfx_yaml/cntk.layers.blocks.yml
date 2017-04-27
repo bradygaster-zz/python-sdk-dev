@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -71,19 +72,23 @@ items:
     parameters:
     - description: the object you want to make constant
       id: value
-      type: object
-    - default: ''
+      type:
+      - object
+    - defaultValue: ''
       description: vector or tensor dimension of the output of this layer
       id: shape
-      type: int or tuple of ints
-    - default: <cntk.default_options.default_override_or object at 0x2afede35ccc0>
+      type:
+      - int or tuple of ints
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad41166cc0>
       description: data type
       id: dtype
-      type: np.dtype, defaults to np.float32
-    - default: None
+      type:
+      - np.dtype, defaults to np.float32
+    - defaultValue: None
       description: the name of the Function instance in the network
       id: name
-      type: str, defaults to ''
+      type:
+      - str, defaults to ''
   type: Method
   uid: cntk.layers.blocks.Constant
 - _type: function
@@ -126,31 +131,38 @@ items:
     parameters:
     - description: vector or tensor dimension of the output of this layer
       id: shape
-      type: int or tuple of ints
-    - default: ''
+      type:
+      - int or tuple of ints
+    - defaultValue: ''
       description: ''
       id: cell_shape
-      type: tuple, defaults to None
-    - default: <cntk.default_options.default_override_or object at 0x2afede3afba8>
+      type:
+      - tuple, defaults to None
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9be0>
       description: function to apply at the end, e.g. *relu*
       id: activation
-      type: Function, defaults to tanh
-    - default: <cntk.default_options.default_override_or object at 0x2afede3afb70>
+      type:
+      - Function, defaults to tanh
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9ba8>
       description: initial value of weights *W*
       id: init
-      type: scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - default: <cntk.default_options.default_override_or object at 0x2afede3afb38>
+      type:
+      - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9b70>
       description: initial value of weights *b*
       id: init_bias
-      type: scalar or NumPy array or cntk.initializer, defaults to 0
-    - default: <cntk.default_options.default_override_or object at 0x2afede3afac8>
+      type:
+      - scalar or NumPy array or cntk.initializer, defaults to 0
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9b00>
       description: ''
       id: enable_self_stabilization
-      type: bool, defaults to False
-    - default: None
+      type:
+      - bool, defaults to False
+    - defaultValue: None
       description: the name of the Function instance in the network
       id: name
-      type: str, defaults to ''
+      type:
+      - str, defaults to ''
     return:
       description: A function (prev_h, input) -> h)
       type: cntk.ops.functions.Function
@@ -175,29 +187,35 @@ items:
     parameters:
     - description: vector or tensor dimension of the output of this layer
       id: shape
-      type: int or tuple of ints
-    - default: ''
+      type:
+      - int or tuple of ints
+    - defaultValue: ''
       description: data type
       id: dtype
-      type: np.dtype, defaults to np.float32
-    - default: (<cntk.axis.Axis; proxy of <Swig Object of type 'CNTK::Axis *' at 0x2afede356630>
-        >, <cntk.axis.Axis; proxy of <Swig Object of type 'CNTK::Axis *' at 0x2afede356510>
-        >)
+      type:
+      - np.dtype, defaults to np.float32
+    - defaultValue: (<cntk.axis.Axis; proxy of <Swig Object of type 'CNTK::Axis *'
+        at 0x2aad41160630> >, <cntk.axis.Axis; proxy of <Swig Object of type 'CNTK::Axis
+        *' at 0x2aad41160510> >)
       description: ''
       id: needs_gradient
-      type: bool, defaults to True
-    - default: 'False'
+      type:
+      - bool, defaults to True
+    - defaultValue: 'False'
       description: ''
       id: is_sparse
-      type: bool, defaults to False
-    - default: 'True'
+      type:
+      - bool, defaults to False
+    - defaultValue: 'True'
       description: ''
       id: dynamic_axes
-      type: object, Axis.default_input_variable_dynamic_axes
-    - default: <cntk.default_options.default_override_or object at 0x2afede35cd68>
+      type:
+      - object, Axis.default_input_variable_dynamic_axes
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad41166d68>
       description: the name of the Function instance in the network
       id: name
-      type: str, defaults to ''
+      type:
+      - str, defaults to ''
   type: Method
   uid: cntk.layers.blocks.Input
 - _type: function
@@ -219,35 +237,43 @@ items:
     parameters:
     - description: vector or tensor dimension of the output of this layer
       id: shape
-      type: int or tuple of ints
-    - default: ''
+      type:
+      - int or tuple of ints
+    - defaultValue: ''
       description: ''
       id: cell_shape
-      type: tuple, defaults to None
-    - default: <cntk.default_options.default_override_or object at 0x2afede37a5f8>
+      type:
+      - tuple, defaults to None
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411845c0>
       description: function to apply at the end, e.g. *relu*
       id: activation
-      type: Function, defaults to tanh
-    - default: <cntk.default_options.default_override_or object at 0x2afede369710>
+      type:
+      - Function, defaults to tanh
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411736d8>
       description: ''
       id: use_peepholes
-      type: bool, defaults to False
-    - default: <cntk.default_options.default_override_or object at 0x2afede3644a8>
+      type:
+      - bool, defaults to False
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad4116e470>
       description: initial value of weights *W*
       id: init
-      type: scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - default: <cntk.default_options.default_override_or object at 0x2afede364470>
+      type:
+      - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad4116e438>
       description: initial value of weights *b*
       id: init_bias
-      type: scalar or NumPy array or cntk.initializer, defaults to 0
-    - default: <cntk.default_options.default_override_or object at 0x2afede372cf8>
+      type:
+      - scalar or NumPy array or cntk.initializer, defaults to 0
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad4117ccc0>
       description: ''
       id: enable_self_stabilization
-      type: bool, defaults to False
-    - default: None
+      type:
+      - bool, defaults to False
+    - defaultValue: None
       description: the name of the Function instance in the network
       id: name
-      type: str, defaults to ''
+      type:
+      - str, defaults to ''
     return:
       description: A function (prev_h, prev_c, input) -> h)
       type: cntk.ops.functions.Function
@@ -270,20 +296,24 @@ items:
   summary: Constructs a Parameter variable.
   syntax:
     parameters:
-    - default: <cntk.default_options.default_override_or object at 0x2afede35cc88>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad41166c88>
       description: vector or tensor dimension of the output of this layer
       id: shape
-      type: int or tuple of ints
+      type:
+      - int or tuple of ints
     - description: initial value of weights *W*
       id: init
-      type: scalar or NumPy array or cntk.initializer
+      type:
+      - scalar or NumPy array or cntk.initializer
     - description: data type
       id: dtype
-      type: np.dtype, defaults to np.float32
-    - default: ''
+      type:
+      - np.dtype, defaults to np.float32
+    - defaultValue: ''
       description: the name of the Function instance in the network
       id: name
-      type: str, defaults to ''
+      type:
+      - str, defaults to ''
   type: Method
   uid: cntk.layers.blocks.Parameter
 - _type: function
@@ -303,21 +333,25 @@ items:
   summary: Constructs a Placeholder variable.
   syntax:
     parameters:
-    - default: 'False'
+    - defaultValue: 'False'
       description: vector or tensor dimension of the output of this layer
       id: shape
-      type: int or tuple of ints, defaults to None
-    - default: None
+      type:
+      - int or tuple of ints, defaults to None
+    - defaultValue: None
       description: ''
       id: dynamic_axes
-      type: object, defaults to None
-    - default: None
+      type:
+      - object, defaults to None
+    - defaultValue: None
       description: ''
       id: is_sparse
-      type: bool, defaults to False
+      type:
+      - bool, defaults to False
     - description: the name of the Function instance in the network
       id: name
-      type: str, defaults to 'placeholder'
+      type:
+      - str, defaults to 'placeholder'
   type: Method
   uid: cntk.layers.blocks.Placeholder
 - _type: function
@@ -339,31 +373,38 @@ items:
     parameters:
     - description: vector or tensor dimension of the output of this layer
       id: shape
-      type: int or tuple of ints
-    - default: ''
+      type:
+      - int or tuple of ints
+    - defaultValue: ''
       description: ''
       id: cell_shape
-      type: tuple, defaults to None
-    - default: <cntk.default_options.default_override_or object at 0x2afede3afa90>
+      type:
+      - tuple, defaults to None
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9ac8>
       description: function to apply at the end, e.g. *relu*
       id: activation
-      type: Function, defaults to signmoid
-    - default: <cntk.default_options.default_override_or object at 0x2afede3afa58>
+      type:
+      - Function, defaults to signmoid
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9a90>
       description: initial value of weights *W*
       id: init
-      type: scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - default: <cntk.default_options.default_override_or object at 0x2afede3afa20>
+      type:
+      - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9a58>
       description: initial value of weights *b*
       id: init_bias
-      type: scalar or NumPy array or cntk.initializer, defaults to 0
-    - default: <cntk.default_options.default_override_or object at 0x2afede3af9b0>
+      type:
+      - scalar or NumPy array or cntk.initializer, defaults to 0
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b99e8>
       description: ''
       id: enable_self_stabilization
-      type: bool, defaults to False
-    - default: None
+      type:
+      - bool, defaults to False
+    - defaultValue: None
       description: the name of the Function instance in the network
       id: name
-      type: str, defaults to ''
+      type:
+      - str, defaults to ''
     return:
       description: A function (prev_h, input) -> h) where h = activation (W * input
         + R * prev_h + b)
@@ -397,18 +438,21 @@ items:
     exploding gradients.'
   syntax:
     parameters:
-    - default: <cntk.default_options.default_override_or object at 0x2afede372d30>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad4117ccf8>
       description: ''
       id: steepness
-      type: int, defaults to 4
-    - default: '4'
+      type:
+      - int, defaults to 4
+    - defaultValue: '4'
       description: a flag that allows to disable itself. Useful if this is a global
         default
       id: enable_self_stabilization
-      type: bool, defaults to False
+      type:
+      - bool, defaults to False
     - description: the name of the Function instance in the network
       id: name
-      type: str, defaults to ''
+      type:
+      - str, defaults to ''
     return:
       description: A function
       type: cntk.ops.functions.Function
@@ -428,7 +472,6 @@ items:
       path: cntk/layers/blocks.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 28
-  summary: ''
   syntax:
     parameters:
     - id: name

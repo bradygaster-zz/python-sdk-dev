@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -17,7 +18,6 @@ items:
       path: cntk/debugging/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.debugging
 - _type: function
@@ -34,11 +34,10 @@ items:
       path: cntk/debugging/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 33
-  summary: ''
   syntax:
     parameters:
     - id: root
-    - default: None
+    - defaultValue: None
       id: tag
   type: Method
   uid: cntk.debugging.dump_function
@@ -60,7 +59,7 @@ items:
   syntax:
     parameters:
     - id: root
-    - default: None
+    - defaultValue: None
       id: tag
   type: Method
   uid: cntk.debugging.dump_signature

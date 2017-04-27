@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -5,9 +6,8 @@ items:
   class: cntk.train.training_session.CheckpointConfig
   fullName: cntk.train.training_session.CheckpointConfig
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.CheckpointConfig
+  - - type: cntk.cntk_py.CheckpointConfig
+    - type: builtins.object
   langs:
   - python
   module: cntk.train.training_session
@@ -27,19 +27,23 @@ items:
     parameters:
     - description: checkpoint file name.
       id: filename
-      type: str
+      type:
+      - str
     - description: checkpoint frequency in samples. If 0, no checkpointing takes place.
         If `sys.maxsize`, a single checkpoint is taken at the end of the training.
       id: frequency
-      type: int
+      type:
+      - int
     - description: saves all checkpoints, using `filename` as prefix and checkpoint
         index as a suffix.
       id: preserve_all
-      type: bool
+      type:
+      - bool
     - description: flag, indicating whether to restore from available checkpoint before
         the start of the training
       id: restore
-      type: bool
+      type:
+      - bool
   type: Class
   uid: cntk.train.training_session.CheckpointConfig
 references: []

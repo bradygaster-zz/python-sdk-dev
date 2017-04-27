@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -18,7 +19,6 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.logging.progress_print
 - _type: function
@@ -35,11 +35,10 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 505
-  summary: ''
   syntax:
     parameters:
     - id: model
-    - default: '0'
+    - defaultValue: '0'
       id: trace_level
   type: Method
   uid: cntk.logging.progress_print.log_number_of_parameters

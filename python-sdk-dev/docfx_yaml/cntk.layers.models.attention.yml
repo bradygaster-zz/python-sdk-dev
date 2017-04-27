@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -39,17 +40,17 @@ items:
   syntax:
     parameters:
     - id: attention_dim
-    - default: ''
+    - defaultValue: ''
       id: attention_span
-    - default: <cntk.default_options.default_override_or object at 0x2afede5c0630>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad413ca668>
       id: attention_axis
-    - default: <cntk.default_options.default_override_or object at 0x2afede5c05f8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad413ca630>
       id: init
-    - default: <cntk.default_options.default_override_or object at 0x2afede5c05c0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad413ca5f8>
       id: go_backwards
-    - default: None
+    - defaultValue: None
       id: enable_self_stabilization
-    - default: None
+    - defaultValue: None
       id: name
   type: Method
   uid: cntk.layers.models.attention.AttentionModel

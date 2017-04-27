@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -19,7 +20,6 @@ items:
       path: cntk/sample_installer.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.sample_installer
 - _type: function
@@ -36,7 +36,6 @@ items:
       path: cntk/sample_installer.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 24
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.sample_installer.default_sample_dir
@@ -54,7 +53,6 @@ items:
       path: cntk/sample_installer.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 31
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.sample_installer.default_sample_url
@@ -76,11 +74,11 @@ items:
     Python package requirements.
   syntax:
     parameters:
-    - default: None
+    - defaultValue: None
       description: the URL of the sample zip file (if passed `None`, which is default,
         the sample URL matching the CNTK module release is chosen)
       id: url
-    - default: None
+    - defaultValue: None
       description: the directory to extract the samples into (if passed `None`, which
         is default, a name matching the CNTK module release is chosen, `CNTK-Samples-<version>`)
       id: directory
@@ -102,7 +100,6 @@ items:
       path: cntk/sample_installer.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 21
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.sample_installer.module_is_unreleased

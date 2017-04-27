@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -19,9 +20,8 @@ items:
   class: cntk.train.trainer.Trainer
   fullName: cntk.train.trainer.Trainer
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.Trainer
+  - - type: cntk.cntk_py.Trainer
+    - type: builtins.object
   langs:
   - python
   module: cntk.train.trainer
@@ -59,20 +59,24 @@ items:
     parameters:
     - description: root node of the function to train
       id: model
-      type: Function
+      type:
+      - Function
     - description: Function with one or two outputs, representing loss and, if given,
         evaluation metric (in this order). Alternatively, a tuple(loss Function, evaluation
         Function) is also accepted.
       id: criterion
-      type: Python tuple of Function, or Function or
+      type:
+      - Python tuple of Function, or Function or
     - description: list of learners from `cntk.learner`
       id: parameter_learners
-      type: list
+      type:
+      - list
     - description: "optionally, list of progress writers from `cntk.utils` to automatically\
         \ track\n   training progress.\n\nTODO: Would be great to allow to skip some\
         \ parameters that should not be updated."
       id: progress_writers
-      type: list
+      type:
+      - list
   type: Class
   uid: cntk.train.trainer.Trainer
 - _type: attribute
@@ -231,7 +235,8 @@ items:
     - id: self
     - description: filename to restore the checkpoint from
       id: filename
-      type: str
+      type:
+      - str
   type: Method
   uid: cntk.train.trainer.Trainer.restore_from_checkpoint
 - _type: method
@@ -255,10 +260,11 @@ items:
     In distributed environment the checkpointing is done by the main worker.'
   syntax:
     parameters:
-    - default: '{}'
+    - defaultValue: '{}'
       description: filename to store the checkpoint.
       id: filename
-      type: str
+      type:
+      - str
   type: Method
   uid: cntk.train.trainer.Trainer.save_checkpoint
 - _type: method
@@ -326,7 +332,7 @@ items:
     Note: See `forward()` for examples on passing input data.'
   syntax:
     parameters:
-    - default: None
+    - defaultValue: None
       id: self
     - id: arguments
     - id: device
@@ -377,11 +383,11 @@ items:
     Note: See `forward()` for examples on passing input data.'
   syntax:
     parameters:
-    - default: None
+    - defaultValue: None
       id: self
     - id: arguments
     - id: outputs
-    - default: None
+    - defaultValue: None
       id: device
     return:
       description: If `outputs` have not been provided, the returned value is *True*

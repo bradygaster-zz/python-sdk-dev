@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -8,9 +9,11 @@ items:
   class: cntk.ops.tests.userfunction_complex_test.MySigmoid
   fullName: cntk.ops.tests.userfunction_complex_test.MySigmoid
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.ops.functions.UserFunction
+  - - type: cntk.ops.functions.UserFunction
+    - type: cntk.ops.functions.Function
+    - type: cntk.cntk_py.Function
+    - type: cntk.cntk_py.IDictionarySerializable
+    - type: builtins.object
   langs:
   - python
   module: cntk.ops.tests.userfunction_complex_test
@@ -46,7 +49,6 @@ items:
       path: cntk/ops/tests/userfunction_complex_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 132
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -69,14 +71,13 @@ items:
       path: cntk/ops/tests/userfunction_complex_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 127
-  summary: ''
   syntax:
     parameters:
-    - default: None
+    - defaultValue: None
       id: self
     - id: argument
     - id: device
-    - default: None
+    - defaultValue: None
       id: outputs_to_retain
   type: Method
   uid: cntk.ops.tests.userfunction_complex_test.MySigmoid.forward
@@ -95,7 +96,6 @@ items:
       path: cntk/ops/tests/userfunction_complex_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 137
-  summary: ''
   syntax:
     parameters:
     - id: self

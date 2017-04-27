@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -7,9 +8,8 @@ items:
   class: cntk.train.training_session.TrainingSession
   fullName: cntk.train.training_session.TrainingSession
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.TrainingSession
+  - - type: cntk.cntk_py.TrainingSession
+    - type: builtins.object
   langs:
   - python
   module: cntk.train.training_session
@@ -36,28 +36,36 @@ items:
     parameters:
     - description: trainer
       id: trainer
-      type: Trainer
+      type:
+      - Trainer
     - description: minibatch source used for training
       id: mb_source
-      type: MinibatchSource
+      type:
+      - MinibatchSource
     - description: minibatch size schedule for training
       id: mb_size
-      type: minibatch_size_schedule or int
+      type:
+      - minibatch_size_schedule or int
     - description: mapping between input variables and input streams
       id: var_to_stream
-      type: dict
+      type:
+      - dict
     - description: maximum number of samples used for training
       id: max_samples
-      type: int
+      type:
+      - int
     - description: frequency in samples for aggregated progress printing
       id: progress_frequency
-      type: int
+      type:
+      - int
     - description: checkpoint configuration
       id: checkpoint_config
-      type: CheckpointConfig
+      type:
+      - CheckpointConfig
     - description: cross validation configuration
       id: cv_config
-      type: CrossValidationConfig
+      type:
+      - CrossValidationConfig
   type: Class
   uid: cntk.train.training_session.TrainingSession
 - _type: method
@@ -81,16 +89,20 @@ items:
     - id: self
     - description: index of the current callback.
       id: index
-      type: int
+      type:
+      - int
     - description: average error for the cross validation
       id: average_error
-      type: float
+      type:
+      - float
     - description: number of samples in cross validation
       id: num_samples
-      type: int
+      type:
+      - int
     - description: number of minibatch in cross validation
       id: num_minibatches
-      type: int
+      type:
+      - int
     return:
       description: True if training should continue, False otherwise.
   type: Method
@@ -116,7 +128,8 @@ items:
     - description: the device descriptor containing the type and id of the device
         where training takes place.
       id: device
-      type: DeviceDescriptor
+      type:
+      - DeviceDescriptor
   type: Method
   uid: cntk.train.training_session.TrainingSession.train
 references:

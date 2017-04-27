@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -33,7 +34,6 @@ items:
       path: cntk/tests/device_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 15
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.tests.device_test.test_device_kind

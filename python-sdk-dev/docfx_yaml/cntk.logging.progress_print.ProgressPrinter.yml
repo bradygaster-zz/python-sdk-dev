@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -21,9 +22,8 @@ items:
   class: cntk.logging.progress_print.ProgressPrinter
   fullName: cntk.logging.progress_print.ProgressPrinter
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.ProgressWriter
+  - - type: cntk.cntk_py.ProgressWriter
+    - type: builtins.object
   langs:
   - python
   module: cntk.logging.progress_print
@@ -65,38 +65,48 @@ items:
         number: 2*``freq``, print for minibatch number: 3*``freq``,...). A value of
         None means no per-minibatch log.'
       id: freq
-      type: int or None, default None
+      type:
+      - int or None, default None
     - description: Only start printing after the training minibatch number is greater
         or equal to `first`.
       id: first
-      type: int, default 0
+      type:
+      - int, default 0
     - description: prepend minibatch log lines with your own string
       id: tag
-      type: string, default EmptyString
+      type:
+      - string, default EmptyString
     - description: if None, output log data to stdout. If a string is passed, the
         string is path to a file for log data.
       id: log_to_file
-      type: string or None, default None
+      type:
+      - string or None, default None
     - description: set this to distributed.rank if you are using distributed parallelism
         -- each rank's log will go to separate file.
       id: rank
-      type: int or None, default None
+      type:
+      - int or None, default None
     - description: If True output a progress message every 10 seconds or so to stdout.
       id: gen_heartbeat
-      type: bool, default False
+      type:
+      - bool, default False
     - description: The total number of epochs to be trained.  Used for some metadata.
         This parameter is optional.
       id: num_epochs
-      type: int, default 300
+      type:
+      - int, default 300
     - description: similar to `freq`, but applies to printing intermediate test results.
       id: test_freq
-      type: int or None, default None
+      type:
+      - int or None, default None
     - description: similar to `first`, but applies to printing intermediate test results.
       id: test_first
-      type: int, default 0
+      type:
+      - int, default 0
     - description: Treat metric as a percentage for output purposes.
       id: metric_is_pct
-      type: bool, default True
+      type:
+      - bool, default True
   type: Class
   uid: cntk.logging.progress_print.ProgressPrinter
 - _type: method
@@ -210,10 +220,11 @@ items:
   syntax:
     parameters:
     - id: self
-    - default: ''
+    - defaultValue: ''
       description: message to print.
       id: msg
-      type: string, default ''
+      type:
+      - string, default ''
   type: Method
   uid: cntk.logging.progress_print.ProgressPrinter.end_progress_print
 - _type: method
@@ -238,11 +249,12 @@ items:
   syntax:
     parameters:
     - id: self
-    - default: 'False'
+    - defaultValue: 'False'
       description: if *False* it only prints the loss, otherwise it prints both the
         loss and the metric
       id: with_metric
-      type: bool
+      type:
+      - bool
   type: Method
   uid: cntk.logging.progress_print.ProgressPrinter.epoch_summary
 - _type: method
@@ -266,7 +278,8 @@ items:
     - id: self
     - description: message to print.
       id: msg
-      type: string
+      type:
+      - string
   type: Method
   uid: cntk.logging.progress_print.ProgressPrinter.log
 - _type: method
@@ -284,7 +297,6 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 323
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -305,7 +317,6 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 399
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -331,7 +342,6 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 327
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -355,7 +365,6 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 374
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -382,7 +391,6 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 319
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -465,17 +473,20 @@ items:
   syntax:
     parameters:
     - id: self
-    - default: None
+    - defaultValue: None
       description: the value with which to update the loss accumulators
       id: loss
-      type: float
+      type:
+      - float
     - description: the value with which to update the samples accumulator
       id: minibatch_size
-      type: int
+      type:
+      - int
     - description: if *None* do not update the metric accumulators, otherwise update
         with the given value
       id: metric
-      type: float or None
+      type:
+      - float or None
   type: Method
   uid: cntk.logging.progress_print.ProgressPrinter.update
 - _type: method
@@ -499,14 +510,16 @@ items:
     information from the `trainer`.'
   syntax:
     parameters:
-    - default: 'False'
+    - defaultValue: 'False'
       id: self
     - description: trainer from which information is gathered
       id: trainer
-      type: cntk.train.trainer.Trainer
+      type:
+      - cntk.train.trainer.Trainer
     - description: whether to update the metric accumulators
       id: with_metric
-      type: bool
+      type:
+      - bool
   type: Method
   uid: cntk.logging.progress_print.ProgressPrinter.update_with_trainer
 references:

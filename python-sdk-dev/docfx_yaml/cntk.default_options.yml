@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -38,7 +39,6 @@ items:
       path: cntk/default_options.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 34
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.default_options.default_options
@@ -56,7 +56,6 @@ items:
       path: cntk/default_options.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 42
-  summary: ''
   syntax:
     parameters:
     - id: functions
@@ -81,11 +80,11 @@ items:
   syntax:
     parameters:
     - description: "the function that calls this. For example:\n\n<!-- literal_block\
-        \ {\"backrefs\": [], \"names\": [], \"dupnames\": [], \"xml:space\": \"preserve\"\
-        , \"classes\": [], \"ids\": []} -->\n\n````\n\n   def Convolution(args, init=default_override_or(glorot_uniform()),\
-        \ activation=default_override_or(identity), pad=default_override_or(False)):\n\
-        \   init = _get_default_override(Convolution, init=init) # pass default under\
-        \ the same name\n   ````"
+        \ {\"ids\": [], \"xml:space\": \"preserve\", \"names\": [], \"dupnames\":\
+        \ [], \"classes\": [], \"backrefs\": []} -->\n\n````\n\n   def Convolution(args,\
+        \ init=default_override_or(glorot_uniform()), activation=default_override_or(identity),\
+        \ pad=default_override_or(False)):\n   init = _get_default_override(Convolution,\
+        \ init=init) # pass default under the same name\n   ````"
       id: function
   type: Method
   uid: cntk.default_options.get_default_override
@@ -103,7 +102,6 @@ items:
       path: cntk/default_options.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 57
-  summary: ''
   syntax:
     parameters:
     - id: value

@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -8,9 +9,8 @@ items:
   class: cntk.ops.functions.CloneMethod
   fullName: cntk.ops.functions.CloneMethod
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: enum.Enum
+  - - type: enum.Enum
+    - type: builtins.object
   langs:
   - python
   module: cntk.ops.functions

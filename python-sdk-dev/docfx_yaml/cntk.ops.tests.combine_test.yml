@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -34,7 +35,6 @@ items:
       path: cntk/ops/tests/combine_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 29
-  summary: ''
   syntax:
     parameters:
     - id: left_operand
@@ -59,7 +59,6 @@ items:
       path: cntk/ops/tests/combine_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 69
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.combine_test.test_op_combine_input_var

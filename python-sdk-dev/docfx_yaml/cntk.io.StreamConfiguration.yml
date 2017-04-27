@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -5,9 +6,8 @@ items:
   class: cntk.io.StreamConfiguration
   fullName: cntk.io.StreamConfiguration
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.StreamConfiguration
+  - - type: cntk.cntk_py.StreamConfiguration
+    - type: builtins.object
   langs:
   - python
   module: cntk.io
@@ -27,17 +27,21 @@ items:
     parameters:
     - description: name of this stream
       id: name
-      type: str
+      type:
+      - str
     - description: dimensions of this stream. A text format reader reads data as flat
         arrays. If you need different shapes you can `reshape()` it later.
       id: dim
-      type: int
+      type:
+      - int
     - description: whether the provided data is sparse (*False* by default)
       id: is_sparse
-      type: bool, defaults to False
+      type:
+      - bool, defaults to False
     - description: name of the stream in the file
       id: stream_alias
-      type: str, defaults to ''
+      type:
+      - str, defaults to ''
   type: Class
   uid: cntk.io.StreamConfiguration
 references: []

@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -37,7 +38,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.layers.tests.layers_test
 - _type: function
@@ -54,7 +54,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 30
-  summary: ''
   syntax:
     parameters:
     - id: r
@@ -76,7 +75,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 567
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -96,7 +94,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 58
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -116,7 +113,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 38
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.layers.tests.layers_test.test_default_options
@@ -134,7 +130,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 677
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -154,7 +149,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 587
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -174,7 +168,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 528
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -194,7 +187,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 502
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -214,7 +206,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 315
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -234,7 +225,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 411
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -254,7 +244,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 580
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -274,7 +263,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 215
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -294,7 +282,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 629
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -314,7 +301,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 260
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -334,7 +320,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 658
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -354,7 +339,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 14
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -374,7 +358,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 644
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -394,7 +377,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 90
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -414,7 +396,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 102
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.layers.tests.layers_test.test_recurrence
@@ -432,7 +413,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 146
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -452,7 +432,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 555
-  summary: ''
   syntax:
     parameters:
     - id: device_id
@@ -472,7 +451,6 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 174
-  summary: ''
   syntax:
     parameters:
     - id: device_id

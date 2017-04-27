@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -42,9 +43,9 @@ items:
   class: cntk.ops.functions.Function
   fullName: cntk.ops.functions.Function
   inheritance:
-  - inheritance:
-      type: builtins.object
-    type: cntk.cntk_py.Function
+  - - type: cntk.cntk_py.Function
+    - type: cntk.cntk_py.IDictionarySerializable
+    - type: builtins.object
   langs:
   - python
   module: cntk.ops.functions
@@ -291,11 +292,13 @@ items:
 
         * ''freeze'': parameters are cloned and made immutable (constant).'
       id: method
-      type: CloneMethod
+      type:
+      - CloneMethod
     - description: a dictionary mapping variables in this function to variables in
         the cloned function
       id: substitutions
-      type: dict
+      type:
+      - dict
     return:
       description: the cloned Function
       type: Function
@@ -362,11 +365,11 @@ items:
   syntax:
     parameters:
     - id: self
-    - default: 'True'
+    - defaultValue: 'True'
       id: arguments
-    - default: None
+    - defaultValue: None
       id: device
-    - default: None
+    - defaultValue: None
       id: as_numpy
     return:
       description: Dict with keys of ouput variable names and values of output variable.
@@ -414,7 +417,8 @@ items:
     parameters:
     - description: names to look for
       id: name
-      type: str
+      type:
+      - str
     return:
       description: list of `Function` objects matching `name`
   type: Method
@@ -468,7 +472,8 @@ items:
     parameters:
     - description: names to look for
       id: name
-      type: str
+      type:
+      - str
     return:
       description: '`Function` object matching `name`'
   type: Method
@@ -545,21 +550,25 @@ items:
     - description: outputs to fetch values for. If not set, all outputs of the function
         will be fetched.
       id: outputs
-      type: iterable, optional
+      type:
+      - iterable, optional
     - description: the subset of the Function's output variables for which gradients
         shall be calculated in a subsequent backward call. If *None*, the returned
         state will be *None* and a subsequent call to `backward()` will not be possible.
       id: keep_for_backward
-      type: set, default None
+      type:
+      - set, default None
     - description: the device descriptor that contains the type and id of the device
         on which the computation is. If *None*, the default device is used.
       id: device
-      type: DeviceDescriptor, default None
+      type:
+      - DeviceDescriptor, default None
     - description: whether to return the result as a NumPy array. Default True. Specifying
         this as False returns a CNTK Value which avoids a costly conversion but returns
         a somewhat opaque object.
       id: as_numpy
-      type: bool
+      type:
+      - bool
     return:
       description: A tuple (BackPropState, map of outputs to NumPy arrays). The BackPropState
         is a handle taken by `backward()`.
@@ -589,25 +598,30 @@ items:
     parameters:
     - description: mapping of the Function's arguments to values
       id: at
-      type: dict
+      type:
+      - dict
     - description: list of Variables with respect to which the gradient will be computed.
         If omitted, the gradients with respect to all arguments of this Function that
         need gradient will be computed.
       id: wrt
-      type: list, default None
+      type:
+      - list, default None
     - description: outputs (including intermediate outputs in the graph) to fetch
         values for. If not specified, values for none of the outputs are fetched.
       id: outputs
-      type: iterable, optional
+      type:
+      - iterable, optional
     - description: the device descriptor that contains the type and id of the device
         on which the computation is performed. If *None*, the default device is used.
       id: device
-      type: DeviceDescriptor, default None
+      type:
+      - DeviceDescriptor, default None
     - description: whether to return the gradients as a NumPy array. Default True.
         Specifying this as False returns a CNTK Value which avoids a costly conversion
         but returns a somewhat opaque object.
       id: as_numpy
-      type: bool, default True
+      type:
+      - bool, default True
     return:
       description: "Dict with keys of `wrt` variables and gradient values of\n   `wrt`\
         \ variables. A single NumPy array if there is only one gradient value. If\
@@ -722,10 +736,12 @@ items:
     parameters:
     - description: filename to load the model from
       id: filename
-      type: str
+      type:
+      - str
     - description: instance of DeviceDescriptor
       id: device
-      type: DeviceDescriptor, default is the default device
+      type:
+      - DeviceDescriptor, default is the default device
     return:
       description: root node
   type: Method
@@ -868,7 +884,8 @@ items:
     parameters:
     - description: the variable that will replace the placeholder
       id: substitution
-      type: Variable
+      type:
+      - Variable
     return:
       description: itself
       type: Function
@@ -895,7 +912,8 @@ items:
     parameters:
     - description: map from placeholder to variables
       id: substitutions
-      type: dict
+      type:
+      - dict
     return:
       description: itself
       type: Function
@@ -921,7 +939,8 @@ items:
     parameters:
     - description: saved model path
       id: filename
-      type: str
+      type:
+      - str
     return:
       description: this method only has the side-effect of loading the model parameters
         from the file
@@ -943,7 +962,6 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 1036
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -993,7 +1011,8 @@ items:
     parameters:
     - description: model path
       id: filename
-      type: str
+      type:
+      - str
   type: Method
   uid: cntk.ops.functions.Function.save
 - _type: method
@@ -1011,7 +1030,6 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 1017
-  summary: ''
   syntax:
     parameters:
     - id: self
@@ -1055,31 +1073,31 @@ items:
     startLine: 62
   summary: "`@Function` constructs a Function from a Python lambda where the Function's\
     \ input signature is defined by the lambda.\nUse this as a decorator, e.g.:\n\
-    <!-- literal_block {\"backrefs\": [], \"names\": [], \"dupnames\": [], \"xml:space\"\
-    : \"preserve\", \"classes\": [], \"ids\": []} -->\n\n````\n\n   @Function\n  \
-    \ def f(x): return x * x\n   ````\nThe above form creates a CNTK Function whose\
+    <!-- literal_block {\"ids\": [], \"xml:space\": \"preserve\", \"names\": [], \"\
+    dupnames\": [], \"classes\": [], \"backrefs\": []} -->\n\n````\n\n   @Function\n\
+    \   def f(x): return x * x\n   ````\nThe above form creates a CNTK Function whose\
     \ arguments are placeholder variables. Such a function can only be combined with\
     \ others symbolic functions.\nTo train a Function or pass data to it, you need\
     \ to declare the types of the arguments. In this case, the @Function decorator\
     \ creates a CNTK Function whose arguments are input variables.\nIf you use Python\
     \ 3, Functions with types are declared using Python annotation syntax, e.g.:\n\
-    <!-- literal_block {\"backrefs\": [], \"names\": [], \"dupnames\": [], \"xml:space\"\
-    : \"preserve\", \"classes\": [], \"ids\": []} -->\n\n````\n\n   @Function\n  \
-    \ def f(x:Tensor[13]):\n       return x * x\n   ````\nIf you are working with\
+    <!-- literal_block {\"ids\": [], \"xml:space\": \"preserve\", \"names\": [], \"\
+    dupnames\": [], \"classes\": [], \"backrefs\": []} -->\n\n````\n\n   @Function\n\
+    \   def f(x:Tensor[13]):\n       return x * x\n   ````\nIf you are working with\
     \ Python 2.7, use CNTK's @Signature decorator instead:\n<!-- literal_block {\"\
-    backrefs\": [], \"names\": [], \"dupnames\": [], \"xml:space\": \"preserve\",\
-    \ \"classes\": [], \"ids\": []} -->\n\n````\n\n   @Function\n   @Signature(Tensor[13])\n\
+    ids\": [], \"xml:space\": \"preserve\", \"names\": [], \"dupnames\": [], \"classes\"\
+    : [], \"backrefs\": []} -->\n\n````\n\n   @Function\n   @Signature(Tensor[13])\n\
     \   def f(x):\n       return x * x\n   ````\n`make_block=True` is used to implement\
     \ @BlockFunction(). If given the result will be wrapped in `as_block()`, using\
     \ the supplied `op_name` and `name` parameters, which are otherwise ignored."
   syntax:
     parameters:
     - id: f
-    - default: None
+    - defaultValue: None
       id: make_block
-    - default: None
+    - defaultValue: None
       id: op_name
-    - default: 'False'
+    - defaultValue: 'False'
       id: name
   type: Method
   uid: cntk.ops.functions.Function.to_Function

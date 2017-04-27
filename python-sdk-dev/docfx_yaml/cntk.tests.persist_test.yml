@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -19,7 +20,6 @@ items:
       path: cntk/tests/persist_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.tests.persist_test
 - _type: function
@@ -36,7 +36,6 @@ items:
       path: cntk/tests/persist_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 14
-  summary: ''
   syntax:
     parameters:
     - id: tmpdir
@@ -56,7 +55,6 @@ items:
       path: cntk/tests/persist_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 35
-  summary: ''
   syntax:
     parameters:
     - id: tmpdir
@@ -76,7 +74,6 @@ items:
       path: cntk/tests/persist_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 59
-  summary: ''
   syntax:
     parameters:
     - id: tmpdir
@@ -96,7 +93,6 @@ items:
       path: cntk/tests/persist_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 85
-  summary: ''
   syntax:
     parameters:
     - id: tmpdir

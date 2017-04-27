@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -46,11 +47,13 @@ items:
     - description: list of samples. If `dynamic_axis` is given, samples are sequences
         of tensors. Otherwise, they are simple tensors.
       id: batch
-      type: list
-    - default: ''
+      type:
+      - list
+    - defaultValue: ''
       description: the dynamic axis
       id: dynamic_axis
-      type: str or cntk.ops.dynamic_axis() instance
+      type:
+      - str or cntk.ops.dynamic_axis() instance
     return:
       description: (indices, values, shape)
   type: Method
@@ -75,7 +78,8 @@ items:
     parameters:
     - description: device id, -1 for CPU, 0 or higher for GPU
       id: device_id
-      type: int
+      type:
+      - int
     return:
       description: '`DeviceDescriptor`'
   type: Method
@@ -94,7 +98,6 @@ items:
       path: cntk/ops/tests/ops_test_utils.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 249
-  summary: ''
   syntax:
     parameters:
     - id: first_list
@@ -115,7 +118,6 @@ items:
       path: cntk/ops/tests/ops_test_utils.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 238
-  summary: ''
   syntax:
     parameters:
     - id: arr
@@ -136,7 +138,6 @@ items:
       path: cntk/ops/tests/ops_test_utils.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 200
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.ops_test_utils.test_batch_dense_to_sparse_full
@@ -154,7 +155,6 @@ items:
       path: cntk/ops/tests/ops_test_utils.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 222
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.ops_test_utils.test_batch_dense_to_sparse_zeros
@@ -172,13 +172,12 @@ items:
       path: cntk/ops/tests/ops_test_utils.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 121
-  summary: ''
   syntax:
     parameters:
     - id: root_node
-    - default: float
+    - defaultValue: float
       id: forward_input
-    - default: '-1'
+    - defaultValue: '-1'
       id: expected_forward
     - id: expected_backward
     - id: device_id

@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -52,7 +53,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 119
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -74,7 +74,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 428
-  summary: ''
   syntax:
     parameters:
     - id: use_cudnn
@@ -97,7 +96,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 50
-  summary: ''
   syntax:
     parameters:
     - id: min_value
@@ -121,7 +119,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 151
-  summary: ''
   syntax:
     parameters:
     - id: shape
@@ -144,7 +141,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 191
-  summary: ''
   syntax:
     parameters:
     - id: dropout_rate
@@ -164,7 +160,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 291
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -186,7 +181,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 105
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -208,7 +202,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 405
-  summary: ''
   syntax:
     parameters:
     - id: sample
@@ -230,7 +223,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 308
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -252,7 +244,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 235
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -274,7 +265,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 325
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -296,7 +286,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 259
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -318,7 +307,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 277
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -340,7 +328,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 75
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -362,7 +349,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 371
-  summary: ''
   syntax:
     parameters:
     - id: sample
@@ -384,7 +370,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 348
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -406,7 +391,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 201
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -428,7 +412,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 218
-  summary: ''
   syntax:
     parameters:
     - id: operand
@@ -450,7 +433,6 @@ items:
       path: cntk/ops/tests/non_linear_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 137
-  summary: ''
   syntax:
     parameters:
     - id: operand

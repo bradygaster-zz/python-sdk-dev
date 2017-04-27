@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -33,7 +34,6 @@ items:
       path: cntk/ops/tests/stop_gradient_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 16
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.ops.tests.stop_gradient_test.test_stop_gradient

@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: class
@@ -5,7 +6,7 @@ items:
   class: cntk.default_options.default_override_or
   fullName: cntk.default_options.default_override_or
   inheritance:
-  - type: builtins.object
+  - - type: builtins.object
   langs:
   - python
   module: cntk.default_options

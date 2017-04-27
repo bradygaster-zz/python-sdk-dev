@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -19,7 +20,6 @@ items:
       path: cntk/debugging/tests/debug_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.debugging.tests.debug_test
 - _type: function
@@ -36,7 +36,6 @@ items:
       path: cntk/debugging/tests/debug_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 73
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.debugging.tests.debug_test.test_debug_1
@@ -54,7 +53,6 @@ items:
       path: cntk/debugging/tests/debug_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 123
-  summary: ''
   syntax: {}
   type: Method
   uid: cntk.debugging.tests.debug_test.test_debug_multi_output

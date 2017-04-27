@@ -1,3 +1,4 @@
+#YamlMime:PythonReference
 api_name: []
 items:
 - _type: module
@@ -26,7 +27,6 @@ items:
       path: cntk/ops/sequence/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 0
-  summary: ''
   type: Namespace
   uid: cntk.ops.sequence
 - _type: function
@@ -63,7 +63,8 @@ items:
       id: broadcast_as_operand
     - description: the name of the node in the network
       id: name
-      type: str
+      type:
+      - str
     return:
       description: '`Function`'
   type: Method
@@ -88,19 +89,21 @@ items:
     parameters:
     - description: the tensor (or its name) from which the past value is obtained
       id: x
-    - default: ''
+    - defaultValue: ''
       description: tensor or scalar representing the initial value to be used when
         the input tensor is shifted in time.
       id: initial_state
-    - default: '1'
+    - defaultValue: '1'
       description: the number of time steps to look into the past, where negative
         values mean to look into the future, and 0 means a no-op (default 1).
       id: time_step
-      type: int
-    - default: None
+      type:
+      - int
+    - defaultValue: None
       description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
   type: Method
   uid: cntk.ops.sequence.delay
 - _type: function
@@ -128,7 +131,8 @@ items:
       id: seq
     - description: the name of the node in the network
       id: name
-      type: str
+      type:
+      - str
     return:
       description: '`Function`'
   type: Method
@@ -170,7 +174,8 @@ items:
       id: new_sequence_axis_typeinfo
     - description: the name of the node in the network
       id: name
-      type: str
+      type:
+      - str
     return:
       description: '`Function`'
   type: Method
@@ -211,7 +216,8 @@ items:
       id: seq
     - description: the name of the node in the network
       id: name
-      type: str
+      type:
+      - str
     return:
       description: '`Function`'
   type: Method
@@ -252,7 +258,8 @@ items:
       id: seq
     - description: the name of the node in the network
       id: name
-      type: str
+      type:
+      - str
     return:
       description: '`Function`'
   type: Method
@@ -282,7 +289,8 @@ items:
       id: seq
     - description: the name of the node in the network
       id: name
-      type: str
+      type:
+      - str
     return:
       description: '`Function`'
   type: Method
@@ -312,7 +320,8 @@ items:
       id: seq
     - description: the name of the Function instance in the network
       id: name
-      type: str, optional
+      type:
+      - str, optional
     return:
       description: '`Function`'
   type: Method
@@ -360,7 +369,8 @@ items:
       id: new_sequence_axis_typeinfo
     - description: the name of the node in the network
       id: name
-      type: str
+      type:
+      - str
     return:
       description: '`Function`'
   type: Method
@@ -429,7 +439,8 @@ items:
       id: condition
     - description: the name of the node in the network
       id: name
-      type: str
+      type:
+      - str
     return:
       description: '`Function`'
   type: Method
