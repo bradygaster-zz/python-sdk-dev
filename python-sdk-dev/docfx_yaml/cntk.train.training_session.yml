@@ -117,7 +117,7 @@ items:
       id: mb_size_schedule
       type:
       - minibatch_size_schedule
-    - description: '!DEPRECATED! list of progress writers from `cntk.utils`'
+    - description: '!DEPRECATED! list of progress writers from @cntk.utils'
       id: progress_printer
       type:
       - list
@@ -191,7 +191,7 @@ items:
       type:
       - CrossValidationConfig
     return:
-      description: Instance of `TrainingSession`
+      description: Instance of @TrainingSession
   type: Method
   uid: cntk.train.training_session.training_session
 references:

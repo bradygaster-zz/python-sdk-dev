@@ -7,9 +7,9 @@ items:
   class: cntk.train.distributed.DistributedLearner
   fullName: cntk.train.distributed.DistributedLearner
   inheritance:
-  - - type: cntk.cntk_py.DistributedLearner
-    - type: cntk.cntk_py.Learner
-    - type: builtins.object
+  - - cntk.cntk_py.DistributedLearner
+    - - cntk.cntk_py.Learner
+      - - builtins.object
   langs:
   - python
   module: cntk.train.distributed
@@ -22,7 +22,7 @@ items:
       path: cntk/train/distributed.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 100
-  summary: 'Bases: `cntk.cntk_py.DistributedLearner`
+  summary: 'Bases: @cntk.cntk_py.DistributedLearner
 
     A distributed learner that handles data like gradients/momentums across multiple
     MPI workers

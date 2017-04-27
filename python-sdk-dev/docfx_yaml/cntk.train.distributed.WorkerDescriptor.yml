@@ -8,8 +8,8 @@ items:
   class: cntk.train.distributed.WorkerDescriptor
   fullName: cntk.train.distributed.WorkerDescriptor
   inheritance:
-  - - type: cntk.cntk_py.DistributedWorkerDescriptor
-    - type: builtins.object
+  - - cntk.cntk_py.DistributedWorkerDescriptor
+    - - builtins.object
   langs:
   - python
   module: cntk.train.distributed
@@ -22,9 +22,9 @@ items:
       path: cntk/train/distributed.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 22
-  summary: 'Bases: `cntk.cntk_py.DistributedWorkerDescriptor`
+  summary: 'Bases: @cntk.cntk_py.DistributedWorkerDescriptor
 
-    Distributed worker descriptor, returned by `Communicator` instance.
+    Distributed worker descriptor, returned by @Communicator instance.
 
 
     '

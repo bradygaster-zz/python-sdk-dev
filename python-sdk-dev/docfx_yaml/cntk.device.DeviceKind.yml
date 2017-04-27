@@ -6,8 +6,8 @@ items:
   class: cntk.device.DeviceKind
   fullName: cntk.device.DeviceKind
   inheritance:
-  - - type: enum.Enum
-    - type: builtins.object
+  - - enum.Enum
+    - - builtins.object
   langs:
   - python
   module: cntk.device
@@ -20,7 +20,7 @@ items:
       path: cntk/device.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 13
-  summary: 'Bases: `enum.Enum`
+  summary: 'Bases: @enum.Enum
 
     Describes different device kinds like CPU or GPU.
 

@@ -20,8 +20,8 @@ items:
   class: cntk.train.trainer.Trainer
   fullName: cntk.train.trainer.Trainer
   inheritance:
-  - - type: cntk.cntk_py.Trainer
-    - type: builtins.object
+  - - cntk.cntk_py.Trainer
+    - - builtins.object
   langs:
   - python
   module: cntk.train.trainer
@@ -34,7 +34,7 @@ items:
       path: cntk/train/trainer.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 19
-  summary: 'Bases: `cntk.cntk_py.Trainer`
+  summary: 'Bases: @cntk.cntk_py.Trainer
 
     Class for training the model parameters of a models'' specified loss function,
     using the specified set of `parameter_learners` for updating the model''s parameters
@@ -67,11 +67,11 @@ items:
       id: criterion
       type:
       - Python tuple of Function, or Function or
-    - description: list of learners from `cntk.learner`
+    - description: list of learners from @cntk.learner
       id: parameter_learners
       type:
       - list
-    - description: "optionally, list of progress writers from `cntk.utils` to automatically\
+    - description: "optionally, list of progress writers from @cntk.utils to automatically\
         \ track\n   training progress.\n\nTODO: Would be great to allow to skip some\
         \ parameters that should not be updated."
       id: progress_writers
@@ -329,7 +329,7 @@ items:
   summary: 'Test the model on the specified batch of samples using the evaluation
     Function specified during construction of the Trainer.
 
-    Note: See `forward()` for examples on passing input data.'
+    Note: See @cntk.ops.functions.Function.forward for examples on passing input data.'
   syntax:
     parameters:
     - defaultValue: None
@@ -380,7 +380,7 @@ items:
   summary: 'Optimize model parameters using the specified ''arguments'' minibatch
     of training samples.
 
-    Note: See `forward()` for examples on passing input data.'
+    Note: See @cntk.ops.functions.Function.forward for examples on passing input data.'
   syntax:
     parameters:
     - defaultValue: None

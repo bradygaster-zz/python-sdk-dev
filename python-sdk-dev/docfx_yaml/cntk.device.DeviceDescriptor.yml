@@ -8,8 +8,8 @@ items:
   class: cntk.device.DeviceDescriptor
   fullName: cntk.device.DeviceDescriptor
   inheritance:
-  - - type: cntk.cntk_py.DeviceDescriptor
-    - type: builtins.object
+  - - cntk.cntk_py.DeviceDescriptor
+    - - builtins.object
   langs:
   - python
   module: cntk.device
@@ -22,7 +22,7 @@ items:
       path: cntk/device.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 28
-  summary: 'Bases: `cntk.cntk_py.DeviceDescriptor`
+  summary: 'Bases: @cntk.cntk_py.DeviceDescriptor
 
     Describes a device by an unique id and its type. If the device corresponds to
     a GPU its type is 1, otherwise, it is 0

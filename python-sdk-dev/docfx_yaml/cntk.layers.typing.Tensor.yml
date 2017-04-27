@@ -6,7 +6,7 @@ items:
   class: cntk.layers.typing.Tensor
   fullName: cntk.layers.typing.Tensor
   inheritance:
-  - - type: builtins.object
+  - - builtins.object
   langs:
   - python
   module: cntk.layers.typing
@@ -19,7 +19,7 @@ items:
       path: null
       repo: https://github.com/Microsoft/CNTK
     startLine: null
-  summary: 'Bases: `object`
+  summary: 'Bases: @object
 
     Meta class to denote a data tensor (with batch axis). Use with dimensions, e.g.
     `Tensor[13,42]`.'

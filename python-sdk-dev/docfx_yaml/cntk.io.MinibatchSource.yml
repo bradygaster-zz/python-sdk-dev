@@ -13,8 +13,8 @@ items:
   class: cntk.io.MinibatchSource
   fullName: cntk.io.MinibatchSource
   inheritance:
-  - - type: cntk.cntk_py.MinibatchSource
-    - type: builtins.object
+  - - cntk.cntk_py.MinibatchSource
+    - - builtins.object
   langs:
   - python
   module: cntk.io
@@ -27,12 +27,12 @@ items:
       path: cntk/io/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 82
-  summary: 'Bases: `cntk.cntk_py.MinibatchSource`
+  summary: 'Bases: @cntk.cntk_py.MinibatchSource
 
     A *MinibatchSource* can be indexed by the stream name, which will return a Parent
     class of all minibatch sources.  A *MinibatchSource* can be indexed by the stream
-    name, which will return a `MinibatchData` object that can be passed e.g. to the
-    `train_minibatch()` function.
+    name, which will return a @MinibatchData object that can be passed e.g. to the
+    @cntk.train.trainer.Trainer.train_minibatch function.
 
 
 
@@ -111,7 +111,7 @@ items:
   summary: Gets current position in the minibatch source.
   syntax:
     return:
-      description: Minibatch position `Dictionary` on the global timeline.
+      description: Minibatch position @cntk.cntk_py.Dictionary on the global timeline.
   type: Property
   uid: cntk.io.MinibatchSource.current_position
 - _type: method
@@ -134,7 +134,8 @@ items:
     parameters:
     - id: self
     return:
-      description: A `Dictionary` that has the checkpoint state of the MinibatchSource
+      description: A @cntk.cntk_py.Dictionary that has the checkpoint state of the
+        MinibatchSource
       type: cntk.cntk_py.Dictionary
   type: Method
   uid: cntk.io.MinibatchSource.get_checkpoint_state
@@ -190,8 +191,8 @@ items:
       id: minibatch_size_in_samples
       type:
       - int
-    - description: mapping of `Variable` to `StreamInformation` which will be used
-        to convert the returned data.
+    - description: mapping of @cntk.ops.variables.Variable to @cntk.cntk_py.StreamInformation
+        which will be used to convert the returned data.
       id: input_map
       type:
       - dict
@@ -208,9 +209,9 @@ items:
       type:
       - int, defaults to None
     return:
-      description: A mapping of `StreamInformation` to `MinibatchData` if *input_map*
-        was not specified. Otherwise, the returned value will be a mapping of `Variable`
-        to class:*MinibatchData*.
+      description: A mapping of @cntk.cntk_py.StreamInformation to @MinibatchData
+        if *input_map* was not specified. Otherwise, the returned value will be a
+        mapping of @cntk.ops.variables.Variable to class:*MinibatchData*.
       type: cntk.io.MinibatchData
   type: Method
   uid: cntk.io.MinibatchSource.next_minibatch

@@ -41,7 +41,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 156
   summary: Helper test function that converts a batch of dense tensors into sparse
-    representation that can be consumed by `cntk.ops.sparse_input_numpy()`.
+    representation that can be consumed by @cntk.ops.sparse_input_numpy.
   syntax:
     parameters:
     - description: list of samples. If `dynamic_axis` is given, samples are sequences
@@ -72,7 +72,7 @@ items:
       path: cntk/ops/tests/ops_test_utils.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 24
-  summary: Converts the legacy device ID as it was used in CNTK 1 to a `DeviceDescriptor`
+  summary: Converts the legacy device ID as it was used in CNTK 1 to a @cntk.device.DeviceDescriptor
     instance.
   syntax:
     parameters:
@@ -81,7 +81,7 @@ items:
       type:
       - int
     return:
-      description: '`DeviceDescriptor`'
+      description: '@cntk.device.DeviceDescriptor'
   type: Method
   uid: cntk.ops.tests.ops_test_utils.cntk_device
 - _type: function

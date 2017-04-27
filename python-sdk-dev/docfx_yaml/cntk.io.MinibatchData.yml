@@ -13,10 +13,10 @@ items:
   class: cntk.io.MinibatchData
   fullName: cntk.io.MinibatchData
   inheritance:
-  - - type: cntk.cntk_py.MinibatchData
-    - type: builtins.object
-  - - type: cntk.tensor.ArrayMixin
-    - type: builtins.object
+  - - cntk.cntk_py.MinibatchData
+    - - builtins.object
+  - - cntk.tensor.ArrayMixin
+    - - builtins.object
   langs:
   - python
   module: cntk.io
@@ -29,10 +29,10 @@ items:
       path: cntk/io/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 20
-  summary: 'Bases: `cntk.cntk_py.MinibatchData`, `cntk.tensor.ArrayMixin`
+  summary: 'Bases: @cntk.cntk_py.MinibatchData, @cntk.tensor.ArrayMixin
 
     Holds a minibatch of input data. This is never directly created, but only returned
-    by `MinibatchSource` instances.
+    by @MinibatchSource instances.
 
 
 

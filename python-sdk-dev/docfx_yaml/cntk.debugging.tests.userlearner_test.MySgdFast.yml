@@ -7,9 +7,9 @@ items:
   class: cntk.debugging.tests.userlearner_test.MySgdFast
   fullName: cntk.debugging.tests.userlearner_test.MySgdFast
   inheritance:
-  - - type: cntk.learners.UserLearner
-    - type: cntk.cntk_py.Learner
-    - type: builtins.object
+  - - cntk.learners.UserLearner
+    - - cntk.cntk_py.Learner
+      - - builtins.object
   langs:
   - python
   module: cntk.debugging.tests.userlearner_test
@@ -22,7 +22,7 @@ items:
       path: cntk/debugging/tests/userlearner_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 42
-  summary: 'Bases: `cntk.learners.UserLearner`
+  summary: 'Bases: @cntk.learners.UserLearner
 
     '
   syntax: {}

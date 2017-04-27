@@ -9,11 +9,11 @@ items:
   class: cntk.ops.tests.userfunction_test.MultiOutputUserFunction
   fullName: cntk.ops.tests.userfunction_test.MultiOutputUserFunction
   inheritance:
-  - - type: cntk.ops.functions.UserFunction
-    - type: cntk.ops.functions.Function
-    - type: cntk.cntk_py.Function
-    - type: cntk.cntk_py.IDictionarySerializable
-    - type: builtins.object
+  - - cntk.ops.functions.UserFunction
+    - - cntk.ops.functions.Function
+      - - cntk.cntk_py.Function
+        - - cntk.cntk_py.IDictionarySerializable
+          - - builtins.object
   langs:
   - python
   module: cntk.ops.tests.userfunction_test
@@ -26,7 +26,7 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 309
-  summary: 'Bases: `cntk.ops.functions.UserFunction`
+  summary: 'Bases: @cntk.ops.functions.UserFunction
 
 
 

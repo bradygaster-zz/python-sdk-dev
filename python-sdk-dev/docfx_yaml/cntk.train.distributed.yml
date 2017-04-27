@@ -44,12 +44,7 @@ items:
     block is partitioned into N non-overlapping splits.
 
     During training, a random, unprocessed block is randomly taken by the trainer
-    and the N partitions of this block are dispatched on the workers.
-
-    See also: [1] K. Chen and Q. Huo. [Scalable training of deep learning machines
-    by incremental block training with intra-block parallel optimization and blockwise
-    model-update filtering](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/0005880.pdf).
-    Proceedings of ICASSP, 2016.'
+    and the N partitions of this block are dispatched on the workers.'
   syntax:
     parameters:
     - description: a local learner (i.e. sgd)
@@ -80,6 +75,10 @@ items:
       - int
     return:
       description: a distributed learner instance
+    seealso: 'See also: [1] K. Chen and Q. Huo. [Scalable training of deep learning
+      machines by incremental block training with intra-block parallel optimization
+      and blockwise model-update filtering](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/0005880.pdf).
+      Proceedings of ICASSP, 2016.'
   type: Method
   uid: cntk.train.distributed.block_momentum_distributed_learner
 - _type: function

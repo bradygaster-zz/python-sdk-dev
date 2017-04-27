@@ -79,7 +79,7 @@ items:
       id: shape
       type:
       - int or tuple of ints
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad41166cc0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f1ccc0>
       description: data type
       id: dtype
       type:
@@ -138,22 +138,22 @@ items:
       id: cell_shape
       type:
       - tuple, defaults to None
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9be0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6eba8>
       description: function to apply at the end, e.g. *relu*
       id: activation
       type:
       - Function, defaults to tanh
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9ba8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6eb70>
       description: initial value of weights *W*
       id: init
       type:
       - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9b70>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6eb38>
       description: initial value of weights *b*
       id: init_bias
       type:
       - scalar or NumPy array or cntk.initializer, defaults to 0
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9b00>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6eac8>
       description: ''
       id: enable_self_stabilization
       type:
@@ -195,8 +195,8 @@ items:
       type:
       - np.dtype, defaults to np.float32
     - defaultValue: (<cntk.axis.Axis; proxy of <Swig Object of type 'CNTK::Axis *'
-        at 0x2aad41160630> >, <cntk.axis.Axis; proxy of <Swig Object of type 'CNTK::Axis
-        *' at 0x2aad41160510> >)
+        at 0x2b16b4f16630> >, <cntk.axis.Axis; proxy of <Swig Object of type 'CNTK::Axis
+        *' at 0x2b16b4f16510> >)
       description: ''
       id: needs_gradient
       type:
@@ -211,7 +211,7 @@ items:
       id: dynamic_axes
       type:
       - object, Axis.default_input_variable_dynamic_axes
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad41166d68>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f1cd68>
       description: the name of the Function instance in the network
       id: name
       type:
@@ -244,27 +244,27 @@ items:
       id: cell_shape
       type:
       - tuple, defaults to None
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411845c0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f3a588>
       description: function to apply at the end, e.g. *relu*
       id: activation
       type:
       - Function, defaults to tanh
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411736d8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f296a0>
       description: ''
       id: use_peepholes
       type:
       - bool, defaults to False
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad4116e470>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f24438>
       description: initial value of weights *W*
       id: init
       type:
       - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad4116e438>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f24400>
       description: initial value of weights *b*
       id: init_bias
       type:
       - scalar or NumPy array or cntk.initializer, defaults to 0
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad4117ccc0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f32c88>
       description: ''
       id: enable_self_stabilization
       type:
@@ -296,7 +296,7 @@ items:
   summary: Constructs a Parameter variable.
   syntax:
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad41166c88>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f1cc88>
       description: vector or tensor dimension of the output of this layer
       id: shape
       type:
@@ -380,22 +380,22 @@ items:
       id: cell_shape
       type:
       - tuple, defaults to None
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9ac8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6ea90>
       description: function to apply at the end, e.g. *relu*
       id: activation
       type:
       - Function, defaults to signmoid
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9a90>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6ea58>
       description: initial value of weights *W*
       id: init
       type:
       - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b9a58>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6ea20>
       description: initial value of weights *b*
       id: init_bias
       type:
       - scalar or NumPy array or cntk.initializer, defaults to 0
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad411b99e8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f6e978>
       description: ''
       id: enable_self_stabilization
       type:
@@ -438,7 +438,7 @@ items:
     exploding gradients.'
   syntax:
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad4117ccf8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b4f32cc0>
       description: ''
       id: steepness
       type:

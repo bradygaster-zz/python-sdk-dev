@@ -6,7 +6,7 @@ items:
   class: cntk.layers.typing.Sequence
   fullName: cntk.layers.typing.Sequence
   inheritance:
-  - - type: builtins.object
+  - - builtins.object
   langs:
   - python
   module: cntk.layers.typing
@@ -19,7 +19,7 @@ items:
       path: null
       repo: https://github.com/Microsoft/CNTK
     startLine: null
-  summary: 'Bases: `object`
+  summary: 'Bases: @object
 
     Meta-meta class to denote a sequence of data tensors. Example: `Sequence[Tensor[13,42]]`'
   syntax: {}

@@ -43,9 +43,9 @@ items:
   class: cntk.ops.functions.Function
   fullName: cntk.ops.functions.Function
   inheritance:
-  - - type: cntk.cntk_py.Function
-    - type: cntk.cntk_py.IDictionarySerializable
-    - type: builtins.object
+  - - cntk.cntk_py.Function
+    - - cntk.cntk_py.IDictionarySerializable
+      - - builtins.object
   langs:
   - python
   module: cntk.ops.functions
@@ -58,7 +58,7 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 34
-  summary: 'Bases: `cntk.cntk_py.Function`
+  summary: 'Bases: @cntk.cntk_py.Function
 
     Base class of all primitive tensor operators.
 
@@ -213,7 +213,8 @@ items:
 
     array([[[ 0.25]]], dtype=float32)
 
-    Note: See `forward()` for more examples on passing input data.'
+    Note: See @cntk.ops.functions.Function.forward for more examples on passing input
+    data.'
   syntax:
     return:
       description: mapping of `variables` to NumPy arrays
@@ -319,7 +320,7 @@ items:
       path: null
       repo: https://github.com/Microsoft/CNTK
     startLine: null
-  summary: List of all *Constant* variables of this `Function`
+  summary: List of all *Constant* variables of this @cntk.ops.functions.Function
   syntax: {}
   type: Property
   uid: cntk.ops.functions.Function.constants
@@ -361,7 +362,7 @@ items:
     startLine: 464
   summary: 'Evaluate the node using the specified `arguments` as input.
 
-    Note: See `forward()` for examples on passing input data.'
+    Note: See @cntk.ops.functions.Function.forward for examples on passing input data.'
   syntax:
     parameters:
     - id: self
@@ -394,7 +395,7 @@ items:
     startLine: 937
   summary: 'Returns a list of primitive function with `name` in the graph starting
     from this node. Throws an exception if `name` occurs multiple times. If you expect
-    only one function to be returned, use `find_by_name()`.
+    only one function to be returned, use @find_by_name.
 
     -[ Example ]-
 
@@ -410,9 +411,7 @@ items:
 
     >>> c.find_all_with_name(''z'')
 
-    []
-
-    See also: `find_by_name()`'
+    []'
   syntax:
     parameters:
     - description: names to look for
@@ -420,7 +419,8 @@ items:
       type:
       - str
     return:
-      description: list of `Function` objects matching `name`
+      description: list of @Function objects matching `name`
+    seealso: 'See also: @find_by_name'
   type: Method
   uid: cntk.ops.functions.Function.find_all_with_name
 - _type: method
@@ -440,7 +440,7 @@ items:
     startLine: 967
   summary: 'Returns a primitive function with `name` in the graph starting from this
     node. Throws an exception if `name` occurs multiple times. If you expect multiple
-    functions to be returned, use `find_all_with_name()`.
+    functions to be returned, use @find_all_with_name.
 
     -[ Example ]-
 
@@ -465,9 +465,7 @@ items:
 
     >>> C.combine([d.find_by_name(''c'')]).eval({a:[[1]], b:[[2]]})
 
-    array([[[ 3.]]], dtype=float32)
-
-    See also: `find_all_with_name()`'
+    array([[[ 3.]]], dtype=float32)'
   syntax:
     parameters:
     - description: names to look for
@@ -475,7 +473,8 @@ items:
       type:
       - str
     return:
-      description: '`Function` object matching `name`'
+      description: '@Function object matching `name`'
+    seealso: 'See also: @find_all_with_name'
   type: Method
   uid: cntk.ops.functions.Function.find_by_name
 - _type: method
@@ -545,7 +544,7 @@ items:
         \ list of bools, denoting whether a sequence is a new one (*True*) or a continuation\
         \ of the sequence in the same slot of the previous minibatch (*False*). This\
         \ will be applied to all batches.\n\nData should be either NumPy arrays or\
-        \ a `MinibatchData` instance."
+        \ a @cntk.io.MinibatchData instance."
       id: arguments
     - description: outputs to fetch values for. If not set, all outputs of the function
         will be fetched.
@@ -554,7 +553,7 @@ items:
       - iterable, optional
     - description: the subset of the Function's output variables for which gradients
         shall be calculated in a subsequent backward call. If *None*, the returned
-        state will be *None* and a subsequent call to `backward()` will not be possible.
+        state will be *None* and a subsequent call to @backward will not be possible.
       id: keep_for_backward
       type:
       - set, default None
@@ -571,7 +570,7 @@ items:
       - bool
     return:
       description: A tuple (BackPropState, map of outputs to NumPy arrays). The BackPropState
-        is a handle taken by `backward()`.
+        is a handle taken by @backward.
   type: Method
   uid: cntk.ops.functions.Function.forward
 - _type: method
@@ -731,7 +730,7 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 1042
-  summary: Load the model in `filename`, that has been saved using `save()`.
+  summary: Load the model in `filename`, that has been saved using @cntk.ops.functions.Function.save.
   syntax:
     parameters:
     - description: filename to load the model from
@@ -1073,20 +1072,20 @@ items:
     startLine: 62
   summary: "`@Function` constructs a Function from a Python lambda where the Function's\
     \ input signature is defined by the lambda.\nUse this as a decorator, e.g.:\n\
-    <!-- literal_block {\"ids\": [], \"xml:space\": \"preserve\", \"names\": [], \"\
-    dupnames\": [], \"classes\": [], \"backrefs\": []} -->\n\n````\n\n   @Function\n\
+    <!-- literal_block {\"dupnames\": [], \"xml:space\": \"preserve\", \"classes\"\
+    : [], \"names\": [], \"backrefs\": [], \"ids\": []} -->\n\n````\n\n   @Function\n\
     \   def f(x): return x * x\n   ````\nThe above form creates a CNTK Function whose\
     \ arguments are placeholder variables. Such a function can only be combined with\
     \ others symbolic functions.\nTo train a Function or pass data to it, you need\
     \ to declare the types of the arguments. In this case, the @Function decorator\
     \ creates a CNTK Function whose arguments are input variables.\nIf you use Python\
     \ 3, Functions with types are declared using Python annotation syntax, e.g.:\n\
-    <!-- literal_block {\"ids\": [], \"xml:space\": \"preserve\", \"names\": [], \"\
-    dupnames\": [], \"classes\": [], \"backrefs\": []} -->\n\n````\n\n   @Function\n\
+    <!-- literal_block {\"dupnames\": [], \"xml:space\": \"preserve\", \"classes\"\
+    : [], \"names\": [], \"backrefs\": [], \"ids\": []} -->\n\n````\n\n   @Function\n\
     \   def f(x:Tensor[13]):\n       return x * x\n   ````\nIf you are working with\
     \ Python 2.7, use CNTK's @Signature decorator instead:\n<!-- literal_block {\"\
-    ids\": [], \"xml:space\": \"preserve\", \"names\": [], \"dupnames\": [], \"classes\"\
-    : [], \"backrefs\": []} -->\n\n````\n\n   @Function\n   @Signature(Tensor[13])\n\
+    dupnames\": [], \"xml:space\": \"preserve\", \"classes\": [], \"names\": [], \"\
+    backrefs\": [], \"ids\": []} -->\n\n````\n\n   @Function\n   @Signature(Tensor[13])\n\
     \   def f(x):\n       return x * x\n   ````\n`make_block=True` is used to implement\
     \ @BlockFunction(). If given the result will be wrapped in `as_block()`, using\
     \ the supplied `op_name` and `name` parameters, which are otherwise ignored."

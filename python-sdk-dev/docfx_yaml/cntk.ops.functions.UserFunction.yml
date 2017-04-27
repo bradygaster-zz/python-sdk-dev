@@ -9,10 +9,10 @@ items:
   class: cntk.ops.functions.UserFunction
   fullName: cntk.ops.functions.UserFunction
   inheritance:
-  - - type: cntk.ops.functions.Function
-    - type: cntk.cntk_py.Function
-    - type: cntk.cntk_py.IDictionarySerializable
-    - type: builtins.object
+  - - cntk.ops.functions.Function
+    - - cntk.cntk_py.Function
+      - - cntk.cntk_py.IDictionarySerializable
+        - - builtins.object
   langs:
   - python
   module: cntk.ops.functions
@@ -25,7 +25,7 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 1076
-  summary: 'Bases: `cntk.ops.functions.Function`
+  summary: 'Bases: @cntk.ops.functions.Function
 
     Base class of all user extension functions.
 
@@ -96,7 +96,7 @@ items:
     startLine: 1218
   summary: 'Returns a list of all output variables this user-defined function outputs.
 
-    Output variables are created by `output_variable()`.'
+    Output variables are created by @cntk.ops.output_variable.'
   syntax:
     parameters:
     - id: self

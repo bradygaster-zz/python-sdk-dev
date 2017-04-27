@@ -42,11 +42,11 @@ items:
     - id: attention_dim
     - defaultValue: ''
       id: attention_span
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad413ca668>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b5182630>
       id: attention_axis
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad413ca630>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b51825f8>
       id: init
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2aad413ca5f8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b51825c0>
       id: go_backwards
     - defaultValue: None
       id: enable_self_stabilization

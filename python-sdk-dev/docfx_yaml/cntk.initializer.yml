@@ -53,7 +53,8 @@ items:
       type:
       - int
     return:
-      description: initializer for `Parameter` useful for deconvolution layer
+      description: initializer for @cntk.ops.variables.Parameter useful for deconvolution
+        layer
   type: Method
   uid: cntk.initializer.bilinear
 - _type: function
@@ -93,8 +94,8 @@ items:
       type:
       - int
     return:
-      description: initializer for `Parameter` initialized to Gaussian distribution
-        with mean *0* and standard deviation $$scale*sqrt(2.0/(fanIn+fanOut))$$
+      description: initializer for @cntk.ops.variables.Parameter initialized to Gaussian
+        distribution with mean *0* and standard deviation $$scale*sqrt(2.0/(fanIn+fanOut))$$
   type: Method
   uid: cntk.initializer.glorot_normal
 - _type: function
@@ -134,8 +135,8 @@ items:
       type:
       - int
     return:
-      description: initializer for `Parameter` initialized to uniform distribution
-        between $$scale*sqrt(6.0/(fanIn+fanOut))*[-1,1]$$
+      description: initializer for @cntk.ops.variables.Parameter initialized to uniform
+        distribution between $$scale*sqrt(6.0/(fanIn+fanOut))*[-1,1]$$
   type: Method
   uid: cntk.initializer.glorot_uniform
 - _type: function
@@ -175,8 +176,8 @@ items:
       type:
       - int
     return:
-      description: initializer for `Parameter` initialized to Gaussian distribution
-        with mean *0* and standard deviation $$scale*sqrt(2.0/fanIn)$$
+      description: initializer for @cntk.ops.variables.Parameter initialized to Gaussian
+        distribution with mean *0* and standard deviation $$scale*sqrt(2.0/fanIn)$$
   type: Method
   uid: cntk.initializer.he_normal
 - _type: function
@@ -216,8 +217,8 @@ items:
       type:
       - int
     return:
-      description: initializer for `Parameter` initialized to uniform distribution
-        between $$scale*sqrt(6.0/fanIn)*[-1,1]$$
+      description: initializer for @cntk.ops.variables.Parameter initialized to uniform
+        distribution between $$scale*sqrt(6.0/fanIn)*[-1,1]$$
   type: Method
   uid: cntk.initializer.he_uniform
 - _type: function
@@ -252,8 +253,8 @@ items:
       type:
       - int
     return:
-      description: new initializer for `Parameter` with specified output_rank and
-        filter_rank
+      description: new initializer for @cntk.ops.variables.Parameter with specified
+        output_rank and filter_rank
   type: Method
   uid: cntk.initializer.initializer_with_rank
 - _type: function
@@ -293,7 +294,7 @@ items:
       type:
       - int
     return:
-      description: initializer for `cntk.ops.variables.Parameter` initialized to normal
+      description: initializer for @cntk.ops.variables.Parameter initialized to normal
         distribution with mean *0* and standard deviation *scale*.
   type: Method
   uid: cntk.initializer.normal
@@ -324,7 +325,7 @@ items:
       type:
       - int
     return:
-      description: initializer for `cntk.ops.variables.Parameter` initialized to uniform
+      description: initializer for @cntk.ops.variables.Parameter initialized to uniform
         distribution between *scale*[-1.0, 1.0]* note this maps to the "uniform1"
         distribution in BrainScript.
   type: Method
@@ -366,8 +367,8 @@ items:
       type:
       - int
     return:
-      description: initializer for `Parameter` initialized to Gaussian distribution
-        with mean *0* and standard deviation $$scale*sqrt(3.0/fanIn)$$
+      description: initializer for @cntk.ops.variables.Parameter initialized to Gaussian
+        distribution with mean *0* and standard deviation $$scale*sqrt(3.0/fanIn)$$
   type: Method
   uid: cntk.initializer.xavier
 references:

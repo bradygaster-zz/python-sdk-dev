@@ -8,8 +8,8 @@ items:
   class: cntk.learners.UnitType
   fullName: cntk.learners.UnitType
   inheritance:
-  - - type: enum.Enum
-    - type: builtins.object
+  - - enum.Enum
+    - - builtins.object
   langs:
   - python
   module: cntk.learners
@@ -22,7 +22,7 @@ items:
       path: cntk/learners/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 15
-  summary: 'Bases: `enum.Enum`
+  summary: 'Bases: @enum.Enum
 
     Indicates whether the values in the schedule are specified on the per-sample or
     per-minibatch basis.

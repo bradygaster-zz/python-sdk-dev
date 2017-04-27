@@ -6,8 +6,8 @@ items:
   class: cntk.train.training_session.CheckpointConfig
   fullName: cntk.train.training_session.CheckpointConfig
   inheritance:
-  - - type: cntk.cntk_py.CheckpointConfig
-    - type: builtins.object
+  - - cntk.cntk_py.CheckpointConfig
+    - - builtins.object
   langs:
   - python
   module: cntk.train.training_session
@@ -20,7 +20,7 @@ items:
       path: cntk/train/training_session.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 16
-  summary: 'Bases: `cntk.cntk_py.CheckpointConfig`
+  summary: 'Bases: @cntk.cntk_py.CheckpointConfig
 
     A checkpoint configuration for the training session.'
   syntax:

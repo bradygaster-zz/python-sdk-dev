@@ -10,8 +10,8 @@ items:
   class: cntk.learners.Learner
   fullName: cntk.learners.Learner
   inheritance:
-  - - type: cntk.cntk_py.Learner
-    - type: builtins.object
+  - - cntk.cntk_py.Learner
+    - - builtins.object
   langs:
   - python
   module: cntk.learners
@@ -24,7 +24,7 @@ items:
       path: cntk/learners/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 104
-  summary: 'Bases: `cntk.cntk_py.Learner`
+  summary: 'Bases: @cntk.cntk_py.Learner
 
     Abstraction for learning a subset of parameters of a learnable function using
     first order gradient values. For example momentum, AdaGrad, RMSProp, etc. are
@@ -126,8 +126,8 @@ items:
   syntax:
     parameters:
     - id: self
-    - description: maps `Parameter` to a NumPy array containing the first order gradient
-        values for the Parameter w.r.t. the training objective.
+    - description: maps @cntk.ops.variables.Parameter to a NumPy array containing
+        the first order gradient values for the Parameter w.r.t. the training objective.
       id: gradient_values
       type:
       - dict
