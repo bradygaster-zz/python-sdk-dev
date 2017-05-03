@@ -600,7 +600,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.variables.Constant'
+      description: '`Constant`'
   type: Method
   uid: cntk.ops.constant
 - _type: function
@@ -1411,7 +1411,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.variables.Variable'
+      description: '`Variable`'
   type: Method
   uid: cntk.ops.input_variable
 - _type: function
@@ -1810,7 +1810,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.variables.Variable that is of output type'
+      description: '`Variable` that is of output type'
   type: Method
   uid: cntk.ops.output_variable
 - _type: function
@@ -1884,7 +1884,7 @@ items:
       type:
       - tuple or int, optional
     - description: if init is a scalar it will be replicated for every element in
-        the tensor or NumPy array. If it is the output of an initializer form @cntk.initializer
+        the tensor or NumPy array. If it is the output of an initializer form [cntk.initializer](.md#module-cntk.initializer.md)
         it will be used to initialize the tensor at the first forward pass. If *None*,
         the tensor will be initialized with 0.
       id: init
@@ -1904,7 +1904,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.variables.Parameter'
+      description: '`Parameter`'
   type: Method
   uid: cntk.ops.parameter
 - _type: function
@@ -2037,7 +2037,7 @@ items:
       type:
       - list
     return:
-      description: '@cntk.ops.variables.Variable'
+      description: '`Variable`'
   type: Method
   uid: cntk.ops.placeholder_variable
 - _type: function
@@ -2111,7 +2111,7 @@ items:
     parameters:
     - description: pooling input
       id: operand
-    - description: one of @cntk.ops.MAX_POOLING or @cntk.ops.AVG_POOLING
+    - description: one of `MAX_POOLING` or `AVG_POOLING`
       id: pooling_type
     - description: dimensions of the pooling window
       id: pooling_window_shape
@@ -2200,7 +2200,7 @@ items:
     sampled set. In case of sampling without replacement the result is only an estimate
     which might be quite rough in the case of small sample sizes. Intended uses are
     e.g. sampled softmax, noise contrastive estimation etc. This operation will be
-    typically used together with @random_sample.
+    typically used together with @cntk.ops.random_sample.
 
     -[ Example ]-
 
@@ -2286,7 +2286,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_log_sum_exp
-  seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
+  seealso: 'See also: `reduce_sum()` for more details and examples.'
   source:
     id: reduce_log_sum_exp
     path: cntk/internal/swig_helper.py
@@ -2324,7 +2324,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_max
-  seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
+  seealso: 'See also: `reduce_sum()` for more details and examples.'
   source:
     id: reduce_max
     path: cntk/internal/swig_helper.py
@@ -2349,7 +2349,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_mean
-  seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
+  seealso: 'See also: `reduce_sum()` for more details and examples.'
   source:
     id: reduce_mean
     path: cntk/internal/swig_helper.py
@@ -2374,7 +2374,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_min
-  seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
+  seealso: 'See also: `reduce_sum()` for more details and examples.'
   source:
     id: reduce_min
     path: cntk/internal/swig_helper.py
@@ -2399,7 +2399,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_prod
-  seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
+  seealso: 'See also: `reduce_sum()` for more details and examples.'
   source:
     id: reduce_prod
     path: cntk/internal/swig_helper.py
@@ -3002,11 +3002,11 @@ items:
     \ a matrix. The operator '@' has been overloaded such that in Python 3.5 and later\
     \ X @ W equals times(X, W).\nFor better performance on times operation on sequence\
     \ which is followed by sequence.reduce_sum, use infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK,\
-    \ i.e. replace following:\n<!-- literal_block {\"dupnames\": [], \"xml:space\"\
-    : \"preserve\", \"backrefs\": [], \"ids\": [], \"names\": [], \"classes\": []}\
+    \ i.e. replace following:\n<!-- literal_block {\"backrefs\": [], \"ids\": [],\
+    \ \"names\": [], \"xml:space\": \"preserve\", \"classes\": [], \"dupnames\": []}\
     \ -->\n\n````\n\n   sequence.reduce_sum(times(seq1, seq2))\n   ````\nwith:\n<!--\
-    \ literal_block {\"dupnames\": [], \"xml:space\": \"preserve\", \"backrefs\":\
-    \ [], \"ids\": [], \"names\": [], \"classes\": []} -->\n\n````\n\n   times(seq1,\
+    \ literal_block {\"backrefs\": [], \"ids\": [], \"names\": [], \"xml:space\":\
+    \ \"preserve\", \"classes\": [], \"dupnames\": []} -->\n\n````\n\n   times(seq1,\
     \ seq2, infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK)\n\
     \   ````\n-[ Example ]-\n>>> C.times([[1,2],[3,4]], [[5],[6]]).eval()\narray([[\
     \ 17.],\n       [ 39.]], dtype=float32)\n>>> C.times(1.*np.reshape(np.arange(8),\
@@ -3158,7 +3158,7 @@ items:
       id: operand
     - description: input to the corresponding pooling operation
       id: pooling_input
-    - description: only @cntk.ops.MAX_UNPOOLING is supported now
+    - description: only `MAX_UNPOOLING` is supported now
       id: unpooling_type
     - description: dimensions of the unpooling window
       id: unpooling_window_shape

@@ -19,7 +19,7 @@ items:
       path: cntk/tensor.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 158
-  summary: 'Bases: @object'
+  summary: 'Bases: `object`'
   syntax: {}
   type: Class
   uid: cntk.tensor.ArrayMixin

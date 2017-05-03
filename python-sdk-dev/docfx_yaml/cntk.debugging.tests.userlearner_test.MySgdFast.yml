@@ -24,7 +24,7 @@ items:
       path: cntk/debugging/tests/userlearner_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 42
-  summary: 'Bases: @cntk.learners.UserLearner
+  summary: 'Bases: `cntk.learners.UserLearner`
 
     '
   syntax: {}

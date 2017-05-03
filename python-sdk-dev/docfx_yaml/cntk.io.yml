@@ -43,12 +43,11 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 455
   summary: "Configures the CNTK text-format reader that reads text-based files with\
-    \ lines of the form:\n<!-- literal_block {\"dupnames\": [], \"xml:space\": \"\
-    preserve\", \"backrefs\": [], \"ids\": [], \"names\": [], \"classes\": []} -->\n\
-    \n````\n\n   [Sequence_Id] (Sample)+\n   ````\nwhere:\n<!-- literal_block {\"\
-    dupnames\": [], \"xml:space\": \"preserve\", \"backrefs\": [], \"ids\": [], \"\
-    names\": [], \"classes\": []} -->\n\n````\n\n   Sample=|Input_Name (Value )*\n\
-    \   ````"
+    \ lines of the form:\n<!-- literal_block {\"backrefs\": [], \"ids\": [], \"names\"\
+    : [], \"xml:space\": \"preserve\", \"classes\": [], \"dupnames\": []} -->\n\n\
+    ````\n\n   [Sequence_Id] (Sample)+\n   ````\nwhere:\n<!-- literal_block {\"backrefs\"\
+    : [], \"ids\": [], \"names\": [], \"xml:space\": \"preserve\", \"classes\": [],\
+    \ \"dupnames\": []} -->\n\n````\n\n   Sample=|Input_Name (Value )*\n   ````"
   syntax:
     parameters:
     - id: filename
@@ -76,7 +75,7 @@ items:
   syntax:
     parameters:
     - description: any dictionary-like object that contains a mapping from stream
-        names to @StreamDef objects. Each StreamDef object configures a feature stream.
+        names to `StreamDef` objects. Each StreamDef object configures a feature stream.
       id: streams
   type: Method
   uid: cntk.io.HTKFeatureDeserializer
@@ -103,7 +102,7 @@ items:
       type:
       - str
     - description: any dictionary-like object that contains a mapping from stream
-        names to @StreamDef objects. Each StreamDef object configures a label stream.
+        names to `StreamDef` objects. Each StreamDef object configures a label stream.
       id: streams
   type: Method
   uid: cntk.io.HTKMLFDeserializer
@@ -123,12 +122,12 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 418
   summary: "Configures the image reader that reads images and corresponding labels\
-    \ from a file of the form:\n<!-- literal_block {\"dupnames\": [], \"xml:space\"\
-    : \"preserve\", \"backrefs\": [], \"ids\": [], \"names\": [], \"classes\": []}\
+    \ from a file of the form:\n<!-- literal_block {\"backrefs\": [], \"ids\": [],\
+    \ \"names\": [], \"xml:space\": \"preserve\", \"classes\": [], \"dupnames\": []}\
     \ -->\n\n````\n\n   <full path to image> <tab> <numerical label (0-based class\
-    \ id)>\n   ````\nor:\n<!-- literal_block {\"dupnames\": [], \"xml:space\": \"\
-    preserve\", \"backrefs\": [], \"ids\": [], \"names\": [], \"classes\": []} -->\n\
-    \n````\n\n   sequenceId <tab> path <tab> label\n   ````"
+    \ id)>\n   ````\nor:\n<!-- literal_block {\"backrefs\": [], \"ids\": [], \"names\"\
+    : [], \"xml:space\": \"preserve\", \"classes\": [], \"dupnames\": []} -->\n\n\
+    ````\n\n   sequenceId <tab> path <tab> label\n   ````"
   syntax:
     parameters:
     - id: filename
@@ -175,7 +174,7 @@ items:
     - defaultValue: None
       description: dimensions of this stream. HTKFeatureDeserializer, HTKMLFDeserializer,
         and CTFDeserializer read data as flat arrays. If you need different shapes
-        you can @cntk.ops.reshape it later.
+        you can `reshape()` it later.
       id: shape
       type:
       - int or tuple, defaults to None

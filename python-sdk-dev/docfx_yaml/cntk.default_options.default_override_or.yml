@@ -19,7 +19,7 @@ items:
       path: cntk/default_options.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 50
-  summary: 'Bases: @object'
+  summary: 'Bases: `object`'
   syntax: {}
   type: Class
   uid: cntk.default_options.default_override_or

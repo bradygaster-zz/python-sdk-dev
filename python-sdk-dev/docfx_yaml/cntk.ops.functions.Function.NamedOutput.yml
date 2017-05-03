@@ -19,7 +19,7 @@ items:
       path: cntk/ops/functions.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 54
-  summary: 'Bases: @object'
+  summary: 'Bases: `object`'
   syntax: {}
   type: Class
   uid: cntk.ops.functions.Function.NamedOutput

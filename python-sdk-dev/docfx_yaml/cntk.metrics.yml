@@ -73,7 +73,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '`Function`'
   type: Method
   uid: cntk.metrics.classification_error
 - _type: function
@@ -142,7 +142,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '`Function`'
   type: Method
   uid: cntk.metrics.edit_distance_error
 - _type: function
@@ -188,7 +188,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '`Function`'
   type: Method
   uid: cntk.metrics.lambda_rank
 - _type: function
@@ -249,7 +249,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '`Function`'
   type: Method
   uid: cntk.metrics.ndcg_at_1
 references:

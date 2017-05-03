@@ -56,7 +56,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '`Function`'
   type: Method
   uid: cntk.losses.binary_cross_entropy
 - _type: function
@@ -81,15 +81,14 @@ items:
     \    [ 1.,  0.],\n       [ 0., -1.]], dtype=float32)"
   syntax:
     parameters:
-    - description: numpy array or any @cntk.ops.functions.Function that outputs a
-        tensor
+    - description: numpy array or any `Function` that outputs a tensor
       id: x
     - description: the name of the Function instance in the network
       id: name
       type:
       - str, optional
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '`Function`'
   type: Method
   uid: cntk.losses.cosine_distance
 - _type: function
@@ -126,8 +125,7 @@ items:
     \  0.5]],\n<BLANKLINE>\n       [[ 1. ,  0. ,  0.5]]], dtype=float32)"
   syntax:
     parameters:
-    - description: numpy array or any @cntk.ops.functions.Function that outputs a
-        tensor
+    - description: numpy array or any `Function` that outputs a tensor
       id: y
       type:
       - x,
@@ -141,7 +139,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '`Function`'
   type: Method
   uid: cntk.losses.cosine_distance_with_negative_samples
 - _type: function
@@ -193,7 +191,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '`Function`'
   type: Method
   uid: cntk.losses.cross_entropy_with_softmax
 - _type: function
@@ -241,7 +239,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '`Function`'
   type: Method
   uid: cntk.losses.squared_error
 - _type: function
@@ -277,7 +275,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '`Function`'
   type: Method
   uid: cntk.losses.weighted_binary_cross_entropy
 references:

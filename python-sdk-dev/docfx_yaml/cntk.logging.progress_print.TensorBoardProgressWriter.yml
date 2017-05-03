@@ -28,7 +28,7 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 409
-  summary: 'Bases: @cntk.cntk_py.ProgressWriter
+  summary: 'Bases: `cntk.cntk_py.ProgressWriter`
 
     Allows writing various statistics (e.g. loss and metric) to TensorBoard event
     files during training/evaluation. The generated files can be opened in TensorBoard

@@ -66,7 +66,7 @@ items:
       type:
       - str
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '[Function](.md#cntk.ops.functions.Function.md)'
   type: Method
   uid: cntk.ops.sequence.broadcast_as
 - _type: function
@@ -134,7 +134,7 @@ items:
       type:
       - str
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '[Function](.md#cntk.ops.functions.Function.md)'
   type: Method
   uid: cntk.ops.sequence.first
 - _type: function
@@ -177,7 +177,7 @@ items:
       type:
       - str
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '[Function](.md#cntk.ops.functions.Function.md)'
   type: Method
   uid: cntk.ops.sequence.gather
 - _type: function
@@ -219,7 +219,7 @@ items:
       type:
       - str
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '[Function](.md#cntk.ops.functions.Function.md)'
   type: Method
   uid: cntk.ops.sequence.is_first
 - _type: function
@@ -261,7 +261,7 @@ items:
       type:
       - str
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '[Function](.md#cntk.ops.functions.Function.md)'
   type: Method
   uid: cntk.ops.sequence.is_last
 - _type: function
@@ -292,7 +292,7 @@ items:
       type:
       - str
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '[Function](.md#cntk.ops.functions.Function.md)'
   type: Method
   uid: cntk.ops.sequence.last
 - _type: function
@@ -323,7 +323,7 @@ items:
       type:
       - str, optional
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '[Function](.md#cntk.ops.functions.Function.md)'
   type: Method
   uid: cntk.ops.sequence.reduce_sum
 - _type: function
@@ -372,7 +372,7 @@ items:
       type:
       - str
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '[Function](.md#cntk.ops.functions.Function.md)'
   type: Method
   uid: cntk.ops.sequence.scatter
 - _type: function
@@ -397,7 +397,7 @@ items:
     TBA'
   syntax:
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '[Function](.md#cntk.ops.functions.Function.md)'
   type: Method
   uid: cntk.ops.sequence.slice
 - _type: function
@@ -441,7 +441,7 @@ items:
       type:
       - str
     return:
-      description: '@cntk.ops.functions.Function'
+      description: '[Function](.md#cntk.ops.functions.Function.md)'
   type: Method
   uid: cntk.ops.sequence.where
 references:

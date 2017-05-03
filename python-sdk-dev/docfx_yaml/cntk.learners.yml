@@ -103,7 +103,7 @@ items:
       - bool, default True
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
-        @cntk.train.trainer.Trainer
+        `Trainer`
   type: Method
   uid: cntk.learners.adagrad
 - _type: function
@@ -141,7 +141,7 @@ items:
       type:
       - output of momentum_schedule() or momentum_as_time_constant_schedule()
     - description: when `True`, momentum is interpreted as a unit-gain filter. Defaults
-        to the value returned by @default_unit_gain_value.
+        to the value returned by `default_unit_gain_value()`.
       id: unit_gain
     - description: variance momentum schedule. Defaults to `momentum_as_time_constant_schedule(720000)`.
       id: variance_momentum
@@ -170,7 +170,7 @@ items:
       - bool, default True
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
-        @cntk.train.trainer.Trainer
+        `Trainer`
   type: Method
   uid: cntk.learners.adam
 - _type: function
@@ -218,7 +218,7 @@ items:
       type:
       - output of momentum_schedule() or momentum_as_time_constant_schedule()
     - description: when `True`, momentum is interpreted as a unit-gain filter. Defaults
-        to the value returned by @default_unit_gain_value.
+        to the value returned by `default_unit_gain_value()`.
       id: unit_gain
     - description: variance momentum schedule. Defaults to `momentum_as_time_constant_schedule(720000)`.
       id: variance_momentum
@@ -247,7 +247,7 @@ items:
       - bool, default True
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
-        @cntk.train.trainer.Trainer
+        `Trainer`
   type: Method
   uid: cntk.learners.adam_sgd
 - _type: function
@@ -303,7 +303,7 @@ items:
       type:
       - output of momentum_schedule() or momentum_as_time_constant_schedule()
     - description: when `True`, momentum is interpreted as a unit-gain filter. Defaults
-        to the value returned by @default_unit_gain_value.
+        to the value returned by @cntk.learners.default_unit_gain_value.
       id: unit_gain
     - description: variance momentum schedule. Defaults to `momentum_as_time_constant_schedule(720000)`.
       id: variance_momentum
@@ -332,7 +332,7 @@ items:
       - bool, default True
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
-        @cntk.train.trainer.Trainer
+        `Trainer`
   type: Method
   uid: cntk.learners.fsadagrad
 - _type: function
@@ -341,7 +341,7 @@ items:
   - python
   module: cntk.learners
   name: learning_rate_schedule
-  seealso: 'See also: @training_parameter_schedule'
+  seealso: 'See also: `training_parameter_schedule()`'
   source:
     id: learning_rate_schedule
     path: cntk/internal/swig_helper.py
@@ -350,18 +350,18 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 293
-  summary: Create a learning rate schedule (using the same semantics as @training_parameter_schedule).
+  summary: Create a learning rate schedule (using the same semantics as `training_parameter_schedule()`).
   syntax:
     parameters:
-    - description: see parameter `schedule` in @training_parameter_schedule.
+    - description: see parameter `schedule` in `training_parameter_schedule()`.
       id: lr
       type:
       - float or list
-    - description: see parameter `unit` in @training_parameter_schedule.
+    - description: see parameter `unit` in `training_parameter_schedule()`.
       id: unit
       type:
       - UnitType
-    - description: see parameter `epoch_size` in @training_parameter_schedule.
+    - description: see parameter `epoch_size` in `training_parameter_schedule()`.
       id: epoch_size
       type:
       - int
@@ -384,13 +384,13 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 354
   summary: 'Create a momentum schedule in a minibatch-size agnostic way (using the
-    same semantics as @training_parameter_schedule with *unit=UnitType.sample*).
+    same semantics as `training_parameter_schedule()` with *unit=UnitType.sample*).
 
     CNTK specifies momentum in a minibatch-size agnostic way as the time constant
     (in samples) of a unit-gain 1st-order IIR filter. The value specifies the number
     of samples after which a gradient has an effect of 1/e=37%.
 
-    If you want to specify the momentum per sample (or per minibatch), use @momentum_schedule.
+    If you want to specify the momentum per sample (or per minibatch), use `momentum_schedule()`.
 
     -[ Examples ]-
 
@@ -423,9 +423,9 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 316
   summary: 'Create a per-minibatch momentum schedule (using the same semantics as
-    @training_parameter_schedule with the *unit=UnitType.minibatch*).
+    `training_parameter_schedule()` with the *unit=UnitType.minibatch*).
 
-    If you want to provide momentum values in a minibatch-size agnostic way, use @momentum_as_time_constant_schedule.
+    If you want to provide momentum values in a minibatch-size agnostic way, use @cntk.learners.momentum_as_time_constant_schedule.
 
     -[ Examples ]-
 
@@ -494,7 +494,7 @@ items:
       type:
       - output of momentum_schedule() or momentum_as_time_constant_schedule()
     - description: when `True`, momentum is interpreted as a unit-gain filter. Defaults
-        to the value returned by @default_unit_gain_value.
+        to the value returned by @cntk.learners.default_unit_gain_value.
       id: unit_gain
     - description: the L1 regularization weight per sample, defaults to 0.0
       id: l1_regularization_weight
@@ -519,7 +519,7 @@ items:
       - bool, default True
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
-        @cntk.train.trainer.Trainer
+        `Trainer`
   type: Method
   uid: cntk.learners.momentum_sgd
 - _type: function
@@ -564,7 +564,7 @@ items:
       type:
       - output of momentum_schedule() or momentum_as_time_constant_schedule()
     - description: when `True`, momentum is interpreted as a unit-gain filter. Defaults
-        to the value returned by @default_unit_gain_value.
+        to the value returned by @cntk.learners.default_unit_gain_value.
       id: unit_gain
     - description: the L1 regularization weight per sample, defaults to 0.0
       id: l1_regularization_weight
@@ -589,7 +589,7 @@ items:
       - bool, default True
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
-        @cntk.train.trainer.Trainer.
+        `Trainer`.
   type: Method
   uid: cntk.learners.nesterov
 - _type: function
@@ -666,7 +666,7 @@ items:
       - bool, default True
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
-        @cntk.train.trainer.Trainer
+        `Trainer`
   type: Method
   uid: cntk.learners.rmsprop
 - _type: function
@@ -741,7 +741,7 @@ items:
       - bool, default True
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
-        @cntk.train.trainer.Trainer
+        `Trainer`
   type: Method
   uid: cntk.learners.sgd
 - _type: function
@@ -750,7 +750,7 @@ items:
   - python
   module: cntk.learners
   name: training_parameter_schedule
-  seealso: 'See also: @learning_rate_schedule'
+  seealso: 'See also: @cntk.learners.learning_rate_schedule'
   source:
     id: training_parameter_schedule
     path: cntk/internal/swig_helper.py

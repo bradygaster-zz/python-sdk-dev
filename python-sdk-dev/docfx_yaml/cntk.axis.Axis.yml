@@ -34,7 +34,7 @@ items:
       path: cntk/axis.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 9
-  summary: 'Bases: @cntk.cntk_py.Axis
+  summary: 'Bases: `cntk.cntk_py.Axis`
 
     An axis object describes the axis of a variable and is used for specifying the
     axes parameters of certain functions such as reductions.  Besides the static axes

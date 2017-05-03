@@ -19,7 +19,7 @@ items:
       path: null
       repo: https://github.com/Microsoft/CNTK
     startLine: null
-  summary: 'Bases: @object
+  summary: 'Bases: `object`
 
     Meta class to denote a parameter tensor (no batch axis). Use with dimensions,
     e.g. `ParameterTensor[512,256]`.'

@@ -21,7 +21,7 @@ items:
       path: cntk/layers/typing.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 57
-  summary: 'Bases: @type'
+  summary: 'Bases: `type`'
   syntax: {}
   type: Class
   uid: cntk.layers.typing.SequenceOverMeta

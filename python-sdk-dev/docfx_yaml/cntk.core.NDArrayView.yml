@@ -26,11 +26,11 @@ items:
       path: cntk/core.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 23
-  summary: 'Bases: @cntk.cntk_py.NDArrayView
+  summary: 'Bases: `cntk.cntk_py.NDArrayView`
 
-    Creates an empty dense internal data representation of a @cntk.core.Value object.
-    To create an NDArrayView from a NumPy array, use @from_dense. To create an NDArrayView
-    from a sparse array, use @from_csr.
+    Creates an empty dense internal data representation of a `Value` object. To create
+    an NDArrayView from a NumPy array, use @cntk.core.NDArrayView.from_dense. To create
+    an NDArrayView from a sparse array, use @cntk.core.NDArrayView.from_csr.
 
 
 
@@ -68,7 +68,8 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 79
-  summary: Create a @NDArrayView instance from a SciPy sparse array in CSR format.
+  summary: Create a @cntk.core.NDArrayView instance from a SciPy sparse array in CSR
+    format.
   syntax:
     parameters:
     - description: SciPy sparse matrix in CSR format
@@ -89,7 +90,7 @@ items:
       type:
       - bool, default False
     return:
-      description: '@NDArrayView instance'
+      description: '@cntk.core.NDArrayView instance'
   type: Method
   uid: cntk.core.NDArrayView.from_csr
 - _type: method
@@ -107,8 +108,8 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 110
-  summary: Create a @NDArrayView instance from a NumPy or SciPy sparse array in CSR
-    format.
+  summary: Create a @cntk.core.NDArrayView instance from a NumPy or SciPy sparse array
+    in CSR format.
   syntax:
     parameters:
     - description: data
@@ -129,7 +130,7 @@ items:
       type:
       - bool, default False
     return:
-      description: '@NDArrayView instance'
+      description: '@cntk.core.NDArrayView instance'
   type: Method
   uid: cntk.core.NDArrayView.from_data
 - _type: method
@@ -147,7 +148,7 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 46
-  summary: Create a @NDArrayView instance from a NumPy array.
+  summary: Create a @cntk.core.NDArrayView instance from a NumPy array.
   syntax:
     parameters:
     - description: NumPy array
@@ -168,7 +169,7 @@ items:
       type:
       - bool, optional
     return:
-      description: '@NDArrayView instance'
+      description: '@cntk.core.NDArrayView instance'
   type: Method
   uid: cntk.core.NDArrayView.from_dense
 - _type: attribute

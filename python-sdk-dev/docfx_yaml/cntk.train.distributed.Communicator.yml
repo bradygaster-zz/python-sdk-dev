@@ -28,7 +28,7 @@ items:
       path: cntk/train/distributed.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 41
-  summary: 'Bases: @cntk.cntk_py.DistributedCommunicator
+  summary: 'Bases: `cntk.cntk_py.DistributedCommunicator`
 
     A communicator interface exposing communication primitives that serve as building
     blocks for distributed training.

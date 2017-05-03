@@ -24,7 +24,7 @@ items:
       path: cntk/train/tests/training_session_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 82
-  summary: 'Bases: @cntk.cntk_py.ProgressWriter
+  summary: 'Bases: `cntk.cntk_py.ProgressWriter`
 
 
 

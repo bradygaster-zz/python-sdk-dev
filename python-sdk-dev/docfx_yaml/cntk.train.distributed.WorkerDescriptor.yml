@@ -23,9 +23,10 @@ items:
       path: cntk/train/distributed.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 22
-  summary: 'Bases: @cntk.cntk_py.DistributedWorkerDescriptor
+  summary: 'Bases: `cntk.cntk_py.DistributedWorkerDescriptor`
 
-    Distributed worker descriptor, returned by @Communicator instance.
+    Distributed worker descriptor, returned by @cntk.train.distributed.Communicator
+    instance.
 
 
     '

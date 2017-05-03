@@ -37,7 +37,7 @@ items:
       path: cntk/logging/progress_print.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 27
-  summary: 'Bases: @cntk.cntk_py.ProgressWriter
+  summary: 'Bases: `cntk.cntk_py.ProgressWriter`
 
     Allows printing various statistics (e.g. loss and metric) as training/evaluation
     progresses.

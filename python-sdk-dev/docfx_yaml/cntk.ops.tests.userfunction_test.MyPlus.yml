@@ -31,7 +31,7 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 20
-  summary: 'Bases: @cntk.ops.functions.UserFunction
+  summary: 'Bases: [cntk.ops.functions.UserFunction](.md#cntk.ops.functions.UserFunction.md)
 
 
 

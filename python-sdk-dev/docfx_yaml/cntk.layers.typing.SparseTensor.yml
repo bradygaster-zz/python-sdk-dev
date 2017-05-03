@@ -19,7 +19,7 @@ items:
       path: null
       repo: https://github.com/Microsoft/CNTK
     startLine: null
-  summary: 'Bases: @object
+  summary: 'Bases: `object`
 
     Meta class to denote a sparse data tensor (with batch axis). Use with dimensions,
     e.g. `SparseTensor[129]`.'

@@ -26,7 +26,7 @@ items:
       path: cntk/core.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 182
-  summary: 'Bases: @cntk.cntk_py.Value
+  summary: 'Bases: `cntk.cntk_py.Value`
 
     Internal representation of minibatch data.
 
@@ -49,7 +49,7 @@ items:
       id: dtype
     - description: "batch input for *var*. It can be:\n\n   * a pure Python structure\
         \ (list of lists, ...),\n\n   * a list of NumPy arrays or SciPy sparse CSR\
-        \ matrices\n\n   * a @cntk.core.Value object (e.g. returned by @one_hot)"
+        \ matrices\n\n   * a @cntk.core.Value object (e.g. returned by @cntk.core.Value.one_hot)"
       id: batch
     - description: if None, every sequence is treated as a new sequence. Otherwise,
         it is interpreted as a list of Booleans that tell whether a sequence is a
@@ -124,7 +124,7 @@ items:
       path: null
       repo: https://github.com/Microsoft/CNTK
     startLine: null
-  summary: Retrieves the underlying @NDArrayView instance.
+  summary: Retrieves the underlying @cntk.core.NDArrayView instance.
   syntax: {}
   type: Property
   uid: cntk.core.Value.data
@@ -203,8 +203,8 @@ items:
       type:
       - DeviceDescriptor, default None
     return:
-      description: '`batch` converted into a @Value object that can be passed to the
-        forward or eval function.'
+      description: '`batch` converted into a @cntk.core.Value object that can be passed
+        to the forward or eval function.'
   type: Method
   uid: cntk.core.Value.one_hot
 - _type: attribute

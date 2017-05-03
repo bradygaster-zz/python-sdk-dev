@@ -31,10 +31,10 @@ items:
       path: cntk/io/__init__.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 20
-  summary: 'Bases: @cntk.cntk_py.MinibatchData, @cntk.tensor.ArrayMixin
+  summary: 'Bases: `cntk.cntk_py.MinibatchData`, [cntk.tensor.ArrayMixin](.md#cntk.tensor.ArrayMixin.md)
 
     Holds a minibatch of input data. This is never directly created, but only returned
-    by @MinibatchSource instances.
+    by `MinibatchSource` instances.
 
 
 

@@ -20,7 +20,7 @@ items:
       path: cntk/debugging/tests/debug_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 48
-  summary: 'Bases: @object
+  summary: 'Bases: `object`
 
     '
   syntax: {}

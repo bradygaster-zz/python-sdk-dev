@@ -61,7 +61,7 @@ items:
   - python
   module: cntk.logging.graph
   name: find_all_with_name
-  seealso: 'See also: @cntk.ops.functions.Function.find_all_with_name in class @cntk.ops.functions.Function.'
+  seealso: 'See also: `find_all_with_name()` in class `Function`.'
   source:
     id: find_all_with_name
     path: cntk/logging/graph.py
@@ -92,7 +92,7 @@ items:
   - python
   module: cntk.logging.graph
   name: find_by_name
-  seealso: 'See also: @cntk.ops.functions.Function.find_by_name in class @cntk.ops.functions.Function.'
+  seealso: 'See also: `find_by_name()` in class `Function`.'
   source:
     id: find_by_name
     path: cntk/logging/graph.py

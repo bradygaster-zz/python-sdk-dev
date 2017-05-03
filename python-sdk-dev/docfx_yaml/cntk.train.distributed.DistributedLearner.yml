@@ -24,7 +24,7 @@ items:
       path: cntk/train/distributed.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 100
-  summary: 'Bases: @cntk.cntk_py.DistributedLearner
+  summary: 'Bases: `cntk.cntk_py.DistributedLearner`
 
     A distributed learner that handles data like gradients/momentums across multiple
     MPI workers
