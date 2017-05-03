@@ -86,6 +86,9 @@ items:
   summary: Returns a cloned model that has debug nodes inserted everywhere. When the
     graph is evaluated or trained, those nodes will allow to inspect the graph.
   syntax:
+    content: debug_model(model, in_stream=<_io.TextIOWrapper name='<stdin>' mode='r'
+      encoding='ANSI_X3.4-1968'>, out_stream=<_io.TextIOWrapper name='<stdout>' mode='w'
+      encoding='ANSI_X3.4-1968'>, exit_func=<built-in function exit>)
     parameters:
     - description: root node until which the nodes are to be debugged
       id: model
@@ -129,6 +132,7 @@ items:
   summary: Save the network of `root_op` in `filename`. For debugging purposes only,
     very likely to be deprecated in the future.
   syntax:
+    content: save_as_legacy_model(root_op, filename)
     parameters:
     - description: op of the graph to save
       id: root_op
@@ -160,6 +164,7 @@ items:
     \ for every forward/backward 1000000  : output each node's full matrix for every\
     \ forward/backward"
   syntax:
+    content: set_computation_network_trace_level(level)
     parameters:
     - description: trace level
       id: level
@@ -184,6 +189,7 @@ items:
   summary: Fill in NaNs in gaps of sequences to track unmasked uninitialized data.
     For debugging purposes only.
   syntax:
+    content: set_computation_network_track_gap_nans(enable)
     parameters:
     - description: whether to enable gap nans tracking (with performance impact)
       id: enable

@@ -34,6 +34,8 @@ items:
 
     '
   syntax:
+    content: TrainingSession(self, trainer, mb_source, mb_size, var_to_stream, max_samples,
+      progress_frequency, checkpoint_config, cv_config)
     parameters:
     - description: trainer
       id: trainer
@@ -86,6 +88,7 @@ items:
     startLine: 169
   summary: Callback that gets executed at the end of cross validation.
   syntax:
+    content: on_cross_validation_end(self, index, average_error, num_samples, num_minibatches)
     parameters:
     - id: self
     - description: index of the current callback.
@@ -125,6 +128,7 @@ items:
     startLine: 154
   summary: Perform training on a specified device.
   syntax:
+    content: train()
     parameters:
     - description: the device descriptor containing the type and id of the device
         where training takes place.

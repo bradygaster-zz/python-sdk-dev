@@ -57,6 +57,7 @@ items:
 
     '
   syntax:
+    content: Trainer(self, model, criterion, parameter_learners, progress_writers=None)
     parameters:
     - description: root node of the function to train
       id: model
@@ -232,6 +233,7 @@ items:
   summary: Restores a checkpoint of the model and Trainer state from the specified
     file location.
   syntax:
+    content: restore_from_checkpoint(self, filename)
     parameters:
     - id: self
     - description: filename to restore the checkpoint from
@@ -260,6 +262,7 @@ items:
 
     In distributed environment the checkpointing is done by the main worker.'
   syntax:
+    content: save_checkpoint(self, filename, external_state={})
     parameters:
     - defaultValue: '{}'
       description: filename to store the checkpoint.
@@ -286,6 +289,7 @@ items:
   summary: Updates the progress writers with the summary of test progress since start
     and resets the internal accumulators.
   syntax:
+    content: summarize_test_progress(self)
     parameters:
     - id: self
   type: Method
@@ -308,6 +312,7 @@ items:
   summary: Updates the progress writers with the summary of training progress since
     start and resets the internal accumulators.
   syntax:
+    content: summarize_training_progress(self)
     parameters:
     - id: self
   type: Method
@@ -333,6 +338,7 @@ items:
     Note: See [forward()](.md#cntk.ops.functions.Function.forward.md) for examples
     on passing input data.'
   syntax:
+    content: test_minibatch(self, arguments, device=None)
     parameters:
     - defaultValue: None
       id: self
@@ -386,6 +392,7 @@ items:
     Note: See [forward()](.md#cntk.ops.functions.Function.forward.md) for examples
     on passing input data.'
   syntax:
+    content: train_minibatch(self, arguments, outputs=None, device=None)
     parameters:
     - defaultValue: None
       id: self

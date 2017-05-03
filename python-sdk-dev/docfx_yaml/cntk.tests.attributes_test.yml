@@ -36,7 +36,8 @@ items:
       path: cntk/tests/attributes_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 16
-  syntax: {}
+  syntax:
+    content: test_convolution_attributes()
   type: Method
   uid: cntk.tests.attributes_test.test_convolution_attributes
 - _type: function
@@ -53,7 +54,8 @@ items:
       path: cntk/tests/attributes_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 33
-  syntax: {}
+  syntax:
+    content: test_convolution_transpose_attributes()
   type: Method
   uid: cntk.tests.attributes_test.test_convolution_transpose_attributes
 - _type: function
@@ -70,7 +72,8 @@ items:
       path: cntk/tests/attributes_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 50
-  syntax: {}
+  syntax:
+    content: test_dropout_attributes()
   type: Method
   uid: cntk.tests.attributes_test.test_dropout_attributes
 - _type: function
@@ -87,7 +90,8 @@ items:
       path: cntk/tests/attributes_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 57
-  syntax: {}
+  syntax:
+    content: test_slice_attributes()
   type: Method
   uid: cntk.tests.attributes_test.test_slice_attributes
 references:

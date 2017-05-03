@@ -23,7 +23,8 @@ items:
 
     Meta-meta-meta class to denote a sequence of data tensors over a custom axis.
     Example: `userAxis = Axis(); SequenceOver[userAxis][Tensor[13,42]]`'
-  syntax: {}
+  syntax:
+    content: SequenceOver()
   type: Class
   uid: cntk.layers.typing.SequenceOver
 references: []

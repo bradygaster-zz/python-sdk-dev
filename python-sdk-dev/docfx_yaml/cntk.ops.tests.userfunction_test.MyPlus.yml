@@ -37,7 +37,8 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    content: MyPlus(cls)
   type: Class
   uid: cntk.ops.tests.userfunction_test.MyPlus
 - _type: method
@@ -56,6 +57,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 43
   syntax:
+    content: backward(self, state, root_gradients)
     parameters:
     - id: self
     - id: state
@@ -78,6 +80,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 31
   syntax:
+    content: clone(self, cloned_inputs)
     parameters:
     - id: self
     - id: cloned_inputs
@@ -99,6 +102,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 34
   syntax:
+    content: forward(self, arguments, device=None, outputs_to_retain=None)
     parameters:
     - defaultValue: None
       id: self
@@ -124,6 +128,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 27
   syntax:
+    content: infer_outputs(self)
     parameters:
     - id: self
   type: Method

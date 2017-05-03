@@ -55,6 +55,7 @@ items:
     \  21.],\n         [ 22.,  23.]],\n<BLANKLINE>\n        [[ 18.,  19.],\n     \
     \    [ 20.,  21.],\n         [ 22.,  23.]]]], dtype=float32)"
   syntax:
+    content: broadcast_as()
     parameters:
     - description: the symbolic tensor whose value will be broadcast
       id: operand
@@ -86,6 +87,7 @@ items:
   summary: This function combines `past_value` and `future_value` into a single function.
     This is useful when the time_step can be specified as positive or negative.
   syntax:
+    content: delay(x, initial_state=None, time_step=1, name="")
     parameters:
     - description: the tensor (or its name) from which the past value is obtained
       id: x
@@ -126,6 +128,7 @@ items:
     >>> y.eval({x:x0})\narray([[[ 0.,  1.],\n         [ 2.,  3.],\n         [ 4.,\
     \  5.]]], dtype=float32)"
   syntax:
+    content: first()
     parameters:
     - description: the symbolic tensor denoting a sequence
       id: seq
@@ -161,6 +164,7 @@ items:
     \ 16.,  17.]],\n<BLANKLINE>\n        [[ 18.,  19.],\n         [ 20.,  21.],\n\
     \         [ 22.,  23.]]]], dtype=float32)"
   syntax:
+    content: gather()
     parameters:
     - description: the symbolic sequence from which elements will be selected
       id: seq
@@ -211,6 +215,7 @@ items:
 
     array([[ 1.,  0.,  0.,  0.]], dtype=float32)'
   syntax:
+    content: is_first()
     parameters:
     - description: the symbolic tensor denoting a sequence
       id: seq
@@ -253,6 +258,7 @@ items:
 
     array([[ 0.,  0.,  0.,  1.]], dtype=float32)'
   syntax:
+    content: is_last()
     parameters:
     - description: the symbolic tensor denoting a sequence
       id: seq
@@ -284,6 +290,7 @@ items:
     >>> y.eval({x:x0})\narray([[[ 18.,  19.],\n         [ 20.,  21.],\n         [\
     \ 22.,  23.]]], dtype=float32)"
   syntax:
+    content: last()
     parameters:
     - description: the symbolic tensor denoting a sequence
       id: seq
@@ -315,6 +322,7 @@ items:
     >>> y = C.sequence.reduce_sum(x)\n>>> y.eval({x:x0})\narray([[[ 36.,  40.],\n\
     \         [ 44.,  48.],\n         [ 52.,  56.]]], dtype=float32)"
   syntax:
+    content: reduce_sum()
     parameters:
     - description: sequence input tensor
       id: seq
@@ -354,6 +362,7 @@ items:
     \   0.],\n         [  0.,   0.]],\n<BLANKLINE>\n        [[  0.,   0.],\n     \
     \    [  0.,   0.],\n         [  0.,   0.]]]], dtype=float32)"
   syntax:
+    content: scatter()
     parameters:
     - description: the symbolic sequence from which elements will be copied in the
         output
@@ -396,6 +405,7 @@ items:
 
     TBA'
   syntax:
+    content: slice()
     return:
       description: '[Function](.md#cntk.ops.functions.Function.md)'
   type: Method
@@ -432,6 +442,7 @@ items:
     >>> # as a result, a 1.2 times stretch is realized by duplicating frame[0] and\
     \ frame[5]"
   syntax:
+    content: where()
     parameters:
     - description: sequence of 0 or 1 values for filtering, or other positive values
         for repetition (also fractional)

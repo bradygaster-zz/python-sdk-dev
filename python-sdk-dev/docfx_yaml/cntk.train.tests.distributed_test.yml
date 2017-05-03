@@ -39,6 +39,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 25
   syntax:
+    content: create_block_momentum_distributed_learner(learner, distributed_after)
     parameters:
     - id: learner
     - id: distributed_after
@@ -59,6 +60,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 31
   syntax:
+    content: create_block_momentum_distributed_learner_with_time_constant(learner,
+      distributed_after)
     parameters:
     - id: learner
     - id: distributed_after
@@ -79,6 +82,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 18
   syntax:
+    content: create_data_parallel_distributed_learner(learner, quantized, distributed_after)
     parameters:
     - id: learner
     - id: quantized
@@ -100,6 +104,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 38
   syntax:
+    content: run_distributed_training(tmpdir, create_func)
     parameters:
     - id: tmpdir
     - id: create_func
@@ -120,6 +125,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 201
   syntax:
+    content: test_distributed(tmpdir, is_1bit_sgd)
     parameters:
     - id: tmpdir
     - id: is_1bit_sgd
@@ -140,6 +146,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 81
   syntax:
+    content: test_distributed_mb_source(tmpdir)
     parameters:
     - id: tmpdir
   type: Method

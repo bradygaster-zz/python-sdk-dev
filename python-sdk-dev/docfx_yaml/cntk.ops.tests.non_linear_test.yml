@@ -54,6 +54,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 119
   syntax:
+    content: test_op_abs(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -75,6 +76,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 428
   syntax:
+    content: test_op_batch_normalization(use_cudnn, sample, device_id, precision)
     parameters:
     - id: use_cudnn
     - id: sample
@@ -97,6 +99,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 50
   syntax:
+    content: test_op_clip(min_value, max_value, x, device_id, precision)
     parameters:
     - id: min_value
     - id: max_value
@@ -120,6 +123,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 151
   syntax:
+    content: test_op_dropout(shape, dropout_rate, device_id, precision)
     parameters:
     - id: shape
     - id: dropout_rate
@@ -142,6 +146,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 191
   syntax:
+    content: test_op_dropout_bad_input(dropout_rate)
     parameters:
     - id: dropout_rate
   type: Method
@@ -161,6 +166,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 291
   syntax:
+    content: test_op_elu(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -182,6 +188,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 105
   syntax:
+    content: test_op_exp(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -203,6 +210,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 405
   syntax:
+    content: test_op_hardmax(sample, device_id, precision)
     parameters:
     - id: sample
     - id: device_id
@@ -224,6 +232,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 308
   syntax:
+    content: test_op_leaky_relu(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -245,6 +254,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 235
   syntax:
+    content: test_op_log(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -266,6 +276,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 325
   syntax:
+    content: test_op_param_relu(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -287,6 +298,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 259
   syntax:
+    content: test_op_reciprocal(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -308,6 +320,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 277
   syntax:
+    content: test_op_relu(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -329,6 +342,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 75
   syntax:
+    content: test_op_sigmoid(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -350,6 +364,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 371
   syntax:
+    content: test_op_softmax(sample, device_id, precision)
     parameters:
     - id: sample
     - id: device_id
@@ -371,6 +386,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 348
   syntax:
+    content: test_op_softplus(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -392,6 +408,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 201
   syntax:
+    content: test_op_sqrt(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -413,6 +430,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 218
   syntax:
+    content: test_op_square(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -434,6 +452,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 137
   syntax:
+    content: test_op_tanh(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id

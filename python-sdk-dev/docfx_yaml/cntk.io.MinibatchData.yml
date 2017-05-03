@@ -43,7 +43,8 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    content: MinibatchData(self)
   type: Class
   uid: cntk.io.MinibatchData
 - _type: attribute

@@ -34,6 +34,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 20
   syntax:
+    content: test_initializer_init(device_id)
     parameters:
     - id: device_id
   type: Method

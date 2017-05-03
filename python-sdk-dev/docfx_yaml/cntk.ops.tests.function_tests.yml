@@ -55,6 +55,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 317
   syntax:
+    content: test_MinibatchData_and_Value_as_input(tmpdir)
     parameters:
     - id: tmpdir
   type: Method
@@ -73,7 +74,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 246
-  syntax: {}
+  syntax:
+    content: test_as_composite()
   type: Method
   uid: cntk.ops.tests.function_tests.test_as_composite
 - _type: function
@@ -90,7 +92,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 216
-  syntax: {}
+  syntax:
+    content: test_clone_with_function_in_substitution_map()
   type: Method
   uid: cntk.ops.tests.function_tests.test_clone_with_function_in_substitution_map
 - _type: function
@@ -107,7 +110,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 229
-  syntax: {}
+  syntax:
+    content: test_clone_with_slice()
   type: Method
   uid: cntk.ops.tests.function_tests.test_clone_with_slice
 - _type: function
@@ -124,7 +128,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 55
-  syntax: {}
+  syntax:
+    content: test_cloning()
   type: Method
   uid: cntk.ops.tests.function_tests.test_cloning
 - _type: function
@@ -141,7 +146,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 284
-  syntax: {}
+  syntax:
+    content: test_combine_duplicated_inputs()
   type: Method
   uid: cntk.ops.tests.function_tests.test_combine_duplicated_inputs
 - _type: function
@@ -158,7 +164,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 184
-  syntax: {}
+  syntax:
+    content: test_data_type_inference()
   type: Method
   uid: cntk.ops.tests.function_tests.test_data_type_inference
 - _type: function
@@ -175,7 +182,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 26
-  syntax: {}
+  syntax:
+    content: test_eval_by_node_name()
   type: Method
   uid: cntk.ops.tests.function_tests.test_eval_by_node_name
 - _type: function
@@ -192,7 +200,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 145
-  syntax: {}
+  syntax:
+    content: test_evaluating_multiple_outputs()
   type: Method
   uid: cntk.ops.tests.function_tests.test_evaluating_multiple_outputs
 - _type: function
@@ -209,7 +218,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 96
-  syntax: {}
+  syntax:
+    content: test_exception_for_unnamed_arguments()
   type: Method
   uid: cntk.ops.tests.function_tests.test_exception_for_unnamed_arguments
 - _type: function
@@ -226,7 +236,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 307
-  syntax: {}
+  syntax:
+    content: test_extra_arguments_in_eval()
   type: Method
   uid: cntk.ops.tests.function_tests.test_extra_arguments_in_eval
 - _type: function
@@ -243,7 +254,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 130
-  syntax: {}
+  syntax:
+    content: test_getting_output_from_non_existent_node()
   type: Method
   uid: cntk.ops.tests.function_tests.test_getting_output_from_non_existent_node
 - _type: function
@@ -260,7 +272,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 262
-  syntax: {}
+  syntax:
+    content: test_input_order()
   type: Method
   uid: cntk.ops.tests.function_tests.test_input_order
 - _type: function
@@ -277,7 +290,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 107
-  syntax: {}
+  syntax:
+    content: test_output_in_intermediate_node()
   type: Method
   uid: cntk.ops.tests.function_tests.test_output_in_intermediate_node
 - _type: function
@@ -295,6 +309,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 349
   syntax:
+    content: test_output_subset_evaluation(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -313,7 +328,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 192
-  syntax: {}
+  syntax:
+    content: test_recurrence_shape_inference()
   type: Method
   uid: cntk.ops.tests.function_tests.test_recurrence_shape_inference
 - _type: function
@@ -330,7 +346,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 81
-  syntax: {}
+  syntax:
+    content: test_replace_placeholder_s()
   type: Method
   uid: cntk.ops.tests.function_tests.test_replace_placeholder_s
 - _type: function
@@ -347,7 +364,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 37
-  syntax: {}
+  syntax:
+    content: test_replace_placeholders()
   type: Method
   uid: cntk.ops.tests.function_tests.test_replace_placeholders
 - _type: function
@@ -364,7 +382,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 201
-  syntax: {}
+  syntax:
+    content: test_sequence_data_mismatch()
   type: Method
   uid: cntk.ops.tests.function_tests.test_sequence_data_mismatch
 - _type: function
@@ -381,7 +400,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 165
-  syntax: {}
+  syntax:
+    content: test_set_name()
   type: Method
   uid: cntk.ops.tests.function_tests.test_set_name
 - _type: function
@@ -398,7 +418,8 @@ items:
       path: cntk/ops/tests/function_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 22
-  syntax: {}
+  syntax:
+    content: test_variable_forwarding()
   type: Method
   uid: cntk.ops.tests.function_tests.test_variable_forwarding
 references:

@@ -36,6 +36,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 505
   syntax:
+    content: log_number_of_parameters(model, trace_level=0)
     parameters:
     - id: model
     - defaultValue: '0'

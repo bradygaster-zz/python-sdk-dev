@@ -55,6 +55,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 30
   syntax:
+    content: assert_list_of_arrays_equal(r, exp, err_msg)
     parameters:
     - id: r
     - id: exp
@@ -76,6 +77,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 567
   syntax:
+    content: test_1D_convolution_without_reduction_dim(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -95,6 +97,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 58
   syntax:
+    content: test_Function(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -113,7 +116,8 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 38
-  syntax: {}
+  syntax:
+    content: test_default_options()
   type: Method
   uid: cntk.layers.tests.layers_test.test_default_options
 - _type: function
@@ -131,6 +135,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 677
   syntax:
+    content: test_layers_batch_normalization(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -150,6 +155,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 587
   syntax:
+    content: test_layers_conv_pool_unpool_deconv(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -169,6 +175,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 528
   syntax:
+    content: test_layers_convolution_2d(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -188,6 +195,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 502
   syntax:
+    content: test_layers_convolution_3d(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -207,6 +215,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 315
   syntax:
+    content: test_layers_convolution_shape(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -226,6 +235,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 411
   syntax:
+    content: test_layers_convolution_value(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -245,6 +255,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 580
   syntax:
+    content: test_layers_deconvolution(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -264,6 +275,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 215
   syntax:
+    content: test_layers_dense(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -283,6 +295,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 629
   syntax:
+    content: test_layers_dropout(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -302,6 +315,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 260
   syntax:
+    content: test_layers_embedding(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -321,6 +335,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 658
   syntax:
+    content: test_layers_layer_normalization(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -340,6 +355,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 14
   syntax:
+    content: test_layers_name(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -359,6 +375,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 644
   syntax:
+    content: test_layers_stabilizer(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -378,6 +395,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 90
   syntax:
+    content: test_lookup(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -396,7 +414,8 @@ items:
       path: cntk/layers/tests/layers_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 102
-  syntax: {}
+  syntax:
+    content: test_recurrence()
   type: Method
   uid: cntk.layers.tests.layers_test.test_recurrence
 - _type: function
@@ -414,6 +433,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 146
   syntax:
+    content: test_recurrence_fun(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -433,6 +453,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 555
   syntax:
+    content: test_sequential_convolution_without_reduction_dim(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -452,6 +473,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 174
   syntax:
+    content: test_unfold(device_id)
     parameters:
     - id: device_id
   type: Method

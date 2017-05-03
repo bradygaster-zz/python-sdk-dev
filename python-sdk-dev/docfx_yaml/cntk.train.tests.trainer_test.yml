@@ -45,7 +45,8 @@ items:
       path: cntk/train/tests/trainer_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 309
-  syntax: {}
+  syntax:
+    content: test_disallow_seq_starts_with_Value_objects()
   type: Method
   uid: cntk.train.tests.trainer_test.test_disallow_seq_starts_with_Value_objects
 - _type: function
@@ -63,6 +64,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 193
   syntax:
+    content: test_eval_one_hot_bad(one_hot_batch, dim, device_id)
     parameters:
     - id: one_hot_batch
     - id: dim
@@ -84,6 +86,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 172
   syntax:
+    content: test_eval_one_hot_seq(one_hot_batch, device_id)
     parameters:
     - id: one_hot_batch
     - id: device_id
@@ -104,6 +107,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 74
   syntax:
+    content: test_eval_sparse_dense(tmpdir, device_id)
     parameters:
     - id: tmpdir
     - id: device_id
@@ -124,6 +128,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 132
   syntax:
+    content: test_eval_sparse_no_seq(batch_index_data, device_id)
     parameters:
     - id: batch_index_data
     - id: device_id
@@ -144,6 +149,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 148
   syntax:
+    content: test_eval_sparse_seq_1(batch, device_id)
     parameters:
     - id: batch
     - id: device_id
@@ -163,7 +169,8 @@ items:
       path: cntk/train/tests/trainer_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 201
-  syntax: {}
+  syntax:
+    content: test_model_not_criterion_subset()
   type: Method
   uid: cntk.train.tests.trainer_test.test_model_not_criterion_subset
 - _type: function
@@ -180,7 +187,8 @@ items:
       path: cntk/train/tests/trainer_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 231
-  syntax: {}
+  syntax:
+    content: test_model_one_output_of_multi_output_function()
   type: Method
   uid: cntk.train.tests.trainer_test.test_model_one_output_of_multi_output_function
 - _type: function
@@ -197,7 +205,8 @@ items:
       path: cntk/train/tests/trainer_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 283
-  syntax: {}
+  syntax:
+    content: test_not_replaced_placeholders()
   type: Method
   uid: cntk.train.tests.trainer_test.test_not_replaced_placeholders
 - _type: function
@@ -214,7 +223,8 @@ items:
       path: cntk/train/tests/trainer_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 56
-  syntax: {}
+  syntax:
+    content: test_output_to_retain()
   type: Method
   uid: cntk.train.tests.trainer_test.test_output_to_retain
 - _type: function
@@ -231,7 +241,8 @@ items:
       path: cntk/train/tests/trainer_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 323
-  syntax: {}
+  syntax:
+    content: test_scalar_input()
   type: Method
   uid: cntk.train.tests.trainer_test.test_scalar_input
 - _type: function
@@ -249,6 +260,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 23
   syntax:
+    content: test_trainer(tmpdir, no_eval_function)
     parameters:
     - id: tmpdir
     - id: no_eval_function
@@ -268,7 +280,8 @@ items:
       path: cntk/train/tests/trainer_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 250
-  syntax: {}
+  syntax:
+    content: test_trainer_with_some_params_not_learned()
   type: Method
   uid: cntk.train.tests.trainer_test.test_trainer_with_some_params_not_learned
 references:

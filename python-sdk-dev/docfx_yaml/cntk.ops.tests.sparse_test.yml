@@ -39,6 +39,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 18
   syntax:
+    content: test_times_2d_sparse_operand(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -58,6 +59,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 45
   syntax:
+    content: test_times_2d_sparse_sequence_operand(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -76,7 +78,8 @@ items:
       path: cntk/ops/tests/sparse_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 177
-  syntax: {}
+  syntax:
+    content: test_times_sparse_operand_reduce_multiple_axes()
   type: Method
   uid: cntk.ops.tests.sparse_test.test_times_sparse_operand_reduce_multiple_axes
 - _type: function
@@ -94,6 +97,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 70
   syntax:
+    content: test_training_2d_sparse_sequence_operand(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -113,6 +117,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 117
   syntax:
+    content: test_training_3d_sparse_sequence_with_recurrence(device_id)
     parameters:
     - id: device_id
   type: Method

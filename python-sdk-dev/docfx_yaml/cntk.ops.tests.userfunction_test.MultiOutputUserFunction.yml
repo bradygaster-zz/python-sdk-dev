@@ -35,7 +35,8 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    content: MultiOutputUserFunction(cls)
   type: Class
   uid: cntk.ops.tests.userfunction_test.MultiOutputUserFunction
 - _type: method
@@ -54,6 +55,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 325
   syntax:
+    content: backward(self, state, root_gradients, variables)
     parameters:
     - id: self
     - id: state
@@ -77,6 +79,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 317
   syntax:
+    content: forward(self, arguments, outputs, device=None, outputs_to_retain=None)
     parameters:
     - defaultValue: None
       id: self
@@ -103,6 +106,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 313
   syntax:
+    content: infer_outputs(self)
     parameters:
     - id: self
   type: Method

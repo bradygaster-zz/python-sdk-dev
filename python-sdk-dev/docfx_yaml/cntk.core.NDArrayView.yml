@@ -38,6 +38,7 @@ items:
 
     '
   syntax:
+    content: NDArrayView(self, shape, data_type, device=None)
     parameters:
     - description: shape of the data
       id: shape
@@ -71,6 +72,7 @@ items:
   summary: Create a @cntk.core.NDArrayView instance from a SciPy sparse array in CSR
     format.
   syntax:
+    content: from_csr()
     parameters:
     - description: SciPy sparse matrix in CSR format
       id: csr_array
@@ -111,6 +113,7 @@ items:
   summary: Create a @cntk.core.NDArrayView instance from a NumPy or SciPy sparse array
     in CSR format.
   syntax:
+    content: from_data()
     parameters:
     - description: data
       id: data
@@ -150,6 +153,7 @@ items:
     startLine: 46
   summary: Create a @cntk.core.NDArrayView instance from a NumPy array.
   syntax:
+    content: from_dense()
     parameters:
     - description: NumPy array
       id: np_array
@@ -213,6 +217,7 @@ items:
     \ [2, 3])\n>>> np_sliced = np.asarray(sliced)\n>>> # Result is an array of shape\
     \ (2, 3)\n>>> print(np_sliced)\n[[ 10.  20.  30.]\n [ 40.  50.  60.]]"
   syntax:
+    content: slice_view()
     parameters:
     - description: shape of the same rank as this Value instance that denotes the
         start of the slicing

@@ -20,7 +20,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 50
   summary: 'Bases: `object`'
-  syntax: {}
+  syntax:
+    content: default_override_or(self, value)
   type: Class
   uid: cntk.default_options.default_override_or
 references: []

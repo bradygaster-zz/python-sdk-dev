@@ -66,6 +66,7 @@ items:
   summary: Creates an AdaGrad learner instance to learn the parameters. See [1] for
     more information.
   syntax:
+    content: adagrad()
     parameters:
     - description: list of network parameters to tune. These can be obtained by the
         root operator's `parameters`.
@@ -125,6 +126,7 @@ items:
   summary: Creates an Adam learner instance to learn the parameters. See [1] for more
     information.
   syntax:
+    content: adam()
     parameters:
     - description: list of network parameters to tune. These can be obtained by the
         root operator's `parameters`.
@@ -199,6 +201,7 @@ items:
     Creates an Adam learner if low_memory is False or FSAdaGrad otherwise to learn
     the parameters. See [1] for more information.'
   syntax:
+    content: adam_sgd()
     parameters:
     - description: list of network parameters to tune. These can be obtained by the
         root operator's `parameters`.
@@ -265,7 +268,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 59
   summary: Returns true if by default momentum is applied in the unit-gain fashion.
-  syntax: {}
+  syntax:
+    content: default_unit_gain_value()
   type: Method
   uid: cntk.learners.default_unit_gain_value
 - _type: function
@@ -284,6 +288,7 @@ items:
     startLine: 612
   summary: Creates an FSAdaGrad learner instance to learn the parameters.
   syntax:
+    content: fsadagrad()
     parameters:
     - description: list of network parameters to tune. These can be obtained by the
         root operator's `parameters`.
@@ -352,6 +357,7 @@ items:
     startLine: 293
   summary: Create a learning rate schedule (using the same semantics as `training_parameter_schedule()`).
   syntax:
+    content: learning_rate_schedule()
     parameters:
     - description: see parameter `schedule` in `training_parameter_schedule()`.
       id: lr
@@ -404,6 +410,7 @@ items:
 
     >>> m = momentum_as_time_constant_schedule([1100, 1500], 1000)'
   syntax:
+    content: momentum_as_time_constant_schedule()
     return:
       description: momentum as time constant schedule
   type: Method
@@ -455,6 +462,7 @@ items:
 
     (0.99, 0.99, 0.88, 0.88, 0.77)'
   syntax:
+    content: momentum_schedule()
     return:
       description: momentum schedule
   type: Method
@@ -475,6 +483,7 @@ items:
     startLine: 453
   summary: Creates a Momentum SGD learner instance to learn the parameters.
   syntax:
+    content: momentum_sgd()
     parameters:
     - description: list of network parameters to tune. These can be obtained by the
         root operator's `parameters`.
@@ -545,6 +554,7 @@ items:
     originally proposed by Nesterov [1] in 1983 and then shown to work well in a deep
     learning context by Sutskever, et al. [2].
   syntax:
+    content: nesterov()
     parameters:
     - description: list of network parameters to tune. These can be obtained by the
         root operator's `parameters`.
@@ -608,6 +618,7 @@ items:
     startLine: 785
   summary: Creates an RMSProp learner instance to learn the parameters.
   syntax:
+    content: rmsprop()
     parameters:
     - description: list of network parameters to tune. These can be obtained by the
         root operator's `parameters`.
@@ -685,6 +696,7 @@ items:
     startLine: 66
   summary: Sets globally default unit-gain flag value.
   syntax:
+    content: set_default_unit_gain_value(value)
     parameters:
     - id: value
   type: Method
@@ -708,6 +720,7 @@ items:
   summary: Creates an SGD learner instance to learn the parameters. See [1] for more
     information on how to set the parameters.
   syntax:
+    content: sgd()
     parameters:
     - description: list of network parameters to tune. These can be obtained by the
         '.parameters()' method of the root operator.
@@ -791,6 +804,7 @@ items:
 
     (0.1, 0.1, 0.01, 0.01, 0.001, 0.001)'
   syntax:
+    content: training_parameter_schedule()
     parameters:
     - description: if float, is the parameter schedule to be used for all samples.
         In case of list, the elements are used as the values for `epoch_size` samples.

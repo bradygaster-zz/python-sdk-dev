@@ -72,6 +72,7 @@ items:
 
     (32, 32, 64, 64, 128, 128)'
   syntax:
+    content: minibatch_size_schedule()
     parameters:
     - description: if integer, it this minibatch size will be used for the whole training.
         In case of list of integers, the elements are used as the values for `epoch_size`
@@ -104,6 +105,7 @@ items:
     startLine: 230
   summary: A factory function to create a training session object.
   syntax:
+    content: training_session()
     parameters:
     - description: '!DEPRECATED! use mb_source instead'
       id: training_minibatch_source

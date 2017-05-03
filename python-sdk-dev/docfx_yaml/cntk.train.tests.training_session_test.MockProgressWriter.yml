@@ -29,7 +29,8 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    content: MockProgressWriter(self, expected_cv=None, training_summary_counter=0)
   type: Class
   uid: cntk.train.tests.training_session_test.MockProgressWriter
 - _type: method
@@ -48,6 +49,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 102
   syntax:
+    content: on_write_test_summary(self, samples, updates, summaries, aggregate_metric,
+      elapsed_milliseconds)
     parameters:
     - id: self
     - id: samples
@@ -73,6 +76,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 98
   syntax:
+    content: on_write_training_summary(self, samples, updates, summaries, aggregate_loss,
+      aggregate_metric, elapsed_milliseconds)
     parameters:
     - id: self
     - id: samples
@@ -99,6 +104,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 91
   syntax:
+    content: on_write_training_update(self, samples, updates, aggregate_loss, aggregate_metric)
     parameters:
     - id: self
     - id: samples

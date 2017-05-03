@@ -47,6 +47,7 @@ items:
     startLine: 19
   summary: Tests whether `s` is a string in a way that works on Python 2 and 3.
   syntax:
+    content: is_string(s)
     parameters:
     - id: s
   type: Method
@@ -67,6 +68,7 @@ items:
     startLine: 391
   summary: Sanitizes the axis.
   syntax:
+    content: sanitize_axis(axis)
     parameters:
     - description: 'the axis to be used.
 
@@ -101,6 +103,7 @@ items:
     startLine: 115
   summary: Convert to [Value](.md#cntk.core.Value.md).
   syntax:
+    content: sanitize_batch()
     parameters:
     - description: input variable into which `batch` is passed
       id: var
@@ -149,6 +152,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 374
   syntax:
+    content: sanitize_dtype_cntk(dtype)
     parameters:
     - id: dtype
   type: Method
@@ -168,6 +172,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 359
   syntax:
+    content: sanitize_dtype_numpy(dtype)
     parameters:
     - id: dtype
   type: Method
@@ -187,6 +192,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 414
   syntax:
+    content: sanitize_dynamic_axes(axes)
     parameters:
     - id: axes
   type: Method
@@ -208,6 +214,7 @@ items:
   summary: Tries to retrieve a Function from the argument or throws an exception if
     that's not possible.
   syntax:
+    content: sanitize_function(arg)
     parameters:
     - id: arg
   type: Method
@@ -231,6 +238,7 @@ items:
     \ nor *np.float64*, it sets it to *np.float32*.\n\n   * If `arg` is an op, it\
     \ is assumed that it has only one output, which will be returned."
   syntax:
+    content: sanitize_input(arg, fallback_dtype=<class 'numpy.float32'>, reshape=None)
     parameters:
     - id: arg
     - defaultValue: None
@@ -264,6 +272,7 @@ items:
     startLine: 41
   summary: Converts precision to NumPy precision
   syntax:
+    content: sanitize_precision(precision)
     parameters:
     - description: precision, if string it can be one of 'float' 'float32, 'double',
         or 'float64'
@@ -290,6 +299,7 @@ items:
     startLine: 62
   summary: If shape is scalar, it creates a tuple out of it.
   syntax:
+    content: sanitize_shape(shape)
     parameters:
     - id: shape
   type: Method
@@ -311,6 +321,7 @@ items:
   summary: Converts a given `value` to an [NDArrayView](.md#cntk.core.NDArrayView.md)
     object that can be passed to the CNTK core.
   syntax:
+    content: sanitize_value(shape, value, dtype, device)
     parameters:
     - description: shape of the value
       id: shape
@@ -349,6 +360,8 @@ items:
     handed off to the evaluation methods (`forward()`, `backward()`, `train_minibatch()`
     and `test_minibatch()`).
   syntax:
+    content: sanitize_var_map(op_arguments, arguments, precision=None, device=None,
+      extract_values_from_minibatch_data=True)
     parameters:
     - defaultValue: None
       description: arguments of the root function. In `forward()` pass it is typically
@@ -413,6 +426,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 424
   syntax:
+    content: sanitize_variable_value_dict(var_value_dict)
     parameters:
     - id: var_value_dict
   type: Method

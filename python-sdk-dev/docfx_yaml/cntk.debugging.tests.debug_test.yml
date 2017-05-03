@@ -36,7 +36,8 @@ items:
       path: cntk/debugging/tests/debug_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 73
-  syntax: {}
+  syntax:
+    content: test_debug_1()
   type: Method
   uid: cntk.debugging.tests.debug_test.test_debug_1
 - _type: function
@@ -53,7 +54,8 @@ items:
       path: cntk/debugging/tests/debug_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 123
-  syntax: {}
+  syntax:
+    content: test_debug_multi_output()
   type: Method
   uid: cntk.debugging.tests.debug_test.test_debug_multi_output
 references:

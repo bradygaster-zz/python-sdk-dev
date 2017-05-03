@@ -41,10 +41,11 @@ items:
     startLine: 35
   summary: "Layer factory function to create a composite that applies a sequence of\
     \ layers constructed with a constructor lambda(layer). For example:\n<!-- literal_block\
-    \ {\"backrefs\": [], \"ids\": [], \"names\": [], \"xml:space\": \"preserve\",\
-    \ \"classes\": [], \"dupnames\": []} -->\n\n````\n\n   For(range(3), lambda i:\
-    \ Dense(2000))\n   For(range(3), lambda: Dense(2000))\n   ````"
+    \ {\"xml:space\": \"preserve\", \"dupnames\": [], \"classes\": [], \"ids\": [],\
+    \ \"backrefs\": [], \"names\": []} -->\n\n````\n\n   For(range(3), lambda i: Dense(2000))\n\
+    \   For(range(3), lambda: Dense(2000))\n   ````"
   syntax:
+    content: For(rng, constructor, name="")
     parameters:
     - defaultValue: ''
       id: rng
@@ -67,6 +68,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 60
   syntax:
+    content: LayerStack(N, constructor)
     parameters:
     - id: N
     - id: constructor
@@ -89,6 +91,7 @@ items:
   summary: Layer factory function to create a composite that adds a skip connection
     to a function. This is equivalent to `SequentialClique([f, identity])`.
   syntax:
+    content: ResNetBlock(f, name="")
     parameters:
     - id: f
     - defaultValue: ''
@@ -113,6 +116,7 @@ items:
     layers (or any functions) onto an input. Sequential ([F, G, H]) === F >> G >>
     H
   syntax:
+    content: Sequential(layers, name="")
     parameters:
     - id: layers
     - defaultValue: ''
@@ -137,6 +141,7 @@ items:
     or any functions onto an input, with skip connections between all function. I.e.
     each function receives a sum of the input and all prior functions' outputs.
   syntax:
+    content: SequentialClique(functions, name="")
     parameters:
     - id: functions
     - defaultValue: ''

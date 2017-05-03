@@ -37,6 +37,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 49
   syntax:
+    content: test_random_sample_inclusion_frequency(weights, num_samples, allow_duplicates,
+      expected, tolerance, raises_exception, device_id, precision)
     parameters:
     - id: weights
     - id: num_samples
@@ -63,6 +65,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 70
   syntax:
+    content: test_random_sample_with_replacement(weights, num_samples, tolerance,
+      raises_exception, device_id, precision)
     parameters:
     - id: weights
     - id: num_samples
@@ -87,6 +91,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 101
   syntax:
+    content: test_random_sample_without_replacement(weights, num_samples, expected_count,
+      tolerance, raises_exception, device_id, precision)
     parameters:
     - id: weights
     - id: num_samples

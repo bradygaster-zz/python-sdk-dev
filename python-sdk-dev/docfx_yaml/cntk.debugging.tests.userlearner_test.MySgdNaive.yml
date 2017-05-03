@@ -27,7 +27,8 @@ items:
   summary: 'Bases: `cntk.learners.UserLearner`
 
     '
-  syntax: {}
+  syntax:
+    content: MySgdNaive(self, parameters, lr_schedule)
   type: Class
   uid: cntk.debugging.tests.userlearner_test.MySgdNaive
 - _type: method
@@ -46,6 +47,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 34
   syntax:
+    content: update(self, gradient_values, training_sample_count, sweep_end)
     parameters:
     - id: self
     - id: gradient_values

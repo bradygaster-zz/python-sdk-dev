@@ -35,7 +35,8 @@ items:
       path: cntk/tests/tensor_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 19
-  syntax: {}
+  syntax:
+    content: test_eval_scalar()
   type: Method
   uid: cntk.tests.tensor_test.test_eval_scalar
 - _type: function
@@ -52,7 +53,8 @@ items:
       path: cntk/tests/tensor_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 24
-  syntax: {}
+  syntax:
+    content: test_numpy_conversion()
   type: Method
   uid: cntk.tests.tensor_test.test_numpy_conversion
 - _type: function
@@ -69,7 +71,8 @@ items:
       path: cntk/tests/tensor_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 13
-  syntax: {}
+  syntax:
+    content: test_overload_exception()
   type: Method
   uid: cntk.tests.tensor_test.test_overload_exception
 references:

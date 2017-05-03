@@ -31,7 +31,8 @@ items:
     and initialized during construction.
 
     '
-  syntax: {}
+  syntax:
+    content: UserLearner(self, parameters, lr_schedule, as_numpy=True)
   type: Class
   uid: cntk.learners.UserLearner
 - _type: method
@@ -51,6 +52,7 @@ items:
     startLine: 201
   summary: Update the parameters associated with this learner.
   syntax:
+    content: update(self, gradient_values, training_sample_count, sweep_end)
     parameters:
     - id: self
     - description: maps `Parameter` to a NumPy array containing the first order gradient

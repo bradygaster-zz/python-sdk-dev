@@ -36,7 +36,8 @@ items:
       path: cntk/logging/tests/graph_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 114
-  syntax: {}
+  syntax:
+    content: test_depth_first_search()
   type: Method
   uid: cntk.logging.tests.graph_test.test_depth_first_search
 - _type: function
@@ -53,7 +54,8 @@ items:
       path: cntk/logging/tests/graph_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 62
-  syntax: {}
+  syntax:
+    content: test_find_nodes()
   type: Method
   uid: cntk.logging.tests.graph_test.test_find_nodes
 - _type: function
@@ -70,7 +72,8 @@ items:
       path: cntk/logging/tests/graph_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 90
-  syntax: {}
+  syntax:
+    content: test_find_nodes_returning_proper_types()
   type: Method
   uid: cntk.logging.tests.graph_test.test_find_nodes_returning_proper_types
 - _type: function
@@ -87,7 +90,8 @@ items:
       path: cntk/logging/tests/graph_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 102
-  syntax: {}
+  syntax:
+    content: test_plot()
   type: Method
   uid: cntk.logging.tests.graph_test.test_plot
 references:

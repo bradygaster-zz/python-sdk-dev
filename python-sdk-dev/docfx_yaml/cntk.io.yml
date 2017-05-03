@@ -43,12 +43,13 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 455
   summary: "Configures the CNTK text-format reader that reads text-based files with\
-    \ lines of the form:\n<!-- literal_block {\"backrefs\": [], \"ids\": [], \"names\"\
-    : [], \"xml:space\": \"preserve\", \"classes\": [], \"dupnames\": []} -->\n\n\
-    ````\n\n   [Sequence_Id] (Sample)+\n   ````\nwhere:\n<!-- literal_block {\"backrefs\"\
-    : [], \"ids\": [], \"names\": [], \"xml:space\": \"preserve\", \"classes\": [],\
-    \ \"dupnames\": []} -->\n\n````\n\n   Sample=|Input_Name (Value )*\n   ````"
+    \ lines of the form:\n<!-- literal_block {\"xml:space\": \"preserve\", \"dupnames\"\
+    : [], \"classes\": [], \"ids\": [], \"backrefs\": [], \"names\": []} -->\n\n````\n\
+    \n   [Sequence_Id] (Sample)+\n   ````\nwhere:\n<!-- literal_block {\"xml:space\"\
+    : \"preserve\", \"dupnames\": [], \"classes\": [], \"ids\": [], \"backrefs\":\
+    \ [], \"names\": []} -->\n\n````\n\n   Sample=|Input_Name (Value )*\n   ````"
   syntax:
+    content: CTFDeserializer(filename, streams)
     parameters:
     - id: filename
     - description: file name containing the text input
@@ -73,6 +74,7 @@ items:
     startLine: 377
   summary: Configures the HTK feature reader that reads speech data from scp files.
   syntax:
+    content: HTKFeatureDeserializer(streams)
     parameters:
     - description: any dictionary-like object that contains a mapping from stream
         names to `StreamDef` objects. Each StreamDef object configures a feature stream.
@@ -96,6 +98,7 @@ items:
   summary: Configures an HTK label reader that reads speech HTK format MLF (Master
     Label File)
   syntax:
+    content: HTKMLFDeserializer(label_mapping_file, streams)
     parameters:
     - description: path to the label mapping file
       id: label_mapping_file
@@ -122,13 +125,14 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 418
   summary: "Configures the image reader that reads images and corresponding labels\
-    \ from a file of the form:\n<!-- literal_block {\"backrefs\": [], \"ids\": [],\
-    \ \"names\": [], \"xml:space\": \"preserve\", \"classes\": [], \"dupnames\": []}\
+    \ from a file of the form:\n<!-- literal_block {\"xml:space\": \"preserve\", \"\
+    dupnames\": [], \"classes\": [], \"ids\": [], \"backrefs\": [], \"names\": []}\
     \ -->\n\n````\n\n   <full path to image> <tab> <numerical label (0-based class\
-    \ id)>\n   ````\nor:\n<!-- literal_block {\"backrefs\": [], \"ids\": [], \"names\"\
-    : [], \"xml:space\": \"preserve\", \"classes\": [], \"dupnames\": []} -->\n\n\
-    ````\n\n   sequenceId <tab> path <tab> label\n   ````"
+    \ id)>\n   ````\nor:\n<!-- literal_block {\"xml:space\": \"preserve\", \"dupnames\"\
+    : [], \"classes\": [], \"ids\": [], \"backrefs\": [], \"names\": []} -->\n\n````\n\
+    \n   sequenceId <tab> path <tab> label\n   ````"
   syntax:
+    content: ImageDeserializer(filename, streams)
     parameters:
     - id: filename
     - description: file name of the map file that associates images to classes
@@ -155,6 +159,8 @@ items:
     of some configuration keys have a mild dependency on the exact deserializer, and
     certain keys are meaningless for certain deserializers.
   syntax:
+    content: StreamDef(field=None, shape=None, is_sparse=False, transforms=None, context=None,
+      scp=None, mlf=None, broadcast=None)
     parameters:
     - defaultValue: None
       description: 'this is the name of the stream
@@ -230,6 +236,7 @@ items:
   summary: Converts a list of NumPy arrays representing tensors of inputs into a format
     that is readable by @cntk.io.CTFDeserializer.
   syntax:
+    content: sequence_to_cntk_text_format(seq_idx, alias_tensor_map)
     parameters:
     - description: number of current sequence
       id: seq_idx

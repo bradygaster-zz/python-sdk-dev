@@ -34,7 +34,8 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    content: PlusAndLast(cls)
   type: Class
   uid: cntk.ops.tests.userfunction_test.PlusAndLast
 - _type: method
@@ -53,6 +54,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 289
   syntax:
+    content: forward(self, arguments, device=None, outputs_to_retain=None)
     parameters:
     - defaultValue: None
       id: self
@@ -78,6 +80,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 285
   syntax:
+    content: infer_outputs(self)
     parameters:
     - id: self
   type: Method

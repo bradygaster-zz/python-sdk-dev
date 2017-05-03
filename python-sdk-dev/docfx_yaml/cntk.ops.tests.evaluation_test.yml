@@ -44,6 +44,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 284
   syntax:
+    content: test_edit_distance_error(left_input, right_input, subPen, delPen, insPen,
+      squashInputs, tokensToIgnore, result, device_id, precision)
     parameters:
     - id: left_input
     - id: right_input
@@ -72,6 +74,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 225
   syntax:
+    content: test_lambda_rank(grad, value, output, gain, device_id, precision)
     parameters:
     - id: grad
     - id: value
@@ -96,6 +99,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 254
   syntax:
+    content: test_ndcg(value, output, gain, device_id, precision)
     parameters:
     - id: value
     - id: output
@@ -119,6 +123,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 136
   syntax:
+    content: test_op_classification_error(output_vector, target_vector, device_id,
+      precision)
     parameters:
     - id: output_vector
     - id: target_vector
@@ -141,6 +147,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 183
   syntax:
+    content: test_op_classification_error_with_axis(output_vector, target_vector,
+      axis, device_id, precision)
     parameters:
     - id: output_vector
     - id: target_vector
@@ -164,6 +172,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 27
   syntax:
+    content: test_op_cross_entropy_with_soft_max(output_vector, target_vector, device_id,
+      precision)
     parameters:
     - id: output_vector
     - id: target_vector
@@ -186,6 +196,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 73
   syntax:
+    content: test_op_cross_entropy_with_soft_max_and_axis(output_vector, target_vector,
+      axis, device_id, precision)
     parameters:
     - id: output_vector
     - id: target_vector
@@ -209,6 +221,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 110
   syntax:
+    content: test_op_squared_error(output_vector, target_vector, device_id, precision)
     parameters:
     - id: output_vector
     - id: target_vector
@@ -231,6 +244,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 292
   syntax:
+    content: test_sequence_grad_as_numpy_false(device_id, precision)
     parameters:
     - id: device_id
     - id: precision

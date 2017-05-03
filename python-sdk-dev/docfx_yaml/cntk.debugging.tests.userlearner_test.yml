@@ -38,6 +38,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 83
   syntax:
+    content: ffnet(optimizer, num_minibatches_to_train)
     parameters:
     - id: optimizer
     - id: num_minibatches_to_train
@@ -58,6 +59,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 15
   syntax:
+    content: generate_random_data(sample_size, feature_dim, num_classes)
     parameters:
     - id: sample_size
     - id: feature_dim
@@ -78,7 +80,8 @@ items:
       path: cntk/debugging/tests/userlearner_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 126
-  syntax: {}
+  syntax:
+    content: test_user_learner()
   type: Method
   uid: cntk.debugging.tests.userlearner_test.test_user_learner
 references:

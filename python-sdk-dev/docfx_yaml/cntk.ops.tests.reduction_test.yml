@@ -45,6 +45,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 169
   syntax:
+    content: test_op_reduce_all(input_data, axis, device_id, precision)
     parameters:
     - id: input_data
     - id: axis
@@ -67,6 +68,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 231
   syntax:
+    content: test_op_reduce_argmax(input_data, axis, device_id, precision)
     parameters:
     - id: input_data
     - id: axis
@@ -89,6 +91,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 245
   syntax:
+    content: test_op_reduce_argmin(input_data, axis, device_id, precision)
     parameters:
     - id: input_data
     - id: axis
@@ -111,6 +114,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 130
   syntax:
+    content: test_op_reduce_log_sum(input_data, axis, device_id, precision)
     parameters:
     - id: input_data
     - id: axis
@@ -133,6 +137,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 45
   syntax:
+    content: test_op_reduce_max(input_data, axis, device_id, precision)
     parameters:
     - id: input_data
     - id: axis
@@ -155,6 +160,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 111
   syntax:
+    content: test_op_reduce_mean(input_data, axis, device_id, precision)
     parameters:
     - id: input_data
     - id: axis
@@ -177,6 +183,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 213
   syntax:
+    content: test_op_reduce_mean_all_constant(input_data, axis, device_id, precision)
     parameters:
     - id: input_data
     - id: axis
@@ -199,6 +206,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 69
   syntax:
+    content: test_op_reduce_min(input_data, axis, device_id, precision)
     parameters:
     - id: input_data
     - id: axis
@@ -221,6 +229,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 150
   syntax:
+    content: test_op_reduce_prod(input_data, axis, device_id, precision)
     parameters:
     - id: input_data
     - id: axis
@@ -243,6 +252,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 27
   syntax:
+    content: test_op_reduce_sum(input_data, axis, device_id, precision)
     parameters:
     - id: input_data
     - id: axis

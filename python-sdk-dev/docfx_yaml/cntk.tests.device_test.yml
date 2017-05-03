@@ -34,7 +34,8 @@ items:
       path: cntk/tests/device_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 15
-  syntax: {}
+  syntax:
+    content: test_device_kind()
   type: Method
   uid: cntk.tests.device_test.test_device_kind
 references:

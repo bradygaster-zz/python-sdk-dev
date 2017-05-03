@@ -36,7 +36,8 @@ items:
       path: cntk/sample_installer.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 24
-  syntax: {}
+  syntax:
+    content: default_sample_dir()
   type: Method
   uid: cntk.sample_installer.default_sample_dir
 - _type: function
@@ -53,7 +54,8 @@ items:
       path: cntk/sample_installer.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 31
-  syntax: {}
+  syntax:
+    content: default_sample_url()
   type: Method
   uid: cntk.sample_installer.default_sample_url
 - _type: function
@@ -73,6 +75,7 @@ items:
   summary: Fetch the CNTK samples from a URL, extract to local directory, and install
     Python package requirements.
   syntax:
+    content: install_samples(url=None, directory=None, quiet=False)
     parameters:
     - defaultValue: None
       description: the URL of the sample zip file (if passed `None`, which is default,
@@ -100,7 +103,8 @@ items:
       path: cntk/sample_installer.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 21
-  syntax: {}
+  syntax:
+    content: module_is_unreleased()
   type: Method
   uid: cntk.sample_installer.module_is_unreleased
 references:

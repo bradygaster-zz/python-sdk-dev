@@ -35,6 +35,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 23
   syntax:
+    content: precision(request)
     parameters:
     - id: request
   type: Method

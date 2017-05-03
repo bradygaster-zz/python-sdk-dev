@@ -20,7 +20,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 158
   summary: 'Bases: `object`'
-  syntax: {}
+  syntax:
+    content: ArrayMixin()
   type: Class
   uid: cntk.tensor.ArrayMixin
 references: []

@@ -36,6 +36,7 @@ items:
 
     '
   syntax:
+    content: Value(self, shape=None, dtype=None, batch=None, seq_starts=None, device=None)
     parameters:
     - description: shape of the value
       id: shape
@@ -81,6 +82,7 @@ items:
     startLine: 272
   summary: Creates a @cntk.core.Value object.
   syntax:
+    content: create()
     parameters:
     - description: variable into which `data` is passed
       id: var
@@ -184,6 +186,7 @@ items:
     \  0.,  0.],\n         [ 0.,  0.,  1.,  0.,  0.,  0.]]], dtype=float32),\n array([[[\
     \ 0.,  0.,  0.,  0.,  1.,  0.],\n         [ 0.,  1.,  0.,  0.,  0.,  0.]]], dtype=float32)]"
   syntax:
+    content: one_hot()
     parameters:
     - description: batch input data of indices
       id: batch

@@ -59,6 +59,8 @@ items:
 
     '
   syntax:
+    content: ProgressPrinter(self, freq=None, first=0, tag="", log_to_file=None, rank=None,
+      gen_heartbeat=False, num_epochs=300, test_freq=None, test_first=0, metric_is_pct=True)
     parameters:
     - description: 'determines how often printing of training progress will occur.
         A value of 0 means a geometric schedule (1,2,4,...). A value > 0 means an
@@ -129,6 +131,7 @@ items:
 
     Returns: the average loss since the last print'
   syntax:
+    content: avg_loss_since_last(self)
     parameters:
     - id: self
   type: Method
@@ -152,6 +155,7 @@ items:
 
     Returns: the average loss since the start of accumulation'
   syntax:
+    content: avg_loss_since_start(self)
     parameters:
     - id: self
   type: Method
@@ -175,6 +179,7 @@ items:
 
     Returns: the average metric since the last print'
   syntax:
+    content: avg_metric_since_last(self)
     parameters:
     - id: self
   type: Method
@@ -198,6 +203,7 @@ items:
 
     Returns: the average metric since the start of accumulation'
   syntax:
+    content: avg_metric_since_start(self)
     parameters:
     - id: self
   type: Method
@@ -219,6 +225,7 @@ items:
     startLine: 115
   summary: Prints the given message signifying the end of training.
   syntax:
+    content: end_progress_print(self, msg="")
     parameters:
     - id: self
     - defaultValue: ''
@@ -248,6 +255,7 @@ items:
     If on an arithmetic schedule print an epoch summary using the ''start'' accumulators.
     If on a geometric schedule does nothing.'
   syntax:
+    content: epoch_summary(self, with_metric=False)
     parameters:
     - id: self
     - defaultValue: 'False'
@@ -275,6 +283,7 @@ items:
     startLine: 126
   summary: Prints any message the user wishes to place in the log.
   syntax:
+    content: log(self, message)
     parameters:
     - id: self
     - description: message to print.
@@ -299,6 +308,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 323
   syntax:
+    content: on_training_update_end(self)
     parameters:
     - id: self
   type: Method
@@ -319,6 +329,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 399
   syntax:
+    content: on_write_test_summary(self, samples, updates, summaries, aggregate_metric,
+      elapsed_milliseconds)
     parameters:
     - id: self
     - id: samples
@@ -344,6 +356,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 327
   syntax:
+    content: on_write_test_update(self, samples, updates, aggregate_metric)
     parameters:
     - id: self
     - id: samples
@@ -367,6 +380,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 374
   syntax:
+    content: on_write_training_summary(self, samples, updates, summaries, aggregate_loss,
+      aggregate_metric, elapsed_milliseconds)
     parameters:
     - id: self
     - id: samples
@@ -393,6 +408,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 319
   syntax:
+    content: on_write_training_update(self, samples, updates, aggregate_loss, aggregate_metric)
     parameters:
     - id: self
     - id: samples
@@ -423,6 +439,7 @@ items:
     Returns: tuple of (average loss since last, average metric since last, samples
     since last)'
   syntax:
+    content: reset_last(self)
     parameters:
     - id: self
   type: Method
@@ -449,6 +466,7 @@ items:
     Returns: tuple of (average loss since start, average metric since start, samples
     since start)'
   syntax:
+    content: reset_start(self)
     parameters:
     - id: self
   type: Method
@@ -472,6 +490,7 @@ items:
 
     Updates the accumulators using the loss, the minibatch_size and the optional metric.'
   syntax:
+    content: update(self, loss, minibatch_size, metric=None)
     parameters:
     - id: self
     - defaultValue: None
@@ -510,6 +529,7 @@ items:
     Update the current loss, the minibatch size and optionally the metric using the
     information from the `trainer`.'
   syntax:
+    content: update_with_trainer(self, trainer, with_metric=False)
     parameters:
     - defaultValue: 'False'
       id: self

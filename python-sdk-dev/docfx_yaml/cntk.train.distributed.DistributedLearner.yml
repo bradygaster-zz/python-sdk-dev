@@ -30,7 +30,8 @@ items:
     MPI workers
 
     '
-  syntax: {}
+  syntax:
+    content: DistributedLearner(self)
   type: Class
   uid: cntk.train.distributed.DistributedLearner
 - _type: method
@@ -50,6 +51,7 @@ items:
     startLine: 105
   summary: Returns the distributed communicator that talks to other MPI workers
   syntax:
+    content: communicator()
     return:
       description: descriptor of current process.
       type:

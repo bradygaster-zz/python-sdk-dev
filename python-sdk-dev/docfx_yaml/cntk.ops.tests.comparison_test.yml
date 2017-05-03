@@ -36,6 +36,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 40
   syntax:
+    content: test_op_comparison(left_operand, right_operand, cntk_function, numpy_function,
+      device_id, precision)
     parameters:
     - id: left_operand
     - id: right_operand

@@ -35,7 +35,8 @@ items:
       path: cntk/tests/misc_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 21
-  syntax: {}
+  syntax:
+    content: test_Value_raises()
   type: Method
   uid: cntk.tests.misc_test.test_Value_raises
 - _type: function
@@ -52,7 +53,8 @@ items:
       path: cntk/tests/misc_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 11
-  syntax: {}
+  syntax:
+    content: test_callstack1()
   type: Method
   uid: cntk.tests.misc_test.test_callstack1
 - _type: function
@@ -69,7 +71,8 @@ items:
       path: cntk/tests/misc_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 16
-  syntax: {}
+  syntax:
+    content: test_callstack2()
   type: Method
   uid: cntk.tests.misc_test.test_callstack2
 references:

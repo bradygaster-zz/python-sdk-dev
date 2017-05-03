@@ -43,6 +43,7 @@ items:
     startLine: 149
   summary: initializer
   syntax:
+    content: bilinear(kernel_width, kernel_height)
     parameters:
     - description: kernel width
       id: kernel_width
@@ -72,6 +73,8 @@ items:
     startLine: 89
   summary: initializer
   syntax:
+    content: glorot_normal(scale=1, output_rank=2147483647, filter_rank=2147483647,
+      seed=None)
     parameters:
     - defaultValue: '2147483647'
       description: scale
@@ -113,6 +116,8 @@ items:
     startLine: 69
   summary: Glorot initializer
   syntax:
+    content: glorot_uniform(scale=1, output_rank=2147483647, filter_rank=2147483647,
+      seed=None)
     parameters:
     - defaultValue: '2147483647'
       description: scale
@@ -154,6 +159,7 @@ items:
     startLine: 129
   summary: initializer
   syntax:
+    content: he_normal(scale=1, output_rank=2147483647, filter_rank=2147483647, seed=None)
     parameters:
     - defaultValue: '2147483647'
       description: scale
@@ -195,6 +201,7 @@ items:
     startLine: 109
   summary: initializer
   syntax:
+    content: he_uniform(scale=1, output_rank=2147483647, filter_rank=2147483647, seed=None)
     parameters:
     - defaultValue: '2147483647'
       description: scale
@@ -237,6 +244,7 @@ items:
   summary: override output_rank and filter_rank specification in a random initializer
     constructed without an explicit output_rank and filter_rank specification
   syntax:
+    content: initializer_with_rank(initializer, output_rank=None, filter_rank=None)
     parameters:
     - description: initializer whose output_rank and filter_rank parameters are to
         be overriden
@@ -272,6 +280,7 @@ items:
     startLine: 30
   summary: Normal initializer
   syntax:
+    content: normal(scale, output_rank=2147483647, filter_rank=2147483647, seed=None)
     parameters:
     - description: scale
       id: scale
@@ -313,6 +322,7 @@ items:
     startLine: 12
   summary: Uniform initializer
   syntax:
+    content: uniform(scale, seed=None)
     parameters:
     - description: scale
       id: scale
@@ -345,6 +355,7 @@ items:
     startLine: 49
   summary: Xavier initializer
   syntax:
+    content: xavier(scale=1, output_rank=2147483647, filter_rank=2147483647, seed=None)
     parameters:
     - defaultValue: '2147483647'
       description: scale

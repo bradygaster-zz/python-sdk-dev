@@ -20,7 +20,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 54
   summary: 'Bases: `object`'
-  syntax: {}
+  syntax:
+    content: NamedOutput(self)
   type: Class
   uid: cntk.ops.functions.Function.NamedOutput
 references: []

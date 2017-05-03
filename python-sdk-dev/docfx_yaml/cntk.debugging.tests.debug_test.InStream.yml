@@ -23,7 +23,8 @@ items:
   summary: 'Bases: `object`
 
     '
-  syntax: {}
+  syntax:
+    content: InStream(self, to_be_read)
   type: Class
   uid: cntk.debugging.tests.debug_test.InStream
 - _type: method
@@ -42,6 +43,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 52
   syntax:
+    content: readline(self)
     parameters:
     - id: self
   type: Method

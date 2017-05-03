@@ -36,7 +36,8 @@ items:
       path: cntk/tests/function_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 25
-  syntax: {}
+  syntax:
+    content: test_0d_data_1d_sample_shape()
   type: Method
   uid: cntk.tests.function_test.test_0d_data_1d_sample_shape
 - _type: function
@@ -53,7 +54,8 @@ items:
       path: cntk/tests/function_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 32
-  syntax: {}
+  syntax:
+    content: test_1d_NDArrayView_copy()
   type: Method
   uid: cntk.tests.function_test.test_1d_NDArrayView_copy
 - _type: function
@@ -70,7 +72,8 @@ items:
       path: cntk/tests/function_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 11
-  syntax: {}
+  syntax:
+    content: test_outputs()
   type: Method
   uid: cntk.tests.function_test.test_outputs
 - _type: function
@@ -87,7 +90,8 @@ items:
       path: cntk/tests/function_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 43
-  syntax: {}
+  syntax:
+    content: test_sequences_packed_in_single_ndarray()
   type: Method
   uid: cntk.tests.function_test.test_sequences_packed_in_single_ndarray
 references:

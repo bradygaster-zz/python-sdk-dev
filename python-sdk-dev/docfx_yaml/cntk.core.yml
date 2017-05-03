@@ -38,6 +38,7 @@ items:
   summary: Wraps the passed Function to create a composite representing the composite
     Function graph rooted at the passed root Function.
   syntax:
+    content: user_function(user_func)
     parameters:
     - id: user_func
   type: Method

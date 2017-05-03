@@ -40,6 +40,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 170
   syntax:
+    content: test_full_sweep_minibatch(tmpdir)
     parameters:
     - id: tmpdir
   type: Method
@@ -58,7 +59,8 @@ items:
       path: cntk/io/tests/io_tests.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 85
-  syntax: {}
+  syntax:
+    content: test_image()
   type: Method
   uid: cntk.io.tests.io_tests.test_image
 - _type: function
@@ -76,6 +78,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 301
   syntax:
+    content: test_is_tensor(data, expected)
     parameters:
     - id: data
     - id: expected
@@ -96,6 +99,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 228
   syntax:
+    content: test_large_minibatch(tmpdir)
     parameters:
     - id: tmpdir
   type: Method
@@ -115,6 +119,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 277
   syntax:
+    content: test_sequence_conversion_dense(idx, alias_tensor_map, expected)
     parameters:
     - id: idx
     - id: alias_tensor_map
@@ -136,6 +141,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 269
   syntax:
+    content: test_sequence_conversion_exceptions(idx, alias_tensor_map, expected)
     parameters:
     - id: idx
     - id: alias_tensor_map
@@ -157,6 +163,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 20
   syntax:
+    content: test_text_format(tmpdir)
     parameters:
     - id: tmpdir
   type: Method

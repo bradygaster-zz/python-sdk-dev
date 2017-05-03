@@ -117,6 +117,7 @@ items:
 
     array([ 1.,  1.,  2.,  3.], dtype=float32)'
   syntax:
+    content: abs()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -151,6 +152,7 @@ items:
     substitute a specific instance of the aliased Function/Variable in the computation
     graph instead of substituting all usages of the aliased Function/Variable.
   syntax:
+    content: alias()
     parameters:
     - description: The Function/Variable to alias
       id: operand
@@ -183,6 +185,7 @@ items:
     >>> C.argmax(data, 0).eval()\narray([[ 2.,  2.]], dtype=float32)\n>>> C.argmax(data,\
     \ 1).eval()\narray([[ 1.],\n       [ 1.],\n       [ 1.]], dtype=float32)"
   syntax:
+    content: argmax()
     parameters:
     - description: any @cntk.ops.functions.Function that outputs a tensor.
       id: x
@@ -223,6 +226,7 @@ items:
     >>> C.argmin(data, 0).eval()\narray([[ 0.,  1.]], dtype=float32)\n>>> C.argmin(data,\
     \ 1).eval()\narray([[ 0.],\n       [ 1.],\n       [ 1.]], dtype=float32)"
   syntax:
+    content: argmin()
     parameters:
     - description: any @cntk.ops.functions.Function that outputs a tensor.
       id: x
@@ -266,6 +270,7 @@ items:
     block just appears as an opaque primitive. Users still have the ability to peek
     at the underlying Function graph that implements the actual block Function.
   syntax:
+    content: as_block()
     parameters:
     - description: The composite Function that the block encapsulates
       id: composite
@@ -304,6 +309,7 @@ items:
     root. The composite denotes a higher-level Function encapsulating the entire graph
     of Functions underlying the specified rootFunction.
   syntax:
+    content: as_composite()
     parameters:
     - description: Root Function, the graph underlying which, the newly created composite
         encapsulates
@@ -358,6 +364,7 @@ items:
 
     array([ 2.,  4.,  8.], dtype=float32)'
   syntax:
+    content: associative_multi_arg(f)
     parameters:
     - description: left side tensor
       id: left
@@ -383,6 +390,7 @@ items:
     independently and applies affine transformation to preserve representation of
     the layer.
   syntax:
+    content: batch_normalization()
     parameters:
     - description: input of the batch normalization operation
       id: operand
@@ -453,6 +461,7 @@ items:
     >>> C.ceil([[0.6, 3.3], [1.9, 5.6]]).eval()\narray([[ 1.,  4.],\n       [ 2.,\
     \  6.]], dtype=float32)"
   syntax:
+    content: ceil()
     parameters:
     - description: input tensor
       id: arg
@@ -494,6 +503,7 @@ items:
 
     array([-5., -4.,  0.,  4.,  9.], dtype=float32)'
   syntax:
+    content: clip()
     parameters:
     - description: tensor to be clipped
       id: x
@@ -543,6 +553,7 @@ items:
     >>> len(forward)\n2\n>>> list(forward.values()) # doctest: +SKIP\n[array([[[ 1.,\
     \ -3.,  6.,  2.]]], dtype=float32),\n array([[[ 1.,  7.,  0.,  6.]]], dtype=float32)]"
   syntax:
+    content: combine()
     parameters:
     - description: list of functions or their variables to combine
       id: operands
@@ -574,6 +585,7 @@ items:
     \ ]-\n>>> constant_data = C.constant([[1., 2.], [3., 4.], [5., 6.]])\n>>> constant_data.value\n\
     array([[ 1.,  2.],\n       [ 3.,  4.],\n       [ 5.,  6.]], dtype=float32)"
   syntax:
+    content: constant()
     parameters:
     - description: a scalar initial value that would be replicated for every element
         in the tensor or NumPy array. If `None`, the tensor will be initialized uniformly
@@ -638,6 +650,7 @@ items:
     array([[[[[  6.,   8.,  10.,  12.],\n          [ 16.,  18.,  20.,  22.],\n   \
     \       [ 26.,  28.,  30.,  32.],\n          [ 36.,  38.,  40.,  42.]]]]], dtype=float32)"
   syntax:
+    content: convolution()
     parameters:
     - description: convolution filter weights, stored as a tensor of dimensions ,
         where  must be the kernel dimensions (spatial extent of the filter).
@@ -722,6 +735,7 @@ items:
     \  -1.],\n          [  9.,  10.,  12.,   2.],\n          [ -6.,   5.,   6.,  16.]]]]],\
     \ dtype=float32)"
   syntax:
+    content: convolution_transpose()
     parameters:
     - description: convolution filter weights, stored as a tensor of dimensions ,
         where  must be the kernel dimensions (spatial extent of the filter).
@@ -789,6 +803,7 @@ items:
     \ shape as `x`.\n-[ Example ]-\n>>> np.round(C.cos(np.arccos([[1,0.5],[-0.25,-0.75]])).eval(),5)\n\
     array([[ 1.  ,  0.5 ],\n       [-0.25, -0.75]], dtype=float32)"
   syntax:
+    content: cos()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -827,6 +842,7 @@ items:
     \ # doctest: +SKIP\narray([[   0.,    0.],\n       [   0.,  160.],\n       [ \
     \  0.,  240.]], dtype=float32)"
   syntax:
+    content: dropout()
     parameters:
     - description: input tensor
       id: x
@@ -869,6 +885,7 @@ items:
 
     array([  2.5,   5. ,   7.5,  15. ], dtype=float32)'
   syntax:
+    content: element_divide()
     parameters:
     - description: left side tensor
       id: left
@@ -899,6 +916,7 @@ items:
   summary: The output of this operation is the element-wise max of the two or more
     input tensors. It supports broadcasting.
   syntax:
+    content: element_max(arg1, arg2)
     parameters:
     - description: left side tensor
       id: arg1
@@ -925,6 +943,7 @@ items:
   summary: The output of this operation is the element-wise min of the two or more
     input tensors. It supports broadcasting.
   syntax:
+    content: element_min(arg1, arg2)
     parameters:
     - description: left side tensor
       id: arg1
@@ -959,6 +978,7 @@ items:
 
     array([     1.,     10.,    200.,   1000.,  10000.], dtype=float32)'
   syntax:
+    content: element_select()
     parameters:
     - description: condition tensor
       id: flag
@@ -1005,6 +1025,7 @@ items:
 
     array([  10.,   40.,   30.,  120.], dtype=float32)'
   syntax:
+    content: element_times(arg1, arg2)
     parameters:
     - description: left side tensor
       id: arg1
@@ -1039,6 +1060,7 @@ items:
 
     array([[-0.632121, -0.393469,  0.      ,  1.      ,  2.      ]], dtype=float32)'
   syntax:
+    content: elu()
     parameters:
     - description: any @cntk.ops.functions.Function that outputs a tensor.
       id: x
@@ -1081,6 +1103,7 @@ items:
 
     array([ 0.,  0.,  1.], dtype=float32)'
   syntax:
+    content: equal()
     parameters:
     - description: left side tensor
       id: left
@@ -1117,6 +1140,7 @@ items:
 
     array([ 1.      ,  2.718282], dtype=float32)'
   syntax:
+    content: exp()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -1151,6 +1175,7 @@ items:
     \ -5., -3., -1.,  0.], dtype=float32)\n>>> C.floor([[-0.6, -4.3], [1.9, -3.2]]).eval()\n\
     array([[-1., -5.],\n       [ 1., -4.]], dtype=float32)"
   syntax:
+    content: floor()
     parameters:
     - description: input tensor
       id: arg
@@ -1184,6 +1209,7 @@ items:
     graph = cntk.labels_to_graph(labels) networkOut = model(features) fb = C.forward_backward(graph,
     networkOut, 132)'
   syntax:
+    content: forward_backward()
     parameters:
     - description: labels graph
       id: graph
@@ -1230,6 +1256,7 @@ items:
     \        [[ 18.,  19.],\n         [ 20.,  21.],\n         [ 22.,  23.]],\n<BLANKLINE>\n\
     \        [[  0.,   0.],\n         [  0.,   0.],\n         [  0.,   0.]]]], dtype=float32)"
   syntax:
+    content: future_value()
     parameters:
     - description: the tensor (or its name) from which the future value is obtained.
       id: x
@@ -1275,6 +1302,7 @@ items:
 
     array([ 0.,  0.,  1.], dtype=float32)'
   syntax:
+    content: greater()
     parameters:
     - description: left side tensor
       id: left
@@ -1315,6 +1343,7 @@ items:
 
     array([ 0.,  1.,  1.], dtype=float32)'
   syntax:
+    content: greater_equal()
     parameters:
     - description: left side tensor
       id: left
@@ -1356,6 +1385,7 @@ items:
 
     array([ 0.,  1.,  0.,  0.], dtype=float32)'
   syntax:
+    content: hardmax()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -1385,6 +1415,7 @@ items:
   summary: 'It creates an input in the network: a place where data, such as features
     and labels, should be provided.'
   syntax:
+    content: input_variable()
     parameters:
     - description: the shape of the input tensor
       id: shape
@@ -1434,6 +1465,7 @@ items:
 
     num_classes = 2 labels = cntk.input_variable((num_classes)) graph = cntk.labels_to_graph(labels)'
   syntax:
+    content: labels_to_graph()
     parameters:
     - description: input training labels
       id: labels
@@ -1466,6 +1498,7 @@ items:
 
     array([[-0.01 , -0.005,  0.   ,  1.   ,  2.   ]], dtype=float32)'
   syntax:
+    content: leaky_relu()
     parameters:
     - description: any @cntk.ops.functions.Function that outputs a tensor.
       id: x
@@ -1508,6 +1541,7 @@ items:
 
     array([ 1.,  0.,  0.], dtype=float32)'
   syntax:
+    content: less()
     parameters:
     - description: left side tensor
       id: left
@@ -1548,6 +1582,7 @@ items:
 
     array([ 1.,  1.,  0.], dtype=float32)'
   syntax:
+    content: less_equal()
     parameters:
     - description: left side tensor
       id: left
@@ -1588,6 +1623,7 @@ items:
     for *log*, because this is the only guaranteed precision across platforms. This
     will be changed to return *NaN* and *-inf*.'
   syntax:
+    content: log()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -1629,6 +1665,7 @@ items:
 
     array([ 2.,  3.,  4.], dtype=float32)'
   syntax:
+    content: log_add_exp(arg1, arg2)
     parameters:
     - description: left side tensor
       id: arg1
@@ -1657,6 +1694,7 @@ items:
     \ dtype=float32)\n>>> C.minus([[1,2],[3,4]], 1).eval()\narray([[ 0.,  1.],\n \
     \      [ 2.,  3.]], dtype=float32)"
   syntax:
+    content: minus()
     parameters:
     - description: left side tensor
       id: left
@@ -1693,6 +1731,7 @@ items:
 
     array([ 1., -1.,  2., -3.], dtype=float32)'
   syntax:
+    content: negate()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -1732,6 +1771,7 @@ items:
 
     array([ 1.,  0.,  1.], dtype=float32)'
   syntax:
+    content: not_equal()
     parameters:
     - description: left side tensor
       id: left
@@ -1772,6 +1812,7 @@ items:
     \  0.,  0.],\n       [ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],\n       [ 0., \
     \ 0.,  0.,  0.,  0.,  0.,  0.,  0.]], dtype=float32)"
   syntax:
+    content: optimized_rnnstack()
     return:
       description: '@cntk.ops.functions.Function'
   type: Method
@@ -1792,6 +1833,7 @@ items:
     startLine: 2542
   summary: It creates an output variable that is used to define a user defined function.
   syntax:
+    content: output_variable()
     parameters:
     - description: the shape of the input tensor
       id: shape
@@ -1840,6 +1882,7 @@ items:
 
     array([[-0.5 , -0.25,  0.  ,  1.  ,  2.  ]], dtype=float32)'
   syntax:
+    content: param_relu()
     parameters:
     - description: same shape as x
       id: alpha
@@ -1877,6 +1920,7 @@ items:
     \ init=2)\n>>> np.asarray(init_parameter) # doctest: +SKIP\narray([[ 2.,  2.,\
     \  2.,  2.],\n       [ 2.,  2.,  2.,  2.],\n       [ 2.,  2.,  2.,  2.]], dtype=float32)"
   syntax:
+    content: parameter()
     parameters:
     - description: the shape of the input tensor. If not provided, it will be inferred
         from `value`.
@@ -1954,6 +1998,7 @@ items:
     <BLANKLINE>\n        [[ 12. ,  13. ],\n         [ 14. ,  15. ],\n         [ 16.\
     \ ,  17. ]]]], dtype=float32)"
   syntax:
+    content: past_value()
     parameters:
     - description: the tensor (or its name) from which the past value is obtained
       id: x
@@ -1989,6 +2034,7 @@ items:
   summary: Computes per dimension mean-variance normalization of the specified input
     operand.
   syntax:
+    content: per_dim_mean_variance_normalize()
     parameters:
     - description: the variable to be normalized
       id: operand
@@ -2027,6 +2073,7 @@ items:
     variable in a recurrent network, which is replaced with the actual output variable
     by calling replace_placeholder(s).
   syntax:
+    content: placeholder_variable()
     parameters:
     - description: the shape of the variable tensor
       id: shape
@@ -2075,6 +2122,7 @@ items:
 
     array([  8.,   8.,  10.,  10.,  12.], dtype=float32)'
   syntax:
+    content: plus(arg1, arg2)
     parameters:
     - description: left side tensor
       id: arg1
@@ -2108,6 +2156,7 @@ items:
     >>> C.pooling(x, C.MAX_POOLING, (2,2), (2,2)).eval({x : [img]})\narray([[[[[ \
     \ 5.,   7.],\n          [ 13.,  15.]]]]], dtype=float32)"
   syntax:
+    content: pooling()
     parameters:
     - description: pooling input
       id: operand
@@ -2166,6 +2215,7 @@ items:
     one set of samples per minibatch. Intended use cases are e.g. sampled softmax,
     noise contrastive estimation etc.'
   syntax:
+    content: random_sample()
     parameters:
     - description: input vector of sampling weights which should be non-negative numbers.
       id: weights
@@ -2242,6 +2292,7 @@ items:
 
     1.0'
   syntax:
+    content: random_sample_inclusion_frequency()
     return:
       description: '@cntk.ops.functions.Function'
   type: Method
@@ -2268,6 +2319,7 @@ items:
 
     array([-3.      ,  5.      , -0.5     ,  0.333333], dtype=float32)'
   syntax:
+    content: reciprocal()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -2314,6 +2366,7 @@ items:
 
     5.4561934'
   syntax:
+    content: reduce_log_sum_exp()
     return:
       description: '@cntk.ops.functions.Function'
   type: Method
@@ -2339,6 +2392,7 @@ items:
     \ 0).eval()\narray([[ 50.,  60.]], dtype=float32)\n>>> C.reduce_max(data, 1).eval()\n\
     array([[ 20.],\n       [ 40.],\n       [ 60.]], dtype=float32)"
   syntax:
+    content: reduce_max()
     return:
       description: '@cntk.ops.functions.Function'
   type: Method
@@ -2364,6 +2418,7 @@ items:
     \ 0).eval()\narray([[ 30.,  40.]], dtype=float32)\n>>> C.reduce_mean(data, 1).eval()\n\
     array([[ 12.5],\n       [ 35. ],\n       [ 57.5]], dtype=float32)"
   syntax:
+    content: reduce_mean()
     return:
       description: '@cntk.ops.functions.Function'
   type: Method
@@ -2389,6 +2444,7 @@ items:
     \ 0).eval()\narray([[ 10.,  20.]], dtype=float32)\n>>> C.reduce_min(data, 1).eval()\n\
     array([[ 10.],\n       [ 30.],\n       [ 50.]], dtype=float32)"
   syntax:
+    content: reduce_min()
     return:
       description: '@cntk.ops.functions.Function'
   type: Method
@@ -2414,6 +2470,7 @@ items:
     array([[ 15.,  48.]], dtype=float32)\n>>> C.reduce_prod(data, 1).eval()\narray([[\
     \  2.],\n       [ 12.],\n       [ 30.]], dtype=float32)"
   syntax:
+    content: reduce_prod()
     return:
       description: '@cntk.ops.functions.Function'
   type: Method
@@ -2452,6 +2509,7 @@ items:
     >>> np.round(C.reduce_mean(x, axis=C.Axis.all_axes()).eval({x:[x1,x2]}),5)\n4.5\n\
     >>> (np.sum(x1)+np.sum(x2))/(x1.size+x2.size)\n4.5"
   syntax:
+    content: reduce_sum()
     parameters:
     - description: input tensor
       id: x
@@ -2492,6 +2550,7 @@ items:
 
     array([[ 0.,  0.,  0.,  1.,  2.]], dtype=float32)'
   syntax:
+    content: relu()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -2525,6 +2584,7 @@ items:
     \ dtype=np.float32)})\narray([[[[ 0.,  1.,  2.],\n         [ 3.,  4.,  5.]]]],\
     \ dtype=float32)"
   syntax:
+    content: reshape()
     parameters:
     - description: tensor to be reshaped
       id: x
@@ -2563,6 +2623,7 @@ items:
     operation can be used as a replacement for the final pooling layer of an image
     classification network (as presented in Fast R-CNN and others).'
   syntax:
+    content: roipooling()
     parameters:
     - description: a convolutional feature map as the input volume ([W x H x C x N]).
       id: conv_feature_map
@@ -2604,6 +2665,7 @@ items:
     \ C.round([[-0.6, -4.3], [1.9, -3.2]]).eval()\narray([[-1., -4.],\n       [ 2.,\
     \ -3.]], dtype=float32)"
   syntax:
+    content: round()
     parameters:
     - description: input tensor
       id: arg
@@ -2640,6 +2702,7 @@ items:
 
     array([ 0.119203,  0.268941,  0.5     ,  0.731059,  0.880797], dtype=float32)'
   syntax:
+    content: sigmoid()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -2670,6 +2733,7 @@ items:
     \ shape as `x`.\n-[ Example ]-\n>>> np.round(C.sin(np.arcsin([[1,0.5],[-0.25,-0.75]])).eval(),5)\n\
     array([[ 1.  ,  0.5 ],\n       [-0.25, -0.75]], dtype=float32)"
   syntax:
+    content: sin()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -2716,6 +2780,7 @@ items:
     \ when done #>>> x1[1].eval() #array([[ 4.,  5.,  6.]], dtype=float32) #>>> x1[:,:2,:].eval()\
     \ #array([[ 1.,  2.], #         [ 4.,  5.]], dtype=float32)"
   syntax:
+    content: slice()
     return:
       description: '@cntk.ops.functions.Function'
   type: Method
@@ -2745,6 +2810,7 @@ items:
     \ 5]]], axis=-1).eval()\narray([[[ 0.5     ,  0.5     ],\n        [ 0.119203,\
     \  0.880797]]], dtype=float32)"
   syntax:
+    content: softmax()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -2795,6 +2861,7 @@ items:
 
     array([[ 0.004537,  0.031732,  0.173287,  1.004537,  2.000084]], dtype=float32)'
   syntax:
+    content: softplus()
     parameters:
     - description: any @cntk.ops.functions.Function that outputs a tensor.
       id: x
@@ -2838,6 +2905,7 @@ items:
     array([[[  1.,   2.],\n        [  4.,   5.],\n        [ 10.,  20.],\n        [\
     \ 30.,  40.],\n        [ 50.,  60.]]], dtype=float32)"
   syntax:
+    content: splice()
     parameters:
     - description: one or more input tensors
       id: inputs
@@ -2879,6 +2947,7 @@ items:
     Note: CNTK returns zero for sqrt of negative nubmers, this will be changed to
     retrun NaN'
   syntax:
+    content: sqrt()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -2913,6 +2982,7 @@ items:
 
     array([   1.,  100.], dtype=float32)'
   syntax:
+    content: square()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -2942,6 +3012,7 @@ items:
   summary: Outputs its input as it and prevents any gradient contribution from its
     output to its input.
   syntax:
+    content: stop_gradient()
     parameters:
     - description: class:*~cntk.ops.functions.Function* that outputs a tensor
       id: input
@@ -2971,6 +3042,7 @@ items:
     \ shape as `x`.\n-[ Example ]-\n>>> C.tanh([[1,2],[3,4]]).eval()\narray([[ 0.761594,\
     \  0.964028],\n       [ 0.995055,  0.999329]], dtype=float32)"
   syntax:
+    content: tanh()
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -3002,11 +3074,11 @@ items:
     \ a matrix. The operator '@' has been overloaded such that in Python 3.5 and later\
     \ X @ W equals times(X, W).\nFor better performance on times operation on sequence\
     \ which is followed by sequence.reduce_sum, use infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK,\
-    \ i.e. replace following:\n<!-- literal_block {\"backrefs\": [], \"ids\": [],\
-    \ \"names\": [], \"xml:space\": \"preserve\", \"classes\": [], \"dupnames\": []}\
+    \ i.e. replace following:\n<!-- literal_block {\"xml:space\": \"preserve\", \"\
+    dupnames\": [], \"classes\": [], \"ids\": [], \"backrefs\": [], \"names\": []}\
     \ -->\n\n````\n\n   sequence.reduce_sum(times(seq1, seq2))\n   ````\nwith:\n<!--\
-    \ literal_block {\"backrefs\": [], \"ids\": [], \"names\": [], \"xml:space\":\
-    \ \"preserve\", \"classes\": [], \"dupnames\": []} -->\n\n````\n\n   times(seq1,\
+    \ literal_block {\"xml:space\": \"preserve\", \"dupnames\": [], \"classes\": [],\
+    \ \"ids\": [], \"backrefs\": [], \"names\": []} -->\n\n````\n\n   times(seq1,\
     \ seq2, infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK)\n\
     \   ````\n-[ Example ]-\n>>> C.times([[1,2],[3,4]], [[5],[6]]).eval()\narray([[\
     \ 17.],\n       [ 39.]], dtype=float32)\n>>> C.times(1.*np.reshape(np.arange(8),\
@@ -3018,6 +3090,7 @@ items:
     \         [ 38.,  47.]],\n<BLANKLINE>\n        [[ 28.,  41.],\n         [ 54.,\
     \  67.]]]])"
   syntax:
+    content: times()
     parameters:
     - description: left side matrix or tensor
       id: left
@@ -3078,6 +3151,7 @@ items:
     \ [[  5.]\n  [  7.]\n  [  9.]]\n<BLANKLINE>\n [[ 11.]\n  [ 13.]\n  [ 15.]]\n<BLANKLINE>\n\
     \ [[ 17.]\n  [ 19.]\n  [ 21.]]]"
   syntax:
+    content: times_transpose()
     parameters:
     - description: left side tensor
       id: left
@@ -3109,6 +3183,7 @@ items:
     \ with `axis1` and `axis2` swapped.\n-[ Example ]-\n>>> C.transpose([[[0,1],[2,3],[4,5]]],\
     \ 1, 2).eval()\narray([[[ 0.,  2.,  4.],\n        [ 1.,  3.,  5.]]], dtype=float32)"
   syntax:
+    content: transpose()
     parameters:
     - description: tensor to be transposed
       id: x
@@ -3153,6 +3228,7 @@ items:
     \ 0.,   5.,   0.,   7.],\n          [  0.,   0.,   0.,   0.],\n          [  0.,\
     \  13.,   0.,  15.]]]]], dtype=float32)"
   syntax:
+    content: unpooling()
     parameters:
     - description: unpooling input
       id: operand

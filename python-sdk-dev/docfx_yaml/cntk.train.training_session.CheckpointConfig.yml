@@ -25,6 +25,7 @@ items:
 
     A checkpoint configuration for the training session.'
   syntax:
+    content: CheckpointConfig(self, filename, frequency=None, restore=True, preserve_all=False)
     parameters:
     - description: checkpoint file name.
       id: filename

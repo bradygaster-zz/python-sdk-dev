@@ -37,6 +37,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 14
   syntax:
+    content: test_load_save_constant(tmpdir)
     parameters:
     - id: tmpdir
   type: Method
@@ -56,6 +57,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 35
   syntax:
+    content: test_load_save_input_legacy_names(tmpdir)
     parameters:
     - id: tmpdir
   type: Method
@@ -75,6 +77,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 59
   syntax:
+    content: test_load_save_inputs(tmpdir)
     parameters:
     - id: tmpdir
   type: Method
@@ -94,6 +97,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 85
   syntax:
+    content: test_load_save_unique_input(tmpdir)
     parameters:
     - id: tmpdir
   type: Method

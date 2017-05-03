@@ -35,6 +35,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 9
   syntax:
+    content: map_if_possible(obj)
     parameters:
     - id: obj
   type: Method
@@ -58,6 +59,7 @@ items:
     containing a dictionary, it will try to upcast every element in the tuple and
     all the keys and values in the dictionary.
   syntax:
+    content: typemap(f)
     parameters:
     - id: f
   type: Method

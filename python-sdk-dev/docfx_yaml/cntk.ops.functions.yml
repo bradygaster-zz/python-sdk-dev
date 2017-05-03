@@ -38,7 +38,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 1061
   summary: Alias for @cntk.ops.functions.Function.load.
-  syntax: {}
+  syntax:
+    content: load_model()
   type: Method
   uid: cntk.ops.functions.load_model
 - _type: function
@@ -55,7 +56,8 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 1068
-  syntax: {}
+  syntax:
+    content: save_model()
   type: Method
   uid: cntk.ops.functions.save_model
 references:

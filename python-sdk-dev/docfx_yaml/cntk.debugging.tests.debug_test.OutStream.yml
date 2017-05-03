@@ -25,7 +25,8 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    content: OutStream(self)
   type: Class
   uid: cntk.debugging.tests.debug_test.OutStream
 - _type: method
@@ -44,6 +45,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 69
   syntax:
+    content: flush(self)
     parameters:
     - id: self
   type: Method
@@ -64,6 +66,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 62
   syntax:
+    content: write(self, text)
     parameters:
     - id: self
     - id: text

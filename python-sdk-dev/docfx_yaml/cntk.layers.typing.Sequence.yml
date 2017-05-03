@@ -22,7 +22,8 @@ items:
   summary: 'Bases: `object`
 
     Meta-meta class to denote a sequence of data tensors. Example: `Sequence[Tensor[13,42]]`'
-  syntax: {}
+  syntax:
+    content: Sequence()
   type: Class
   uid: cntk.layers.typing.Sequence
 references: []

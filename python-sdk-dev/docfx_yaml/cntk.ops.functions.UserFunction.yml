@@ -39,6 +39,7 @@ items:
 
     '
   syntax:
+    content: UserFunction(cls)
     parameters:
     - description: inputs to this function
       id: inputs
@@ -73,6 +74,7 @@ items:
     startLine: 1228
   summary: Creates a clone of this user-defined function.
   syntax:
+    content: clone(self, cloned_inputs)
     parameters:
     - id: self
     - description: list of cloned inputs to the new user-defined Function clone to
@@ -101,6 +103,7 @@ items:
 
     Output variables are created by `output_variable()`.'
   syntax:
+    content: infer_outputs(self)
     parameters:
     - id: self
   type: Method
@@ -122,6 +125,7 @@ items:
     startLine: 1241
   summary: Returns the operator name.
   syntax:
+    content: op_name(self)
     parameters:
     - id: self
   type: Method

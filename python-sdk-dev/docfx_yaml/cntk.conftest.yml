@@ -36,6 +36,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 69
   syntax:
+    content: add_namespace(doctest_namespace)
     parameters:
     - id: doctest_namespace
   type: Method
@@ -55,6 +56,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 13
   syntax:
+    content: pytest_addoption(parser)
     parameters:
     - id: parser
   type: Method
@@ -74,6 +76,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 26
   syntax:
+    content: pytest_generate_tests(metafunc)
     parameters:
     - id: metafunc
   type: Method

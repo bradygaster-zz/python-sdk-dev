@@ -42,8 +42,10 @@ items:
     a given number of time steps. Negative means future. This is provided as a layer
     instead of a function so that it can easily be used in a Sequential() expression.
   syntax:
+    content: Delay(T=1, initial_state=<cntk.default_options.default_override_or object
+      at 0x2b1e628d96a0>, name="")
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b5e477cd6a0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d96a0>
       id: T
     - defaultValue: '1'
       id: initial_state
@@ -77,15 +79,18 @@ items:
     `go_backwards=False` selects a fold-left, while `True` a fold-right, but note
     that the `folder_function` signature is always the one of fold-left.'
   syntax:
+    content: Fold(folder_function, go_backwards=<cntk.default_options.default_override_or
+      object at 0x2b1e628d97b8>, initial_state=<cntk.default_options.default_override_or
+      object at 0x2b1e628d97f0>, return_full_state=False, name="")
     parameters:
     - id: folder_function
     - defaultValue: ''
       id: go_backwards
     - defaultValue: 'False'
       id: initial_state
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b5e477cd7f0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d97f0>
       id: return_full_state
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b5e477cd7b8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d97b8>
       id: name
   type: Method
   uid: cntk.layers.sequence.Fold
@@ -107,8 +112,10 @@ items:
     view for N past steps over a sequence along the given ''axis''. It returns two
     matrices: a value matrix, shape=(N,dim), and a valid window, shape=(1,dim)'
   syntax:
+    content: PastValueWindow(window_size, axis, go_backwards=<cntk.default_options.default_override_or
+      object at 0x2b1e628d96d8>, name="")
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b5e477cd6d8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d96d8>
       id: window_size
     - id: axis
     - id: go_backwards
@@ -137,15 +144,18 @@ items:
     bidirectionality be an option of this? bidirectional=True? What was the reason
     it cannot?'
   syntax:
+    content: Recurrence(step_function, go_backwards=<cntk.default_options.default_override_or
+      object at 0x2b1e628d9748>, initial_state=<cntk.default_options.default_override_or
+      object at 0x2b1e628d9780>, return_full_state=False, name="")
     parameters:
     - id: step_function
     - defaultValue: ''
       id: go_backwards
     - defaultValue: 'False'
       id: initial_state
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b5e477cd780>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d9780>
       id: return_full_state
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b5e477cd748>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d9748>
       id: name
   type: Method
   uid: cntk.layers.sequence.Recurrence
@@ -169,13 +179,15 @@ items:
     accepts the initial state as data argument(s). Initial state consists of N arguments,
     matching 'over'.
   syntax:
+    content: RecurrenceFrom(step_function, go_backwards=<cntk.default_options.default_override_or
+      object at 0x2b1e628d9710>, return_full_state=False, name="")
     parameters:
     - id: step_function
     - defaultValue: ''
       id: go_backwards
     - defaultValue: 'False'
       id: return_full_state
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b5e477cd710>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b1e628d9710>
       id: name
   type: Method
   uid: cntk.layers.sequence.RecurrenceFrom
@@ -196,11 +208,11 @@ items:
   summary: "Layer factory function to create a function that implements the unfold()\
     \ anamorphism. It creates a function that, starting with a seed input, applies\
     \ 'generator_function' repeatedly and emits the sequence of results. Depending\
-    \ on the recurrent block, it may have this form:\n<!-- literal_block {\"backrefs\"\
-    : [], \"ids\": [], \"names\": [], \"xml:space\": \"preserve\", \"classes\": [],\
-    \ \"dupnames\": []} -->\n\n````\n\n   result = f(... f(f([g(input), initial_state]))\
-    \ ... )\n   ````\nor this form:\n<!-- literal_block {\"backrefs\": [], \"ids\"\
-    : [], \"names\": [], \"xml:space\": \"preserve\", \"classes\": [], \"dupnames\"\
+    \ on the recurrent block, it may have this form:\n<!-- literal_block {\"xml:space\"\
+    : \"preserve\", \"dupnames\": [], \"classes\": [], \"ids\": [], \"backrefs\":\
+    \ [], \"names\": []} -->\n\n````\n\n   result = f(... f(f([g(input), initial_state]))\
+    \ ... )\n   ````\nor this form:\n<!-- literal_block {\"xml:space\": \"preserve\"\
+    , \"dupnames\": [], \"classes\": [], \"ids\": [], \"backrefs\": [], \"names\"\
     : []} -->\n\n````\n\n   result = f(g(input), ... f(g(input), f(g(input), initial_state))\
     \ ... )\n   ````\nwhere *f* is *generator_function*. An example use of this is\
     \ sequence-to-sequence decoding, where *g(input)* is the sequence encoder, *initial_state*\
@@ -209,6 +221,9 @@ items:
     \ state for the output recursion. The second form is an attention-based decoder,\
     \ where the encoded input affects every application of *f* differently."
   syntax:
+    content: 'UnfoldFrom(generator_function, map_state_function=Composite(Combine):
+      Placeholder(''keep'', [???], [???]) -> Placeholder(''keep'', [???], [???]),
+      until_predicate=None, length_increase=1, initial_state=None, name="")'
     parameters:
     - id: generator_function
     - defaultValue: ''

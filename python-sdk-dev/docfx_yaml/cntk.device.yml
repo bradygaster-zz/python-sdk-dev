@@ -43,6 +43,7 @@ items:
     startLine: 62
   summary: Returns a device descriptor list with all the available devices
   syntax:
+    content: all_devices()
     return:
       description: all device descriptors
       type:
@@ -65,6 +66,7 @@ items:
     startLine: 73
   summary: Returns a device descriptor with the best configuration.
   syntax:
+    content: best()
     return:
       description: Best device descriptor
       type:
@@ -87,6 +89,7 @@ items:
     startLine: 84
   summary: Returns CPU device descriptor
   syntax:
+    content: cpu()
     return:
       description: CPU device descriptor
       type:
@@ -109,6 +112,7 @@ items:
     startLine: 95
   summary: Returns default device
   syntax:
+    content: default()
     return:
       description: Default device descriptor
       type:
@@ -131,6 +135,7 @@ items:
     startLine: 106
   summary: Returns GPU device
   syntax:
+    content: gpu()
     return:
       description: GPU device descriptor
       type:
@@ -153,6 +158,7 @@ items:
     startLine: 128
   summary: Set new device descriptor as default
   syntax:
+    content: set_default_device()
     parameters:
     - description: new device descriptor
       id: new_default_device
@@ -180,6 +186,7 @@ items:
     startLine: 117
   summary: Use default device
   syntax:
+    content: use_default_device()
     return:
       description: Id of default device
       type:

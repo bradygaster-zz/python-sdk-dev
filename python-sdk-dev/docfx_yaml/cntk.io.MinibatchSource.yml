@@ -43,6 +43,9 @@ items:
 
     '
   syntax:
+    content: MinibatchSource(self, deserializers=None, randomize=True, randomization_window=128,
+      sample_based_randomization_window=False, epoch_size=18446744073709551615, distributed_after=18446744073709551615,
+      multithreaded_deserializer=None, frame_mode=False, truncation_length=0)
     parameters:
     - description: list of deserializers
       id: deserializers
@@ -132,6 +135,7 @@ items:
     startLine: 223
   summary: Gets the checkpoint state of the MinibatchSource.
   syntax:
+    content: get_checkpoint_state(self)
     parameters:
     - id: self
     return:
@@ -181,6 +185,7 @@ items:
     taken.  An empty map is returned when the MinibatchSource has no more data to
     return.'
   syntax:
+    content: next_minibatch()
     parameters:
     - description: '<SYSTEM MESSAGE: /root/CNTK/bindings/python/doc/cntk.io.rst:2:
         (INFO/1) Duplicate explicit target name: "here".>
@@ -234,6 +239,7 @@ items:
     startLine: 233
   summary: Restores the MinibatchSource state from the specified checkpoint.
   syntax:
+    content: restore_from_checkpoint(self, checkpoint)
     parameters:
     - id: self
     - description: checkpoint to restore from
@@ -260,6 +266,7 @@ items:
   summary: Gets the description of the stream with given name. Throws an exception
     if there are none or multiple streams with this same name.
   syntax:
+    content: stream_info(self, name)
     parameters:
     - id: self
     - id: name
@@ -282,6 +289,7 @@ items:
     startLine: 146
   summary: Describes the stream that this source produces.
   syntax:
+    content: stream_infos(self)
     parameters:
     - id: self
     return:

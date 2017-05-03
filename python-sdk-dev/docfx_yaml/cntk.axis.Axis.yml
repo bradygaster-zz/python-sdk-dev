@@ -61,7 +61,8 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    content: Axis(self)
   type: Class
   uid: cntk.axis.Axis
 - _type: method
@@ -81,6 +82,7 @@ items:
     startLine: 103
   summary: Axis object representing all the axes--static and dynamic--of an operand.
   syntax:
+    content: all_axes()
     return:
       description: all axes
       type:
@@ -104,6 +106,7 @@ items:
     startLine: 92
   summary: Axis object representing all the static axes of an operand.
   syntax:
+    content: all_static_axes()
     return:
       description: all static axes
       type:
@@ -127,6 +130,7 @@ items:
     startLine: 81
   summary: Returns an Axis object representing the batch axis
   syntax:
+    content: default_batch_axis()
     return:
       description: default batch axis
       type:
@@ -150,6 +154,7 @@ items:
     startLine: 70
   summary: Returns an Axis object representing the default dynamic axis
   syntax:
+    content: default_dynamic_axis()
     return:
       description: default dynamic axis
       type:
@@ -173,6 +178,7 @@ items:
     startLine: 114
   summary: Default dynamic axes of the input variable
   syntax:
+    content: default_input_variable_dynamic_axes()
     return:
       description: instances
       type:
@@ -198,6 +204,7 @@ items:
 
     Creates an Axis object representing a new leading static axis.'
   syntax:
+    content: end_static_axis()
     return:
       description: axis object representing a new leading static axis.
       type:
@@ -291,6 +298,7 @@ items:
     startLine: 166
   summary: Creates an Axis object representing a new leading static axis.
   syntax:
+    content: new_leading_axis()
     return:
       description: axis object representing a new leading static axis.
       type:
@@ -314,6 +322,7 @@ items:
     startLine: 136
   summary: Creates an Axis object representing a new unique dynamic axis.
   syntax:
+    content: new_unique_dynamic_axis()
     parameters:
     - description: name of the dynmic axis
       id: name
@@ -343,6 +352,7 @@ items:
   summary: Returns the integer with which the static axis is defined. For example,
     0 = first axis, 1 = second axis, etc.
   syntax:
+    content: static_axis_index(self, checked=True)
     parameters:
     - id: self
     - defaultValue: 'True'
@@ -374,6 +384,7 @@ items:
     startLine: 125
   summary: Unknown dynamic axes
   syntax:
+    content: unknown_dynamic_axes()
     return:
       description: instances
       type:

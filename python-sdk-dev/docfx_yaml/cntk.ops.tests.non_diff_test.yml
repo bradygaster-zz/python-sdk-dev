@@ -37,7 +37,8 @@ items:
       path: cntk/ops/tests/non_diff_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 97
-  syntax: {}
+  syntax:
+    content: test_input_variable()
   type: Method
   uid: cntk.ops.tests.non_diff_test.test_input_variable
 - _type: function
@@ -55,6 +56,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 43
   syntax:
+    content: test_op_ceil(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -76,6 +78,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 28
   syntax:
+    content: test_op_floor(operand, device_id, precision)
     parameters:
     - id: operand
     - id: device_id
@@ -97,6 +100,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 84
   syntax:
+    content: test_op_round(operand, expected, device_id, precision)
     parameters:
     - id: operand
     - id: expected

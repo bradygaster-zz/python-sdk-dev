@@ -43,6 +43,7 @@ items:
   summary: Helper test function that converts a batch of dense tensors into sparse
     representation that can be consumed by `cntk.ops.sparse_input_numpy()`.
   syntax:
+    content: batch_dense_to_sparse(batch, dynamic_axis="")
     parameters:
     - description: list of samples. If `dynamic_axis` is given, samples are sequences
         of tensors. Otherwise, they are simple tensors.
@@ -75,6 +76,7 @@ items:
   summary: Converts the legacy device ID as it was used in CNTK 1 to a [DeviceDescriptor](.md#cntk.device.DeviceDescriptor.md)
     instance.
   syntax:
+    content: cntk_device(device_id)
     parameters:
     - description: device id, -1 for CPU, 0 or higher for GPU
       id: device_id
@@ -99,6 +101,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 249
   syntax:
+    content: compare_lists_of_np_arrays(first_list, second_list)
     parameters:
     - id: first_list
     - id: second_list
@@ -119,6 +122,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 238
   syntax:
+    content: remove_np_array_in_list(arr, l)
     parameters:
     - id: arr
     - id: l
@@ -138,7 +142,8 @@ items:
       path: cntk/ops/tests/ops_test_utils.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 200
-  syntax: {}
+  syntax:
+    content: test_batch_dense_to_sparse_full()
   type: Method
   uid: cntk.ops.tests.ops_test_utils.test_batch_dense_to_sparse_full
 - _type: function
@@ -155,7 +160,8 @@ items:
       path: cntk/ops/tests/ops_test_utils.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 222
-  syntax: {}
+  syntax:
+    content: test_batch_dense_to_sparse_zeros()
   type: Method
   uid: cntk.ops.tests.ops_test_utils.test_batch_dense_to_sparse_zeros
 - _type: function
@@ -173,6 +179,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 121
   syntax:
+    content: unittest_helper(root_node, forward_input, expected_forward, expected_backward,
+      device_id=-1, precision="float")
     parameters:
     - id: root_node
     - defaultValue: float

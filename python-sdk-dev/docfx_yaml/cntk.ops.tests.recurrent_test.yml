@@ -38,6 +38,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 116
   syntax:
+    content: test_op_delay_with_initial_state(input_size, time_step, initial_state_size,
+      device_id, precision)
     parameters:
     - id: input_size
     - id: time_step
@@ -61,6 +63,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 28
   syntax:
+    content: test_op_future_value(input_size, time_step, initial_state, device_id,
+      precision)
     parameters:
     - id: input_size
     - id: time_step
@@ -84,6 +88,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 68
   syntax:
+    content: test_op_past_value(input_size, time_step, initial_state, device_id, precision)
     parameters:
     - id: input_size
     - id: time_step

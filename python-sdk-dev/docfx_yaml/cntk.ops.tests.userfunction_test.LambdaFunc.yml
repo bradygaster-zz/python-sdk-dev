@@ -35,7 +35,8 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    content: LambdaFunc(cls)
   type: Class
   uid: cntk.ops.tests.userfunction_test.LambdaFunc
 - _type: method
@@ -54,6 +55,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 236
   syntax:
+    content: backward(self, state, root_gradients)
     parameters:
     - id: self
     - id: state
@@ -76,6 +78,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 230
   syntax:
+    content: forward(self, argument, device=None, outputs_to_retain=None)
     parameters:
     - defaultValue: None
       id: self
@@ -101,6 +104,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 227
   syntax:
+    content: infer_outputs(self)
     parameters:
     - id: self
   type: Method

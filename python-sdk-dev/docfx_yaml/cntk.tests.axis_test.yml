@@ -36,7 +36,8 @@ items:
       path: cntk/tests/axis_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 8
-  syntax: {}
+  syntax:
+    content: test_axis()
   type: Method
   uid: cntk.tests.axis_test.test_axis
 - _type: function
@@ -53,7 +54,8 @@ items:
       path: cntk/tests/axis_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 24
-  syntax: {}
+  syntax:
+    content: test_axis_comparison()
   type: Method
   uid: cntk.tests.axis_test.test_axis_comparison
 - _type: function
@@ -70,7 +72,8 @@ items:
       path: cntk/tests/axis_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 20
-  syntax: {}
+  syntax:
+    content: test_default_axis()
   type: Method
   uid: cntk.tests.axis_test.test_default_axis
 - _type: function
@@ -87,7 +90,8 @@ items:
       path: cntk/tests/axis_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 15
-  syntax: {}
+  syntax:
+    content: test_dyn_axis()
   type: Method
   uid: cntk.tests.axis_test.test_dyn_axis
 references:

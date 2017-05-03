@@ -22,7 +22,8 @@ items:
   summary: 'Bases: `object`
 
     This class defines math overloads so that CNTK nodes can be written in math expressions.'
-  syntax: {}
+  syntax:
+    content: TensorOpsMixin()
   type: Class
   uid: cntk.tensor.TensorOpsMixin
 references: []

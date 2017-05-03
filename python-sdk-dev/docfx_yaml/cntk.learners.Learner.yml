@@ -37,7 +37,8 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    content: Learner(self, parameters, learningRateSchedule)
   type: Class
   uid: cntk.learners.Learner
 - _type: method
@@ -57,6 +58,7 @@ items:
     startLine: 153
   summary: Current learning rate.
   syntax:
+    content: learning_rate(self)
     parameters:
     - id: self
   type: Method
@@ -100,6 +102,7 @@ items:
     corresponds to the current value of elapsed samples/sweeps, and it takes effect
     from the current position in the training process onwards.'
   syntax:
+    content: reset_learning_rate(self, learning_rate)
     parameters:
     - id: self
     - description: learning rate to reset to
@@ -125,6 +128,7 @@ items:
     startLine: 113
   summary: Update the parameters associated with this learner.
   syntax:
+    content: update(self, gradient_values, training_sample_count)
     parameters:
     - id: self
     - description: maps `Parameter` to a NumPy array containing the first order gradient

@@ -37,7 +37,8 @@ items:
       path: cntk/ops/tests/block_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 115
-  syntax: {}
+  syntax:
+    content: test_as_block_with_function_in_arguments_map()
   type: Method
   uid: cntk.ops.tests.block_test.test_as_block_with_function_in_arguments_map
 - _type: function
@@ -54,7 +55,8 @@ items:
       path: cntk/ops/tests/block_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 104
-  syntax: {}
+  syntax:
+    content: test_block_with_duplicate_inputs()
   type: Method
   uid: cntk.ops.tests.block_test.test_block_with_duplicate_inputs
 - _type: function
@@ -71,7 +73,8 @@ items:
       path: cntk/ops/tests/block_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 81
-  syntax: {}
+  syntax:
+    content: test_combine_op_as_block()
   type: Method
   uid: cntk.ops.tests.block_test.test_combine_op_as_block
 - _type: function
@@ -89,6 +92,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 30
   syntax:
+    content: test_op_as_block(input_shape, output_shape, expected_output_shape, device_id,
+      precision)
     parameters:
     - id: input_shape
     - id: output_shape

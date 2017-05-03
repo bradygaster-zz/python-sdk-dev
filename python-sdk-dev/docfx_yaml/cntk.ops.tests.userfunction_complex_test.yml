@@ -43,6 +43,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 47
   syntax:
+    content: dense_layer(input, output_dim, nonlinearity)
     parameters:
     - id: input
     - id: output_dim
@@ -64,6 +65,8 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 54
   syntax:
+    content: fully_connected_classifier_net(input, num_output_classes, hidden_layer_dim,
+      num_hidden_layers, nonlinearity)
     parameters:
     - id: input
     - id: num_output_classes
@@ -87,6 +90,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 27
   syntax:
+    content: generate_random_data_sample(sample_size, feature_dim, num_classes)
     parameters:
     - id: sample_size
     - id: feature_dim
@@ -108,6 +112,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 39
   syntax:
+    content: linear_layer(input_var, output_dim)
     parameters:
     - id: input_var
     - id: output_dim
@@ -128,6 +133,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 149
   syntax:
+    content: measure_runtime(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -147,6 +153,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 62
   syntax:
+    content: print_training_progress(trainer, mb, frequency)
     parameters:
     - id: trainer
     - id: mb
@@ -168,6 +175,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 141
   syntax:
+    content: test_ext_user_sigmoid(device_id)
     parameters:
     - id: device_id
   type: Method
@@ -187,6 +195,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 72
   syntax:
+    content: train(nonlinearity, num_hidden_layers, device_id)
     parameters:
     - id: nonlinearity
     - id: num_hidden_layers

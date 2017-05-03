@@ -52,6 +52,7 @@ items:
       repo: https://github.com/Microsoft/CNTK
     startLine: 179
   syntax:
+    content: test_ext_backpropstate(payload)
     parameters:
     - id: payload
   type: Method
@@ -70,7 +71,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 48
-  syntax: {}
+  syntax:
+    content: test_ext_eval_1()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_1
 - _type: function
@@ -87,7 +89,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 59
-  syntax: {}
+  syntax:
+    content: test_ext_eval_2_only_param()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_2_only_param
 - _type: function
@@ -104,7 +107,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 72
-  syntax: {}
+  syntax:
+    content: test_ext_eval_3_no_input()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_3_no_input
 - _type: function
@@ -121,7 +125,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 82
-  syntax: {}
+  syntax:
+    content: test_ext_eval_4_a_inside_graph()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_4_a_inside_graph
 - _type: function
@@ -138,7 +143,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 93
-  syntax: {}
+  syntax:
+    content: test_ext_eval_4_b_inside_graph()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_4_b_inside_graph
 - _type: function
@@ -155,7 +161,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 103
-  syntax: {}
+  syntax:
+    content: test_ext_eval_5_times()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_5_times
 - _type: function
@@ -172,7 +179,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 114
-  syntax: {}
+  syntax:
+    content: test_ext_eval_6_clone()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_6_clone
 - _type: function
@@ -189,7 +197,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 129
-  syntax: {}
+  syntax:
+    content: test_ext_eval_7_placeholder()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_eval_7_placeholder
 - _type: function
@@ -206,7 +215,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 240
-  syntax: {}
+  syntax:
+    content: test_ext_lambdafunc()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_lambdafunc
 - _type: function
@@ -223,7 +233,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 142
-  syntax: {}
+  syntax:
+    content: test_ext_train()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_ext_train
 - _type: function
@@ -240,7 +251,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 332
-  syntax: {}
+  syntax:
+    content: test_multioutput_udf()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_multioutput_udf
 - _type: function
@@ -257,7 +269,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 165
-  syntax: {}
+  syntax:
+    content: test_udf_clone()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_udf_clone
 - _type: function
@@ -274,7 +287,8 @@ items:
       path: cntk/ops/tests/userfunction_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 293
-  syntax: {}
+  syntax:
+    content: test_udf_plus_and_last()
   type: Method
   uid: cntk.ops.tests.userfunction_test.test_udf_plus_and_last
 references:

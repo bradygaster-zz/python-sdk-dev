@@ -34,7 +34,8 @@ items:
       path: cntk/ops/tests/stop_gradient_test.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 16
-  syntax: {}
+  syntax:
+    content: test_stop_gradient()
   type: Method
   uid: cntk.ops.tests.stop_gradient_test.test_stop_gradient
 references:

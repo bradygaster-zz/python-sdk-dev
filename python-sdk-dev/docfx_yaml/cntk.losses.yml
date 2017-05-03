@@ -45,6 +45,7 @@ items:
 
     TBA'
   syntax:
+    content: binary_cross_entropy()
     parameters:
     - description: the computed posterior probability for a variable to be 1 from
         the network (typ. a `sigmoid`)
@@ -80,6 +81,7 @@ items:
     \ np.round(C.cosine_distance(x,y).eval({x:a,y:b}),5)\narray([[-1.,  1.],\n   \
     \    [ 1.,  0.],\n       [ 0., -1.]], dtype=float32)"
   syntax:
+    content: cosine_distance()
     parameters:
     - description: numpy array or any `Function` that outputs a tensor
       id: x
@@ -124,6 +126,7 @@ items:
     \ decimals=4)\narray([[[ 1. ,  0.5,  0. ]],\n<BLANKLINE>\n       [[ 1. ,  0.5,\
     \  0.5]],\n<BLANKLINE>\n       [[ 1. ,  0. ,  0.5]]], dtype=float32)"
   syntax:
+    content: cosine_distance_with_negative_samples()
     parameters:
     - description: numpy array or any `Function` that outputs a tensor
       id: y
@@ -176,6 +179,7 @@ items:
 
     array([[ 1.84019]], dtype=float32)'
   syntax:
+    content: cross_entropy_with_softmax()
     parameters:
     - description: the unscaled computed output values from the network
       id: output_vector
@@ -228,6 +232,7 @@ items:
 
     array([[ 0.]], dtype=float32)'
   syntax:
+    content: squared_error()
     parameters:
     - description: the output values from the network
       id: output
@@ -263,6 +268,7 @@ items:
 
     TBA'
   syntax:
+    content: weighted_binary_cross_entropy()
     parameters:
     - description: the computed posterior probability from the network
       id: output

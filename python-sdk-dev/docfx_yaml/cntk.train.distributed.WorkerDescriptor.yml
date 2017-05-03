@@ -30,7 +30,8 @@ items:
 
 
     '
-  syntax: {}
+  syntax:
+    content: WorkerDescriptor(self)
   type: Class
   uid: cntk.train.distributed.WorkerDescriptor
 - _type: attribute
