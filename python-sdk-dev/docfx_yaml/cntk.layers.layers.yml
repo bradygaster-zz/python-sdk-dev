@@ -71,7 +71,7 @@ items:
     >>> model = Dense(500, activation=C.relu) >> Dense(10)'
   syntax:
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b5182160>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df657080>
       description: function to apply at the end, e.g. *relu*
       id: activation
       type:
@@ -83,7 +83,8 @@ items:
     return:
       description: A function that accepts one argument and applies the operation
         to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.Activation
 - _type: function
@@ -130,7 +131,7 @@ items:
       id: strides
       type:
       - int or tuple of ints, defaults to 1
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b51820b8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64ff98>
       description: if *False*, then the pooling operation will be shifted over the
         "valid" area of input, that is, no value outside the area is used. If `pad=True`
         on the other hand, pooling will be applied to all input positions, and positions
@@ -147,7 +148,8 @@ items:
     return:
       description: A function that accepts one argument and applies the average-pooling
         operation to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.AveragePooling
 - _type: function
@@ -179,9 +181,9 @@ items:
     \ pixel positions\n    ((3,), (3,))"
   syntax:
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b5182240>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df657160>
       id: map_rank
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b5182208>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df657128>
       description: passing 1 means spatially-pooled batch-normalization, where normalization
         values will be tied across all pixel positions; while `None` will normalize
         all elements of the input tensor independently
@@ -193,7 +195,7 @@ items:
       id: init_scale
       type:
       - float, default 1
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b51821d0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df6570f0>
       description: time constant for smoothing the batch statistics in order to compute
         aggregate estimates for inference.
       id: normalization_time_constant
@@ -204,7 +206,7 @@ items:
       id: epsilon
       type:
       - float, default 0.00001
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b5182198>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df6570b8>
       description: if `True` then use CNTK's own engine instead of NVidia's.
       id: use_cntk_engine
       type:
@@ -216,7 +218,8 @@ items:
     return:
       description: A function that accepts one argument and applies the operation
         to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.BatchNormalization
 - _type: function
@@ -306,7 +309,7 @@ items:
       id: init
       type:
       - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a6d8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f5f8>
       description: if *False*, then the filter will be shifted over the "valid" area
         of input, that is, no value outside the area is used. If `pad=True` on the
         other hand, the filter will be applied to all input positions, and positions
@@ -315,7 +318,7 @@ items:
       id: pad
       type:
       - bool or tuple of bools, defaults to False
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a6a0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f5c0>
       description: stride of the convolution (increment when sliding the filter over
         the input). Use a *tuple* to specify a per-axis value.
       id: strides
@@ -333,19 +336,19 @@ items:
       id: bias
       type:
       - bool, optional, defaults to True
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a668>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f588>
       description: initial value of weights *b*
       id: init_bias
       type:
       - scalar or NumPy array or cntk.initializer, defaults to 0
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a630>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f550>
       description: set to 0 if input items are scalars (input has no depth axis),
         e.g. an audio signal or a black-and-white image that is stored with tensor
         shape (H,W) instead of (1,H,W)
       id: reduction_rank
       type:
       - int, defaults to 1
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a5c0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f4e0>
       description: When this is *True* this is deconvolution
       id: transpose
       type:
@@ -364,7 +367,8 @@ items:
     return:
       description: A function that accepts one argument and applies the convolution
         operation to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.Convolution
 - _type: function
@@ -402,12 +406,12 @@ items:
       id: activation
       type:
       - Function, defaults to identity
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a828>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f748>
       description: initial value of weights *W*
       id: init
       type:
       - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a7f0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f710>
       description: if *False*, then the filter will be shifted over the "valid" area
         of input, that is, no value outside the area is used. If `pad=True` on the
         other hand, the filter will be applied to all input positions, and positions
@@ -422,17 +426,17 @@ items:
       id: strides
       type:
       - int or tuple of ints, defaults to 1
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a7b8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f6d8>
       description: the layer will have no bias if *False* is passed here
       id: bias
       type:
       - bool, defaults to True
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a780>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f6a0>
       description: initial value of weights *b*
       id: init_bias
       type:
       - scalar or NumPy array or cntk.initializer, defaults to 0
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a710>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f630>
       description: set to 0 if input items are scalars (input has no depth axis),
         e.g. an audio signal or a black-and-white image that is stored with tensor
         shape (H,W) instead of (1,H,W)
@@ -447,7 +451,8 @@ items:
     return:
       description: A function that accepts one argument and applies the convolution
         operation to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.Convolution1D
 - _type: function
@@ -485,12 +490,12 @@ items:
       id: activation
       type:
       - Function, defaults to identity
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a978>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f898>
       description: initial value of weights *W*
       id: init
       type:
       - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a940>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f860>
       description: if *False*, then the filter will be shifted over the "valid" area
         of input, that is, no value outside the area is used. If `pad=True` on the
         other hand, the filter will be applied to all input positions, and positions
@@ -505,17 +510,17 @@ items:
       id: strides
       type:
       - int or tuple of ints, defaults to 1
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a908>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f828>
       description: the layer will have no bias if *False* is passed here
       id: bias
       type:
       - bool, defaults to True
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a8d0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f7f0>
       description: initial value of weights *b*
       id: init_bias
       type:
       - scalar or NumPy array or cntk.initializer, defaults to 0
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a860>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f780>
       description: set to 0 if input items are scalars (input has no depth axis),
         e.g. an audio signal or a black-and-white image that is stored with tensor
         shape (H,W) instead of (1,H,W)
@@ -530,7 +535,8 @@ items:
     return:
       description: A function that accepts one argument and applies the convolution
         operation to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.Convolution2D
 - _type: function
@@ -568,12 +574,12 @@ items:
       id: activation
       type:
       - Function, defaults to identity
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517aac8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f9e8>
       description: initial value of weights *W*
       id: init
       type:
       - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517aa90>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f9b0>
       description: if *False*, then the filter will be shifted over the "valid" area
         of input, that is, no value outside the area is used. If `pad=True` on the
         other hand, the filter will be applied to all input positions, and positions
@@ -588,17 +594,17 @@ items:
       id: strides
       type:
       - int or tuple of ints, defaults to 1
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517aa58>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f978>
       description: the layer will have no bias if *False* is passed here
       id: bias
       type:
       - bool, defaults to True
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517aa20>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f940>
       description: initial value of weights *b*
       id: init_bias
       type:
       - scalar or NumPy array or cntk.initializer, defaults to 0
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a9b0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f8d0>
       description: set to 0 if input items are scalars (input has no depth axis),
         e.g. an audio signal or a black-and-white image that is stored with tensor
         shape (H,W) instead of (1,H,W)
@@ -613,7 +619,8 @@ items:
     return:
       description: A function that accepts one argument and applies the convolution
         operation to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.Convolution3D
 - _type: function
@@ -660,7 +667,7 @@ items:
     \ form (input_depth, num_filters, *filter_shape)\n    (3, 128, 3, 4)"
   syntax:
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517ab00>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fa20>
       description: shape (spatial extent) of the receptive field, *not* including
         the input feature-map depth. E.g. (3,3) for a 2D convolution.
       id: filter_shape
@@ -700,12 +707,12 @@ items:
       id: sharing
       type:
       - bool, default True
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517ac18>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fb38>
       description: the layer will have no bias if *False* is passed here
       id: bias
       type:
       - bool, optional, default True
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517abe0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fb00>
       description: initial value of weights *b*
       id: init_bias
       type:
@@ -724,13 +731,13 @@ items:
       id: reduction_rank
       type:
       - int, default 1
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517aba8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fac8>
       description: set to a positive number to define the maximum workspace memory
         for convolution.
       id: max_temp_mem_size_in_samples
       type:
       - int, default 0
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517ab70>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fa90>
       description: the name of the Function instance in the network
       id: name
       type:
@@ -759,7 +766,7 @@ items:
     is verified to be 1-dimensional. See *ConvolutionTranspose()* for extensive documentation.
   syntax:
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517ac50>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fb70>
       id: filter_shape
     - id: num_filters
     - id: activation
@@ -767,15 +774,15 @@ items:
       id: init
     - defaultValue: None
       id: pad
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517ad68>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fc88>
       id: strides
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517ad30>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fc50>
       id: bias
     - defaultValue: '1'
       id: init_bias
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517acf8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fc18>
       id: output_shape
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517acc0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fbe0>
       id: name
   type: Method
   uid: cntk.layers.layers.ConvolutionTranspose1D
@@ -798,7 +805,7 @@ items:
     is verified to be 2-dimensional. See *ConvolutionTranspose()* for extensive documentation.
   syntax:
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517ada0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fcc0>
       id: filter_shape
     - id: num_filters
     - id: activation
@@ -806,15 +813,15 @@ items:
       id: init
     - defaultValue: None
       id: pad
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517aeb8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fdd8>
       id: strides
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517ae80>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fda0>
       id: bias
     - defaultValue: '1'
       id: init_bias
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517ae48>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fd68>
       id: output_shape
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517ae10>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fd30>
       id: name
   type: Method
   uid: cntk.layers.layers.ConvolutionTranspose2D
@@ -837,7 +844,7 @@ items:
     is verified to be 3-dimensional. See *ConvolutionTranspose()* for extensive documentation.
   syntax:
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517aef0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fe10>
       id: filter_shape
     - id: num_filters
     - id: activation
@@ -845,15 +852,15 @@ items:
       id: init
     - defaultValue: None
       id: pad
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b5182048>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64ff28>
       id: strides
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517afd0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fef0>
       id: bias
     - defaultValue: '1'
       id: init_bias
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517af98>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64feb8>
       id: output_shape
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517af60>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64fe80>
       id: name
   type: Method
   uid: cntk.layers.layers.ConvolutionTranspose3D
@@ -891,12 +898,12 @@ items:
       id: activation
       type:
       - Function, defaults to identity
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a4e0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f400>
       description: initial value of weights *W*
       id: init
       type:
       - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a4a8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f3c8>
       description: number of inferred axes to add to W (*map_rank* must not be given)
       id: input_rank
       type:
@@ -912,12 +919,12 @@ items:
       id: bias
       type:
       - bool, optional, defaults to True
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a470>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f390>
       description: initial value of weights *b*
       id: init_bias
       type:
       - scalar or NumPy array or cntk.initializer, defualts to 0
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a400>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f320>
       description: the name of the function instance in the network
       id: name
       type:
@@ -925,7 +932,8 @@ items:
     return:
       description: A function that accepts one argument and applies the operation
         to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.Dense
 - _type: function
@@ -981,7 +989,8 @@ items:
     return:
       description: A function that accepts one argument and applies the operation
         to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.Dropout
 - _type: function
@@ -1010,8 +1019,8 @@ items:
     \ sparse.\nThe lookup table in this layer is learnable, unless a user-specified\
     \ one is supplied through the `weights` parameter. For example, to use an existing\
     \ embedding table from a file in numpy format, use this:\n<!-- literal_block {\"\
-    dupnames\": [], \"xml:space\": \"preserve\", \"classes\": [], \"names\": [], \"\
-    backrefs\": [], \"ids\": []} -->\n\n````\n\n   Embedding(weights=np.load('PATH.npy'))\n\
+    dupnames\": [], \"xml:space\": \"preserve\", \"backrefs\": [], \"ids\": [], \"\
+    names\": [], \"classes\": []} -->\n\n````\n\n   Embedding(weights=np.load('PATH.npy'))\n\
     \   ````\nTo initialize a learnable lookup table with a given numpy array that\
     \ is to be used as the initial value, pass that array to the `init` parameter\
     \ (not `weights`).\nAn `Embedding` instance owns its weight parameter tensor *E*,\
@@ -1032,7 +1041,7 @@ items:
       id: shape
       type:
       - int or tuple of ints
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b517a550>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64f470>
       description: (learnable embedding only) initial value of weights *E*
       id: init
       type:
@@ -1051,7 +1060,8 @@ items:
     return:
       description: A function that accepts one argument and applies the embedding
         operation to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.Embedding
 - _type: function
@@ -1086,7 +1096,8 @@ items:
     return:
       description: A function that accepts one argument and applies the operation
         to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.GlobalAveragePooling
 - _type: function
@@ -1121,7 +1132,8 @@ items:
     return:
       description: A function that accepts one argument and applies the operation
         to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.GlobalMaxPooling
 - _type: function
@@ -1148,7 +1160,8 @@ items:
     return:
       description: A function that accepts one argument and returns it with the desired
         name attached
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.Label
 - _type: function
@@ -1175,7 +1188,7 @@ items:
     \ -0.99999,  2.99999]]], dtype=float32)"
   syntax:
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b5182278>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df657198>
       description: initial value for the `scale` parameter
       id: initial_scale
       type:
@@ -1197,7 +1210,8 @@ items:
     return:
       description: A function that accepts one argument and applies the operation
         to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.LayerNormalization
 - _type: function
@@ -1244,7 +1258,7 @@ items:
       id: strides
       type:
       - int or tuple of ints, defaults to 1
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b16b5182080>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2ab6df64ff60>
       description: if *False*, then the pooling operation will be shifted over the
         "valid" area of input, that is, no value outside the area is used. If `pad=True`
         on the other hand, pooling will be applied to all input positions, and positions
@@ -1261,7 +1275,8 @@ items:
     return:
       description: A function that accepts one argument and applies the max-pooling
         operation to it
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.layers.layers.MaxPooling
 - _type: function

@@ -11,8 +11,9 @@ items:
   class: cntk.core.NDArrayView
   fullName: cntk.core.NDArrayView
   inheritance:
-  - - cntk.cntk_py.NDArrayView
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.NDArrayView
   langs:
   - python
   module: cntk.core

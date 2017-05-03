@@ -11,8 +11,9 @@ items:
   class: cntk.core.Value
   fullName: cntk.core.Value
   inheritance:
-  - - cntk.cntk_py.Value
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.Value
   langs:
   - python
   module: cntk.core

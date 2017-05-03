@@ -7,9 +7,11 @@ items:
   class: cntk.debugging.tests.userlearner_test.MySgdNaive
   fullName: cntk.debugging.tests.userlearner_test.MySgdNaive
   inheritance:
-  - - cntk.learners.UserLearner
-    - - cntk.cntk_py.Learner
-      - - builtins.object
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: cntk.cntk_py.Learner
+    type: cntk.learners.UserLearner
   langs:
   - python
   module: cntk.debugging.tests.userlearner_test

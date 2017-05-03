@@ -13,10 +13,12 @@ items:
   class: cntk.io.MinibatchData
   fullName: cntk.io.MinibatchData
   inheritance:
-  - - cntk.cntk_py.MinibatchData
-    - - builtins.object
-  - - cntk.tensor.ArrayMixin
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.MinibatchData
+  - inheritance:
+    - type: builtins.object
+    type: cntk.tensor.ArrayMixin
   langs:
   - python
   module: cntk.io

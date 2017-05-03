@@ -8,8 +8,9 @@ items:
   class: cntk.train.training_session.TrainingSession
   fullName: cntk.train.training_session.TrainingSession
   inheritance:
-  - - cntk.cntk_py.TrainingSession
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.TrainingSession
   langs:
   - python
   module: cntk.train.training_session

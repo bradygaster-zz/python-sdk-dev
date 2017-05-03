@@ -381,6 +381,7 @@ items:
   - python
   module: cntk.ops.sequence
   name: slice
+  seealso: 'See also: Indexing in NumPy: [http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html](http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)'
   source:
     id: slice
     path: cntk/internal/swig_helper.py
@@ -397,7 +398,6 @@ items:
   syntax:
     return:
       description: '@cntk.ops.functions.Function'
-    seealso: 'See also: Indexing in NumPy: [http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html](http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)'
   type: Method
   uid: cntk.ops.sequence.slice
 - _type: function

@@ -198,7 +198,8 @@ items:
       - str, default to ''
     return:
       description: An instance of @cntk.ops.functions.Function
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.ops.argmax
 - _type: function
@@ -237,7 +238,8 @@ items:
       - str, default to ''
     return:
       description: An instance of @cntk.ops.functions.Function
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.ops.argmin
 - _type: function
@@ -1048,7 +1050,8 @@ items:
       - str, default to ''
     return:
       description: An instance of @cntk.ops.functions.Function
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.ops.elu
 - _type: function
@@ -1474,7 +1477,8 @@ items:
       - str, default to ''
     return:
       description: An instance of @cntk.ops.functions.Function
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.ops.leaky_relu
 - _type: function
@@ -1851,7 +1855,8 @@ items:
       - str, default to ''
     return:
       description: An instance of @cntk.ops.functions.Function
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.ops.param_relu
 - _type: function
@@ -2281,6 +2286,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_log_sum_exp
+  seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
   source:
     id: reduce_log_sum_exp
     path: cntk/internal/swig_helper.py
@@ -2310,7 +2316,6 @@ items:
   syntax:
     return:
       description: '@cntk.ops.functions.Function'
-    seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
   type: Method
   uid: cntk.ops.reduce_log_sum_exp
 - _type: function
@@ -2319,6 +2324,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_max
+  seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
   source:
     id: reduce_max
     path: cntk/internal/swig_helper.py
@@ -2335,7 +2341,6 @@ items:
   syntax:
     return:
       description: '@cntk.ops.functions.Function'
-    seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
   type: Method
   uid: cntk.ops.reduce_max
 - _type: function
@@ -2344,6 +2349,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_mean
+  seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
   source:
     id: reduce_mean
     path: cntk/internal/swig_helper.py
@@ -2360,7 +2366,6 @@ items:
   syntax:
     return:
       description: '@cntk.ops.functions.Function'
-    seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
   type: Method
   uid: cntk.ops.reduce_mean
 - _type: function
@@ -2369,6 +2374,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_min
+  seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
   source:
     id: reduce_min
     path: cntk/internal/swig_helper.py
@@ -2385,7 +2391,6 @@ items:
   syntax:
     return:
       description: '@cntk.ops.functions.Function'
-    seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
   type: Method
   uid: cntk.ops.reduce_min
 - _type: function
@@ -2394,6 +2399,7 @@ items:
   - python
   module: cntk.ops
   name: reduce_prod
+  seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
   source:
     id: reduce_prod
     path: cntk/internal/swig_helper.py
@@ -2410,7 +2416,6 @@ items:
   syntax:
     return:
       description: '@cntk.ops.functions.Function'
-    seealso: 'See also: @cntk.ops.reduce_sum for more details and examples.'
   type: Method
   uid: cntk.ops.reduce_prod
 - _type: function
@@ -2683,6 +2688,7 @@ items:
   - python
   module: cntk.ops
   name: slice
+  seealso: 'See also: Indexing in NumPy: [http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html](http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)'
   source:
     id: slice
     path: cntk/internal/swig_helper.py
@@ -2712,7 +2718,6 @@ items:
   syntax:
     return:
       description: '@cntk.ops.functions.Function'
-    seealso: 'See also: Indexing in NumPy: [http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html](http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)'
   type: Method
   uid: cntk.ops.slice
 - _type: function
@@ -2805,7 +2810,8 @@ items:
       - str, default to ''
     return:
       description: An instance of @cntk.ops.functions.Function
-      type: cntk.ops.functions.Function
+      type:
+      - cntk.ops.functions.Function
   type: Method
   uid: cntk.ops.softplus
 - _type: function
@@ -2997,10 +3003,10 @@ items:
     \ X @ W equals times(X, W).\nFor better performance on times operation on sequence\
     \ which is followed by sequence.reduce_sum, use infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK,\
     \ i.e. replace following:\n<!-- literal_block {\"dupnames\": [], \"xml:space\"\
-    : \"preserve\", \"classes\": [], \"names\": [], \"backrefs\": [], \"ids\": []}\
+    : \"preserve\", \"backrefs\": [], \"ids\": [], \"names\": [], \"classes\": []}\
     \ -->\n\n````\n\n   sequence.reduce_sum(times(seq1, seq2))\n   ````\nwith:\n<!--\
-    \ literal_block {\"dupnames\": [], \"xml:space\": \"preserve\", \"classes\": [],\
-    \ \"names\": [], \"backrefs\": [], \"ids\": []} -->\n\n````\n\n   times(seq1,\
+    \ literal_block {\"dupnames\": [], \"xml:space\": \"preserve\", \"backrefs\":\
+    \ [], \"ids\": [], \"names\": [], \"classes\": []} -->\n\n````\n\n   times(seq1,\
     \ seq2, infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK)\n\
     \   ````\n-[ Example ]-\n>>> C.times([[1,2],[3,4]], [[5],[6]]).eval()\narray([[\
     \ 17.],\n       [ 39.]], dtype=float32)\n>>> C.times(1.*np.reshape(np.arange(8),\

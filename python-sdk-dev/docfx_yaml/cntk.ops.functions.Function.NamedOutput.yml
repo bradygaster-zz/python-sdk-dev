@@ -6,7 +6,7 @@ items:
   class: cntk.ops.functions.Function.NamedOutput
   fullName: cntk.ops.functions.Function.NamedOutput
   inheritance:
-  - - builtins.object
+  - type: builtins.object
   langs:
   - python
   module: cntk.ops.functions.Function

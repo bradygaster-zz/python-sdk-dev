@@ -8,8 +8,9 @@ items:
   class: cntk.train.distributed.WorkerDescriptor
   fullName: cntk.train.distributed.WorkerDescriptor
   inheritance:
-  - - cntk.cntk_py.DistributedWorkerDescriptor
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.DistributedWorkerDescriptor
   langs:
   - python
   module: cntk.train.distributed

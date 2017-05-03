@@ -45,7 +45,8 @@ items:
   syntax:
     return:
       description: all device descriptors
-      type: DeviceDescriptor list
+      type:
+      - DeviceDescriptor list
   type: Method
   uid: cntk.device.all_devices
 - _type: function
@@ -66,7 +67,8 @@ items:
   syntax:
     return:
       description: Best device descriptor
-      type: DeviceDescriptor
+      type:
+      - DeviceDescriptor
   type: Method
   uid: cntk.device.best
 - _type: function
@@ -87,7 +89,8 @@ items:
   syntax:
     return:
       description: CPU device descriptor
-      type: DeviceDescriptor
+      type:
+      - DeviceDescriptor
   type: Method
   uid: cntk.device.cpu
 - _type: function
@@ -108,7 +111,8 @@ items:
   syntax:
     return:
       description: Default device descriptor
-      type: DeviceDescriptor
+      type:
+      - DeviceDescriptor
   type: Method
   uid: cntk.device.default
 - _type: function
@@ -129,7 +133,8 @@ items:
   syntax:
     return:
       description: GPU device descriptor
-      type: DeviceDescriptor
+      type:
+      - DeviceDescriptor
   type: Method
   uid: cntk.device.gpu
 - _type: function
@@ -155,7 +160,8 @@ items:
       - DeviceDescriptor
     return:
       description: id
-      type: DeviceDescriptor
+      type:
+      - DeviceDescriptor
   type: Method
   uid: cntk.device.set_default_device
 - _type: function
@@ -176,7 +182,8 @@ items:
   syntax:
     return:
       description: Id of default device
-      type: int
+      type:
+      - int
   type: Method
   uid: cntk.device.use_default_device
 references:

@@ -13,8 +13,9 @@ items:
   class: cntk.logging.progress_print.TensorBoardProgressWriter
   fullName: cntk.logging.progress_print.TensorBoardProgressWriter
   inheritance:
-  - - cntk.cntk_py.ProgressWriter
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.ProgressWriter
   langs:
   - python
   module: cntk.logging.progress_print

@@ -6,7 +6,7 @@ items:
   class: cntk.layers.typing.SequenceOver
   fullName: cntk.layers.typing.SequenceOver
   inheritance:
-  - - builtins.object
+  - type: builtins.object
   langs:
   - python
   module: cntk.layers.typing

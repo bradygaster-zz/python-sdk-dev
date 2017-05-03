@@ -13,8 +13,9 @@ items:
   class: cntk.train.distributed.Communicator
   fullName: cntk.train.distributed.Communicator
   inheritance:
-  - - cntk.cntk_py.DistributedCommunicator
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.DistributedCommunicator
   langs:
   - python
   module: cntk.train.distributed
@@ -82,7 +83,8 @@ items:
   syntax:
     return:
       description: descriptor of current process.
-      type: WorkerDescriptor
+      type:
+      - WorkerDescriptor
   type: Method
   uid: cntk.train.distributed.Communicator.current_worker
 - _type: method
@@ -184,7 +186,8 @@ items:
   syntax:
     return:
       description: workers in this communicator.
-      type: (list) of WorkerDescriptor
+      type:
+      - (list) of WorkerDescriptor
   type: Method
   uid: cntk.train.distributed.Communicator.workers
 references:

@@ -6,7 +6,7 @@ items:
   class: cntk.default_options.default_override_or
   fullName: cntk.default_options.default_override_or
   inheritance:
-  - - builtins.object
+  - type: builtins.object
   langs:
   - python
   module: cntk.default_options

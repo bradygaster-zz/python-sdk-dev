@@ -9,8 +9,9 @@ items:
   class: cntk.ops.functions.CloneMethod
   fullName: cntk.ops.functions.CloneMethod
   inheritance:
-  - - enum.Enum
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
   langs:
   - python
   module: cntk.ops.functions

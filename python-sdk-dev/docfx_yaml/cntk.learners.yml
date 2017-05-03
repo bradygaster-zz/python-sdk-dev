@@ -52,6 +52,9 @@ items:
   - python
   module: cntk.learners
   name: adagrad
+  seealso: 'See also: [1]  J. Duchi, E. Hazan, and Y. Singer. [Adaptive Subgradient
+    Methods for Online Learning and Stochastic Optimization](http://www.magicbroom.info/Papers/DuchiHaSi10.pdf).
+    The Journal of Machine Learning Research, 2011.'
   source:
     id: adagrad
     path: cntk/internal/swig_helper.py
@@ -101,9 +104,6 @@ items:
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
         @cntk.train.trainer.Trainer
-    seealso: 'See also: [1]  J. Duchi, E. Hazan, and Y. Singer. [Adaptive Subgradient
-      Methods for Online Learning and Stochastic Optimization](http://www.magicbroom.info/Papers/DuchiHaSi10.pdf).
-      The Journal of Machine Learning Research, 2011.'
   type: Method
   uid: cntk.learners.adagrad
 - _type: function
@@ -112,6 +112,8 @@ items:
   - python
   module: cntk.learners
   name: adam
+  seealso: 'See also: [1] D. Kingma, J. Ba. [Adam: A Method for Stochastic Optimization](http://arxiv.org/abs/1412.6980).
+    International Conference for Learning Representations, 2015.'
   source:
     id: adam
     path: cntk/internal/swig_helper.py
@@ -169,8 +171,6 @@ items:
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
         @cntk.train.trainer.Trainer
-    seealso: 'See also: [1] D. Kingma, J. Ba. [Adam: A Method for Stochastic Optimization](http://arxiv.org/abs/1412.6980).
-      International Conference for Learning Representations, 2015.'
   type: Method
   uid: cntk.learners.adam
 - _type: function
@@ -179,6 +179,10 @@ items:
   - python
   module: cntk.learners
   name: adam_sgd
+  seealso: "See also: <SYSTEM MESSAGE: /root/CNTK/bindings/python/doc/cntk.learners.rst:2:\
+    \ (INFO/1) Duplicate explicit target name: \"adam: a method for stochastic optimization\"\
+    .>\n\n  [1] D. Kingma, J. Ba. [Adam: A Method for Stochastic Optimization](http://arxiv.org/abs/1412.6980).\
+    \ International Conference for Learning Representations, 2015."
   source:
     id: adam_sgd
     path: cntk/internal/swig_helper.py
@@ -244,10 +248,6 @@ items:
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
         @cntk.train.trainer.Trainer
-    seealso: "See also: <SYSTEM MESSAGE: /root/CNTK/bindings/python/doc/cntk.learners.rst:2:\
-      \ (INFO/1) Duplicate explicit target name: \"adam: a method for stochastic optimization\"\
-      .>\n\n  [1] D. Kingma, J. Ba. [Adam: A Method for Stochastic Optimization](http://arxiv.org/abs/1412.6980).\
-      \ International Conference for Learning Representations, 2015."
   type: Method
   uid: cntk.learners.adam_sgd
 - _type: function
@@ -341,6 +341,7 @@ items:
   - python
   module: cntk.learners
   name: learning_rate_schedule
+  seealso: 'See also: @training_parameter_schedule'
   source:
     id: learning_rate_schedule
     path: cntk/internal/swig_helper.py
@@ -366,7 +367,6 @@ items:
       - int
     return:
       description: learning rate schedule
-    seealso: 'See also: @training_parameter_schedule'
   type: Method
   uid: cntk.learners.learning_rate_schedule
 - _type: function
@@ -528,6 +528,11 @@ items:
   - python
   module: cntk.learners
   name: nesterov
+  seealso: "See also: [1] Y. Nesterov. A Method of Solving a Convex Programming Problem\
+    \ with Convergence Rate O(1/ sqrt(k)). Soviet Mathematics Doklady, 1983.\n\n \
+    \ [2] I. Sutskever, J. Martens, G. Dahl, and G. Hinton. [On the Importance of\
+    \ Initialization and Momentum in Deep Learning](http://www.cs.toronto.edu/~fritz/absps/momentum.pdf).\
+    \  Proceedings of the 30th International Conference on Machine Learning, 2013."
   source:
     id: nesterov
     path: cntk/internal/swig_helper.py
@@ -585,11 +590,6 @@ items:
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
         @cntk.train.trainer.Trainer.
-    seealso: "See also: [1] Y. Nesterov. A Method of Solving a Convex Programming\
-      \ Problem with Convergence Rate O(1/ sqrt(k)). Soviet Mathematics Doklady, 1983.\n\
-      \n  [2] I. Sutskever, J. Martens, G. Dahl, and G. Hinton. [On the Importance\
-      \ of Initialization and Momentum in Deep Learning](http://www.cs.toronto.edu/~fritz/absps/momentum.pdf).\
-      \  Proceedings of the 30th International Conference on Machine Learning, 2013."
   type: Method
   uid: cntk.learners.nesterov
 - _type: function
@@ -695,6 +695,8 @@ items:
   - python
   module: cntk.learners
   name: sgd
+  seealso: 'See also: [1] L. Bottou. [Stochastic Gradient Descent Tricks](http://research.microsoft.com/pubs/192769/tricks-2012.pdf).
+    Neural Networks: Tricks of the Trade: Springer, 2012.'
   source:
     id: sgd
     path: cntk/internal/swig_helper.py
@@ -740,8 +742,6 @@ items:
     return:
       description: Instance of a @cntk.learners.Learner that can be passed to the
         @cntk.train.trainer.Trainer
-    seealso: 'See also: [1] L. Bottou. [Stochastic Gradient Descent Tricks](http://research.microsoft.com/pubs/192769/tricks-2012.pdf).
-      Neural Networks: Tricks of the Trade: Springer, 2012.'
   type: Method
   uid: cntk.learners.sgd
 - _type: function
@@ -750,6 +750,7 @@ items:
   - python
   module: cntk.learners
   name: training_parameter_schedule
+  seealso: 'See also: @learning_rate_schedule'
   source:
     id: training_parameter_schedule
     path: cntk/internal/swig_helper.py
@@ -814,7 +815,6 @@ items:
       - optional, int
     return:
       description: training parameter schedule
-    seealso: 'See also: @learning_rate_schedule'
   type: Method
   uid: cntk.learners.training_parameter_schedule
 references:

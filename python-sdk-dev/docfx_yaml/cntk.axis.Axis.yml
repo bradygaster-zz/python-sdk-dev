@@ -19,8 +19,9 @@ items:
   class: cntk.axis.Axis
   fullName: cntk.axis.Axis
   inheritance:
-  - - cntk.cntk_py.Axis
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.Axis
   langs:
   - python
   module: cntk.axis
@@ -82,7 +83,8 @@ items:
   syntax:
     return:
       description: all axes
-      type: Axis
+      type:
+      - Axis
   type: Method
   uid: cntk.axis.Axis.all_axes
 - _type: method
@@ -104,7 +106,8 @@ items:
   syntax:
     return:
       description: all static axes
-      type: Axis
+      type:
+      - Axis
   type: Method
   uid: cntk.axis.Axis.all_static_axes
 - _type: method
@@ -126,7 +129,8 @@ items:
   syntax:
     return:
       description: default batch axis
-      type: Axis
+      type:
+      - Axis
   type: Method
   uid: cntk.axis.Axis.default_batch_axis
 - _type: method
@@ -148,7 +152,8 @@ items:
   syntax:
     return:
       description: default dynamic axis
-      type: Axis
+      type:
+      - Axis
   type: Method
   uid: cntk.axis.Axis.default_dynamic_axis
 - _type: method
@@ -170,7 +175,8 @@ items:
   syntax:
     return:
       description: instances
-      type: tuple of Axis
+      type:
+      - tuple of Axis
   type: Method
   uid: cntk.axis.Axis.default_input_variable_dynamic_axes
 - _type: method
@@ -194,7 +200,8 @@ items:
   syntax:
     return:
       description: axis object representing a new leading static axis.
-      type: Axis
+      type:
+      - Axis
   type: Method
   uid: cntk.axis.Axis.end_static_axis
 - _type: attribute
@@ -217,7 +224,8 @@ items:
   syntax:
     return:
       description: True if this axis is ordered and False otherwise
-      type: bool
+      type:
+      - bool
   type: Property
   uid: cntk.axis.Axis.is_ordered
 - _type: attribute
@@ -239,7 +247,8 @@ items:
   syntax:
     return:
       description: True if this axis is of type static and False otherwise
-      type: bool
+      type:
+      - bool
   type: Property
   uid: cntk.axis.Axis.is_static_axis
 - _type: attribute
@@ -261,7 +270,8 @@ items:
   syntax:
     return:
       description: the name of this axis.
-      type: str
+      type:
+      - str
   type: Property
   uid: cntk.axis.Axis.name
 - _type: method
@@ -283,7 +293,8 @@ items:
   syntax:
     return:
       description: axis object representing a new leading static axis.
-      type: Axis
+      type:
+      - Axis
   type: Method
   uid: cntk.axis.Axis.new_leading_axis
 - _type: method
@@ -310,7 +321,8 @@ items:
       - str
     return:
       description: new unique dynamic axis
-      type: Axis
+      type:
+      - Axis
   type: Method
   uid: cntk.axis.Axis.new_unique_dynamic_axis
 - _type: method
@@ -341,7 +353,8 @@ items:
       - bool
     return:
       description: the number with which the static axis is defined.
-      type: int
+      type:
+      - int
   type: Method
   uid: cntk.axis.Axis.static_axis_index
 - _type: method
@@ -363,7 +376,8 @@ items:
   syntax:
     return:
       description: instances
-      type: tuple of Axis
+      type:
+      - tuple of Axis
   type: Method
   uid: cntk.axis.Axis.unknown_dynamic_axes
 references:

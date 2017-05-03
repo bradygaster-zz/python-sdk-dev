@@ -9,10 +9,13 @@ items:
   class: cntk.ops.functions.UserFunction
   fullName: cntk.ops.functions.UserFunction
   inheritance:
-  - - cntk.ops.functions.Function
-    - - cntk.cntk_py.Function
-      - - cntk.cntk_py.IDictionarySerializable
-        - - builtins.object
+  - inheritance:
+    - inheritance:
+      - inheritance:
+        - type: builtins.object
+        type: cntk.cntk_py.IDictionarySerializable
+      type: cntk.cntk_py.Function
+    type: cntk.ops.functions.Function
   langs:
   - python
   module: cntk.ops.functions

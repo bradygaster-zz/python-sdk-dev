@@ -6,7 +6,7 @@ items:
   class: cntk.tensor.TensorOpsMixin
   fullName: cntk.tensor.TensorOpsMixin
   inheritance:
-  - - builtins.object
+  - type: builtins.object
   langs:
   - python
   module: cntk.tensor

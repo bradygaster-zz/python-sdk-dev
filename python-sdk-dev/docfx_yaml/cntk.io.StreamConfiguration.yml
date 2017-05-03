@@ -6,8 +6,9 @@ items:
   class: cntk.io.StreamConfiguration
   fullName: cntk.io.StreamConfiguration
   inheritance:
-  - - cntk.cntk_py.StreamConfiguration
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.StreamConfiguration
   langs:
   - python
   module: cntk.io

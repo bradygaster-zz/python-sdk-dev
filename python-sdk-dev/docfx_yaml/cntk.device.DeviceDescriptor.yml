@@ -8,8 +8,9 @@ items:
   class: cntk.device.DeviceDescriptor
   fullName: cntk.device.DeviceDescriptor
   inheritance:
-  - - cntk.cntk_py.DeviceDescriptor
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.DeviceDescriptor
   langs:
   - python
   module: cntk.device
@@ -53,7 +54,8 @@ items:
     - id: self
     return:
       description: id
-      type: int
+      type:
+      - int
   type: Method
   uid: cntk.device.DeviceDescriptor.id
 - _type: method
@@ -77,7 +79,8 @@ items:
     - id: self
     return:
       description: type
-      type: int
+      type:
+      - int
   type: Method
   uid: cntk.device.DeviceDescriptor.type
 references:

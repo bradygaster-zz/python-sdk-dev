@@ -6,7 +6,7 @@ items:
   class: cntk.layers.typing.ParameterTensor
   fullName: cntk.layers.typing.ParameterTensor
   inheritance:
-  - - builtins.object
+  - type: builtins.object
   langs:
   - python
   module: cntk.layers.typing

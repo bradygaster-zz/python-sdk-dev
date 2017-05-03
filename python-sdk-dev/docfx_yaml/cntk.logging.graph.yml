@@ -61,6 +61,7 @@ items:
   - python
   module: cntk.logging.graph
   name: find_all_with_name
+  seealso: 'See also: @cntk.ops.functions.Function.find_all_with_name in class @cntk.ops.functions.Function.'
   source:
     id: find_all_with_name
     path: cntk/logging/graph.py
@@ -83,7 +84,6 @@ items:
       - str
     return:
       description: List of primitive (or block) functions having the specified name
-    seealso: 'See also: @cntk.ops.functions.Function.find_all_with_name in class @cntk.ops.functions.Function.'
   type: Method
   uid: cntk.logging.graph.find_all_with_name
 - _type: function
@@ -92,6 +92,7 @@ items:
   - python
   module: cntk.logging.graph
   name: find_by_name
+  seealso: 'See also: @cntk.ops.functions.Function.find_by_name in class @cntk.ops.functions.Function.'
   source:
     id: find_by_name
     path: cntk/logging/graph.py
@@ -114,7 +115,6 @@ items:
       - str
     return:
       description: Primitive (or block) function having the specified name
-    seealso: 'See also: @cntk.ops.functions.Function.find_by_name in class @cntk.ops.functions.Function.'
   type: Method
   uid: cntk.logging.graph.find_by_name
 - _type: function

@@ -9,8 +9,9 @@ items:
   class: cntk.train.tests.training_session_test.MockProgressWriter
   fullName: cntk.train.tests.training_session_test.MockProgressWriter
   inheritance:
-  - - cntk.cntk_py.ProgressWriter
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.ProgressWriter
   langs:
   - python
   module: cntk.train.tests.training_session_test

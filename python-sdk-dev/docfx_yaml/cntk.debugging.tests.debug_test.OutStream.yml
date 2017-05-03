@@ -8,7 +8,7 @@ items:
   class: cntk.debugging.tests.debug_test.OutStream
   fullName: cntk.debugging.tests.debug_test.OutStream
   inheritance:
-  - - builtins.object
+  - type: builtins.object
   langs:
   - python
   module: cntk.debugging.tests.debug_test

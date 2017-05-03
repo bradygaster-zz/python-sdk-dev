@@ -7,7 +7,7 @@ items:
   class: cntk.debugging.tests.debug_test.InStream
   fullName: cntk.debugging.tests.debug_test.InStream
   inheritance:
-  - - builtins.object
+  - type: builtins.object
   langs:
   - python
   module: cntk.debugging.tests.debug_test

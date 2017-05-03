@@ -20,8 +20,9 @@ items:
   class: cntk.train.trainer.Trainer
   fullName: cntk.train.trainer.Trainer
   inheritance:
-  - - cntk.cntk_py.Trainer
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.Trainer
   langs:
   - python
   module: cntk.train.trainer
@@ -339,7 +340,8 @@ items:
     return:
       description: "the average evaluation criterion value per sample for the\n  \
         \ tested minibatch."
-      type: float
+      type:
+      - float
   type: Method
   uid: cntk.train.trainer.Trainer.test_minibatch
 - _type: attribute
@@ -395,7 +397,8 @@ items:
         end of learning (through their update). Otherwise, the return value is a tuple
         of the that *bool* and a dictionary that maps the variables in *outputs* to
         their respective NumPy arrays.
-      type: bool or tuple
+      type:
+      - bool or tuple
   type: Method
   uid: cntk.train.trainer.Trainer.train_minibatch
 references:

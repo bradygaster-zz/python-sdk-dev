@@ -30,6 +30,10 @@ items:
   - python
   module: cntk.train.distributed
   name: block_momentum_distributed_learner
+  seealso: 'See also: [1] K. Chen and Q. Huo. [Scalable training of deep learning
+    machines by incremental block training with intra-block parallel optimization
+    and blockwise model-update filtering](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/0005880.pdf).
+    Proceedings of ICASSP, 2016.'
   source:
     id: block_momentum_distributed_learner
     path: cntk/internal/swig_helper.py
@@ -75,10 +79,6 @@ items:
       - int
     return:
       description: a distributed learner instance
-    seealso: 'See also: [1] K. Chen and Q. Huo. [Scalable training of deep learning
-      machines by incremental block training with intra-block parallel optimization
-      and blockwise model-update filtering](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/0005880.pdf).
-      Proceedings of ICASSP, 2016.'
   type: Method
   uid: cntk.train.distributed.block_momentum_distributed_learner
 - _type: function

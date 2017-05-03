@@ -8,8 +8,9 @@ items:
   class: cntk.learners.UnitType
   fullName: cntk.learners.UnitType
   inheritance:
-  - - enum.Enum
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
   langs:
   - python
   module: cntk.learners

@@ -6,8 +6,9 @@ items:
   class: cntk.device.DeviceKind
   fullName: cntk.device.DeviceKind
   inheritance:
-  - - enum.Enum
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: enum.Enum
   langs:
   - python
   module: cntk.device

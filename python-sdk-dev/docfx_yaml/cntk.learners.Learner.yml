@@ -10,8 +10,9 @@ items:
   class: cntk.learners.Learner
   fullName: cntk.learners.Learner
   inheritance:
-  - - cntk.cntk_py.Learner
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.Learner
   langs:
   - python
   module: cntk.learners

@@ -7,9 +7,11 @@ items:
   class: cntk.train.distributed.DistributedLearner
   fullName: cntk.train.distributed.DistributedLearner
   inheritance:
-  - - cntk.cntk_py.DistributedLearner
-    - - cntk.cntk_py.Learner
-      - - builtins.object
+  - inheritance:
+    - inheritance:
+      - type: builtins.object
+      type: cntk.cntk_py.Learner
+    type: cntk.cntk_py.DistributedLearner
   langs:
   - python
   module: cntk.train.distributed
@@ -50,7 +52,8 @@ items:
   syntax:
     return:
       description: descriptor of current process.
-      type: Communicator
+      type:
+      - Communicator
   type: Method
   uid: cntk.train.distributed.DistributedLearner.communicator
 references:

@@ -13,8 +13,9 @@ items:
   class: cntk.io.MinibatchSource
   fullName: cntk.io.MinibatchSource
   inheritance:
-  - - cntk.cntk_py.MinibatchSource
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: cntk.cntk_py.MinibatchSource
   langs:
   - python
   module: cntk.io
@@ -136,7 +137,8 @@ items:
     return:
       description: A @cntk.cntk_py.Dictionary that has the checkpoint state of the
         MinibatchSource
-      type: cntk.cntk_py.Dictionary
+      type:
+      - cntk.cntk_py.Dictionary
   type: Method
   uid: cntk.io.MinibatchSource.get_checkpoint_state
 - _type: attribute
@@ -212,7 +214,8 @@ items:
       description: A mapping of @cntk.cntk_py.StreamInformation to @MinibatchData
         if *input_map* was not specified. Otherwise, the returned value will be a
         mapping of @cntk.ops.variables.Variable to class:*MinibatchData*.
-      type: cntk.io.MinibatchData
+      type:
+      - cntk.io.MinibatchData
   type: Method
   uid: cntk.io.MinibatchSource.next_minibatch
 - _type: method
@@ -284,7 +287,8 @@ items:
     - id: self
     return:
       description: A *dict* mapping input names to the stream information
-      type: dict
+      type:
+      - dict
   type: Method
   uid: cntk.io.MinibatchSource.stream_infos
 references:

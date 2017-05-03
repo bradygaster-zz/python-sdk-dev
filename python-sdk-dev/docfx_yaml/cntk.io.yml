@@ -33,6 +33,7 @@ items:
   - python
   module: cntk.io
   name: CTFDeserializer
+  seealso: 'See also: [CNTKTextReader format](https://github.com/microsoft/cntk/wiki/BrainScript-CNTKTextFormat-Reader)'
   source:
     id: CTFDeserializer
     path: cntk/io/__init__.py
@@ -43,10 +44,10 @@ items:
     startLine: 455
   summary: "Configures the CNTK text-format reader that reads text-based files with\
     \ lines of the form:\n<!-- literal_block {\"dupnames\": [], \"xml:space\": \"\
-    preserve\", \"classes\": [], \"names\": [], \"backrefs\": [], \"ids\": []} -->\n\
+    preserve\", \"backrefs\": [], \"ids\": [], \"names\": [], \"classes\": []} -->\n\
     \n````\n\n   [Sequence_Id] (Sample)+\n   ````\nwhere:\n<!-- literal_block {\"\
-    dupnames\": [], \"xml:space\": \"preserve\", \"classes\": [], \"names\": [], \"\
-    backrefs\": [], \"ids\": []} -->\n\n````\n\n   Sample=|Input_Name (Value )*\n\
+    dupnames\": [], \"xml:space\": \"preserve\", \"backrefs\": [], \"ids\": [], \"\
+    names\": [], \"classes\": []} -->\n\n````\n\n   Sample=|Input_Name (Value )*\n\
     \   ````"
   syntax:
     parameters:
@@ -55,7 +56,6 @@ items:
       id: filename
       type:
       - str
-    seealso: 'See also: [CNTKTextReader format](https://github.com/microsoft/cntk/wiki/BrainScript-CNTKTextFormat-Reader)'
   type: Method
   uid: cntk.io.CTFDeserializer
 - _type: function
@@ -113,6 +113,7 @@ items:
   - python
   module: cntk.io
   name: ImageDeserializer
+  seealso: 'See also: [Image reader definition](https://github.com/microsoft/cntk/wiki/Image-reader)'
   source:
     id: ImageDeserializer
     path: cntk/io/__init__.py
@@ -123,10 +124,10 @@ items:
     startLine: 418
   summary: "Configures the image reader that reads images and corresponding labels\
     \ from a file of the form:\n<!-- literal_block {\"dupnames\": [], \"xml:space\"\
-    : \"preserve\", \"classes\": [], \"names\": [], \"backrefs\": [], \"ids\": []}\
+    : \"preserve\", \"backrefs\": [], \"ids\": [], \"names\": [], \"classes\": []}\
     \ -->\n\n````\n\n   <full path to image> <tab> <numerical label (0-based class\
     \ id)>\n   ````\nor:\n<!-- literal_block {\"dupnames\": [], \"xml:space\": \"\
-    preserve\", \"classes\": [], \"names\": [], \"backrefs\": [], \"ids\": []} -->\n\
+    preserve\", \"backrefs\": [], \"ids\": [], \"names\": [], \"classes\": []} -->\n\
     \n````\n\n   sequenceId <tab> path <tab> label\n   ````"
   syntax:
     parameters:
@@ -135,7 +136,6 @@ items:
       id: filename
       type:
       - str
-    seealso: 'See also: [Image reader definition](https://github.com/microsoft/cntk/wiki/Image-reader)'
   type: Method
   uid: cntk.io.ImageDeserializer
 - _type: function
@@ -247,7 +247,8 @@ items:
 
 
         String representation in [CNTKTextReader format](https://github.com/microsoft/cntk/wiki/BrainScript-CNTKTextFormat-Reader)'
-      type: str
+      type:
+      - str
   type: Method
   uid: cntk.io.sequence_to_cntk_text_format
 references:

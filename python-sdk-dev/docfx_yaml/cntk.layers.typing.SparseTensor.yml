@@ -6,7 +6,7 @@ items:
   class: cntk.layers.typing.SparseTensor
   fullName: cntk.layers.typing.SparseTensor
   inheritance:
-  - - builtins.object
+  - type: builtins.object
   langs:
   - python
   module: cntk.layers.typing

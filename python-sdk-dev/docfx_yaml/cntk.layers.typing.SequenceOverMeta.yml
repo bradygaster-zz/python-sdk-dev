@@ -6,8 +6,9 @@ items:
   class: cntk.layers.typing.SequenceOverMeta
   fullName: cntk.layers.typing.SequenceOverMeta
   inheritance:
-  - - builtins.type
-    - - builtins.object
+  - inheritance:
+    - type: builtins.object
+    type: builtins.type
   langs:
   - python
   module: cntk.layers.typing
