@@ -73,8 +73,8 @@ items:
     - description: 'the axis to be used.
 
 
-        * [Axis](.md#cntk.axis.Axis.md): use axis instance directly (will convert
-        row- to col-major in case of static axis).
+        * @cntk.axis.Axis: use axis instance directly (will convert row- to col-major
+        in case of static axis).
 
 
         * int: if positive, use it as static axis. If negative, count from last to
@@ -101,7 +101,7 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 115
-  summary: Convert to [Value](.md#cntk.core.Value.md).
+  summary: Convert to @cntk.core.Value.
   syntax:
     content: sanitize_batch()
     parameters:
@@ -119,7 +119,7 @@ items:
         sequence
 
 
-        * a [Value](.md#cntk.core.Value.md) object (e.g. returned by `one_hot()`)'
+        * a @cntk.core.Value object (e.g. returned by `one_hot()`)'
       id: batch
     - description: if None, every sequence is treated as a new sequence. Otherwise,
         it is interpreted as a list of Booleans one for each sequence in the batch
@@ -133,8 +133,8 @@ items:
       type:
       - DeviceDescriptor, default None
     return:
-      description: batch converted to a [Value](.md#cntk.core.Value.md) instance that
-        can be passed to the core API
+      description: batch converted to a @cntk.core.Value instance that can be passed
+        to the core API
   type: Method
   uid: cntk.internal.sanitize.sanitize_batch
 - _type: function
@@ -318,8 +318,8 @@ items:
       path: cntk/internal/sanitize.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 158
-  summary: Converts a given `value` to an [NDArrayView](.md#cntk.core.NDArrayView.md)
-    object that can be passed to the CNTK core.
+  summary: Converts a given `value` to an @cntk.core.NDArrayView object that can be
+    passed to the CNTK core.
   syntax:
     content: sanitize_value(shape, value, dtype, device)
     parameters:
@@ -338,8 +338,7 @@ items:
       type:
       - DeviceDescriptor
     return:
-      description: '[NDArrayView](.md#cntk.core.NDArrayView.md) object representing
-        `value`'
+      description: '@cntk.core.NDArrayView object representing `value`'
   type: Method
   uid: cntk.internal.sanitize.sanitize_value
 - _type: function
@@ -400,10 +399,9 @@ items:
       - DeviceDescriptor, default None
     - defaultValue: None
       description: specifies if `MinibatchData` instances in the arguments map are
-        converted to the underlying value ([Value](.md#cntk.core.Value.md)) instances
-        (default), or if they should remain intact, as they contain additional meta
-        information required by the Trainer (specifically, by the `train_minibatch()`
-        method).
+        converted to the underlying value (@cntk.core.Value) instances (default),
+        or if they should remain intact, as they contain additional meta information
+        required by the Trainer (specifically, by the `train_minibatch()` method).
       id: extract_values_from_minibatch_data
       type:
       - bool, defaults to True

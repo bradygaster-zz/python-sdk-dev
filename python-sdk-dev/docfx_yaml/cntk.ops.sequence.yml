@@ -67,7 +67,7 @@ items:
       type:
       - str
     return:
-      description: '[Function](.md#cntk.ops.functions.Function.md)'
+      description: '@cntk.ops.functions.Function'
   type: Method
   uid: cntk.ops.sequence.broadcast_as
 - _type: function
@@ -137,7 +137,7 @@ items:
       type:
       - str
     return:
-      description: '[Function](.md#cntk.ops.functions.Function.md)'
+      description: '@cntk.ops.functions.Function'
   type: Method
   uid: cntk.ops.sequence.first
 - _type: function
@@ -181,7 +181,7 @@ items:
       type:
       - str
     return:
-      description: '[Function](.md#cntk.ops.functions.Function.md)'
+      description: '@cntk.ops.functions.Function'
   type: Method
   uid: cntk.ops.sequence.gather
 - _type: function
@@ -224,7 +224,7 @@ items:
       type:
       - str
     return:
-      description: '[Function](.md#cntk.ops.functions.Function.md)'
+      description: '@cntk.ops.functions.Function'
   type: Method
   uid: cntk.ops.sequence.is_first
 - _type: function
@@ -267,7 +267,7 @@ items:
       type:
       - str
     return:
-      description: '[Function](.md#cntk.ops.functions.Function.md)'
+      description: '@cntk.ops.functions.Function'
   type: Method
   uid: cntk.ops.sequence.is_last
 - _type: function
@@ -299,7 +299,7 @@ items:
       type:
       - str
     return:
-      description: '[Function](.md#cntk.ops.functions.Function.md)'
+      description: '@cntk.ops.functions.Function'
   type: Method
   uid: cntk.ops.sequence.last
 - _type: function
@@ -331,7 +331,7 @@ items:
       type:
       - str, optional
     return:
-      description: '[Function](.md#cntk.ops.functions.Function.md)'
+      description: '@cntk.ops.functions.Function'
   type: Method
   uid: cntk.ops.sequence.reduce_sum
 - _type: function
@@ -381,7 +381,7 @@ items:
       type:
       - str
     return:
-      description: '[Function](.md#cntk.ops.functions.Function.md)'
+      description: '@cntk.ops.functions.Function'
   type: Method
   uid: cntk.ops.sequence.scatter
 - _type: function
@@ -390,7 +390,7 @@ items:
   - python
   module: cntk.ops.sequence
   name: slice
-  seealso: 'See also: Indexing in NumPy: [http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html](http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)'
+  seealsoContent: 'See also: Indexing in NumPy: [http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html](http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html)'
   source:
     id: slice
     path: cntk/internal/swig_helper.py
@@ -407,7 +407,7 @@ items:
   syntax:
     content: slice()
     return:
-      description: '[Function](.md#cntk.ops.functions.Function.md)'
+      description: '@cntk.ops.functions.Function'
   type: Method
   uid: cntk.ops.sequence.slice
 - _type: function
@@ -452,7 +452,7 @@ items:
       type:
       - str
     return:
-      description: '[Function](.md#cntk.ops.functions.Function.md)'
+      description: '@cntk.ops.functions.Function'
   type: Method
   uid: cntk.ops.sequence.where
 references:

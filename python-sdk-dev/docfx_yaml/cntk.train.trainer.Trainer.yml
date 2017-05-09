@@ -335,8 +335,7 @@ items:
   summary: 'Test the model on the specified batch of samples using the evaluation
     Function specified during construction of the Trainer.
 
-    Note: See [forward()](.md#cntk.ops.functions.Function.forward.md) for examples
-    on passing input data.'
+    Note: See @cntk.ops.functions.Function.forward for examples on passing input data.'
   syntax:
     content: test_minibatch(self, arguments, device=None)
     parameters:
@@ -389,8 +388,7 @@ items:
   summary: 'Optimize model parameters using the specified ''arguments'' minibatch
     of training samples.
 
-    Note: See [forward()](.md#cntk.ops.functions.Function.forward.md) for examples
-    on passing input data.'
+    Note: See @cntk.ops.functions.Function.forward for examples on passing input data.'
   syntax:
     content: train_minibatch(self, arguments, outputs=None, device=None)
     parameters:

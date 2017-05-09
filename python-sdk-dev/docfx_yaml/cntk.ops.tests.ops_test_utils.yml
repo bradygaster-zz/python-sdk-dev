@@ -73,7 +73,7 @@ items:
       path: cntk/ops/tests/ops_test_utils.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 24
-  summary: Converts the legacy device ID as it was used in CNTK 1 to a [DeviceDescriptor](.md#cntk.device.DeviceDescriptor.md)
+  summary: Converts the legacy device ID as it was used in CNTK 1 to a @cntk.device.DeviceDescriptor
     instance.
   syntax:
     content: cntk_device(device_id)
@@ -83,7 +83,7 @@ items:
       type:
       - int
     return:
-      description: '[DeviceDescriptor](.md#cntk.device.DeviceDescriptor.md)'
+      description: '@cntk.device.DeviceDescriptor'
   type: Method
   uid: cntk.ops.tests.ops_test_utils.cntk_device
 - _type: function
