@@ -186,14 +186,11 @@ items:
     element in tensor x.
   syntax:
     content: argmax()
-    example: '````
-
-
-      >>> # create 3x2 matrix in a sequence of length 1 in a batch of one sample
-
-      >>> data = [[10, 20],[30, 40],[50, 60]]
-
-      ````'
+    example: "````\n\n>>> # create 3x2 matrix in a sequence of length 1 in a batch\
+      \ of one sample\n>>> data = [[10, 20],[30, 40],[50, 60]]\n````\n\n````\n\n>>>\
+      \ C.argmax(data, 0).eval()\narray([[ 2.,  2.]], dtype=float32)\n````\n\n````\n\
+      \n>>> C.argmax(data, 1).eval()\narray([[ 1.],\n       [ 1.],\n       [ 1.]],\
+      \ dtype=float32)\n````"
     parameters:
     - description: any @cntk.ops.functions.Function that outputs a tensor.
       id: x
@@ -232,14 +229,11 @@ items:
     element in tensor x.
   syntax:
     content: argmin()
-    example: '````
-
-
-      >>> # create 3x2 matrix in a sequence of length 1 in a batch of one sample
-
-      >>> data = [[10, 30],[40, 20],[60, 50]]
-
-      ````'
+    example: "````\n\n>>> # create 3x2 matrix in a sequence of length 1 in a batch\
+      \ of one sample\n>>> data = [[10, 30],[40, 20],[60, 50]]\n````\n\n````\n\n>>>\
+      \ C.argmin(data, 0).eval()\narray([[ 0.,  1.]], dtype=float32)\n````\n\n````\n\
+      \n>>> C.argmin(data, 1).eval()\narray([[ 0.],\n       [ 1.],\n       [ 1.]],\
+      \ dtype=float32)\n````"
     parameters:
     - description: any @cntk.ops.functions.Function that outputs a tensor.
       id: x
@@ -361,6 +355,48 @@ items:
 
       array([ 5.,  7.,  9.], dtype=float32)
 
+      ````
+
+
+      ````
+
+
+      >>> C.element_times([5., 10., 15., 30.], [2.]).eval()
+
+      array([ 10.,  20.,  30.,  60.], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> C.plus([-5, -4, -3, -2, -1], [10], [3, 2, 3, 2, 3], [-13], [+42], ''multi_arg_example'').eval()
+
+      array([ 37.,  37.,  39.,  39.,  41.], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> C.element_times([5., 10., 15., 30.], [2.], [1., 2., 1., 2.]).eval()
+
+      array([  10.,   40.,   30.,  120.], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> a = np.arange(3,dtype=np.float32)
+
+      >>> np.exp(C.log_add_exp(np.log(1+a), np.log(1+a*a)).eval())
+
+      array([ 2.,  4.,  8.], dtype=float32)
+
       ````'
     parameters:
     - description: left side tensor
@@ -456,14 +492,9 @@ items:
     integer greater than or equal to the input.
   syntax:
     content: ceil()
-    example: '````
-
-
-      >>> C.ceil([0.2, 1.3, 4., 5.5, 0.0]).eval()
-
-      array([ 1.,  2.,  4.,  6.,  0.], dtype=float32)
-
-      ````'
+    example: "````\n\n>>> C.ceil([0.2, 1.3, 4., 5.5, 0.0]).eval()\narray([ 1.,  2.,\
+      \  4.,  6.,  0.], dtype=float32)\n````\n\n````\n\n>>> C.ceil([[0.6, 3.3], [1.9,\
+      \ 5.6]]).eval()\narray([[ 1.,  4.],\n       [ 2.,  6.]], dtype=float32)\n````"
     parameters:
     - description: input tensor
       id: arg
@@ -501,6 +532,17 @@ items:
       >>> C.clip([1., 2.1, 3.0, 4.1], 2., 4.).eval()
 
       array([ 2. ,  2.1,  3. ,  4. ], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> C.clip([-10., -5., 0., 5., 10.], [-5., -4., 0., 3., 5.], [5., 4., 1., 4.,
+      9.]).eval()
+
+      array([-5., -4.,  0.,  4.,  9.], dtype=float32)
 
       ````'
     parameters:
@@ -547,14 +589,14 @@ items:
     loss and ClassificationError output.
   syntax:
     content: combine()
-    example: '````
-
-
-      >>> in1 = C.input_variable((4,))
-
-      >>> in2 = C.input_variable((4,))
-
-      ````'
+    example: "````\n\n>>> in1 = C.input_variable((4,))\n>>> in2 = C.input_variable((4,))\n\
+      ````\n\n````\n\n>>> in1_data = np.asarray([[1., 2., 3., 4.]], np.float32)\n\
+      >>> in2_data = np.asarray([[0., 5., -3., 2.]], np.float32)\n````\n\n````\n\n\
+      >>> plus_operation = in1 + in2\n>>> minus_operation = in1 - in2\n````\n\n````\n\
+      \n>>> forward = C.combine([plus_operation, minus_operation]).eval({in1: in1_data,\
+      \ in2: in2_data})\n>>> len(forward)\n2\n>>> list(forward.values()) # doctest:\
+      \ +SKIP\n[array([[[ 1., -3.,  6.,  2.]]], dtype=float32),\n array([[[ 1.,  7.,\
+      \  0.,  6.]]], dtype=float32)]\n````"
     parameters:
     - description: list of functions or their variables to combine
       id: operands
@@ -854,7 +896,9 @@ items:
     content: dropout()
     example: "````\n\n>>> data = [[10, 20],[30, 40],[50, 60]]\n>>> C.dropout(data,\
       \ 0.5).eval() # doctest: +SKIP\narray([[  0.,  40.],\n       [  0.,  80.],\n\
-      \       [  0.,   0.]], dtype=float32)\n````"
+      \       [  0.,   0.]], dtype=float32)\n````\n\n````\n\n>>> C.dropout(data, 0.75).eval()\
+      \ # doctest: +SKIP\narray([[   0.,    0.],\n       [   0.,  160.],\n       [\
+      \   0.,  240.]], dtype=float32)\n````"
     parameters:
     - description: input tensor
       id: x
@@ -894,6 +938,16 @@ items:
       >>> C.element_divide([1., 1., 1., 1.], [0.5, 0.25, 0.125, 0.]).eval()
 
       array([ 2.,  4.,  8.,  0.], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> C.element_divide([5., 10., 15., 30.], [2.]).eval()
+
+      array([  2.5,   5. ,   7.5,  15. ], dtype=float32)
 
       ````'
     parameters:
@@ -1031,6 +1085,26 @@ items:
 
       array([ 0.5  ,  0.25 ,  0.125,  0.   ], dtype=float32)
 
+      ````
+
+
+      ````
+
+
+      >>> C.element_times([5., 10., 15., 30.], [2.]).eval()
+
+      array([ 10.,  20.,  30.,  60.], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> C.element_times([5., 10., 15., 30.], [2.], [1., 2., 1., 2.]).eval()
+
+      array([  10.,   40.,   30.,  120.], dtype=float32)
+
       ````'
     parameters:
     - description: left side tensor
@@ -1109,6 +1183,16 @@ items:
 
       array([ 0.,  1.,  0.], dtype=float32)
 
+      ````
+
+
+      ````
+
+
+      >>> C.equal([-1,0,1], [1]).eval()
+
+      array([ 0.,  0.,  1.], dtype=float32)
+
       ````'
     parameters:
     - description: left side tensor
@@ -1180,14 +1264,12 @@ items:
     integer less than or equal to the input.
   syntax:
     content: floor()
-    example: '````
-
-
-      >>> C.floor([0.2, 1.3, 4., 5.5, 0.0]).eval()
-
-      array([ 0.,  1.,  4.,  5.,  0.], dtype=float32)
-
-      ````'
+    example: "````\n\n>>> C.floor([0.2, 1.3, 4., 5.5, 0.0]).eval()\narray([ 0.,  1.,\
+      \  4.,  5.,  0.], dtype=float32)\n````\n\n````\n\n>>> C.floor([[0.6, 3.3], [1.9,\
+      \ 5.6]]).eval()\narray([[ 0.,  3.],\n       [ 1.,  5.]], dtype=float32)\n````\n\
+      \n````\n\n>>> C.floor([-5.5, -4.2, -3., -0.7, 0]).eval()\narray([-6., -5., -3.,\
+      \ -1.,  0.], dtype=float32)\n````\n\n````\n\n>>> C.floor([[-0.6, -4.3], [1.9,\
+      \ -3.2]]).eval()\narray([[-1., -5.],\n       [ 1., -4.]], dtype=float32)\n````"
     parameters:
     - description: input tensor
       id: arg
@@ -1314,6 +1396,16 @@ items:
 
       array([ 0.,  0.,  1.], dtype=float32)
 
+      ````
+
+
+      ````
+
+
+      >>> C.greater([-1,0,1], [0]).eval()
+
+      array([ 0.,  0.,  1.], dtype=float32)
+
       ````'
     parameters:
     - description: left side tensor
@@ -1350,6 +1442,16 @@ items:
 
 
       >>> C.greater_equal([41., 42., 43.], [42., 42., 42.]).eval()
+
+      array([ 0.,  1.,  1.], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> C.greater_equal([-1,0,1], [0]).eval()
 
       array([ 0.,  1.,  1.], dtype=float32)
 
@@ -1392,6 +1494,16 @@ items:
       >>> C.hardmax([1., 1., 2., 3.]).eval()
 
       array([ 0.,  0.,  0.,  1.], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> C.hardmax([1., 3., 2., 3.]).eval()
+
+      array([ 0.,  1.,  0.,  0.], dtype=float32)
 
       ````'
     parameters:
@@ -1549,6 +1661,16 @@ items:
 
       array([ 1.,  0.,  0.], dtype=float32)
 
+      ````
+
+
+      ````
+
+
+      >>> C.less([-1,0,1], [0]).eval()
+
+      array([ 1.,  0.,  0.], dtype=float32)
+
       ````'
     parameters:
     - description: left side tensor
@@ -1585,6 +1707,16 @@ items:
 
 
       >>> C.less_equal([41., 42., 43.], [42., 42., 42.]).eval()
+
+      array([ 1.,  1.,  0.], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> C.less_equal([-1,0,1], [0]).eval()
 
       array([ 1.,  1.,  0.], dtype=float32)
 
@@ -1702,14 +1834,9 @@ items:
   summary: The output of this operation is left minus right tensor. It supports broadcasting.
   syntax:
     content: minus()
-    example: '````
-
-
-      >>> C.minus([1, 2, 3], [4, 5, 6]).eval()
-
-      array([-3., -3., -3.], dtype=float32)
-
-      ````'
+    example: "````\n\n>>> C.minus([1, 2, 3], [4, 5, 6]).eval()\narray([-3., -3., -3.],\
+      \ dtype=float32)\n````\n\n````\n\n>>> C.minus([[1,2],[3,4]], 1).eval()\narray([[\
+      \ 0.,  1.],\n       [ 2.,  3.]], dtype=float32)\n````"
     parameters:
     - description: left side tensor
       id: left
@@ -1784,6 +1911,16 @@ items:
 
 
       >>> C.not_equal([41., 42., 43.], [42., 42., 42.]).eval()
+
+      array([ 1.,  0.,  1.], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> C.not_equal([-1,0,1], [0]).eval()
 
       array([ 1.,  0.,  1.], dtype=float32)
 
@@ -2003,7 +2140,24 @@ items:
       <BLANKLINE>\n        [[  6.,   7.],\n         [  8.,   9.],\n         [ 10.,\
       \  11.]],\n<BLANKLINE>\n        [[ 12.,  13.],\n         [ 14.,  15.],\n   \
       \      [ 16.,  17.]],\n<BLANKLINE>\n        [[ 18.,  19.],\n         [ 20.,\
-      \  21.],\n         [ 22.,  23.]]]], dtype=float32)\n````"
+      \  21.],\n         [ 22.,  23.]]]], dtype=float32)\n````\n\n````\n\n>>> # this\
+      \ demonstrates how past_value shifts the sequence by one, padding with initial_state\n\
+      >>> y = C.past_value(x) # initial_state is 0 by default\n>>> y.eval({x:x0})\n\
+      array([[[[  0.,   0.],\n         [  0.,   0.],\n         [  0.,   0.]],\n<BLANKLINE>\n\
+      \        [[  0.,   1.],\n         [  2.,   3.],\n         [  4.,   5.]],\n<BLANKLINE>\n\
+      \        [[  6.,   7.],\n         [  8.,   9.],\n         [ 10.,  11.]],\n<BLANKLINE>\n\
+      \        [[ 12.,  13.],\n         [ 14.,  15.],\n         [ 16.,  17.]]]], dtype=float32)\n\
+      ````\n\n````\n\n>>> # here, we pass a the initial_state as input data (e.g.\
+      \ sequence-to-sequence)\n>>> s = Input(**Tensor[3,2])  # not a Sequence[], e.g.\
+      \ a final encoder hidden state\n>>> s0 = np.reshape(np.arange(6,dtype=np.float32)/2,(1,1,3,2))\n\
+      >>> s0\narray([[[[ 0. ,  0.5],\n         [ 1. ,  1.5],\n         [ 2. ,  2.5]]]],\
+      \ dtype=float32)\n>>> y = C.past_value(x, initial_state=s)\n>>> y.eval({x:x0,\
+      \ s:s0}) # same as the previous example except for the first time step\narray([[[[\
+      \  0. ,   0.5],\n         [  1. ,   1.5],\n         [  2. ,   2.5]],\n<BLANKLINE>\n\
+      \        [[  0. ,   1. ],\n         [  2. ,   3. ],\n         [  4. ,   5. ]],\n\
+      <BLANKLINE>\n        [[  6. ,   7. ],\n         [  8. ,   9. ],\n         [\
+      \ 10. ,  11. ]],\n<BLANKLINE>\n        [[ 12. ,  13. ],\n         [ 14. ,  15.\
+      \ ],\n         [ 16. ,  17. ]]]], dtype=float32)\n````"
     parameters:
     - description: the tensor (or its name) from which the past value is obtained
       id: x
@@ -2116,6 +2270,36 @@ items:
       >>> C.plus([1, 2, 3], [4, 5, 6]).eval()
 
       array([ 5.,  7.,  9.], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> C.plus([-5, -4, -3, -2, -1], [10]).eval()
+
+      array([ 5.,  6.,  7.,  8.,  9.], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> C.plus([-5, -4, -3, -2, -1], [10], [3, 2, 3, 2, 3], [-13], [+42], ''multi_arg_example'').eval()
+
+      array([ 37.,  37.,  39.,  39.,  41.], dtype=float32)
+
+      ````
+
+
+      ````
+
+
+      >>> C.plus([-5, -4, -3, -2, -1], [10], [3, 2, 3, 2, 3]).eval()
+
+      array([  8.,   8.,  10.,  10.,  12.], dtype=float32)
 
       ````'
     parameters:
@@ -2393,14 +2577,11 @@ items:
   summary: Computes the max of the input tensor's elements across the specified axis.
   syntax:
     content: reduce_max()
-    example: '````
-
-
-      >>> # create 3x2 matrix in a sequence of length 1 in a batch of one sample
-
-      >>> data = [[10, 20],[30, 40],[50, 60]]
-
-      ````'
+    example: "````\n\n>>> # create 3x2 matrix in a sequence of length 1 in a batch\
+      \ of one sample\n>>> data = [[10, 20],[30, 40],[50, 60]]\n````\n\n````\n\n>>>\
+      \ C.reduce_max(data, 0).eval()\narray([[ 50.,  60.]], dtype=float32)\n````\n\
+      \n````\n\n>>> C.reduce_max(data, 1).eval()\narray([[ 20.],\n       [ 40.],\n\
+      \       [ 60.]], dtype=float32)\n````"
     return:
       description: '@cntk.ops.functions.Function'
   type: Method
@@ -2423,14 +2604,11 @@ items:
   summary: Computes the mean of the input tensor's elements across the specified axis.
   syntax:
     content: reduce_mean()
-    example: '````
-
-
-      >>> # create 3x2 matrix in a sequence of length 1 in a batch of one sample
-
-      >>> data = [[5, 20],[30, 40],[55, 60]]
-
-      ````'
+    example: "````\n\n>>> # create 3x2 matrix in a sequence of length 1 in a batch\
+      \ of one sample\n>>> data = [[5, 20],[30, 40],[55, 60]]\n````\n\n````\n\n>>>\
+      \ C.reduce_mean(data, 0).eval()\narray([[ 30.,  40.]], dtype=float32)\n````\n\
+      \n````\n\n>>> C.reduce_mean(data, 1).eval()\narray([[ 12.5],\n       [ 35. ],\n\
+      \       [ 57.5]], dtype=float32)\n````"
     return:
       description: '@cntk.ops.functions.Function'
   type: Method
@@ -2453,14 +2631,11 @@ items:
   summary: Computes the min of the input tensor's elements across the specified axis.
   syntax:
     content: reduce_min()
-    example: '````
-
-
-      >>> # create 3x2 matrix in a sequence of length 1 in a batch of one sample
-
-      >>> data = [[10, 20],[30, 40],[50, 60]]
-
-      ````'
+    example: "````\n\n>>> # create 3x2 matrix in a sequence of length 1 in a batch\
+      \ of one sample\n>>> data = [[10, 20],[30, 40],[50, 60]]\n````\n\n````\n\n>>>\
+      \ C.reduce_min(data, 0).eval()\narray([[ 10.,  20.]], dtype=float32)\n````\n\
+      \n````\n\n>>> C.reduce_min(data, 1).eval()\narray([[ 10.],\n       [ 30.],\n\
+      \       [ 50.]], dtype=float32)\n````"
     return:
       description: '@cntk.ops.functions.Function'
   type: Method
@@ -2483,14 +2658,11 @@ items:
   summary: Computes the min of the input tensor's elements across the specified axis.
   syntax:
     content: reduce_prod()
-    example: '````
-
-
-      >>> # create 3x2 matrix in a sequence of length 1 in a batch of one sample
-
-      >>> data = [[1, 2],[3, 4],[5, 6]]
-
-      ````'
+    example: "````\n\n>>> # create 3x2 matrix in a sequence of length 1 in a batch\
+      \ of one sample\n>>> data = [[1, 2],[3, 4],[5, 6]]\n````\n\n````\n\n>>> C.reduce_prod(data,\
+      \ 0).eval()\narray([[ 15.,  48.]], dtype=float32)\n````\n\n````\n\n>>> C.reduce_prod(data,\
+      \ 1).eval()\narray([[  2.],\n       [ 12.],\n       [ 30.]], dtype=float32)\n\
+      ````"
     return:
       description: '@cntk.ops.functions.Function'
   type: Method
@@ -2683,14 +2855,12 @@ items:
     the round operation of numpy which follows round half to even.
   syntax:
     content: round()
-    example: '````
-
-
-      >>> C.round([0.2, 1.3, 4., 5.5, 0.0]).eval()
-
-      array([ 0.,  1.,  4.,  6.,  0.], dtype=float32)
-
-      ````'
+    example: "````\n\n>>> C.round([0.2, 1.3, 4., 5.5, 0.0]).eval()\narray([ 0.,  1.,\
+      \  4.,  6.,  0.], dtype=float32)\n````\n\n````\n\n>>> C.round([[0.6, 3.3], [1.9,\
+      \ 5.6]]).eval()\narray([[ 1.,  3.],\n       [ 2.,  6.]], dtype=float32)\n````\n\
+      \n````\n\n>>> C.round([-5.5, -4.2, -3., -0.7, 0]).eval()\narray([-5., -4., -3.,\
+      \ -1.,  0.], dtype=float32)\n````\n\n````\n\n>>> C.round([[-0.6, -4.3], [1.9,\
+      \ -3.2]]).eval()\narray([[-1., -4.],\n       [ 2., -3.]], dtype=float32)\n````"
     parameters:
     - description: input tensor
       id: arg
@@ -2827,14 +2997,11 @@ items:
     If `axis` is given, the softmax will be computed along that axis.'
   syntax:
     content: softmax()
-    example: '````
-
-
-      >>> C.softmax([[1, 1, 2, 3]]).eval()
-
-      array([[ 0.082595,  0.082595,  0.224515,  0.610296]], dtype=float32)
-
-      ````'
+    example: "````\n\n>>> C.softmax([[1, 1, 2, 3]]).eval()\narray([[ 0.082595,  0.082595,\
+      \  0.224515,  0.610296]], dtype=float32)\n````\n\n````\n\n>>> C.softmax([1,\
+      \ 1]).eval()\narray([ 0.5,  0.5], dtype=float32)\n````\n\n````\n\n>>> C.softmax([[[1,\
+      \ 1], [3, 5]]], axis=-1).eval()\narray([[[ 0.5     ,  0.5     ],\n        [\
+      \ 0.119203,  0.880797]]], dtype=float32)\n````"
     parameters:
     - description: numpy array or any @cntk.ops.functions.Function that outputs a
         tensor
@@ -2883,6 +3050,16 @@ items:
 
       array([[ 0.313262,  0.474077,  0.693147,  1.313262,  2.126928]], dtype=float32)
 
+      ````
+
+
+      ````
+
+
+      >>> C.softplus([[-1, -0.5, 0, 1, 2]], steepness=4).eval()
+
+      array([[ 0.004537,  0.031732,  0.173287,  1.004537,  2.000084]], dtype=float32)
+
       ````'
     parameters:
     - description: any @cntk.ops.functions.Function that outputs a tensor.
@@ -2920,16 +3097,15 @@ items:
   summary: Concatenate the input tensors along an axis.
   syntax:
     content: splice()
-    example: '````
-
-
-      >>> # create 2x2 matrix in a sequence of length 1 in a batch of one sample
-
-      >>> data1 = np.asarray([[[1, 2],
-
-      ...                      [4, 5]]], dtype=np.float32)
-
-      ````'
+    example: "````\n\n>>> # create 2x2 matrix in a sequence of length 1 in a batch\
+      \ of one sample\n>>> data1 = np.asarray([[[1, 2],\n...                     \
+      \ [4, 5]]], dtype=np.float32)\n````\n\n````\n\n>>> x = C.constant(value=data1)\n\
+      >>> # create 3x2 matrix in a sequence of length 1 in a batch of one sample\n\
+      >>> data2 = np.asarray([[[10, 20],\n...                       [30, 40],\n...\
+      \                       [50, 60]]],dtype=np.float32)\n>>> y = C.constant(value=data2)\n\
+      >>> # splice both inputs on axis=0 returns a 5x2 matrix\n>>> C.splice(x, y,\
+      \ axis=1).eval()\narray([[[  1.,   2.],\n        [  4.,   5.],\n        [ 10.,\
+      \  20.],\n        [ 30.,  40.],\n        [ 50.,  60.]]], dtype=float32)\n````"
     parameters:
     - description: one or more input tensors
       id: inputs
@@ -3104,17 +3280,24 @@ items:
     \ a matrix. The operator '@' has been overloaded such that in Python 3.5 and later\
     \ X @ W equals times(X, W).\nFor better performance on times operation on sequence\
     \ which is followed by sequence.reduce_sum, use infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK,\
-    \ i.e. replace following:\n<!-- literal_block {\"dupnames\": [], \"classes\":\
-    \ [], \"names\": [], \"xml:space\": \"preserve\", \"backrefs\": [], \"ids\": []}\
-    \ -->\n\n````\n\n   sequence.reduce_sum(times(seq1, seq2))\n   ````\nwith:\n<!--\
-    \ literal_block {\"dupnames\": [], \"classes\": [], \"names\": [], \"xml:space\"\
-    : \"preserve\", \"backrefs\": [], \"ids\": []} -->\n\n````\n\n   times(seq1, seq2,\
-    \ infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK)\n\
+    \ i.e. replace following:\n<!-- literal_block {\"dupnames\": [], \"names\": [],\
+    \ \"ids\": [], \"classes\": [], \"backrefs\": [], \"xml:space\": \"preserve\"\
+    } -->\n\n````\n\n   sequence.reduce_sum(times(seq1, seq2))\n   ````\nwith:\n<!--\
+    \ literal_block {\"dupnames\": [], \"names\": [], \"ids\": [], \"classes\": [],\
+    \ \"backrefs\": [], \"xml:space\": \"preserve\"} -->\n\n````\n\n   times(seq1,\
+    \ seq2, infer_input_rank_to_map=TIMES_REDUCE_SEQUENCE_AXIS_WITHOUT_INFERRED_INPUT_RANK)\n\
     \   ````"
   syntax:
     content: times()
     example: "````\n\n>>> C.times([[1,2],[3,4]], [[5],[6]]).eval()\narray([[ 17.],\n\
-      \       [ 39.]], dtype=float32)\n````"
+      \       [ 39.]], dtype=float32)\n````\n\n````\n\n>>> C.times(1.*np.reshape(np.arange(8),\
+      \ (2,2,2)),1.*np.reshape(np.arange(8), (2,2,2)), output_rank=1).eval()\narray([[\
+      \ 28.,  34.],\n       [ 76.,  98.]])\n````\n\n````\n\n>>> C.times(1.*np.reshape(np.arange(8),\
+      \ (2,2,2)),1.*np.reshape(np.arange(8), (2,2,2)), output_rank=2).eval()\narray([[[[\
+      \  4.,   5.],\n         [  6.,   7.]],\n<BLANKLINE>\n        [[ 12.,  17.],\n\
+      \         [ 22.,  27.]]],\n<BLANKLINE>\n<BLANKLINE>\n       [[[ 20.,  29.],\n\
+      \         [ 38.,  47.]],\n<BLANKLINE>\n        [[ 28.,  41.],\n         [ 54.,\
+      \  67.]]]])\n````"
     parameters:
     - description: left side matrix or tensor
       id: left

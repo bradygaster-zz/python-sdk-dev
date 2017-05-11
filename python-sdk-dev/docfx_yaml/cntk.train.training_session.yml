@@ -55,6 +55,37 @@ items:
 
       (32, 32)
 
+      ````
+
+
+      ````
+
+
+      >>> # Use minibatches of size 32 for the first 1000 samples, then 64 for the
+      remaining ones
+
+      >>> s = minibatch_size_schedule([32, 64], 1000)
+
+      >>> s[0], s[1], s[1000], s[1001]
+
+      (32, 32, 64, 64)
+
+      ````
+
+
+      ````
+
+
+      >>> # Use 32 for the first 12 epochs, then 64 for the next 15,
+
+      >>> # followed by 128 for the remaining ones, with a 100 samples in an epoch
+
+      >>> s = minibatch_size_schedule([(12, 32), (15, 64), (1, 128)], 100)
+
+      >>> s[0], s[1199], s[1200], s[2699], s[2700], s[5000]
+
+      (32, 32, 64, 64, 128, 128)
+
       ````'
     parameters:
     - description: if integer, it this minibatch size will be used for the whole training.
