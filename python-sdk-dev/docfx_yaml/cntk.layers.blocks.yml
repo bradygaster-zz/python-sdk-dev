@@ -71,7 +71,7 @@ items:
   summary: Constructs a Variable object that is constant.
   syntax:
     content: Constant(value, shape=None, dtype=<cntk.default_options.default_override_or
-      object at 0x2b8bf99bcda0>, name="")
+      object at 0x2b0029fbacc0>, name="")
     parameters:
     - description: the object you want to make constant
       id: value
@@ -82,7 +82,7 @@ items:
       id: shape
       type:
       - int or tuple of ints
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf99bcda0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b0029fbacc0>
       description: data type
       id: dtype
       type:
@@ -133,10 +133,10 @@ items:
   summary: Layer factory function to create a GRU block for use inside a recurrence.
   syntax:
     content: GRU(shape, cell_shape=None, activation=<cntk.default_options.default_override_or
-      object at 0x2b8bf9a0fb70>, init=<cntk.default_options.default_override_or object
-      at 0x2b8bf9a0fbe0>, init_bias=<cntk.default_options.default_override_or object
-      at 0x2b8bf9a0fc18>, enable_self_stabilization=<cntk.default_options.default_override_or
-      object at 0x2b8bf9a0fc50>, name="")
+      object at 0x2b002a00ba90>, init=<cntk.default_options.default_override_or object
+      at 0x2b002a00bb00>, init_bias=<cntk.default_options.default_override_or object
+      at 0x2b002a00bb38>, enable_self_stabilization=<cntk.default_options.default_override_or
+      object at 0x2b002a00bb70>, name="")
     parameters:
     - description: vector or tensor dimension of the output of this layer
       id: shape
@@ -147,22 +147,22 @@ items:
       id: cell_shape
       type:
       - tuple, defaults to None
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf9a0fc50>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b002a00bb70>
       description: function to apply at the end, e.g. *relu*
       id: activation
       type:
       - Function, defaults to tanh
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf9a0fc18>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b002a00bb38>
       description: initial value of weights *W*
       id: init
       type:
       - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf9a0fbe0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b002a00bb00>
       description: initial value of weights *b*
       id: init_bias
       type:
       - scalar or NumPy array or cntk.initializer, defaults to 0
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf9a0fb70>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b002a00ba90>
       description: ''
       id: enable_self_stabilization
       type:
@@ -195,9 +195,9 @@ items:
   summary: Constructs an Input variable.
   syntax:
     content: Input(shape, dtype=<cntk.default_options.default_override_or object at
-      0x2b8bf99bce48>, needs_gradient=True, is_sparse=False, dynamic_axes=(<cntk.axis.Axis;
-      proxy of <Swig Object of type 'CNTK::Axis *' at 0x2b8bf99b7630> >, <cntk.axis.Axis;
-      proxy of <Swig Object of type 'CNTK::Axis *' at 0x2b8bf99b7510> >), name="")
+      0x2b0029fbad68>, needs_gradient=True, is_sparse=False, dynamic_axes=(<cntk.axis.Axis;
+      proxy of <Swig Object of type 'CNTK::Axis *' at 0x2b0029fb4630> >, <cntk.axis.Axis;
+      proxy of <Swig Object of type 'CNTK::Axis *' at 0x2b0029fb4510> >), name="")
     parameters:
     - description: vector or tensor dimension of the output of this layer
       id: shape
@@ -209,8 +209,8 @@ items:
       type:
       - np.dtype, defaults to np.float32
     - defaultValue: (<cntk.axis.Axis; proxy of <Swig Object of type 'CNTK::Axis *'
-        at 0x2b8bf99b7630> >, <cntk.axis.Axis; proxy of <Swig Object of type 'CNTK::Axis
-        *' at 0x2b8bf99b7510> >)
+        at 0x2b0029fb4630> >, <cntk.axis.Axis; proxy of <Swig Object of type 'CNTK::Axis
+        *' at 0x2b0029fb4510> >)
       description: ''
       id: needs_gradient
       type:
@@ -225,7 +225,7 @@ items:
       id: dynamic_axes
       type:
       - object, Axis.default_input_variable_dynamic_axes
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf99bce48>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b0029fbad68>
       description: the name of the Function instance in the network
       id: name
       type:
@@ -249,11 +249,11 @@ items:
   summary: Layer factory function to create an LSTM block for use inside a recurrence.
   syntax:
     content: LSTM(shape, cell_shape=None, activation=<cntk.default_options.default_override_or
-      object at 0x2b8bf99d4da0>, use_peepholes=<cntk.default_options.default_override_or
-      object at 0x2b8bf99c5518>, init=<cntk.default_options.default_override_or object
-      at 0x2b8bf99c5550>, init_bias=<cntk.default_options.default_override_or object
-      at 0x2b8bf99c97b8>, enable_self_stabilization=<cntk.default_options.default_override_or
-      object at 0x2b8bf99db6a0>, name="")
+      object at 0x2b0029fd1cf8>, use_peepholes=<cntk.default_options.default_override_or
+      object at 0x2b0029fc2470>, init=<cntk.default_options.default_override_or object
+      at 0x2b0029fc24a8>, init_bias=<cntk.default_options.default_override_or object
+      at 0x2b0029fc7710>, enable_self_stabilization=<cntk.default_options.default_override_or
+      object at 0x2b0029fd95f8>, name="")
     parameters:
     - description: vector or tensor dimension of the output of this layer
       id: shape
@@ -264,27 +264,27 @@ items:
       id: cell_shape
       type:
       - tuple, defaults to None
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf99db6a0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b0029fd95f8>
       description: function to apply at the end, e.g. *relu*
       id: activation
       type:
       - Function, defaults to tanh
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf99c97b8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b0029fc7710>
       description: ''
       id: use_peepholes
       type:
       - bool, defaults to False
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf99c5550>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b0029fc24a8>
       description: initial value of weights *W*
       id: init
       type:
       - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf99c5518>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b0029fc2470>
       description: initial value of weights *b*
       id: init_bias
       type:
       - scalar or NumPy array or cntk.initializer, defaults to 0
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf99d4da0>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b0029fd1cf8>
       description: ''
       id: enable_self_stabilization
       type:
@@ -317,9 +317,9 @@ items:
   summary: Constructs a Parameter variable.
   syntax:
     content: Parameter(shape, init, dtype=<cntk.default_options.default_override_or
-      object at 0x2b8bf99bcd68>, name="")
+      object at 0x2b0029fbac88>, name="")
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf99bcd68>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b0029fbac88>
       description: vector or tensor dimension of the output of this layer
       id: shape
       type:
@@ -395,10 +395,10 @@ items:
   summary: Layer factory function to create a plain RNN block for use inside a recurrence.
   syntax:
     content: RNNUnit(shape, cell_shape=None, activation=<cntk.default_options.default_override_or
-      object at 0x2b8bf9a0fa58>, init=<cntk.default_options.default_override_or object
-      at 0x2b8bf9a0fac8>, init_bias=<cntk.default_options.default_override_or object
-      at 0x2b8bf9a0fb00>, enable_self_stabilization=<cntk.default_options.default_override_or
-      object at 0x2b8bf9a0fb38>, name="")
+      object at 0x2b002a00b978>, init=<cntk.default_options.default_override_or object
+      at 0x2b002a00b9e8>, init_bias=<cntk.default_options.default_override_or object
+      at 0x2b002a00ba20>, enable_self_stabilization=<cntk.default_options.default_override_or
+      object at 0x2b002a00ba58>, name="")
     parameters:
     - description: vector or tensor dimension of the output of this layer
       id: shape
@@ -409,22 +409,22 @@ items:
       id: cell_shape
       type:
       - tuple, defaults to None
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf9a0fb38>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b002a00ba58>
       description: function to apply at the end, e.g. *relu*
       id: activation
       type:
       - Function, defaults to signmoid
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf9a0fb00>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b002a00ba20>
       description: initial value of weights *W*
       id: init
       type:
       - scalar or NumPy array or cntk.initializer, defaults to glorot_uniform
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf9a0fac8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b002a00b9e8>
       description: initial value of weights *b*
       id: init_bias
       type:
       - scalar or NumPy array or cntk.initializer, defaults to 0
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf9a0fa58>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b002a00b978>
       description: ''
       id: enable_self_stabilization
       type:
@@ -468,9 +468,9 @@ items:
     exploding gradients.'
   syntax:
     content: Stabilizer(steepness=4, enable_self_stabilization=<cntk.default_options.default_override_or
-      object at 0x2b8bf99d4dd8>, name="")
+      object at 0x2b0029fd1d30>, name="")
     parameters:
-    - defaultValue: <cntk.default_options.default_override_or object at 0x2b8bf99d4dd8>
+    - defaultValue: <cntk.default_options.default_override_or object at 0x2b0029fd1d30>
       description: ''
       id: steepness
       type:

@@ -74,11 +74,11 @@ items:
   summary: 'Computes the cosine distance between `x` and `y`:'
   syntax:
     content: cosine_distance()
-    example: "````\n\n>>> a = np.asarray([-1, -1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1]).reshape(3,2,2)\n\
+    example: "```\n\n>>> a = np.asarray([-1, -1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1]).reshape(3,2,2)\n\
       >>> b = np.asarray([1, 1, -1, 1, 1, -1, 1, -1, -1, -1, -1, 1]).reshape(3,2,2)\n\
       >>> x = C.input_variable(shape=(2,))\n>>> y = C.input_variable(shape=(2,))\n\
       >>> np.round(C.cosine_distance(x,y).eval({x:a,y:b}),5)\narray([[-1.,  1.],\n\
-      \       [ 1.,  0.],\n       [ 0., -1.]], dtype=float32)\n````"
+      \       [ 1.,  0.],\n       [ 0., -1.]], dtype=float32)\n```"
     parameters:
     - description: numpy array or any `Function` that outputs a tensor
       id: x
@@ -117,14 +117,14 @@ items:
     how many negative samples one would want to generate.
   syntax:
     content: cosine_distance_with_negative_samples()
-    example: "````\n\n>>> qry = np.asarray([1., 1., 0., 0., 0., 1., 1., 0., 0., 0.,\
+    example: "```\n\n>>> qry = np.asarray([1., 1., 0., 0., 0., 1., 1., 0., 0., 0.,\
       \ 1., 1.], dtype=np.float32).reshape(3, 1, 4)\n>>> doc = np.asarray([1., 1.,\
       \ 0., 0., 0., 1., 1., 0., 0., 0., 1., 1.], dtype=np.float32).reshape(3, 1, 4)\n\
       >>> x = C.input_variable(shape=(4,))\n>>> y = C.input_variable(shape=(4,))\n\
       >>> model = C.cosine_distance_with_negative_samples(x, y, shift=1, num_negative_samples=2)\n\
       >>> np.round(model.eval({x: qry, y: doc}), decimals=4)\narray([[[ 1. ,  0.5,\
       \  0. ]],\n<BLANKLINE>\n       [[ 1. ,  0.5,  0.5]],\n<BLANKLINE>\n       [[\
-      \ 1. ,  0. ,  0.5]]], dtype=float32)\n````"
+      \ 1. ,  0. ,  0.5]]], dtype=float32)\n```"
     parameters:
     - description: numpy array or any `Function` that outputs a tensor
       id: y
@@ -168,24 +168,24 @@ items:
     efficiency and numerical stability.'
   syntax:
     content: cross_entropy_with_softmax()
-    example: '````
+    example: '```
 
 
       >>> C.cross_entropy_with_softmax([[1., 1., 1., 50.]], [[0., 0., 0., 1.]]).eval()
 
       array([[ 0.]], dtype=float32)
 
-      ````
+      ```
 
 
-      ````
+      ```
 
 
       >>> C.cross_entropy_with_softmax([[1., 2., 3., 4.]], [[0.35, 0.15, 0.05, 0.45]]).eval()
 
       array([[ 1.84019]], dtype=float32)
 
-      ````'
+      ```'
     parameters:
     - description: the unscaled computed output values from the network
       id: output_vector
@@ -223,7 +223,7 @@ items:
     is often used as a training criterion.
   syntax:
     content: squared_error()
-    example: '````
+    example: '```
 
 
       >>> i1 = C.input_variable((1,2))
@@ -235,10 +235,10 @@ items:
 
       array([[ 29.]], dtype=float32)
 
-      ````
+      ```
 
 
-      ````
+      ```
 
 
       >>> C.squared_error(i1,i2).eval({i1:np.asarray([[[[1., 2.]]]], dtype=np.float32),
@@ -246,7 +246,7 @@ items:
 
       array([[ 0.]], dtype=float32)
 
-      ````'
+      ```'
     parameters:
     - description: the output values from the network
       id: output

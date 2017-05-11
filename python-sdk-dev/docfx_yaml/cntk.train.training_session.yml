@@ -44,7 +44,7 @@ items:
   summary: Create a minibatch size schedule
   syntax:
     content: minibatch_size_schedule()
-    example: '````
+    example: '```
 
 
       >>> # Use a fixed value 32 for all minibatches
@@ -55,10 +55,10 @@ items:
 
       (32, 32)
 
-      ````
+      ```
 
 
-      ````
+      ```
 
 
       >>> # Use minibatches of size 32 for the first 1000 samples, then 64 for the
@@ -70,10 +70,10 @@ items:
 
       (32, 32, 64, 64)
 
-      ````
+      ```
 
 
-      ````
+      ```
 
 
       >>> # Use 32 for the first 12 epochs, then 64 for the next 15,
@@ -86,7 +86,7 @@ items:
 
       (32, 32, 64, 64, 128, 128)
 
-      ````'
+      ```'
     parameters:
     - description: if integer, it this minibatch size will be used for the whole training.
         In case of list of integers, the elements are used as the values for `epoch_size`

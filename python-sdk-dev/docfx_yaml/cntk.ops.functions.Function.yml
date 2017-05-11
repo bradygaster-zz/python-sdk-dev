@@ -198,7 +198,7 @@ items:
     Note: See `forward()` for more examples on passing input data.'
   syntax:
     content: backward()
-    example: '````
+    example: '```
 
 
       >>> # compute the value and the derivative of the sigmoid at 0
@@ -221,7 +221,7 @@ items:
 
       array([[[ 0.25]]], dtype=float32)
 
-      ````'
+      ```'
     return:
       description: mapping of `variables` to NumPy arrays
       type:
@@ -411,7 +411,7 @@ items:
     only one function to be returned, use `find_by_name()`.
   syntax:
     content: find_all_with_name()
-    example: '````
+    example: '```
 
 
       >>> a = C.input_variable(shape=1, name=''i'')
@@ -428,7 +428,7 @@ items:
 
       []
 
-      ````'
+      ```'
     parameters:
     - description: names to look for
       id: name
@@ -459,7 +459,7 @@ items:
     functions to be returned, use @cntk.ops.functions.Function.find_all_with_name.
   syntax:
     content: find_by_name()
-    example: '````
+    example: '```
 
 
       >>> a = C.input_variable(shape=1, name=''a'')
@@ -476,11 +476,11 @@ items:
 
       True
 
-      ````
+      ```
 
 
       If you need a full function out of it that can be evaluated, you need to upcast
-      it (currently done via combine):````
+      it (currently done via combine):```
 
 
       >>> d = c * 5
@@ -489,7 +489,7 @@ items:
 
       array([[[ 3.]]], dtype=float32)
 
-      ````'
+      ```'
     parameters:
     - description: names to look for
       id: name
@@ -519,7 +519,7 @@ items:
     those that have `is_input = True`).
   syntax:
     content: forward()
-    example: "````\n\n>>> # Doing the same, but with a CSR matrix from scipy.sparse\n\
+    example: "```\n\n>>> # Doing the same, but with a CSR matrix from scipy.sparse\n\
       >>> vocab_size = 5\n>>> from scipy.sparse import csr_matrix\n>>> v = C.input_variable(shape=(vocab_size,),\
       \ is_sparse=True)\n>>> f = C.times(v, np.eye(vocab_size))\n>>> # Note that csr_matrix\
       \ automatically uses a sparse representation underneath.\n>>> sparse_batch =\
@@ -536,7 +536,7 @@ items:
       \ vocab_size) for seq in batch]\n>>> _, fv = f.forward({v:sparse_batch})\n>>>\
       \ list(fv.values())[0]\n[array([[ 0.,  1.,  0.,  0.,  0.]], dtype=float32),\n\
       \ array([[ 0.,  0.,  1.,  0.,  0.], [ 0.,  0.,  0.,  0.,  1.]], dtype=float32)]\n\
-      ````"
+      ```"
     parameters:
     - description: "maps variables to their input data. The interpretation depends\
         \ on the input type:\n\n   * dict: keys are input variable or names, and values\
@@ -607,10 +607,10 @@ items:
     `wrt`. The Function must have a single output.
   syntax:
     content: grad()
-    example: "````\n\n>>> x = C.input_variable(shape=(1,), needs_gradient=True)\n\
-      >>> y = C.sqrt(x)\n>>> a = np.asarray([1,4,16],dtype=np.float32).reshape(3,1,1)\n\
+    example: "```\n\n>>> x = C.input_variable(shape=(1,), needs_gradient=True)\n>>>\
+      \ y = C.sqrt(x)\n>>> a = np.asarray([1,4,16],dtype=np.float32).reshape(3,1,1)\n\
       >>> y.grad({x:a})\narray([[[ 0.5  ]],\n<BLANKLINE>\n       [[ 0.25 ]],\n<BLANKLINE>\n\
-      \       [[ 0.125]]], dtype=float32)\n````"
+      \       [[ 0.125]]], dtype=float32)\n```"
     parameters:
     - description: mapping of the Function's arguments to values
       id: at
@@ -1100,21 +1100,21 @@ items:
     startLine: 62
   summary: "`@Function` constructs a Function from a Python lambda where the Function's\
     \ input signature is defined by the lambda.\nUse this as a decorator, e.g.:\n\
-    <!-- literal_block {\"dupnames\": [], \"names\": [], \"ids\": [], \"classes\"\
-    : [], \"backrefs\": [], \"xml:space\": \"preserve\"} -->\n\n````\n\n   @Function\n\
-    \   def f(x): return x * x\n   ````\nThe above form creates a CNTK Function whose\
+    <!-- literal_block {\"dupnames\": [], \"classes\": [], \"ids\": [], \"xml:space\"\
+    : \"preserve\", \"backrefs\": [], \"names\": []} -->\n\n````\n\n   @Function\n\
+    \   def f(x): return x * x\n   ```\nThe above form creates a CNTK Function whose\
     \ arguments are placeholder variables. Such a function can only be combined with\
     \ others symbolic functions.\nTo train a Function or pass data to it, you need\
     \ to declare the types of the arguments. In this case, the @Function decorator\
     \ creates a CNTK Function whose arguments are input variables.\nIf you use Python\
     \ 3, Functions with types are declared using Python annotation syntax, e.g.:\n\
-    <!-- literal_block {\"dupnames\": [], \"names\": [], \"ids\": [], \"classes\"\
-    : [], \"backrefs\": [], \"xml:space\": \"preserve\"} -->\n\n````\n\n   @Function\n\
-    \   def f(x:Tensor[13]):\n       return x * x\n   ````\nIf you are working with\
+    <!-- literal_block {\"dupnames\": [], \"classes\": [], \"ids\": [], \"xml:space\"\
+    : \"preserve\", \"backrefs\": [], \"names\": []} -->\n\n````\n\n   @Function\n\
+    \   def f(x:Tensor[13]):\n       return x * x\n   ```\nIf you are working with\
     \ Python 2.7, use CNTK's @Signature decorator instead:\n<!-- literal_block {\"\
-    dupnames\": [], \"names\": [], \"ids\": [], \"classes\": [], \"backrefs\": [],\
-    \ \"xml:space\": \"preserve\"} -->\n\n````\n\n   @Function\n   @Signature(Tensor[13])\n\
-    \   def f(x):\n       return x * x\n   ````\n`make_block=True` is used to implement\
+    dupnames\": [], \"classes\": [], \"ids\": [], \"xml:space\": \"preserve\", \"\
+    backrefs\": [], \"names\": []} -->\n\n````\n\n   @Function\n   @Signature(Tensor[13])\n\
+    \   def f(x):\n       return x * x\n   ```\n`make_block=True` is used to implement\
     \ @BlockFunction(). If given the result will be wrapped in `as_block()`, using\
     \ the supplied `op_name` and `name` parameters, which are otherwise ignored."
   syntax:

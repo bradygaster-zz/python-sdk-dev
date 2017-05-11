@@ -175,7 +175,7 @@ items:
     integer data in `batch` is interpreted as the indices representing one-hot vectors.
   syntax:
     content: one_hot()
-    example: "````\n\n>>> num_classes = 6\n>>> sparse_indices = [[1,5],[4]]\n>>> i0\
+    example: "```\n\n>>> num_classes = 6\n>>> sparse_indices = [[1,5],[4]]\n>>> i0\
       \ = C.input_variable(shape=num_classes, is_sparse=True)\n>>> z = C.times(i0,\
       \ np.eye(num_classes))\n>>> value = C.one_hot(sparse_indices, num_classes)\n\
       >>> z.eval({i0: value})\n[array([[ 0.,  1.,  0.,  0.,  0.,  0.],\n        [\
@@ -187,7 +187,7 @@ items:
       \  0.],\n         [ 0.,  0.,  0.,  0.,  0.,  1.]],\n        [[ 0.,  0.,  0.,\
       \  1.,  0.,  0.],\n         [ 0.,  0.,  1.,  0.,  0.,  0.]]], dtype=float32),\n\
       \ array([[[ 0.,  0.,  0.,  0.,  1.,  0.],\n         [ 0.,  1.,  0.,  0.,  0.,\
-      \  0.]]], dtype=float32)]\n````"
+      \  0.]]], dtype=float32)]\n```"
     parameters:
     - description: batch input data of indices
       id: batch
