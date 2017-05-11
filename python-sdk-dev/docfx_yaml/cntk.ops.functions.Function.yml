@@ -195,31 +195,33 @@ items:
     Formally, multiplies the values of `root_gradients` by the Jacobian of the Function
     and returns the subset of the output that corresponds to `variables`.
 
-    -[ Example ]-
-
-    >>> # compute the value and the derivative of the sigmoid at 0
-
-    >>> v = C.input_variable(shape=(1,), needs_gradient=True)
-
-    >>> f = C.sigmoid(v)
-
-    >>> df, fv = f.forward({v:[[0]]}, [f.output], set([f.output]))
-
-    >>> value = list(fv.values())[0]
-
-    >>> grad = f.backward(df, {f.output: np.ones_like(value)}, set([v]))
-
-    >>> value
-
-    array([[[ 0.5]]], dtype=float32)
-
-    >>> list(grad.values())[0]
-
-    array([[[ 0.25]]], dtype=float32)
-
     Note: See `forward()` for more examples on passing input data.'
   syntax:
     content: backward()
+    example: '````
+
+
+      >>> # compute the value and the derivative of the sigmoid at 0
+
+      >>> v = C.input_variable(shape=(1,), needs_gradient=True)
+
+      >>> f = C.sigmoid(v)
+
+      >>> df, fv = f.forward({v:[[0]]}, [f.output], set([f.output]))
+
+      >>> value = list(fv.values())[0]
+
+      >>> grad = f.backward(df, {f.output: np.ones_like(value)}, set([v]))
+
+      >>> value
+
+      array([[[ 0.5]]], dtype=float32)
+
+      >>> list(grad.values())[0]
+
+      array([[[ 0.25]]], dtype=float32)
+
+      ````'
     return:
       description: mapping of `variables` to NumPy arrays
       type:
@@ -404,27 +406,29 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 937
-  summary: 'Returns a list of primitive function with `name` in the graph starting
+  summary: Returns a list of primitive function with `name` in the graph starting
     from this node. Throws an exception if `name` occurs multiple times. If you expect
     only one function to be returned, use `find_by_name()`.
-
-    -[ Example ]-
-
-    >>> a = C.input_variable(shape=1, name=''i'')
-
-    >>> b = C.input_variable(shape=1, name=''i'')
-
-    >>> c = C.plus(a, b, name=''c'')
-
-    >>> len(c.find_all_with_name(''i''))
-
-    2
-
-    >>> c.find_all_with_name(''z'')
-
-    []'
   syntax:
     content: find_all_with_name()
+    example: '````
+
+
+      >>> a = C.input_variable(shape=1, name=''i'')
+
+      >>> b = C.input_variable(shape=1, name=''i'')
+
+      >>> c = C.plus(a, b, name=''c'')
+
+      >>> len(c.find_all_with_name(''i''))
+
+      2
+
+      >>> c.find_all_with_name(''z'')
+
+      []
+
+      ````'
     parameters:
     - description: names to look for
       id: name
@@ -450,36 +454,29 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 967
-  summary: 'Returns a primitive function with `name` in the graph starting from this
+  summary: Returns a primitive function with `name` in the graph starting from this
     node. Throws an exception if `name` occurs multiple times. If you expect multiple
     functions to be returned, use @cntk.ops.functions.Function.find_all_with_name.
-
-    -[ Example ]-
-
-    >>> a = C.input_variable(shape=1, name=''a'')
-
-    >>> b = C.input_variable(shape=1, name=''b'')
-
-    >>> c = C.plus(a, b, name=''c'')
-
-    >>> print(c.find_by_name(''b'').name)
-
-    b
-
-    >>> c.find_by_name(''z'') is None
-
-    True
-
-    If you need a full function out of it that can be evaluated, you need to upcast
-    it (currently done via combine):
-
-    >>> d = c * 5
-
-    >>> C.combine([d.find_by_name(''c'')]).eval({a:[[1]], b:[[2]]})
-
-    array([[[ 3.]]], dtype=float32)'
   syntax:
     content: find_by_name()
+    example: '````
+
+
+      >>> a = C.input_variable(shape=1, name=''a'')
+
+      >>> b = C.input_variable(shape=1, name=''b'')
+
+      >>> c = C.plus(a, b, name=''c'')
+
+      >>> print(c.find_by_name(''b'').name)
+
+      b
+
+      >>> c.find_by_name(''z'') is None
+
+      True
+
+      ````'
     parameters:
     - description: names to look for
       id: name
@@ -504,38 +501,29 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 521
-  summary: "Computes the values of speficied variables in `outputs`, using values\
-    \ provided in `arguments` that correspond to each input *Variable* of the function\
-    \ (i.e. those that have `is_input = True`).\n-[ Example ]-\n>>> # Example of passing\
-    \ dense data\n>>> v = C.input_variable(shape=(3,))\n>>> f = C.reciprocal(v)\n\
-    >>> _, fv = f.forward({v:[[1, 2, 4]]})\n>>> list(fv.values())[0]\narray([[[ 1.\
-    \  ,  0.5 ,  0.25]]], dtype=float32)\n-[ Example ]-\n>>> # Passing sparse values\
-    \ as one-hot with a vocabulary size of 5\n>>> vocab_size = 5\n>>> v = C.input_variable(shape=(vocab_size,),\
-    \ is_sparse=True)\n>>> f = C.times(v, np.eye(vocab_size))\n>>> # Passing a batch\
-    \ of two sequences:\n>>> # 1st sequence: word 1\n>>> # 2nd sequence: words 2 and\
-    \ 4\n>>> batch = [[1],[2,4]]\n>>> sparse_batch = C.one_hot(batch, vocab_size)\n\
-    >>> _, fv = f.forward({v:sparse_batch})\n>>> list(fv.values())[0]\n[array([[ 0.,\
-    \  1.,  0.,  0.,  0.]], dtype=float32),\n array([[ 0.,  0.,  1.,  0.,  0.], [\
-    \ 0.,  0.,  0.,  0.,  1.]], dtype=float32)]\n-[ Example ]-\n>>> # Doing the same,\
-    \ but with a CSR matrix from scipy.sparse\n>>> vocab_size = 5\n>>> from scipy.sparse\
-    \ import csr_matrix\n>>> v = C.input_variable(shape=(vocab_size,), is_sparse=True)\n\
-    >>> f = C.times(v, np.eye(vocab_size))\n>>> # Note that csr_matrix automatically\
-    \ uses a sparse representation underneath.\n>>> sparse_batch = [csr_matrix([[0,1,0,0,0]]),\
-    \ csr_matrix([[0,0,1,0,0], [0,0,0,0,1]])]\n>>> _, fv = f.forward({v:sparse_batch})\n\
-    >>> list(fv.values())[0]\n[array([[ 0.,  1.,  0.,  0.,  0.]], dtype=float32),\n\
-    \ array([[ 0.,  0.,  1.,  0.,  0.], [ 0.,  0.,  0.,  0.,  1.]], dtype=float32)]\n\
-    <BLANKLINE>\n>>> # Much more efficient, however, is to incrementally create CSR\
-    \ arrays.\n>>> # See https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csr_matrix.html\n\
-    >>> # for more information.\n>>> def seq_to_csr_matrix(seq, vocab_size):\n...\
-    \     indptr = [0]\n...     indices = []\n...     data = []\n...     for term_idx\
-    \ in seq:\n...         indices.append(term_idx)\n...         data.append(1)\n\
-    ...         indptr.append(len(indices))\n...     return csr_matrix((data, indices,\
-    \ indptr), shape=(len(seq), vocab_size))\n>>> sparse_batch = [seq_to_csr_matrix(seq,\
-    \ vocab_size) for seq in batch]\n>>> _, fv = f.forward({v:sparse_batch})\n>>>\
-    \ list(fv.values())[0]\n[array([[ 0.,  1.,  0.,  0.,  0.]], dtype=float32),\n\
-    \ array([[ 0.,  0.,  1.,  0.,  0.], [ 0.,  0.,  0.,  0.,  1.]], dtype=float32)]"
+  summary: Computes the values of speficied variables in `outputs`, using values provided
+    in `arguments` that correspond to each input *Variable* of the function (i.e.
+    those that have `is_input = True`).
   syntax:
     content: forward()
+    example: "````\n\n>>> # Doing the same, but with a CSR matrix from scipy.sparse\n\
+      >>> vocab_size = 5\n>>> from scipy.sparse import csr_matrix\n>>> v = C.input_variable(shape=(vocab_size,),\
+      \ is_sparse=True)\n>>> f = C.times(v, np.eye(vocab_size))\n>>> # Note that csr_matrix\
+      \ automatically uses a sparse representation underneath.\n>>> sparse_batch =\
+      \ [csr_matrix([[0,1,0,0,0]]), csr_matrix([[0,0,1,0,0], [0,0,0,0,1]])]\n>>> _,\
+      \ fv = f.forward({v:sparse_batch})\n>>> list(fv.values())[0]\n[array([[ 0.,\
+      \  1.,  0.,  0.,  0.]], dtype=float32),\n array([[ 0.,  0.,  1.,  0.,  0.],\
+      \ [ 0.,  0.,  0.,  0.,  1.]], dtype=float32)]\n<BLANKLINE>\n>>> # Much more\
+      \ efficient, however, is to incrementally create CSR arrays.\n>>> # See https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.csr_matrix.html\n\
+      >>> # for more information.\n>>> def seq_to_csr_matrix(seq, vocab_size):\n...\
+      \     indptr = [0]\n...     indices = []\n...     data = []\n...     for term_idx\
+      \ in seq:\n...         indices.append(term_idx)\n...         data.append(1)\n\
+      ...         indptr.append(len(indices))\n...     return csr_matrix((data, indices,\
+      \ indptr), shape=(len(seq), vocab_size))\n>>> sparse_batch = [seq_to_csr_matrix(seq,\
+      \ vocab_size) for seq in batch]\n>>> _, fv = f.forward({v:sparse_batch})\n>>>\
+      \ list(fv.values())[0]\n[array([[ 0.,  1.,  0.,  0.,  0.]], dtype=float32),\n\
+      \ array([[ 0.,  0.,  1.,  0.,  0.], [ 0.,  0.,  0.,  0.,  1.]], dtype=float32)]\n\
+      ````"
     parameters:
     - description: "maps variables to their input data. The interpretation depends\
         \ on the input type:\n\n   * dict: keys are input variable or names, and values\
@@ -602,13 +590,14 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 708
-  summary: "Computes the gradient of this Function at location `at` with respect to\
-    \ `wrt`. The Function must have a single output.\n-[ Example ]-\n>>> x = C.input_variable(shape=(1,),\
-    \ needs_gradient=True)\n>>> y = C.sqrt(x)\n>>> a = np.asarray([1,4,16],dtype=np.float32).reshape(3,1,1)\n\
-    >>> y.grad({x:a})\narray([[[ 0.5  ]],\n<BLANKLINE>\n       [[ 0.25 ]],\n<BLANKLINE>\n\
-    \       [[ 0.125]]], dtype=float32)"
+  summary: Computes the gradient of this Function at location `at` with respect to
+    `wrt`. The Function must have a single output.
   syntax:
     content: grad()
+    example: "````\n\n>>> x = C.input_variable(shape=(1,), needs_gradient=True)\n\
+      >>> y = C.sqrt(x)\n>>> a = np.asarray([1,4,16],dtype=np.float32).reshape(3,1,1)\n\
+      >>> y.grad({x:a})\narray([[[ 0.5  ]],\n<BLANKLINE>\n       [[ 0.25 ]],\n<BLANKLINE>\n\
+      \       [[ 0.125]]], dtype=float32)\n````"
     parameters:
     - description: mapping of the Function's arguments to values
       id: at
@@ -1098,20 +1087,20 @@ items:
     startLine: 62
   summary: "`@Function` constructs a Function from a Python lambda where the Function's\
     \ input signature is defined by the lambda.\nUse this as a decorator, e.g.:\n\
-    <!-- literal_block {\"xml:space\": \"preserve\", \"ids\": [], \"dupnames\": [],\
-    \ \"classes\": [], \"backrefs\": [], \"names\": []} -->\n\n````\n\n   @Function\n\
-    \   def f(x): return x * x\n   ````\nThe above form creates a CNTK Function whose\
+    <!-- literal_block {\"dupnames\": [], \"classes\": [], \"names\": [], \"xml:space\"\
+    : \"preserve\", \"backrefs\": [], \"ids\": []} -->\n\n````\n\n   @Function\n \
+    \  def f(x): return x * x\n   ````\nThe above form creates a CNTK Function whose\
     \ arguments are placeholder variables. Such a function can only be combined with\
     \ others symbolic functions.\nTo train a Function or pass data to it, you need\
     \ to declare the types of the arguments. In this case, the @Function decorator\
     \ creates a CNTK Function whose arguments are input variables.\nIf you use Python\
     \ 3, Functions with types are declared using Python annotation syntax, e.g.:\n\
-    <!-- literal_block {\"xml:space\": \"preserve\", \"ids\": [], \"dupnames\": [],\
-    \ \"classes\": [], \"backrefs\": [], \"names\": []} -->\n\n````\n\n   @Function\n\
-    \   def f(x:Tensor[13]):\n       return x * x\n   ````\nIf you are working with\
+    <!-- literal_block {\"dupnames\": [], \"classes\": [], \"names\": [], \"xml:space\"\
+    : \"preserve\", \"backrefs\": [], \"ids\": []} -->\n\n````\n\n   @Function\n \
+    \  def f(x:Tensor[13]):\n       return x * x\n   ````\nIf you are working with\
     \ Python 2.7, use CNTK's @Signature decorator instead:\n<!-- literal_block {\"\
-    xml:space\": \"preserve\", \"ids\": [], \"dupnames\": [], \"classes\": [], \"\
-    backrefs\": [], \"names\": []} -->\n\n````\n\n   @Function\n   @Signature(Tensor[13])\n\
+    dupnames\": [], \"classes\": [], \"names\": [], \"xml:space\": \"preserve\", \"\
+    backrefs\": [], \"ids\": []} -->\n\n````\n\n   @Function\n   @Signature(Tensor[13])\n\
     \   def f(x):\n       return x * x\n   ````\n`make_block=True` is used to implement\
     \ @BlockFunction(). If given the result will be wrapped in `as_block()`, using\
     \ the supplied `op_name` and `name` parameters, which are otherwise ignored."

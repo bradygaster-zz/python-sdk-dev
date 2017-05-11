@@ -397,21 +397,17 @@ items:
     (in samples) of a unit-gain 1st-order IIR filter. The value specifies the number
     of samples after which a gradient has an effect of 1/e=37%.
 
-    If you want to specify the momentum per sample (or per minibatch), use `momentum_schedule()`.
-
-    -[ Examples ]-
-
-    >>> # Use a fixed momentum of 1100 for all samples
-
-    >>> m = momentum_as_time_constant_schedule(1100)
-
-    >>> # Use the time constant 1100 for the first 1000 samples,
-
-    >>> # then 1500 for the remaining ones
-
-    >>> m = momentum_as_time_constant_schedule([1100, 1500], 1000)'
+    If you want to specify the momentum per sample (or per minibatch), use `momentum_schedule()`.'
   syntax:
     content: momentum_as_time_constant_schedule()
+    example: '````
+
+
+      >>> # Use a fixed momentum of 1100 for all samples
+
+      >>> m = momentum_as_time_constant_schedule(1100)
+
+      ````'
     return:
       description: momentum as time constant schedule
   type: Method
@@ -433,37 +429,17 @@ items:
   summary: 'Create a per-minibatch momentum schedule (using the same semantics as
     `training_parameter_schedule()` with the *unit=UnitType.minibatch*).
 
-    If you want to provide momentum values in a minibatch-size agnostic way, use @cntk.learners.momentum_as_time_constant_schedule.
-
-    -[ Examples ]-
-
-    >>> # Use a fixed momentum of 0.99 for all samples
-
-    >>> m = momentum_schedule(0.99)
-
-    >>> # Use the momentum value 0.99 for the first 1000 samples,
-
-    >>> # then 0.9 for the remaining ones
-
-    >>> m = momentum_schedule([0.99,0.9], 1000)
-
-    >>> m[0], m[999], m[1000], m[1001]
-
-    (0.99, 0.99, 0.9, 0.9)
-
-    >>> # Use the momentum value 0.99 for the first 999 samples,
-
-    >>> # then 0.88 for the next 888 samples, and 0.77 for the
-
-    >>> # the remaining ones
-
-    >>> m = momentum_schedule([(999,0.99),(888,0.88),(0, 0.77)])
-
-    >>> m[0], m[998], m[999], m[999+888-1], m[999+888]
-
-    (0.99, 0.99, 0.88, 0.88, 0.77)'
+    If you want to provide momentum values in a minibatch-size agnostic way, use @cntk.learners.momentum_as_time_constant_schedule.'
   syntax:
     content: momentum_schedule()
+    example: '````
+
+
+      >>> # Use a fixed momentum of 0.99 for all samples
+
+      >>> m = momentum_schedule(0.99)
+
+      ````'
     return:
       description: momentum schedule
   type: Method
@@ -773,39 +749,22 @@ items:
       path: cntk/internal/swig_helper.py
       repo: https://github.com/Microsoft/CNTK
     startLine: 220
-  summary: 'Create a training parameter schedule containing either per-sample (default)
+  summary: Create a training parameter schedule containing either per-sample (default)
     or per-minibatch values.
-
-    -[ Examples ]-
-
-    >>> # Use a fixed value 0.01 for all samples
-
-    >>> s = training_parameter_schedule(0.01, UnitType.sample)
-
-    >>> s[0], s[1]
-
-    (0.01, 0.01)
-
-    >>> # Use 0.01 for the first 1000 samples, then 0.001 for the remaining ones
-
-    >>> s = training_parameter_schedule([0.01, 0.001], UnitType.sample, 1000)
-
-    >>> s[0], s[1], s[1000], s[1001]
-
-    (0.01, 0.01, 0.001, 0.001)
-
-    >>> # Use 0.1 for the first 12 epochs, then 0.01 for the next 15,
-
-    >>> # followed by 0.001 for the remaining ones, with a 100 samples in an epoch
-
-    >>> s = training_parameter_schedule([(12, 0.1), (15, 0.01), (1, 0.001)], UnitType.sample,
-    100)
-
-    >>> s[0], s[1199], s[1200], s[2699], s[2700], s[5000]
-
-    (0.1, 0.1, 0.01, 0.01, 0.001, 0.001)'
   syntax:
     content: training_parameter_schedule()
+    example: '````
+
+
+      >>> # Use a fixed value 0.01 for all samples
+
+      >>> s = training_parameter_schedule(0.01, UnitType.sample)
+
+      >>> s[0], s[1]
+
+      (0.01, 0.01)
+
+      ````'
     parameters:
     - description: if float, is the parameter schedule to be used for all samples.
         In case of list, the elements are used as the values for `epoch_size` samples.
